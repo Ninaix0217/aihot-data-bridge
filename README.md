@@ -82,29 +82,9 @@ python -m venv .venv
 
 测试覆盖：五个 API 全成功、paper RSS fallback、API 与 RSS 同时失败仍返回 200、分页、stable ID 与 URL 去重、发布时间/采集时间隔离、429 `Retry-After`、5xx 恢复、最大页数标记 `partial`，以及 health endpoint。
 
-## Cloud Run 部署
+## 保留的动态部署资产
 
-`Dockerfile`、`.gcloudignore` 和 `.dockerignore` 保留为未来动态部署备选；当前生产传输路径优先使用下面的 GitHub Pages 静态快照，不再要求 Cloud Run 或 Google Cloud Billing。
-
-前置条件：Google Cloud 项目已经绑定 Billing，且本机 `gcloud` 已登录并选中该项目。这两个账号步骤需要项目所有者本人确认。
-
-```powershell
-gcloud auth login
-gcloud config set project YOUR_PROJECT_ID
-gcloud run deploy aihot-data-bridge `
-  --source . `
-  --region us-central1 `
-  --allow-unauthenticated `
-  --port 8080 `
-  --cpu 1 `
-  --memory 512Mi `
-  --min-instances 0 `
-  --max-instances 1 `
-  --concurrency 10 `
-  --timeout 180
-```
-
-部署完成后必须使用命令返回的公网 HTTPS URL 验证 `/health` 和 `/aihot/today`，并记录 warm/cold latency。不要用 localhost 结果代替公网验收。
+`Dockerfile`、`.gcloudignore` 和 `.dockerignore` 仅保留为未来动态部署备选。本项目当前不配置 Cloud Run、Google Cloud 项目或 Billing；计划中的公开传输路径是下面的 GitHub Pages 静态快照。
 
 对外只暴露 `GET /health` 和 `GET /aihot/today`；FastAPI 的 `/docs`、`/redoc` 和 `/openapi.json` 已关闭。
 
@@ -153,4 +133,4 @@ https://ninaix0217.github.io/aihot-data-bridge/today.json
 - RSS 只有 feed 自身提供的字段；没有 `discoveredAt` 时，`collected_at` 保持 `null`，不会用 Bridge 抓取时间伪造。
 - RSS feed 的条数可能受官方 feed 上限约束；coverage 会标记为 `fallback`，不会伪装成 API 完整成功。
 - 去重仅使用 ID、URL/canonical URL、标题 + 来源 + 发布时间，不做事件级语义合并。
-- 不包含部署平台、认证、数据库、scheduler、Gmail 或 AI 功能。
+- 除 GitHub Actions 定时生成和 Pages 静态发布外，不包含认证、数据库、额外调度服务、Gmail 或 AI 功能。
