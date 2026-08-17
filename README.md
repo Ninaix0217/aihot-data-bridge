@@ -101,7 +101,7 @@ GitHub Actions 定时调用与 FastAPI 相同的 `BridgeService.today()` 核心�
 
 部署 workflow 位于 `.github/workflows/snapshot-pages.yml`：
 
-- 每小时第 37 分钟运行，避开整点高峰并控制私有仓库 Actions 分钟消耗；
+- 每小时第 17、47 分钟运行，避开整点高峰，理论最大快照年龄约 30 分钟；
 - 支持从 GitHub Actions 页面手工执行 `workflow_dispatch`；
 - 同类任务并发时取消旧任务；
 - 15 分钟内未完成 snapshot build 则失败；
