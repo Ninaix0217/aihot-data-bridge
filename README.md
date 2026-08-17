@@ -115,7 +115,7 @@ GitHub Actions 定时调用与 FastAPI 相同的 `BridgeService.today()` 核心�
 https://ninaix0217.github.io/aihot-data-bridge/today.json
 ```
 
-在 GitHub Pages 首次真实部署完成前，此 URL 仅是预期地址，不能视为已验证。
+该固定 URL 已于 2026-08-17 通过两轮 `workflow_dispatch` 真实部署验证：HTTPS 返回 200，JSON 可解析，且第二轮公开 `generated_at` 晚于第一轮。
 
 ### Freshness contract
 
