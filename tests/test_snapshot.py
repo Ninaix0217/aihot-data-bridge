@@ -13,6 +13,7 @@ from aihot_bridge.snapshot import (
     SnapshotRejected,
     export_snapshot,
     load_snapshot,
+    main,
     write_snapshot,
 )
 from aihot_bridge.upstream import UpstreamClient
@@ -155,6 +156,24 @@ async def test_complete_major_failure_creates_no_new_snapshot(tmp_path: Path):
 
     assert service.calls == 1
     assert not output.exists()
+
+
+def test_cli_returns_nonzero_for_complete_major_failure(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+):
+    failed = snapshot_payload(
+        selected_status="failed",
+        selected_items=0,
+        all_status="failed",
+        all_items=0,
+        paper_status="failed",
+        paper_items=0,
+    )
+    snapshot = tmp_path / "failed.json"
+    snapshot.write_text(json.dumps(failed), encoding="utf-8")
+    monkeypatch.setattr("sys.argv", ["aihot-snapshot", "--check", str(snapshot)])
+
+    assert main() == 1
 
 
 @pytest.mark.asyncio
