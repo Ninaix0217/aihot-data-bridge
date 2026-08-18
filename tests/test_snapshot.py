@@ -14,6 +14,7 @@ from aihot_bridge.snapshot import (
     export_snapshot,
     load_snapshot,
     main,
+    report_candidate_path,
     write_snapshot,
 )
 from aihot_bridge.upstream import UpstreamClient
@@ -103,6 +104,30 @@ async def test_exporter_calls_existing_service_and_writes_snapshot(tmp_path: Pat
     assert result == service.payload
     assert load_snapshot(output) == service.payload
     assert json.loads(output.read_text(encoding="utf-8"))["schema_version"] == "aihot-bridge/v1"
+    daily = tmp_path / "dist" / "report-candidate" / "2026-08-17.json"
+    assert load_snapshot(daily) == service.payload
+    assert output.read_bytes() == daily.read_bytes()
+    assert {
+        path.relative_to(tmp_path / "dist").as_posix()
+        for path in (tmp_path / "dist").rglob("*.json")
+    } == {"today.json", "report-candidate/2026-08-17.json"}
+
+
+@pytest.mark.parametrize(
+    "generated_at",
+    (
+        "2026-08-17T16:30:00Z",
+        "2026-08-18T00:30:00+08:00",
+    ),
+)
+def test_report_candidate_path_uses_beijing_date_boundary(
+    tmp_path: Path, generated_at: str
+):
+    output = tmp_path / "dist" / "today.json"
+
+    assert report_candidate_path(output, generated_at) == (
+        tmp_path / "dist" / "report-candidate" / "2026-08-18.json"
+    )
 
 
 def test_partial_coverage_is_publishable(tmp_path: Path):
@@ -157,6 +182,7 @@ async def test_complete_major_failure_creates_no_new_snapshot(tmp_path: Path):
 
     assert service.calls == 1
     assert not output.exists()
+    assert not (tmp_path / "dist" / "report-candidate").exists()
 
 
 def test_cli_returns_nonzero_for_complete_major_failure(

@@ -89,7 +89,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pytest -q
 ```
 
-测试覆盖：五个 API 全成功、paper RSS fallback、API 与 RSS 同时失败仍返回 200、分页、stable ID 与 URL 去重、发布时间/采集时间隔离、429 `Retry-After`、5xx 恢复、最大页数标记 `partial`、health endpoint，以及固定日报窗口的正常/延迟/边界/缺失时间/UTC-CST 合同。
+测试覆盖：五个 API 全成功、paper RSS fallback、API 与 RSS 同时失败仍返回 200、分页、stable ID 与 URL 去重、发布时间/采集时间隔离、429 `Retry-After`、5xx 恢复、最大页数标记 `partial`、health endpoint、固定日报窗口合同，以及北京时间 dated candidate 路径和双 artifact 字节一致性。
 
 ## 保留的动态部署资产
 
@@ -99,7 +99,7 @@ python -m venv .venv
 
 ## Static Snapshot Deployment
 
-GitHub Actions 定时调用与 FastAPI 相同的 `BridgeService.today()` 核心，将 rolling 30h candidate 结果原子写入 `dist/today.json`，再通过 GitHub Pages 发布。Pages 只是 transport layer；分页、fallback、coverage、时间映射和去重仍全部来自现有 Python 核心。
+GitHub Actions 定时调用与 FastAPI 相同的 `BridgeService.today()` 核心，只生成一次 rolling 30h candidate。相同 JSON bytes 会原子写入 `dist/today.json`，以及按 snapshot `generated_at` 转换到 `Asia/Shanghai` 后得到的 `dist/report-candidate/YYYY-MM-DD.json`，再通过 GitHub Pages 一起发布。Pages 只是 transport layer；分页、fallback、coverage、时间映射和去重仍全部来自现有 Python 核心。
 
 本地生成和验证：
 
@@ -115,27 +115,34 @@ GitHub Actions 定时调用与 FastAPI 相同的 `BridgeService.today()` 核心�
 - 同类任务并发时取消旧任务；
 - 15 分钟内未完成 snapshot build 则失败；
 - Pages deployment 遇到瞬时失败时只重试一次；
-- deploy 后回读固定公网 URL，确认公开 `generated_at` 已达到本次候选；
+- deploy 后同时回读 canonical 和当天 dated candidate URL，要求 schema 有效、`generated_at` 均达到本次候选且两者 byte-identical；
 - 只使用 GitHub 官方 Pages artifact 和 OIDC actions。
 
 `.github/workflows/snapshot-health.yml` 在每小时第 13、43 分钟只读取公开 `today.json`，不抓取 AIHOT；快照超过 90 分钟、HTTP 失败或 `generated_at` 无效时 workflow 失败。两个 schedule 都是 GitHub best-effort 调度，并非准点执行保证。
 
 部分上游失败仍会发布，并在 `coverage` 中明确保留 `fallback`、`partial` 或 `failed`。如果 `selected/all/paper` 全部没有可信条目，exporter 会失败且不替换上一次成功 Pages 部署，避免用新的 `generated_at` 发布一个误导性的空快照。
 
-部署后的固定地址：
+部署后的 canonical 地址：
 
 ```text
 https://ninaix0217.github.io/aihot-data-bridge/today.json
 ```
 
-该固定 URL 已于 2026-08-18 再次通过 `workflow_dispatch` 真实部署及部署后回读验证：HTTPS 返回 200，JSON 可解析，且公开 `generated_at` 与本次 artifact 一致。
+日报下游应使用按北京时间日期变化的地址：
+
+```text
+https://ninaix0217.github.io/aihot-data-bridge/report-candidate/YYYY-MM-DD.json
+```
+
+例如北京时间 2026-08-18 使用 `/report-candidate/2026-08-18.json`。文件名表示 **intended consumer/report date**，不表示 contained publication date；文件内容仍是与当次 `today.json` 完全相同的 rolling 30h candidate。Scheduled Task 仍必须用可信 `published_at` 严格筛选 `[previous day 12:00 CST, current day 12:00 CST)`。
 
 ### Pages cache contract
 
 - canonical URL 是上面的固定地址；2026-08-18 实测响应为 `Cache-Control: max-age=600`。
-- 实测不同 `?cb=<unique>` 请求返回相同 `ETag`、`X-GitHub-Request-Id` 和连续的 CDN `Age`，说明当前 GitHub Pages/Fastly 路径没有把该 query 当成独立 cache key。它可以作为独立 GET 的唯一标识，但**不能当作已验证有效的 cache bypass**。
+- `?cb=<unique>` **不是可靠 cache bypass**。实测 query URL 与 canonical 返回相同 `ETag`、`X-GitHub-Request-Id` 和连续 CDN `Age`，且 query URL 可直接 `X-Cache: HIT`；下游不得依赖它规避缓存。
+- dated path 每天改变 consumer URL，因此降低跨日复用同一 `/today.json` stale response 的风险；它仍经过 CDN，不能保证完全绕过缓存，freshness 必须继续由 `generated_at` 验证。
 - deploy 后 runner 回读能证明该 runner 所到达的 CDN 路径已经看到至少本次 `generated_at`；它不能证明每个地区、每个客户端的缓存同时更新。
-- 下游必须继续校验 `generated_at`；发现 stale 时再次 GET 有助于跨过短暂缓存/部署传播，但 query 参数本身不构成新鲜度证明。
+- 下游必须继续校验 `generated_at`；发现 stale 时再次 GET 有助于跨过短暂缓存/部署传播，但 URL 形式本身不构成新鲜度证明。
 
 ### Freshness contract
 
@@ -156,6 +163,8 @@ freshness 与固定窗口 completeness 是两个独立维度：90 分钟阈值�
 - RSS feed 的条数可能受官方 feed 上限约束；coverage 会标记为 `fallback`，不会伪装成 API 完整成功。
 - 30h 是有限安全余量：12:23 生成时比固定窗口开头多 5 小时 37 分，13:10 生成时仍多 4 小时 50 分；它不能补救一个生成时间早于 report end 的旧 snapshot，也不能保证捕获在 Scheduled Task 读取之后才被 AIHOT 收录的 late arrival。
 - `publishedAt → discoveredAt` 的真实样本存在明显长尾；因此 12:30 等待并不构成“不会漏收”的保证，本项目本轮不实现 late-arrival reconciliation。
+- 日报执行越晚，捕获临近 12:00 发布但延迟收录项目的概率越高，但任何有限等待时间都不能保证捕获所有 late arrival。
+- dated candidate 是当前 consumer date 的路径，不是历史 snapshot archive；Pages artifact 不承诺永久保留此前日期文件。
 - 去重仅使用 ID、URL/canonical URL、标题 + 来源 + 发布时间，不做事件级语义合并。
 - GitHub scheduled workflows 可能延迟或在高负载时丢弃；公开仓库连续 60 天无活动时，schedule 会被 GitHub 自动停用。
 - 除 GitHub Actions 定时生成和 Pages 静态发布外，不包含认证、数据库、额外调度服务、Gmail 或 AI 功能。

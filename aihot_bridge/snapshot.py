@@ -9,6 +9,7 @@ import tempfile
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Protocol
+from zoneinfo import ZoneInfo
 
 import httpx
 
@@ -22,6 +23,7 @@ logger = logging.getLogger(__name__)
 REQUIRED_CHANNELS = ("selected", "all", "paper", "hot_topics", "daily")
 MAJOR_CHANNELS = ("selected", "all", "paper")
 TRUSTED_STATUSES = {"ok", "fallback", "partial"}
+BEIJING_TIMEZONE = ZoneInfo("Asia/Shanghai")
 
 
 class SnapshotRejected(RuntimeError):
@@ -36,28 +38,44 @@ async def export_snapshot(
     service: TodayService, output_path: Path
 ) -> dict[str, Any]:
     payload = await service.today()
-    write_snapshot(payload, output_path)
+    content = _validated_snapshot_bytes(payload)
+    _write_bytes_atomically(content, output_path)
+    _write_bytes_atomically(
+        content,
+        report_candidate_path(output_path, payload["generated_at"]),
+    )
     return payload
 
 
 def write_snapshot(payload: dict[str, Any], output_path: Path) -> None:
+    _write_bytes_atomically(_validated_snapshot_bytes(payload), output_path)
+
+
+def report_candidate_path(output_path: Path, generated_at: str) -> Path:
+    parsed = _parse_generated_at(generated_at)
+    report_date = parsed.astimezone(BEIJING_TIMEZONE).date().isoformat()
+    return output_path.parent / "report-candidate" / f"{report_date}.json"
+
+
+def _validated_snapshot_bytes(payload: dict[str, Any]) -> bytes:
     validate_snapshot(payload)
     ensure_trustworthy_snapshot(payload)
+    return (json.dumps(payload, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
 
+
+def _write_bytes_atomically(content: bytes, output_path: Path) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     temporary_path: Path | None = None
     try:
         with tempfile.NamedTemporaryFile(
-            mode="w",
-            encoding="utf-8",
+            mode="wb",
             dir=output_path.parent,
             prefix=f".{output_path.name}.",
             suffix=".tmp",
             delete=False,
         ) as handle:
             temporary_path = Path(handle.name)
-            json.dump(payload, handle, ensure_ascii=False, indent=2)
-            handle.write("\n")
+            handle.write(content)
             handle.flush()
             os.fsync(handle.fileno())
         os.replace(temporary_path, output_path)
@@ -101,17 +119,7 @@ def validate_snapshot(payload: dict[str, Any]) -> None:
     if not isinstance(payload["items"], list):
         raise SnapshotRejected("items must be an array")
 
-    generated_at = payload["generated_at"]
-    if not isinstance(generated_at, str):
-        raise SnapshotRejected("generated_at must be an ISO 8601 string")
-    try:
-        parsed_generated_at = datetime.fromisoformat(
-            generated_at.replace("Z", "+00:00")
-        )
-    except ValueError as exc:
-        raise SnapshotRejected("generated_at must be valid ISO 8601") from exc
-    if parsed_generated_at.tzinfo is None:
-        raise SnapshotRejected("generated_at must include a timezone")
+    _parse_generated_at(payload["generated_at"])
 
     coverage = payload["coverage"]
     for channel in REQUIRED_CHANNELS:
@@ -129,6 +137,20 @@ def validate_snapshot(payload: dict[str, Any]) -> None:
     for field in ("raw_items", "deduplicated_items"):
         if not isinstance(summary.get(field), int) or summary[field] < 0:
             raise SnapshotRejected(f"summary.{field} must be a non-negative integer")
+
+
+def _parse_generated_at(value: Any) -> datetime:
+    if not isinstance(value, str):
+        raise SnapshotRejected("generated_at must be an ISO 8601 string")
+    try:
+        parsed_generated_at = datetime.fromisoformat(
+            value.replace("Z", "+00:00")
+        )
+    except ValueError as exc:
+        raise SnapshotRejected("generated_at must be valid ISO 8601") from exc
+    if parsed_generated_at.tzinfo is None:
+        raise SnapshotRejected("generated_at must include a timezone")
+    return parsed_generated_at
 
 
 def ensure_trustworthy_snapshot(payload: dict[str, Any]) -> None:

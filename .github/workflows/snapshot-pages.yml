@@ -15,6 +15,7 @@ jobs:
     timeout-minutes: 15
     outputs:
       generated_at: ${{ steps.snapshot_metadata.outputs.generated_at }}
+      report_date: ${{ steps.snapshot_metadata.outputs.report_date }}
     permissions:
       contents: read
       pages: read
@@ -38,26 +39,51 @@ jobs:
       - name: Validate snapshot artifact
         run: python -m aihot_bridge.snapshot --check dist/today.json
 
-      - name: Record snapshot metadata
+      - name: Validate and record snapshot metadata
         id: snapshot_metadata
         shell: bash
         run: |
           python - <<'PY'
+          import hashlib
           import json
           import os
           from pathlib import Path
 
-          payload = json.loads(Path("dist/today.json").read_text(encoding="utf-8"))
+          from aihot_bridge.snapshot import load_snapshot
+
+          today_path = Path("dist/today.json")
+          daily_paths = sorted(Path("dist/report-candidate").glob("*.json"))
+          if len(daily_paths) != 1:
+              raise SystemExit(
+                  f"expected exactly one daily candidate artifact, found {len(daily_paths)}"
+              )
+          daily_path = daily_paths[0]
+          today_content = today_path.read_bytes()
+          daily_content = daily_path.read_bytes()
+          if today_content != daily_content:
+              raise SystemExit("today and daily candidate artifacts differ")
+
+          payload = load_snapshot(today_path)
+          daily_payload = load_snapshot(daily_path)
+          if payload["generated_at"] != daily_payload["generated_at"]:
+              raise SystemExit("today and daily candidate generated_at differ")
+
           coverage = payload["coverage"]
           summary = payload["summary"]
+          content_sha256 = hashlib.sha256(today_content).hexdigest()
+          report_date = daily_path.stem
 
           with Path(os.environ["GITHUB_OUTPUT"]).open("a", encoding="utf-8") as output:
               output.write(f"generated_at={payload['generated_at']}\n")
+              output.write(f"report_date={report_date}\n")
 
           lines = [
               "## Snapshot build",
               "",
               f"- generated_at: `{payload['generated_at']}`",
+              f"- daily_candidate: `report-candidate/{report_date}.json`",
+              f"- artifact_sha256: `{content_sha256}`",
+              "- today/daily byte-identical: `true`",
               f"- candidate_window: `[{payload['window']['from']}, {payload['window']['to']})`",
               f"- candidate_window_hours: `{payload['window']['hours']}`",
               f"- raw_items: `{summary['raw_items']}`",
@@ -158,10 +184,15 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Verify deployed public snapshot
+      - name: Install runtime dependencies
+        run: python -m pip install .
+
+      - name: Verify canonical and daily candidate snapshots
         run: >-
           python -m aihot_bridge.freshness
           https://ninaix0217.github.io/aihot-data-bridge/today.json
+          --matching-url
+          https://ninaix0217.github.io/aihot-data-bridge/report-candidate/${{ needs.build.outputs.report_date }}.json
           --max-age-minutes 90
           --expected-generated-at "${{ needs.build.outputs.generated_at }}"
           --attempts 12

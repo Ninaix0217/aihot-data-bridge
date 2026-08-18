@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import sys
@@ -11,7 +12,6 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Callable
-
 
 DEFAULT_SNAPSHOT_URL = (
     "https://ninaix0217.github.io/aihot-data-bridge/today.json"
@@ -28,6 +28,19 @@ class FreshnessResult:
     payload: dict[str, Any]
     generated_at: datetime
     age_seconds: float
+
+
+@dataclass(frozen=True)
+class SnapshotDocument:
+    payload: dict[str, Any]
+    content: bytes
+
+
+@dataclass(frozen=True)
+class MatchingSnapshotResult:
+    canonical: FreshnessResult
+    dated: FreshnessResult
+    sha256: str
 
 
 def _parse_timestamp(value: Any, field: str) -> datetime:
@@ -82,12 +95,12 @@ def evaluate_snapshot(
     )
 
 
-def fetch_snapshot(
+def fetch_snapshot_document(
     url: str,
     *,
     timeout_seconds: float = 20,
     opener: Callable[..., Any] | None = None,
-) -> dict[str, Any]:
+) -> SnapshotDocument:
     request = urllib.request.Request(
         url,
         headers={
@@ -104,17 +117,32 @@ def fetch_snapshot(
                 raise FreshnessCheckError(
                     f"public snapshot returned HTTP {status}"
                 )
-            payload = json.load(response)
+            content = response.read()
     except FreshnessCheckError:
         raise
     except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError) as exc:
         raise FreshnessCheckError(f"public snapshot request failed: {exc}") from exc
+    try:
+        payload = json.loads(content.decode("utf-8"))
     except (json.JSONDecodeError, UnicodeDecodeError) as exc:
         raise FreshnessCheckError(f"public snapshot is not valid JSON: {exc}") from exc
 
     if not isinstance(payload, dict):
         raise FreshnessCheckError("snapshot JSON root must be an object")
-    return payload
+    return SnapshotDocument(payload=payload, content=content)
+
+
+def fetch_snapshot(
+    url: str,
+    *,
+    timeout_seconds: float = 20,
+    opener: Callable[..., Any] | None = None,
+) -> dict[str, Any]:
+    return fetch_snapshot_document(
+        url,
+        timeout_seconds=timeout_seconds,
+        opener=opener,
+    ).payload
 
 
 def check_public_snapshot(
@@ -145,6 +173,90 @@ def check_public_snapshot(
             last_error = exc
             print(
                 f"freshness attempt {attempt}/{attempts} failed: {exc}",
+                file=sys.stderr,
+            )
+            if attempt < attempts:
+                time.sleep(interval_seconds)
+
+    assert last_error is not None
+    raise last_error
+
+
+def check_matching_public_snapshots(
+    canonical_url: str,
+    dated_url: str,
+    *,
+    max_age: timedelta,
+    expected_generated_at: str,
+    attempts: int = 1,
+    interval_seconds: float = 5,
+    timeout_seconds: float = 20,
+    now_factory: Callable[[], datetime] | None = None,
+) -> MatchingSnapshotResult:
+    if attempts < 1:
+        raise ValueError("attempts must be at least one")
+    current_time = now_factory or (lambda: datetime.now(timezone.utc))
+    last_error: FreshnessCheckError | None = None
+
+    for attempt in range(1, attempts + 1):
+        try:
+            canonical_document = fetch_snapshot_document(
+                canonical_url, timeout_seconds=timeout_seconds
+            )
+            dated_document = fetch_snapshot_document(
+                dated_url, timeout_seconds=timeout_seconds
+            )
+            canonical = evaluate_snapshot(
+                canonical_document.payload,
+                now=current_time(),
+                max_age=max_age,
+                expected_generated_at=expected_generated_at,
+            )
+            dated = evaluate_snapshot(
+                dated_document.payload,
+                now=current_time(),
+                max_age=max_age,
+                expected_generated_at=expected_generated_at,
+            )
+
+            from .snapshot import (
+                SnapshotRejected,
+                ensure_trustworthy_snapshot,
+                validate_snapshot,
+            )
+
+            try:
+                validate_snapshot(canonical.payload)
+                ensure_trustworthy_snapshot(canonical.payload)
+                validate_snapshot(dated.payload)
+                ensure_trustworthy_snapshot(dated.payload)
+            except SnapshotRejected as exc:
+                raise FreshnessCheckError(
+                    f"public snapshot schema validation failed: {exc}"
+                ) from exc
+
+            if canonical.generated_at != dated.generated_at:
+                raise FreshnessCheckError(
+                    "public snapshots have different generated_at values"
+                )
+            if canonical_document.content != dated_document.content:
+                raise FreshnessCheckError(
+                    "public snapshots are not byte-identical"
+                )
+
+            return MatchingSnapshotResult(
+                canonical=canonical,
+                dated=dated,
+                sha256=hashlib.sha256(canonical_document.content).hexdigest(),
+            )
+        except (FreshnessCheckError, ValueError) as exc:
+            last_error = (
+                exc
+                if isinstance(exc, FreshnessCheckError)
+                else FreshnessCheckError(str(exc))
+            )
+            print(
+                f"matching snapshot attempt {attempt}/{attempts} failed: {last_error}",
                 file=sys.stderr,
             )
             if attempt < attempts:
@@ -221,6 +333,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("url", nargs="?", default=DEFAULT_SNAPSHOT_URL)
     parser.add_argument("--max-age-minutes", type=float, default=90)
     parser.add_argument("--expected-generated-at")
+    parser.add_argument("--matching-url")
     parser.add_argument("--attempts", type=int, default=1)
     parser.add_argument("--interval-seconds", type=float, default=5)
     parser.add_argument("--timeout-seconds", type=float, default=20)
@@ -230,6 +343,34 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     try:
+        if args.matching_url:
+            if not args.expected_generated_at:
+                raise ValueError(
+                    "--matching-url requires --expected-generated-at"
+                )
+            matching = check_matching_public_snapshots(
+                args.url,
+                args.matching_url,
+                max_age=timedelta(minutes=args.max_age_minutes),
+                expected_generated_at=args.expected_generated_at,
+                attempts=args.attempts,
+                interval_seconds=args.interval_seconds,
+                timeout_seconds=args.timeout_seconds,
+            )
+            _write_github_summary(url=args.url, result=matching.canonical)
+            print(
+                json.dumps(
+                    {
+                        **_result_as_dict(matching.canonical),
+                        "matching_url": args.matching_url,
+                        "byte_identical": True,
+                        "sha256": matching.sha256,
+                    },
+                    ensure_ascii=False,
+                )
+            )
+            return 0
+
         result = check_public_snapshot(
             args.url,
             max_age=timedelta(minutes=args.max_age_minutes),
