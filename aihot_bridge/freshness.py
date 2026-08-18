@@ -34,13 +34,40 @@ class FreshnessResult:
 class SnapshotDocument:
     payload: dict[str, Any]
     content: bytes
+    http_status: int = 200
+
+
+@dataclass(frozen=True)
+class PublicSnapshotObservation:
+    url: str
+    result: str
+    http_status: int | None
+    generated_at: str | None
+    sha256: str | None
+    freshness: FreshnessResult | None
+    error: str | None
 
 
 @dataclass(frozen=True)
 class MatchingSnapshotResult:
-    canonical: FreshnessResult
-    dated: FreshnessResult
-    sha256: str
+    canonical: FreshnessResult | None
+    dated: FreshnessResult | None
+    canonical_observation: PublicSnapshotObservation
+    dated_observation: PublicSnapshotObservation
+    expected_generated_at: str
+    expected_sha256: str
+    sha256: str | None
+    attempts_used: int
+    elapsed_seconds: float
+    state: str
+
+
+class PublicVerificationError(FreshnessCheckError):
+    """The dated production path did not expose the deployment artifact."""
+
+    def __init__(self, message: str, result: MatchingSnapshotResult):
+        super().__init__(message)
+        self.result = result
 
 
 def _parse_timestamp(value: Any, field: str) -> datetime:
@@ -188,6 +215,7 @@ def check_matching_public_snapshots(
     *,
     max_age: timedelta,
     expected_generated_at: str,
+    expected_sha256: str,
     attempts: int = 1,
     interval_seconds: float = 5,
     timeout_seconds: float = 20,
@@ -195,75 +223,251 @@ def check_matching_public_snapshots(
 ) -> MatchingSnapshotResult:
     if attempts < 1:
         raise ValueError("attempts must be at least one")
+    if interval_seconds < 0:
+        raise ValueError("interval_seconds cannot be negative")
+    normalized_expected_sha256 = expected_sha256.strip().lower()
+    if (
+        len(normalized_expected_sha256) != 64
+        or any(
+            character not in "0123456789abcdef"
+            for character in normalized_expected_sha256
+        )
+    ):
+        raise ValueError("expected_sha256 must be a 64-character hex digest")
+
     current_time = now_factory or (lambda: datetime.now(timezone.utc))
-    last_error: FreshnessCheckError | None = None
+    started_at = time.monotonic()
+    canonical_observation: PublicSnapshotObservation | None = None
+    dated_observation: PublicSnapshotObservation | None = None
 
     for attempt in range(1, attempts + 1):
-        try:
-            canonical_document = fetch_snapshot_document(
-                canonical_url, timeout_seconds=timeout_seconds
-            )
-            dated_document = fetch_snapshot_document(
-                dated_url, timeout_seconds=timeout_seconds
-            )
-            canonical = evaluate_snapshot(
-                canonical_document.payload,
-                now=current_time(),
-                max_age=max_age,
+        attempt_started_at = time.monotonic()
+
+        # Observe both paths independently. A canonical failure must never
+        # prevent the dated production consumer path from being evaluated.
+        canonical_observation = _observe_deployment_snapshot(
+            canonical_url,
+            role="canonical",
+            now=current_time(),
+            max_age=max_age,
+            expected_generated_at=expected_generated_at,
+            expected_sha256=normalized_expected_sha256,
+            timeout_seconds=timeout_seconds,
+        )
+        dated_observation = _observe_deployment_snapshot(
+            dated_url,
+            role="dated",
+            now=current_time(),
+            max_age=max_age,
+            expected_generated_at=expected_generated_at,
+            expected_sha256=normalized_expected_sha256,
+            timeout_seconds=timeout_seconds,
+        )
+        _log_deployment_attempt(
+            attempt=attempt,
+            attempts=attempts,
+            expected_generated_at=expected_generated_at,
+            canonical=canonical_observation,
+            dated=dated_observation,
+        )
+
+        if dated_observation.result == "DATED_VERIFIED":
+            state = _success_state_for_canonical(canonical_observation)
+            return _matching_result(
+                canonical=canonical_observation,
+                dated=dated_observation,
                 expected_generated_at=expected_generated_at,
-            )
-            dated = evaluate_snapshot(
-                dated_document.payload,
-                now=current_time(),
-                max_age=max_age,
-                expected_generated_at=expected_generated_at,
+                expected_sha256=normalized_expected_sha256,
+                attempts_used=attempt,
+                elapsed_seconds=time.monotonic() - started_at,
+                state=state,
             )
 
-            from .snapshot import (
-                SnapshotRejected,
-                ensure_trustworthy_snapshot,
-                validate_snapshot,
-            )
+        if attempt < attempts:
+            # Keep attempt starts approximately interval_seconds apart. This
+            # makes the workflow timeout calculable even when requests stall.
+            attempt_elapsed = time.monotonic() - attempt_started_at
+            time.sleep(max(0.0, interval_seconds - attempt_elapsed))
 
-            try:
-                validate_snapshot(canonical.payload)
-                ensure_trustworthy_snapshot(canonical.payload)
-                validate_snapshot(dated.payload)
-                ensure_trustworthy_snapshot(dated.payload)
-            except SnapshotRejected as exc:
-                raise FreshnessCheckError(
-                    f"public snapshot schema validation failed: {exc}"
-                ) from exc
+    assert canonical_observation is not None
+    assert dated_observation is not None
+    failure_state = _failure_state_for_dated(dated_observation)
+    result = _matching_result(
+        canonical=canonical_observation,
+        dated=dated_observation,
+        expected_generated_at=expected_generated_at,
+        expected_sha256=normalized_expected_sha256,
+        attempts_used=attempts,
+        elapsed_seconds=time.monotonic() - started_at,
+        state=failure_state,
+    )
+    raise PublicVerificationError(
+        f"{failure_state}: {dated_observation.error or dated_observation.result}",
+        result,
+    )
 
-            if canonical.generated_at != dated.generated_at:
-                raise FreshnessCheckError(
-                    "public snapshots have different generated_at values"
-                )
-            if canonical_document.content != dated_document.content:
-                raise FreshnessCheckError(
-                    "public snapshots are not byte-identical"
-                )
 
-            return MatchingSnapshotResult(
-                canonical=canonical,
-                dated=dated,
-                sha256=hashlib.sha256(canonical_document.content).hexdigest(),
-            )
-        except (FreshnessCheckError, ValueError) as exc:
-            last_error = (
-                exc
-                if isinstance(exc, FreshnessCheckError)
-                else FreshnessCheckError(str(exc))
-            )
-            print(
-                f"matching snapshot attempt {attempt}/{attempts} failed: {last_error}",
-                file=sys.stderr,
-            )
-            if attempt < attempts:
-                time.sleep(interval_seconds)
+def _observe_deployment_snapshot(
+    url: str,
+    *,
+    role: str,
+    now: datetime,
+    max_age: timedelta,
+    expected_generated_at: str,
+    expected_sha256: str,
+    timeout_seconds: float,
+) -> PublicSnapshotObservation:
+    try:
+        document = fetch_snapshot_document(url, timeout_seconds=timeout_seconds)
+    except (FreshnessCheckError, ValueError) as exc:
+        return PublicSnapshotObservation(
+            url=url,
+            result="PUBLIC_READ_ERROR",
+            http_status=None,
+            generated_at=None,
+            sha256=None,
+            freshness=None,
+            error=str(exc),
+        )
 
-    assert last_error is not None
-    raise last_error
+    content_sha256 = hashlib.sha256(document.content).hexdigest()
+    generated_at = document.payload.get("generated_at")
+    observed_generated_at = generated_at if isinstance(generated_at, str) else None
+
+    from .snapshot import (
+        SnapshotRejected,
+        ensure_trustworthy_snapshot,
+        validate_snapshot,
+    )
+
+    try:
+        validate_snapshot(document.payload)
+        ensure_trustworthy_snapshot(document.payload)
+    except (SnapshotRejected, ValueError) as exc:
+        return PublicSnapshotObservation(
+            url=url,
+            result="PUBLIC_READ_ERROR",
+            http_status=document.http_status,
+            generated_at=observed_generated_at,
+            sha256=content_sha256,
+            freshness=None,
+            error=f"snapshot schema/trust validation failed: {exc}",
+        )
+
+    try:
+        freshness = evaluate_snapshot(
+            document.payload,
+            now=now,
+            max_age=max_age,
+            expected_generated_at=expected_generated_at,
+        )
+    except FreshnessCheckError as exc:
+        message = str(exc)
+        result = (
+            "PROPAGATION_LAG"
+            if "has not reached the deployment candidate" in message
+            else "PUBLIC_READ_ERROR"
+        )
+        return PublicSnapshotObservation(
+            url=url,
+            result=result,
+            http_status=document.http_status,
+            generated_at=observed_generated_at,
+            sha256=content_sha256,
+            freshness=None,
+            error=message,
+        )
+
+    if content_sha256 != expected_sha256:
+        result = "ARTIFACT_MISMATCH" if role == "dated" else "PARITY_MISMATCH"
+        return PublicSnapshotObservation(
+            url=url,
+            result=result,
+            http_status=document.http_status,
+            generated_at=observed_generated_at,
+            sha256=content_sha256,
+            freshness=freshness,
+            error=(
+                "public content SHA-256 does not match the deployment artifact: "
+                f"public={content_sha256} expected={expected_sha256}"
+            ),
+        )
+
+    return PublicSnapshotObservation(
+        url=url,
+        result="DATED_VERIFIED" if role == "dated" else "VERIFIED",
+        http_status=document.http_status,
+        generated_at=observed_generated_at,
+        sha256=content_sha256,
+        freshness=freshness,
+        error=None,
+    )
+
+
+def _log_deployment_attempt(
+    *,
+    attempt: int,
+    attempts: int,
+    expected_generated_at: str,
+    canonical: PublicSnapshotObservation,
+    dated: PublicSnapshotObservation,
+) -> None:
+    print(
+        f"public verification attempt {attempt}/{attempts}: "
+        f"expected_generated_at={expected_generated_at}",
+        file=sys.stderr,
+    )
+    for label, observation in (("canonical", canonical), ("dated", dated)):
+        details = (
+            f"{label}: result={observation.result} "
+            f"http={observation.http_status or 'unavailable'} "
+            f"generated_at={observation.generated_at or 'unavailable'}"
+        )
+        if observation.error:
+            details += f" error={observation.error}"
+        print(details, file=sys.stderr)
+
+
+def _success_state_for_canonical(observation: PublicSnapshotObservation) -> str:
+    if observation.result == "VERIFIED":
+        return "PUBLIC_PARITY_CONFIRMED"
+    if observation.result == "PROPAGATION_LAG":
+        return "CANONICAL_PROPAGATION_LAG"
+    if observation.result == "PUBLIC_READ_ERROR":
+        return "CANONICAL_PUBLIC_READ_ERROR"
+    return "CANONICAL_PARITY_MISMATCH"
+
+
+def _failure_state_for_dated(observation: PublicSnapshotObservation) -> str:
+    if observation.result == "PROPAGATION_LAG":
+        return "DATED_PROPAGATION_TIMEOUT"
+    if observation.result == "ARTIFACT_MISMATCH":
+        return "DATED_ARTIFACT_MISMATCH"
+    return "DATED_PUBLIC_READ_ERROR"
+
+
+def _matching_result(
+    *,
+    canonical: PublicSnapshotObservation,
+    dated: PublicSnapshotObservation,
+    expected_generated_at: str,
+    expected_sha256: str,
+    attempts_used: int,
+    elapsed_seconds: float,
+    state: str,
+) -> MatchingSnapshotResult:
+    return MatchingSnapshotResult(
+        canonical=canonical.freshness,
+        dated=dated.freshness,
+        canonical_observation=canonical,
+        dated_observation=dated,
+        expected_generated_at=expected_generated_at,
+        expected_sha256=expected_sha256,
+        sha256=dated.sha256,
+        attempts_used=attempts_used,
+        elapsed_seconds=elapsed_seconds,
+        state=state,
+    )
 
 
 def _result_as_dict(result: FreshnessResult) -> dict[str, Any]:
@@ -326,6 +530,80 @@ def _write_github_summary(
         handle.write("\n".join(lines) + "\n")
 
 
+def _observation_as_dict(
+    observation: PublicSnapshotObservation,
+) -> dict[str, Any]:
+    return {
+        "url": observation.url,
+        "result": observation.result,
+        "http_status": observation.http_status,
+        "generated_at": observation.generated_at,
+        "sha256": observation.sha256,
+        "error": observation.error,
+    }
+
+
+def _matching_result_as_dict(result: MatchingSnapshotResult) -> dict[str, Any]:
+    return {
+        "status": (
+            "success"
+            if result.dated_observation.result == "DATED_VERIFIED"
+            else "failure"
+        ),
+        "final_verification_state": result.state,
+        "expected_generated_at": result.expected_generated_at,
+        "expected_sha256": result.expected_sha256,
+        "attempts_used": result.attempts_used,
+        "elapsed_seconds": round(result.elapsed_seconds, 1),
+        "dated": _observation_as_dict(result.dated_observation),
+        "canonical": _observation_as_dict(result.canonical_observation),
+    }
+
+
+def _write_matching_github_summary(result: MatchingSnapshotResult) -> None:
+    summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if not summary_path:
+        return
+
+    success = result.dated_observation.result == "DATED_VERIFIED"
+    lines = [
+        "## Public deployment verification",
+        "",
+        f"- Expected generated_at: `{result.expected_generated_at}`",
+        f"- Expected artifact SHA-256: `{result.expected_sha256}`",
+        f"- Attempts used: `{result.attempts_used}`",
+        f"- Elapsed wait: `{result.elapsed_seconds:.1f}s`",
+        "",
+        "### Dated consumer (HARD SLO)",
+        "",
+        f"- URL: `{result.dated_observation.url}`",
+        f"- Result: `{result.dated_observation.result}`",
+        f"- HTTP: `{result.dated_observation.http_status or 'unavailable'}`",
+        f"- generated_at: `{result.dated_observation.generated_at or 'unavailable'}`",
+        f"- SHA-256: `{result.dated_observation.sha256 or 'unavailable'}`",
+        "",
+        "### Canonical (SOFT PARITY)",
+        "",
+        f"- URL: `{result.canonical_observation.url}`",
+        f"- Result: `{result.canonical_observation.result}`",
+        f"- HTTP: `{result.canonical_observation.http_status or 'unavailable'}`",
+        "- generated_at: "
+        f"`{result.canonical_observation.generated_at or 'unavailable'}`",
+        f"- SHA-256: `{result.canonical_observation.sha256 or 'unavailable'}`",
+        "",
+        f"### Final verification state: `{result.state}`",
+        "",
+        f"- Workflow verification result: `{'SUCCESS' if success else 'FAILURE'}`",
+    ]
+    if result.dated_observation.error:
+        lines.append(f"- Dated detail: `{result.dated_observation.error}`")
+    if result.canonical_observation.error:
+        lines.append(f"- Canonical detail: `{result.canonical_observation.error}`")
+
+    with Path(summary_path).open("a", encoding="utf-8") as handle:
+        handle.write("\n".join(lines) + "\n")
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Check the freshness of the public AIHOT snapshot"
@@ -333,6 +611,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("url", nargs="?", default=DEFAULT_SNAPSHOT_URL)
     parser.add_argument("--max-age-minutes", type=float, default=90)
     parser.add_argument("--expected-generated-at")
+    parser.add_argument("--expected-sha256")
     parser.add_argument("--matching-url")
     parser.add_argument("--attempts", type=int, default=1)
     parser.add_argument("--interval-seconds", type=float, default=5)
@@ -348,27 +627,20 @@ def main() -> int:
                 raise ValueError(
                     "--matching-url requires --expected-generated-at"
                 )
+            if not args.expected_sha256:
+                raise ValueError("--matching-url requires --expected-sha256")
             matching = check_matching_public_snapshots(
                 args.url,
                 args.matching_url,
                 max_age=timedelta(minutes=args.max_age_minutes),
                 expected_generated_at=args.expected_generated_at,
+                expected_sha256=args.expected_sha256,
                 attempts=args.attempts,
                 interval_seconds=args.interval_seconds,
                 timeout_seconds=args.timeout_seconds,
             )
-            _write_github_summary(url=args.url, result=matching.canonical)
-            print(
-                json.dumps(
-                    {
-                        **_result_as_dict(matching.canonical),
-                        "matching_url": args.matching_url,
-                        "byte_identical": True,
-                        "sha256": matching.sha256,
-                    },
-                    ensure_ascii=False,
-                )
-            )
+            _write_matching_github_summary(matching)
+            print(json.dumps(_matching_result_as_dict(matching), ensure_ascii=False))
             return 0
 
         result = check_public_snapshot(
@@ -379,6 +651,11 @@ def main() -> int:
             interval_seconds=args.interval_seconds,
             timeout_seconds=args.timeout_seconds,
         )
+    except PublicVerificationError as exc:
+        _write_matching_github_summary(exc.result)
+        print(f"public deployment verification failed: {exc}", file=sys.stderr)
+        print(json.dumps(_matching_result_as_dict(exc.result), ensure_ascii=False))
+        return 1
     except (FreshnessCheckError, ValueError) as exc:
         _write_github_summary(url=args.url, error=exc)
         print(f"freshness check failed: {exc}", file=sys.stderr)

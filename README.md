@@ -115,7 +115,9 @@ GitHub Actions 定时调用与 FastAPI 相同的 `BridgeService.today()` 核心�
 - 同类任务并发时取消旧任务；
 - 15 分钟内未完成 snapshot build 则失败；
 - Pages deployment 遇到瞬时失败时只重试一次；
-- deploy 后同时回读 canonical 和当天 dated candidate URL，要求 schema 有效、`generated_at` 均达到本次候选且两者 byte-identical；
+- deploy 后以当天 dated candidate URL 作为生产硬验收：要求 HTTP/JSON/schema/trustworthy/freshness 有效、`generated_at` 达到本次候选，且正文 SHA-256 等于 build artifact；
+- canonical 回读是 soft parity check：同步时报告 `PUBLIC_PARITY_CONFIRMED`；dated 已验证但 canonical 仍旧、读取失败或内容不同只产生明确 warning，不把已可消费的 deployment 误报为失败；
+- post-deploy verify 使用有界传播等待；dated 始终未达到本次 artifact 才会使 workflow 失败，长期 freshness 仍由独立 health workflow 负责；
 - 只使用 GitHub 官方 Pages artifact 和 OIDC actions。
 
 `.github/workflows/snapshot-health.yml` 在每小时第 13、43 分钟只读取公开 `today.json`，不抓取 AIHOT；快照超过 90 分钟、HTTP 失败或 `generated_at` 无效时 workflow 失败。两个 schedule 都是 GitHub best-effort 调度，并非准点执行保证。
@@ -143,6 +145,12 @@ https://ninaix0217.github.io/aihot-data-bridge/report-candidate/YYYY-MM-DD.json
 - dated path 每天改变 consumer URL，因此降低跨日复用同一 `/today.json` stale response 的风险；它仍经过 CDN，不能保证完全绕过缓存，freshness 必须继续由 `generated_at` 验证。
 - deploy 后 runner 回读能证明该 runner 所到达的 CDN 路径已经看到至少本次 `generated_at`；它不能证明每个地区、每个客户端的缓存同时更新。
 - 下游必须继续校验 `generated_at`；发现 stale 时再次 GET 有助于跨过短暂缓存/部署传播，但 URL 形式本身不构成新鲜度证明。
+
+### Documented propagation incident
+
+2026-08-18 的 scheduled run [`32151678101`](https://github.com/Ninaix0217/aihot-data-bridge/actions/runs/32151678101) 中，build 和 Pages deploy 均成功，但旧 verifier 在约 111 秒内连续 12 次从 canonical URL 读取到 `2026-08-18T14:19:43.601390Z`，未达到本次 artifact 的 `2026-08-18T14:59:35.209873Z`，最终把 workflow 标为失败。该事故分类为 `POST_DEPLOY_PUBLIC_PROPAGATION_TIMEOUT`，不是 snapshot generation failure 或 Pages deploy failure。
+
+GitHub Pages 已实测 `Cache-Control: max-age=600`，因此 verify 现在按约 20 秒 attempt cadence、最多 36 次观察 dated 与 canonical 两条路径。dated consumer path 是 hard SLO；canonical 是 soft parity。轮询保持有界，不替代独立 freshness health workflow。
 
 ### Freshness contract
 
