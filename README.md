@@ -154,7 +154,7 @@ freshness 与固定窗口 completeness 是两个独立维度：90 分钟阈值�
 - V0 不做缓存或持久化，每次 `/aihot/today` 请求都会实时读取上游。
 - RSS 只有 feed 自身提供的字段；没有 `discoveredAt` 时，`collected_at` 保持 `null`，不会用 Bridge 抓取时间伪造。
 - RSS feed 的条数可能受官方 feed 上限约束；coverage 会标记为 `fallback`，不会伪装成 API 完整成功。
-- 30h 是有限安全余量：12:23 生成时比固定窗口开头多 6 小时，13:10 生成时仍多 4 小时 50 分；它不能补救一个生成时间早于 report end 的旧 snapshot，也不能保证捕获在 Scheduled Task 读取之后才被 AIHOT 收录的 late arrival。
+- 30h 是有限安全余量：12:23 生成时比固定窗口开头多 5 小时 37 分，13:10 生成时仍多 4 小时 50 分；它不能补救一个生成时间早于 report end 的旧 snapshot，也不能保证捕获在 Scheduled Task 读取之后才被 AIHOT 收录的 late arrival。
 - `publishedAt → discoveredAt` 的真实样本存在明显长尾；因此 12:30 等待并不构成“不会漏收”的保证，本项目本轮不实现 late-arrival reconciliation。
 - 去重仅使用 ID、URL/canonical URL、标题 + 来源 + 发布时间，不做事件级语义合并。
 - GitHub scheduled workflows 可能延迟或在高负载时丢弃；公开仓库连续 60 天无活动时，schedule 会被 GitHub 自动停用。
