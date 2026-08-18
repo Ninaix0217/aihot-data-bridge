@@ -101,11 +101,15 @@ GitHub Actions 定时调用与 FastAPI 相同的 `BridgeService.today()` 核心�
 
 部署 workflow 位于 `.github/workflows/snapshot-pages.yml`：
 
-- 每小时第 17、47 分钟运行，避开整点高峰，理论最大快照年龄约 30 分钟；
+- 每小时第 23、53 分钟运行，避开整点高峰，理论最大快照年龄约 30 分钟；
 - 支持从 GitHub Actions 页面手工执行 `workflow_dispatch`；
 - 同类任务并发时取消旧任务；
 - 15 分钟内未完成 snapshot build 则失败；
+- Pages deployment 遇到瞬时失败时只重试一次；
+- deploy 后回读固定公网 URL，确认公开 `generated_at` 已达到本次候选；
 - 只使用 GitHub 官方 Pages artifact 和 OIDC actions。
+
+`.github/workflows/snapshot-health.yml` 在每小时第 13、43 分钟只读取公开 `today.json`，不抓取 AIHOT；快照超过 90 分钟、HTTP 失败或 `generated_at` 无效时 workflow 失败。两个 schedule 都是 GitHub best-effort 调度，并非准点执行保证。
 
 部分上游失败仍会发布，并在 `coverage` 中明确保留 `fallback`、`partial` 或 `failed`。如果 `selected/all/paper` 全部没有可信条目，exporter 会失败且不替换上一次成功 Pages 部署，避免用新的 `generated_at` 发布一个误导性的空快照。
 
@@ -115,7 +119,7 @@ GitHub Actions 定时调用与 FastAPI 相同的 `BridgeService.today()` 核心�
 https://ninaix0217.github.io/aihot-data-bridge/today.json
 ```
 
-该固定 URL 已于 2026-08-17 通过两轮 `workflow_dispatch` 真实部署验证：HTTPS 返回 200，JSON 可解析，且第二轮公开 `generated_at` 晚于第一轮。
+该固定 URL 已于 2026-08-18 再次通过 `workflow_dispatch` 真实部署及部署后回读验证：HTTPS 返回 200，JSON 可解析，且公开 `generated_at` 与本次 artifact 一致。
 
 ### Freshness contract
 
@@ -133,4 +137,5 @@ https://ninaix0217.github.io/aihot-data-bridge/today.json
 - RSS 只有 feed 自身提供的字段；没有 `discoveredAt` 时，`collected_at` 保持 `null`，不会用 Bridge 抓取时间伪造。
 - RSS feed 的条数可能受官方 feed 上限约束；coverage 会标记为 `fallback`，不会伪装成 API 完整成功。
 - 去重仅使用 ID、URL/canonical URL、标题 + 来源 + 发布时间，不做事件级语义合并。
+- GitHub scheduled workflows 可能延迟或在高负载时丢弃；公开仓库连续 60 天无活动时，schedule 会被 GitHub 自动停用。
 - 除 GitHub Actions 定时生成和 Pages 静态发布外，不包含认证、数据库、额外调度服务、Gmail 或 AI 功能。
