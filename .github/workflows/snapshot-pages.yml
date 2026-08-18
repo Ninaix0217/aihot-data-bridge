@@ -32,7 +32,7 @@ jobs:
       - name: Install runtime dependencies
         run: python -m pip install .
 
-      - name: Build rolling 24-hour snapshot
+      - name: Build rolling candidate snapshot
         run: python -m aihot_bridge.snapshot --output dist/today.json
 
       - name: Validate snapshot artifact
@@ -58,6 +58,8 @@ jobs:
               "## Snapshot build",
               "",
               f"- generated_at: `{payload['generated_at']}`",
+              f"- candidate_window: `[{payload['window']['from']}, {payload['window']['to']})`",
+              f"- candidate_window_hours: `{payload['window']['hours']}`",
               f"- raw_items: `{summary['raw_items']}`",
               f"- deduplicated_items: `{summary['deduplicated_items']}`",
               "",

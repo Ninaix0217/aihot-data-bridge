@@ -71,8 +71,9 @@ def snapshot_payload(
         "schema_version": "aihot-bridge/v1",
         "generated_at": "2026-08-17T00:00:05Z",
         "window": {
-            "type": "rolling_24h",
-            "from": "2026-08-16T00:00:00Z",
+            "type": "rolling_candidate",
+            "hours": 30,
+            "from": "2026-08-15T18:00:00Z",
             "to": "2026-08-17T00:00:00Z",
         },
         "coverage": coverage,

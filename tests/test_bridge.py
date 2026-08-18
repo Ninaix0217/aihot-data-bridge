@@ -20,7 +20,7 @@ def api_item(
     item_id: str,
     *,
     url: str | None = None,
-    published: str = "2026-08-16T12:00:00Z",
+    published: str | None = "2026-08-16T12:00:00Z",
     discovered: str = "2026-08-16T12:05:00Z",
     category: str = "industry",
 ) -> dict:
@@ -152,6 +152,32 @@ async def test_all_five_apis_success_merge_and_deduplicate():
 
 
 @pytest.mark.asyncio
+async def test_item_sources_request_supported_published_candidate_window():
+    requests: list[dict[str, list[str]]] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.url.path == "/api/v1/items":
+            requests.append(query(request))
+        return success_handler(request)
+
+    service, client = make_service(handler)
+    try:
+        result = await service.today()
+    finally:
+        await client.aclose()
+
+    assert result["window"] == {
+        "type": "rolling_candidate",
+        "hours": 30,
+        "from": "2026-08-15T18:00:00Z",
+        "to": "2026-08-17T00:00:00Z",
+    }
+    assert len(requests) == 3
+    assert all(params["window"] == ["7d"] for params in requests)
+    assert all(params["by"] == ["published"] for params in requests)
+
+
+@pytest.mark.asyncio
 async def test_paper_api_failure_uses_rss_fallback():
     def handler(request: httpx.Request) -> httpx.Response:
         if request.url.path == "/api/v1/items" and query(request).get("category") == ["paper"]:
@@ -223,6 +249,70 @@ async def test_pagination_uses_next_cursor_and_merges_pages():
     assert [item["id"] for item in items] == ["page-1", "page-2"]
     assert partial is None
     assert seen_cursors == [None, "next-1"]
+
+
+@pytest.mark.asyncio
+async def test_published_pagination_stops_after_crossing_candidate_cutoff():
+    calls = 0
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        nonlocal calls
+        calls += 1
+        return httpx.Response(
+            200,
+            json=items_payload(
+                [
+                    api_item("inside", published="2026-08-15T19:00:00Z"),
+                    api_item("crossing", published="2026-08-15T17:59:59Z"),
+                ],
+                "older-page",
+            ),
+        )
+
+    service, client = make_service(handler)
+    try:
+        items, partial = await service._paginated_items(
+            {"mode": "all", "window": "7d", "by": "published", "limit": 100},
+            published_cutoff=datetime(2026, 8, 15, 18, 0, tzinfo=timezone.utc),
+        )
+    finally:
+        await client.aclose()
+
+    assert calls == 1
+    assert [item["id"] for item in items] == ["inside", "crossing"]
+    assert partial is None
+
+
+@pytest.mark.asyncio
+async def test_candidate_filter_uses_published_at_and_preserves_unknown():
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(
+            200,
+            json=items_payload(
+                [
+                    api_item("inside", published="2026-08-15T18:00:00Z"),
+                    api_item("before", published="2026-08-15T17:59:59Z"),
+                    api_item("unknown", published=None),
+                ]
+            ),
+        )
+
+    service, client = make_service(handler)
+    try:
+        _, coverage, items = await service._items_channel(
+            "all",
+            {"mode": "all", "window": "7d", "by": "published", "limit": 100},
+            "/feed/all.xml",
+            datetime(2026, 8, 15, 18, 0, tzinfo=timezone.utc),
+            NOW,
+        )
+    finally:
+        await client.aclose()
+
+    assert coverage["status"] == "ok"
+    assert coverage["items"] == 2
+    assert [item["id"] for item in items] == ["inside", "unknown"]
+    assert items[-1]["published_at"] is None
 
 
 def test_deduplicate_by_stable_id_and_original_url():

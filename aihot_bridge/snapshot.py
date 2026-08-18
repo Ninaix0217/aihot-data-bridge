@@ -150,6 +150,11 @@ def ensure_trustworthy_snapshot(payload: dict[str, Any]) -> None:
 
 def log_snapshot_summary(payload: dict[str, Any]) -> None:
     print(f"generated_at: {payload['generated_at']}")
+    window = payload["window"]
+    print(
+        f"candidate_window: [{window.get('from')}, {window.get('to')}) "
+        f"hours={window.get('hours')}"
+    )
     for channel in REQUIRED_CHANNELS:
         entry = payload["coverage"][channel]
         print(

@@ -123,7 +123,7 @@ def parse_rss_items(
     output: list[dict[str, Any]] = []
     for element in root.findall("./channel/item"):
         published = _parse_rss_date(_text(element, "pubDate"))
-        if published is None or not (window_start <= published <= window_end):
+        if published is None or not (window_start <= published < window_end):
             continue
         description_html = _text(element, "description")
         parsed_html = _DescriptionParser(description_html)

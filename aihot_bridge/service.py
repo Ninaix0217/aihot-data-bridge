@@ -13,6 +13,7 @@ from .normalize import (
     normalize_hot_topic,
     parse_rss_items,
 )
+from .timefields import parse_timestamp, published_at_in_window
 from .upstream import UpstreamClient, UpstreamError
 
 
@@ -33,12 +34,38 @@ class BridgeService:
 
     async def today(self) -> dict[str, Any]:
         window_end = _utc(self._clock())
-        window_start = window_end - timedelta(hours=24)
+        window_start = window_end - timedelta(
+            hours=self._settings.candidate_window_hours
+        )
+
+        item_params = {
+            "window": "7d",
+            "by": "published",
+            "limit": 100,
+        }
 
         results = await asyncio.gather(
-            self._items_channel("selected", {"mode": "selected", "window": "24h", "limit": 100}, "/feed.xml", window_start, window_end),
-            self._items_channel("all", {"mode": "all", "window": "24h", "limit": 100}, "/feed/all.xml", window_start, window_end),
-            self._items_channel("paper", {"mode": "all", "window": "24h", "category": "paper", "limit": 100}, "/feed/category/paper.xml", window_start, window_end),
+            self._items_channel(
+                "selected",
+                {"mode": "selected", **item_params},
+                "/feed.xml",
+                window_start,
+                window_end,
+            ),
+            self._items_channel(
+                "all",
+                {"mode": "all", **item_params},
+                "/feed/all.xml",
+                window_start,
+                window_end,
+            ),
+            self._items_channel(
+                "paper",
+                {"mode": "all", "category": "paper", **item_params},
+                "/feed/category/paper.xml",
+                window_start,
+                window_end,
+            ),
             self._hot_topics_channel(),
             self._daily_channel(window_start, window_end),
         )
@@ -55,7 +82,8 @@ class BridgeService:
             "schema_version": "aihot-bridge/v1",
             "generated_at": _format_time(generated_at),
             "window": {
-                "type": "rolling_24h",
+                "type": "rolling_candidate",
+                "hours": self._settings.candidate_window_hours,
                 "from": _format_time(window_start),
                 "to": _format_time(window_end),
             },
@@ -76,8 +104,17 @@ class BridgeService:
         window_end: datetime,
     ) -> tuple[str, dict[str, Any], list[dict[str, Any]]]:
         try:
-            raw_items, partial_reason = await self._paginated_items(params)
-            items = [normalize_api_item(item, channel) for item in raw_items]
+            raw_items, partial_reason = await self._paginated_items(
+                params, published_cutoff=window_start
+            )
+            candidates = [normalize_api_item(item, channel) for item in raw_items]
+            items = [
+                item
+                for item in candidates
+                if item.get("published_at") is None
+                or parse_timestamp(item["published_at"]) is None
+                or published_at_in_window(item, window_start, window_end)
+            ]
             if partial_reason:
                 return channel, _coverage("partial", "api", len(items), error=partial_reason), items
             return channel, _coverage("ok", "api", len(items)), items
@@ -156,7 +193,10 @@ class BridgeService:
             )
 
     async def _paginated_items(
-        self, base_params: dict[str, Any]
+        self,
+        base_params: dict[str, Any],
+        *,
+        published_cutoff: datetime | None = None,
     ) -> tuple[list[dict[str, Any]], str | None]:
         output: list[dict[str, Any]] = []
         cursor: str | None = None
@@ -167,12 +207,19 @@ class BridgeService:
             if cursor:
                 params["cursor"] = cursor
             payload = await self._upstream.get_json("/api/v1/items", params=params)
-            output.extend(_list_of_dicts(payload.get("items"), "items"))
+            page_items = _list_of_dicts(payload.get("items"), "items")
+            output.extend(page_items)
             page = payload.get("page")
             if not isinstance(page, dict):
                 raise UpstreamError("unexpected items.page schema")
             next_cursor = page.get("nextCursor")
             if not next_cursor:
+                return output, None
+            if (
+                published_cutoff is not None
+                and base_params.get("by") == "published"
+                and _page_reaches_published_cutoff(page_items, published_cutoff)
+            ):
                 return output, None
             if not isinstance(next_cursor, str):
                 raise UpstreamError("unexpected nextCursor type")
@@ -209,6 +256,14 @@ def _list_of_dicts(value: Any, field: str) -> list[dict[str, Any]]:
     if not isinstance(value, list) or any(not isinstance(item, dict) for item in value):
         raise UpstreamError(f"unexpected {field} schema")
     return value
+
+
+def _page_reaches_published_cutoff(
+    items: list[dict[str, Any]], cutoff: datetime
+) -> bool:
+    published = [parse_timestamp(item.get("publishedAt")) for item in items]
+    valid = [value for value in published if value is not None]
+    return bool(valid) and min(valid) <= _utc(cutoff)
 
 
 def _utc(value: datetime) -> datetime:

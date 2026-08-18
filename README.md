@@ -6,9 +6,9 @@
 
 API：
 
-- `GET /api/v1/items?mode=selected&window=24h&limit=100`
-- `GET /api/v1/items?mode=all&window=24h&limit=100`
-- `GET /api/v1/items?mode=all&window=24h&category=paper&limit=100`
+- `GET /api/v1/items?mode=selected&window=7d&by=published&limit=100`
+- `GET /api/v1/items?mode=all&window=7d&by=published&limit=100`
+- `GET /api/v1/items?mode=all&window=7d&by=published&category=paper&limit=100`
 - `GET /api/v1/hot-topics`
 - `GET /api/v1/dailies/latest`
 
@@ -21,7 +21,7 @@ API：
 
 `hot_topics` 没有对应的官方 RSS；其 API 失败时会明确报告 `failed`。
 
-2026-08-17 实测的 API Schema：items 响应根字段为 `schemaVersion/items/page/query`，分页游标位于 `page.nextCursor`，下一页通过 `cursor` 参数请求；日报主体位于 `report`；item 的内容发布时间和 AIHOT 发现时间分别为 `publishedAt` 和 `discoveredAt`。RSS 为 RSS 2.0，稳定 ID 位于 `guid`。代码以这些真实响应为准，没有按提示词猜字段。
+2026-08-18 实测的 API Schema：items 响应根字段为 `schemaVersion/items/page/query`，分页游标位于 `page.nextCursor`，下一页通过 `cursor` 参数请求；日报主体位于 `report`；item 的内容发布时间和 AIHOT 发现时间分别为 `publishedAt` 和 `discoveredAt`。RSS 为 RSS 2.0，稳定 ID 位于 `guid`。上游拒绝 `window=30h`，只接受 `24h` 或 `7d`；`by=published` 的响应回显 `ordering=publishedAtDesc`。因此 Bridge 请求受支持的 7 天发布时间序列，分页到越过本地 30 小时 cutoff 后停止，再裁成有限的 30 小时候选集。
 
 ## Bridge API
 
@@ -37,13 +37,21 @@ API：
 
 实时读取五路上游并返回：
 
-- `window`：本次 rolling 24h 的明确起止时间；
+- `window`：本次 rolling candidate 的明确起止时间和小时数（默认 30h）；
 - `coverage`：每一路的独立状态、实际来源、条数和错误；
 - `summary.raw_items`：五路规范化后、去重前的记录数；
 - `summary.deduplicated_items`：确定性 item-level 去重后的记录数；
 - `items`：统一字段和保留的上游 metadata。
 
 输出中的 `published_at` 来自 `publishedAt`，`collected_at` 来自 `discoveredAt`，两者不会互相替代。不同形状通过 `item_type`（`item`、`hot_topic`、`daily_report`）区分；同一条目出现在哪些上游通过 `source_channels` 保留。
+
+Bridge 不生成日报，也不内置北京时间 12 点业务规则。它提供 `[generated_at - 30h, generated_at)` 的候选 item；下游 Scheduled Task 只用可信、timezone-aware 的 `published_at` 筛选：
+
+```text
+[previous day 12:00 CST, current day 12:00 CST)
+```
+
+`collected_at` 和 `generated_at` 都不能代替 `published_at`。缺失或无法解析 `published_at` 的已抓取条目可保留为未知候选，但不能仅凭 `collected_at` 进入日报窗口。
 
 ### Coverage 语义
 
@@ -67,6 +75,7 @@ python -m venv .venv
 可选环境变量：
 
 - `AIHOT_BASE_URL`
+- `AIHOT_CANDIDATE_WINDOW_HOURS`（默认 30；上游仍固定请求其实际支持的 `7d`）
 - `AIHOT_CONNECT_TIMEOUT_SECONDS`（默认 5）
 - `AIHOT_REQUEST_TIMEOUT_SECONDS`（默认 20）
 - `AIHOT_MAX_RETRIES`（默认 2，即首次请求后最多重试两次）
@@ -80,7 +89,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pytest -q
 ```
 
-测试覆盖：五个 API 全成功、paper RSS fallback、API 与 RSS 同时失败仍返回 200、分页、stable ID 与 URL 去重、发布时间/采集时间隔离、429 `Retry-After`、5xx 恢复、最大页数标记 `partial`，以及 health endpoint。
+测试覆盖：五个 API 全成功、paper RSS fallback、API 与 RSS 同时失败仍返回 200、分页、stable ID 与 URL 去重、发布时间/采集时间隔离、429 `Retry-After`、5xx 恢复、最大页数标记 `partial`、health endpoint，以及固定日报窗口的正常/延迟/边界/缺失时间/UTC-CST 合同。
 
 ## 保留的动态部署资产
 
@@ -90,7 +99,7 @@ python -m venv .venv
 
 ## Static Snapshot Deployment
 
-GitHub Actions 定时调用与 FastAPI 相同的 `BridgeService.today()` 核心，将 rolling 24h 结果原子写入 `dist/today.json`，再通过 GitHub Pages 发布。Pages 只是 transport layer；分页、fallback、coverage、时间映射和去重仍全部来自现有 Python 核心。
+GitHub Actions 定时调用与 FastAPI 相同的 `BridgeService.today()` 核心，将 rolling 30h candidate 结果原子写入 `dist/today.json`，再通过 GitHub Pages 发布。Pages 只是 transport layer；分页、fallback、coverage、时间映射和去重仍全部来自现有 Python 核心。
 
 本地生成和验证：
 
@@ -121,6 +130,13 @@ https://ninaix0217.github.io/aihot-data-bridge/today.json
 
 该固定 URL 已于 2026-08-18 再次通过 `workflow_dispatch` 真实部署及部署后回读验证：HTTPS 返回 200，JSON 可解析，且公开 `generated_at` 与本次 artifact 一致。
 
+### Pages cache contract
+
+- canonical URL 是上面的固定地址；2026-08-18 实测响应为 `Cache-Control: max-age=600`。
+- 实测不同 `?cb=<unique>` 请求返回相同 `ETag`、`X-GitHub-Request-Id` 和连续的 CDN `Age`，说明当前 GitHub Pages/Fastly 路径没有把该 query 当成独立 cache key。它可以作为独立 GET 的唯一标识，但**不能当作已验证有效的 cache bypass**。
+- deploy 后 runner 回读能证明该 runner 所到达的 CDN 路径已经看到至少本次 `generated_at`；它不能证明每个地区、每个客户端的缓存同时更新。
+- 下游必须继续校验 `generated_at`；发现 stale 时再次 GET 有助于跨过短暂缓存/部署传播，但 query 参数本身不构成新鲜度证明。
+
 ### Freshness contract
 
 `generated_at` 是本次 snapshot 抓取完成的 UTC ISO 8601 时间。建议 ChatGPT Scheduled Task 在读取 items 前先判断：
@@ -131,11 +147,15 @@ https://ninaix0217.github.io/aihot-data-bridge/today.json
 
 快照不是实时 API；下游还应检查五路 `coverage`。FastAPI 继续保留为本地调试、契约验证和未来动态部署入口。
 
+freshness 与固定窗口 completeness 是两个独立维度：90 分钟阈值保持不变，用于判断采集结果是否新鲜；30 小时候选范围和 `published_at` 边界才决定能否重建日报窗口。一个 fresh 的严格 rolling 24h snapshot 仍可能缺少固定窗口开头；一个略 stale 的 30h snapshot 也只有在其 `window.to >= report_end` 时才可能完整覆盖本期。
+
 ## 已知限制
 
 - V0 不做缓存或持久化，每次 `/aihot/today` 请求都会实时读取上游。
 - RSS 只有 feed 自身提供的字段；没有 `discoveredAt` 时，`collected_at` 保持 `null`，不会用 Bridge 抓取时间伪造。
 - RSS feed 的条数可能受官方 feed 上限约束；coverage 会标记为 `fallback`，不会伪装成 API 完整成功。
+- 30h 是有限安全余量：12:23 生成时比固定窗口开头多 6 小时，13:10 生成时仍多 4 小时 50 分；它不能补救一个生成时间早于 report end 的旧 snapshot，也不能保证捕获在 Scheduled Task 读取之后才被 AIHOT 收录的 late arrival。
+- `publishedAt → discoveredAt` 的真实样本存在明显长尾；因此 12:30 等待并不构成“不会漏收”的保证，本项目本轮不实现 late-arrival reconciliation。
 - 去重仅使用 ID、URL/canonical URL、标题 + 来源 + 发布时间，不做事件级语义合并。
 - GitHub scheduled workflows 可能延迟或在高负载时丢弃；公开仓库连续 60 天无活动时，schedule 会被 GitHub 自动停用。
 - 除 GitHub Actions 定时生成和 Pages 静态发布外，不包含认证、数据库、额外调度服务、Gmail 或 AI 功能。
