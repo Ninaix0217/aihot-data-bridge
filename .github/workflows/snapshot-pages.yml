@@ -2,7 +2,7 @@ name: Snapshot and GitHub Pages
 
 on:
   schedule:
-    - cron: "17,47 * * * *"
+    - cron: "23,53 * * * *"
   workflow_dispatch:
 
 concurrency:
@@ -13,6 +13,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    outputs:
+      generated_at: ${{ steps.snapshot_metadata.outputs.generated_at }}
     permissions:
       contents: read
       pages: read
@@ -36,6 +38,42 @@ jobs:
       - name: Validate snapshot artifact
         run: python -m aihot_bridge.snapshot --check dist/today.json
 
+      - name: Record snapshot metadata
+        id: snapshot_metadata
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          payload = json.loads(Path("dist/today.json").read_text(encoding="utf-8"))
+          coverage = payload["coverage"]
+          summary = payload["summary"]
+
+          with Path(os.environ["GITHUB_OUTPUT"]).open("a", encoding="utf-8") as output:
+              output.write(f"generated_at={payload['generated_at']}\n")
+
+          lines = [
+              "## Snapshot build",
+              "",
+              f"- generated_at: `{payload['generated_at']}`",
+              f"- raw_items: `{summary['raw_items']}`",
+              f"- deduplicated_items: `{summary['deduplicated_items']}`",
+              "",
+              "| channel | status | source | items |",
+              "| --- | --- | --- | ---: |",
+          ]
+          for channel in ("selected", "all", "paper", "hot_topics", "daily"):
+              entry = coverage[channel]
+              lines.append(
+                  f"| {channel} | {entry['status']} | {entry.get('source')} | {entry['items']} |"
+              )
+
+          with Path(os.environ["GITHUB_STEP_SUMMARY"]).open("a", encoding="utf-8") as summary_file:
+              summary_file.write("\n".join(lines) + "\n")
+          PY
+
       - name: Disable Jekyll processing
         run: touch dist/.nojekyll
 
@@ -47,18 +85,82 @@ jobs:
         with:
           path: dist
 
+      - name: Report snapshot build failure
+        if: failure()
+        shell: bash
+        run: |
+          {
+            echo "## Snapshot build"
+            echo
+            echo "- Result: \`FAILED\`"
+            echo "- The previous Pages snapshot was not replaced."
+          } >> "$GITHUB_STEP_SUMMARY"
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry.outputs.page_url }}
     permissions:
       contents: read
       pages: write
       id-token: write
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
+        continue-on-error: true
         uses: actions/deploy-pages@v5
+
+      - name: Wait before one deployment retry
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 15
+
+      - name: Retry GitHub Pages deployment once
+        id: deployment_retry
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v5
+
+      - name: Require a successful deployment
+        if: >-
+          steps.deployment.outcome == 'failure' &&
+          steps.deployment_retry.outcome != 'success'
+        run: exit 1
+
+      - name: Record deployment result
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "## GitHub Pages deployment"
+            echo
+            echo "- Primary attempt: \`${{ steps.deployment.outcome }}\`"
+            echo "- Retry attempt: \`${{ steps.deployment_retry.outcome || 'not-needed' }}\`"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  verify:
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Verify deployed public snapshot
+        run: >-
+          python -m aihot_bridge.freshness
+          https://ninaix0217.github.io/aihot-data-bridge/today.json
+          --max-age-minutes 90
+          --expected-generated-at "${{ needs.build.outputs.generated_at }}"
+          --attempts 12
+          --interval-seconds 10

@@ -1,0 +1,34 @@
+name: Public Snapshot Freshness
+
+on:
+  schedule:
+    - cron: "13,43 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: aihot-snapshot-health
+  cancel-in-progress: true
+
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Check public today.json freshness
+        run: >-
+          python -m aihot_bridge.freshness
+          https://ninaix0217.github.io/aihot-data-bridge/today.json
+          --max-age-minutes 90
+          --attempts 3
+          --interval-seconds 10
