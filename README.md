@@ -93,13 +93,20 @@ python -m venv .venv
 
 ## 保留的动态部署资产
 
-`Dockerfile`、`.gcloudignore` 和 `.dockerignore` 仅保留为未来动态部署备选。本项目当前不配置 Cloud Run、Google Cloud 项目或 Billing；计划中的公开传输路径是下面的 GitHub Pages 静态快照。
+`Dockerfile`、`.gcloudignore` 和 `.dockerignore` 仅保留为未来动态部署备选。本项目当前不配置 Cloud Run、Google Cloud 项目或 Billing。V2 的 repository consumer path 是 `snapshot-data` 分支；GitHub Pages 继续保留为迁移期公开调试、诊断和独立验证路径。
 
 对外只暴露 `GET /health` 和 `GET /aihot/today`；FastAPI 的 `/docs`、`/redoc` 和 `/openapi.json` 已关闭。
 
-## Static Snapshot Deployment
+## Daily Candidate Producer
 
-GitHub Actions 定时调用与 FastAPI 相同的 `BridgeService.today()` 核心，只生成一次 rolling 30h candidate。相同 JSON bytes 会原子写入 `dist/today.json`，以及按 snapshot `generated_at` 转换到 `Asia/Shanghai` 后得到的 `dist/report-candidate/YYYY-MM-DD.json`，再通过 GitHub Pages 一起发布。Pages 只是 transport layer；分页、fallback、coverage、时间映射和去重仍全部来自现有 Python 核心。
+GitHub Actions 调用与 FastAPI 相同的 `BridgeService.today()` 核心，每次 run 只抓取、normalize、dedupe 和验证一次 rolling 30h candidate。相同 JSON bytes 被用于：
+
+- Pages `dist/today.json`；
+- Pages `dist/report-candidate/YYYY-MM-DD.json`；
+- `snapshot-data:report-candidate/YYYY-MM-DD.json`；
+- `snapshot-data:latest.json`。
+
+`YYYY-MM-DD` 由 snapshot `generated_at` 转换到 `Asia/Shanghai` 后确定。repository data branch 与 Pages 不会分别抓取 AI HOT；分页、fallback、coverage、时间映射和去重都只来自现有 Python 核心。
 
 本地生成和验证：
 
@@ -108,21 +115,37 @@ GitHub Actions 定时调用与 FastAPI 相同的 `BridgeService.today()` 核心�
 .\.venv\Scripts\python.exe -m aihot_bridge.snapshot --check dist\today.json
 ```
 
-部署 workflow 位于 `.github/workflows/snapshot-pages.yml`：
+producer workflow 位于 `.github/workflows/snapshot-pages.yml`：
 
-- 每小时第 23、53 分钟运行，避开整点高峰，理论最大快照年龄约 30 分钟；
+- Pass A：每天 `04:50 UTC`，即北京时间 `12:50`，提供第一份合法 fallback candidate；
+- Pass B：每天 `05:10 UTC`，即北京时间 `13:10`，多等待 20 分钟以捕获更多 late arrivals；
 - 支持从 GitHub Actions 页面手工执行 `workflow_dispatch`；
-- 同类任务并发时取消旧任务；
+- 中午 12:00 前手工执行时，当日固定窗口尚未结束，repository readiness 会 fail closed 且不发布；手工生产验收应在北京时间 12:00 后执行；
+- 同组 run 串行且 `cancel-in-progress: false`，Pass B 不会取消正在运行的 Pass A，也不会并发写 data branch/Pages；
 - 15 分钟内未完成 snapshot build 则失败；
+- snapshot 验证成功后，使用 job-scoped `GITHUB_TOKEN` 和唯一新增权限 `contents: write` 提交 `snapshot-data`，不需要 PAT；
+- push 后通过 GitHub Git ref + Contents API 回读指定 commit，验证 JSON/schema/trust/window、generated_at、Git blob SHA 和 artifact SHA-256；
 - Pages deployment 遇到瞬时失败时只重试一次；
 - deploy 后以当天 dated candidate URL 作为生产硬验收：要求 HTTP/JSON/schema/trustworthy/freshness 有效、`generated_at` 达到本次候选，且正文 SHA-256 等于 build artifact；
 - canonical 回读是 soft parity check：同步时报告 `PUBLIC_PARITY_CONFIRMED`；dated 已验证但 canonical 仍旧、读取失败或内容不同只产生明确 warning，不把已可消费的 deployment 误报为失败；
 - post-deploy verify 使用有界传播等待；dated 始终未达到本次 artifact 才会使 workflow 失败，长期 freshness 仍由独立 health workflow 负责；
 - 只使用 GitHub 官方 Pages artifact 和 OIDC actions。
 
-`.github/workflows/snapshot-health.yml` 在每小时第 13、43 分钟只读取公开 `today.json`，不抓取 AIHOT；快照超过 90 分钟、HTTP 失败或 `generated_at` 无效时 workflow 失败。两个 schedule 都是 GitHub best-effort 调度，并非准点执行保证。
+`.github/workflows/snapshot-health.yml` 每天 `06:00 UTC`（北京时间 `14:00`）通过 GitHub API 检查 `snapshot-data` 的当日 dated candidate，不抓取 AI HOT。它要求 repository object 存在、schema/trust/coverage 可接受、北京 report date 正确，并完整覆盖 `[previous day 12:00 CST, current day 12:00 CST)`。它不再要求 daily producer 在全天任意时刻都保持 `age <= 90m`。两个 schedule 都是 GitHub best-effort 调度，并非准点执行保证。
 
 部分上游失败仍会发布，并在 `coverage` 中明确保留 `fallback`、`partial` 或 `failed`。如果 `selected/all/paper` 全部没有可信条目，exporter 会失败且不替换上一次成功 Pages 部署，避免用新的 `generated_at` 发布一个误导性的空快照。
+
+### Repository data branch contract
+
+未来 GitHub Connector consumer 使用：
+
+```text
+repository: Ninaix0217/aihot-data-bridge
+branch: snapshot-data
+path: report-candidate/YYYY-MM-DD.json
+```
+
+dated path 是正式 consumer candidate；`latest.json` 只用于人工检查和诊断。Pass B 成功时允许更新当天 dated file；Pass B 构建或验证失败时不会执行 data branch commit，因此 Pass A 的已验证 candidate 保持不变。两个 pass 都失败时，data branch 和 Pages 都继续保留最后一份成功数据，不写失败占位 JSON。
 
 部署后的 canonical 地址：
 
@@ -173,6 +196,8 @@ freshness 与固定窗口 completeness 是两个独立维度：90 分钟阈值�
 - `publishedAt → discoveredAt` 的真实样本存在明显长尾；因此 12:30 等待并不构成“不会漏收”的保证，本项目本轮不实现 late-arrival reconciliation。
 - 日报执行越晚，捕获临近 12:00 发布但延迟收录项目的概率越高，但任何有限等待时间都不能保证捕获所有 late arrival。
 - dated candidate 是当前 consumer date 的路径，不是历史 snapshot archive；Pages artifact 不承诺永久保留此前日期文件。
+- `snapshot-data` 会保留每日最多两次成功发布的 Git commit；本轮不做 force-push、LFS 或历史压缩，repository growth 需要后续观察。
+- `snapshot-data` 已作为 GitHub repository 数据入口设计，但 ChatGPT GitHub Connector 的读取能力和 Scheduled Task consumer E2E 属于下一阶段，不能由 producer 测试代替。
 - 去重仅使用 ID、URL/canonical URL、标题 + 来源 + 发布时间，不做事件级语义合并。
 - GitHub scheduled workflows 可能延迟或在高负载时丢弃；公开仓库连续 60 天无活动时，schedule 会被 GitHub 自动停用。
-- 除 GitHub Actions 定时生成和 Pages 静态发布外，不包含认证、数据库、额外调度服务、Gmail 或 AI 功能。
+- 除 GitHub Actions 定时生成、repository data branch 和 Pages 静态发布外，不包含认证、数据库、额外调度服务、Gmail、MCP 或 AI 功能。

@@ -1,8 +1,8 @@
-name: Public Snapshot Freshness
+name: Daily Candidate Readiness
 
 on:
   schedule:
-    - cron: "13,43 * * * *"
+    - cron: "0 6 * * *"
   workflow_dispatch:
 
 permissions:
@@ -24,11 +24,16 @@ jobs:
         uses: actions/setup-python@v7
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pyproject.toml
 
-      - name: Check public today.json freshness
+      - name: Install runtime dependencies
+        run: python -m pip install .
+
+      - name: Check daily repository candidate readiness
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: >-
-          python -m aihot_bridge.freshness
-          https://ninaix0217.github.io/aihot-data-bridge/today.json
-          --max-age-minutes 90
-          --attempts 3
-          --interval-seconds 10
+          python -m aihot_bridge.repository_data health
+          --repository "${{ github.repository }}"
+          --branch snapshot-data

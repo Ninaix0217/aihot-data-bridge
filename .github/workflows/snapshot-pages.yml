@@ -2,12 +2,13 @@ name: Snapshot and GitHub Pages
 
 on:
   schedule:
-    - cron: "23,53 * * * *"
+    - cron: "50 4 * * *"
+    - cron: "10 5 * * *"
   workflow_dispatch:
 
 concurrency:
-  group: aihot-snapshot-pages
-  cancel-in-progress: true
+  group: aihot-daily-producer
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -17,8 +18,10 @@ jobs:
       generated_at: ${{ steps.snapshot_metadata.outputs.generated_at }}
       report_date: ${{ steps.snapshot_metadata.outputs.report_date }}
       content_sha256: ${{ steps.snapshot_metadata.outputs.content_sha256 }}
+      data_commit_sha: ${{ steps.data_readback.outputs.commit_sha }}
+      data_blob_sha: ${{ steps.data_readback.outputs.blob_sha }}
     permissions:
-      contents: read
+      contents: write
       pages: read
     steps:
       - name: Checkout
@@ -103,6 +106,77 @@ jobs:
           with Path(os.environ["GITHUB_STEP_SUMMARY"]).open("a", encoding="utf-8") as summary_file:
               summary_file.write("\n".join(lines) + "\n")
           PY
+
+      - name: Prepare snapshot-data worktree
+        id: data_worktree
+        shell: bash
+        env:
+          DATA_ROOT: ${{ runner.temp }}/snapshot-data
+        run: |
+          if [[ -e "$DATA_ROOT" ]]; then
+            echo "Refusing to reuse existing data worktree: $DATA_ROOT" >&2
+            exit 1
+          fi
+
+          if git ls-remote --exit-code --heads origin snapshot-data >/dev/null 2>&1; then
+            git fetch --no-tags origin snapshot-data
+            git worktree add --detach "$DATA_ROOT" FETCH_HEAD
+          else
+            git worktree add --detach "$DATA_ROOT" HEAD
+            git -C "$DATA_ROOT" switch --orphan snapshot-data
+          fi
+          echo "data_root=$DATA_ROOT" >> "$GITHUB_OUTPUT"
+
+      - name: Stage validated repository candidate
+        shell: bash
+        env:
+          DATA_ROOT: ${{ steps.data_worktree.outputs.data_root }}
+          REPORT_DATE: ${{ steps.snapshot_metadata.outputs.report_date }}
+        run: >-
+          python -m aihot_bridge.repository_data stage
+          --candidate "dist/report-candidate/${REPORT_DATE}.json"
+          --data-root "$DATA_ROOT"
+
+      - name: Commit and push snapshot-data
+        id: data_publish
+        shell: bash
+        env:
+          DATA_ROOT: ${{ steps.data_worktree.outputs.data_root }}
+          REPORT_DATE: ${{ steps.snapshot_metadata.outputs.report_date }}
+          GENERATED_AT: ${{ steps.snapshot_metadata.outputs.generated_at }}
+        run: |
+          git -C "$DATA_ROOT" config user.name "github-actions[bot]"
+          git -C "$DATA_ROOT" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$DATA_ROOT" add -- "report-candidate/${REPORT_DATE}.json" latest.json
+
+          if git -C "$DATA_ROOT" diff --cached --quiet; then
+            echo "Repository candidate is already current; no commit required."
+          else
+            git -C "$DATA_ROOT" commit -m \
+              "Publish AI HOT candidate ${REPORT_DATE} ${GENERATED_AT} run ${GITHUB_RUN_ID}.${GITHUB_RUN_ATTEMPT}"
+          fi
+
+          git -C "$DATA_ROOT" push origin HEAD:refs/heads/snapshot-data
+          commit_sha="$(git -C "$DATA_ROOT" rev-parse HEAD)"
+          echo "commit_sha=$commit_sha" >> "$GITHUB_OUTPUT"
+
+      - name: Verify snapshot-data repository object
+        id: data_readback
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          REPORT_DATE: ${{ steps.snapshot_metadata.outputs.report_date }}
+          GENERATED_AT: ${{ steps.snapshot_metadata.outputs.generated_at }}
+          DATA_COMMIT_SHA: ${{ steps.data_publish.outputs.commit_sha }}
+        run: >-
+          python -m aihot_bridge.repository_data verify-remote
+          --repository "${{ github.repository }}"
+          --branch snapshot-data
+          --path "report-candidate/${REPORT_DATE}.json"
+          --candidate "dist/report-candidate/${REPORT_DATE}.json"
+          --expected-generated-at "$GENERATED_AT"
+          --expected-commit-sha "$DATA_COMMIT_SHA"
+          --attempts 5
+          --interval-seconds 3
 
       - name: Disable Jekyll processing
         run: touch dist/.nojekyll
