@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-08-20T05:16:53.151393Z",
+  "generated_at": "2026-08-20T05:39:16.152311Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-08-18T23:16:48.082102Z",
-    "to": "2026-08-20T05:16:48.082102Z"
+    "from": "2026-08-18T23:39:08.907522Z",
+    "to": "2026-08-20T05:39:08.907522Z"
   },
   "coverage": {
     "selected": {
@@ -17,7 +17,7 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 387,
+      "items": 385,
       "error": null
     },
     "paper": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 427,
-    "deduplicated_items": 391
+    "raw_items": 425,
+    "deduplicated_items": 389
   },
   "items": [
     {
@@ -291,6 +291,110 @@
           "IT之家（RSS）"
         ],
         "story_url": "https://aihot.virxact.com/story/bca5db53-0103-4fbd-85c6-05d34c5deb4f"
+      }
+    },
+    {
+      "id": "cmt12sh2t0mqfro2ofozd057i",
+      "item_type": "item",
+      "category": "industry",
+      "title": "世界机器人大会：机器人跳舞格斗",
+      "description": "世界机器人大会上，机器人跳舞、格斗。",
+      "original_url": "https://x.com/thexpin/status/2090307977148526705",
+      "aihot_url": "https://aihot.virxact.com/items/cmt12sh2t0mqfro2ofozd057i",
+      "published_at": "2026-08-20T05:20:32.000Z",
+      "collected_at": "2026-08-20T05:24:09.005Z",
+      "source": {
+        "name": "X：X.PIN (@thexpin)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Robots dancing and fighting at World Robot Conference",
+        "score": 31,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt12sh2t0mqfro2ofozd057i"
+        }
+      }
+    },
+    {
+      "id": "cmt12sh2t0mqgro2ok8qjit76",
+      "item_type": "item",
+      "category": "industry",
+      "title": "北京世界机器人大会亮点速览",
+      "description": "北京世界机器人大会上的部分亮点",
+      "original_url": "https://x.com/thexpin/status/2090306150055235616",
+      "aihot_url": "https://aihot.virxact.com/items/cmt12sh2t0mqgro2ok8qjit76",
+      "published_at": "2026-08-20T05:13:16.000Z",
+      "collected_at": "2026-08-20T05:24:09.005Z",
+      "source": {
+        "name": "X：X.PIN (@thexpin)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Some highlights at Beijing World Robot Conference",
+        "score": 26,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt12sh2t0mqgro2ok8qjit76"
+        }
+      }
+    },
+    {
+      "id": "cmt12zomo0mtlro2o91x3ix3x",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "OpenCode 平台 Muse Spark 1.2 免费开放",
+      "description": "Muse Spark 1.2 现已在 OpenCode 上免费开放。",
+      "original_url": "https://x.com/opencode/status/2090304057323737237",
+      "aihot_url": "https://aihot.virxact.com/items/cmt12zomo0mtlro2o91x3ix3x",
+      "published_at": "2026-08-20T05:04:57.000Z",
+      "collected_at": "2026-08-20T05:29:44.552Z",
+      "source": {
+        "name": "X：opencode (@opencode)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Muse Spark 1.2 is now free on OpenCode",
+        "score": 30,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt12zomo0mtlro2o91x3ix3x"
+        }
+      }
+    },
+    {
+      "id": "cmt12t74i0mqzro2os9t9z8b4",
+      "item_type": "item",
+      "category": "tip",
+      "title": "索尔喜欢作弊：GPT-5.6 Sol 在 Terminal Bench 2.1 上达到 94% 后开始作弊",
+      "description": "开发者用自建 supervisor 智能体 chum-codex 自动化\"规格驱动\"开发流程，在 Terminal Bench 2.1 上达到 89.9%，超过 vanilla Codex 的 88.8%。",
+      "original_url": "https://jumploops.com/blog/sol-loves-to-cheat",
+      "aihot_url": "https://aihot.virxact.com/items/cmt12t74i0mqzro2os9t9z8b4",
+      "published_at": "2026-08-20T04:54:00.256Z",
+      "collected_at": "2026-08-20T05:24:43.630Z",
+      "source": {
+        "name": "Hacker News 热门（buzzing.cc 中文翻译）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "索尔喜欢作弊",
+        "score": 55,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt12t74i0mqzro2os9t9z8b4"
+        }
       }
     },
     {
@@ -9973,158 +10077,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmszbcq6u08njrodphvxnt82c"
-        }
-      }
-    },
-    {
-      "id": "cmszbcq6h08nhrodpuvgguhaq",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "Deft 新 AI 写作实验室：86% 查询通过检测",
-      "description": "Ethan Mollick 指出，AI 检测器欺骗初创公司的输出是糟糕的写作。新 AI 实验室 Deft 推出，其模型自写的发布公告显示，目前 86% 的用户查询被 pangram 判定为完全人类。Deft 仍处于小型测试阶段，主要目标是更好的写作，而非欺骗检测器。",
-      "original_url": "https://x.com/emollick/status/2089859591597142031",
-      "aihot_url": "https://aihot.virxact.com/items/cmszbcq6h08nhrodpuvgguhaq",
-      "published_at": "2026-08-18T23:38:49.000Z",
-      "collected_at": "2026-08-18T23:48:18.689Z",
-      "source": {
-        "name": "X：Ethan Mollick (@emollick)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "The problem is that the output from the AI detector fooling startup is bad writing.",
-        "score": 31,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmszbcq6h08nhrodpuvgguhaq"
-        }
-      }
-    },
-    {
-      "id": "cmszcmcbv09irrodp51wd8cvg",
-      "item_type": "item",
-      "category": "tip",
-      "title": "欧洲央行警告 AI 投资过热：泡沫一旦破裂或冲击全球经济",
-      "description": "欧洲央行发布博客文章警告，当前\"AI 热潮\"很可能为金融市场大幅调整埋下伏笔，美国股市估值已接近历史高位。欧盟家庭持有价值约 4，400 亿欧元的美国科技股，保险公司和养老基金也大量持股，泡沫破裂将波及全球而非仅限美国。欧洲央行将当前狂热与互联网泡沫等历史技术投资热潮类比，并预计可能经历类似的\"繁荣与破灭\"周期。",
-      "original_url": "https://www.ithome.com/0/991/390.htm",
-      "aihot_url": "https://aihot.virxact.com/items/cmszcmcbv09irrodp51wd8cvg",
-      "published_at": "2026-08-18T23:33:06.000Z",
-      "collected_at": "2026-08-19T00:23:46.222Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "score": 66,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmszcmcbv09irrodp51wd8cvg"
-        }
-      }
-    },
-    {
-      "id": "cmszcmcbv09itrodplh3yl90u",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "苹果 Safari 26.6.1 修复 22 个漏洞，约 41% 由 OpenAI Codex Security 发现",
-      "description": "苹果发布 Safari 26.6.1 更新，修复 22 个涉及 WebKit 的 CVE 安全漏洞，其中 9 个由 OpenAI Codex Security 发现，占比约 41%。该 AI 智能体可自动检测、验证并修复代码安全漏洞。修复内容涵盖恶意网页内容引发的崩溃、内存破坏，以及 1 个可能泄露敏感数据的 WebKit History 漏洞。",
-      "original_url": "https://www.ithome.com/0/991/388.htm",
-      "aihot_url": "https://aihot.virxact.com/items/cmszcmcbv09itrodplh3yl90u",
-      "published_at": "2026-08-18T23:31:42.000Z",
-      "collected_at": "2026-08-19T00:23:46.222Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "占比约 41%：苹果 Safari 26.6.1 修复 22 个漏洞，9 个通过 OpenAI Codex Security 发现",
-        "score": 33,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmszcmcbv09itrodplh3yl90u"
-        }
-      }
-    },
-    {
-      "id": "cmszcmcbv09iurodp9hm83yuc",
-      "item_type": "item",
-      "category": "industry",
-      "title": "OpenAI 宣布新安全政策，加强模型开发监控与网络隔离",
-      "description": "OpenAI 宣布新安全政策，重点控制模型测试期间的安全事件，包括更细致的开发监控、训练后阶段强化对齐与安全重视，并加强网络隔离。新监控系统将检查工具操作、推理轨迹和活动日志，目标在发现可疑活动后 30 分钟内发出警报，预计消耗被监控流程约 20% 的计算资源。",
-      "original_url": "https://www.ithome.com/0/991/387.htm",
-      "aihot_url": "https://aihot.virxact.com/items/cmszcmcbv09iurodp9hm83yuc",
-      "published_at": "2026-08-18T23:28:14.000Z",
-      "collected_at": "2026-08-19T00:23:46.222Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "score": 57,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmszcmcbv09iurodp9hm83yuc"
-        }
-      }
-    },
-    {
-      "id": "cmszah5od07v3rodpiiduevtm",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "苹果 tvOS 27 应用列表新增 Siri 条目，Apple TV 4K 将整合 Siri AI",
-      "description": "9to5Mac 通过挖掘 tvOS 27 Beta 6 代码发现，苹果在系统应用列表中新增 Siri 条目，并关联内部代号\"com.apple.campo\"的字符串。该组件目前尚未开放，尝试打开时系统返回\"已停用\"错误，但已留下对应入口或识别信息，预示 Apple TV 4K 等设备将整合 Siri AI。",
-      "original_url": "https://www.ithome.com/0/991/385.htm",
-      "aihot_url": "https://aihot.virxact.com/items/cmszah5od07v3rodpiiduevtm",
-      "published_at": "2026-08-18T23:19:53.000Z",
-      "collected_at": "2026-08-18T23:23:46.098Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "score": 28,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmszah5od07v3rodpiiduevtm"
-        }
-      }
-    },
-    {
-      "id": "cmszah5od07v4rodpw6z7sg0f",
-      "item_type": "item",
-      "category": "industry",
-      "title": "Anthropic 推出 AI 文本水印后，各类去水印工具开始涌现",
-      "description": "Anthropic 为部分 Claude 模型生成的文本添加\"不可感知的水印\"，以履行欧盟《人工智能法案》相关承诺，但此举引发用户担忧并催生去水印工具。",
-      "original_url": "https://www.ithome.com/0/991/384.htm",
-      "aihot_url": "https://aihot.virxact.com/items/cmszah5od07v4rodpw6z7sg0f",
-      "published_at": "2026-08-18T23:18:50.000Z",
-      "collected_at": "2026-08-18T23:23:46.098Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "score": 52,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmszah5od07v4rodpw6z7sg0f"
         }
       }
     },
