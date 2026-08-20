@@ -32,6 +32,21 @@ def test_snapshot_concurrency_preserves_running_pass_and_serializes_writes():
     assert workflow["jobs"]["build"]["permissions"]["contents"] == "write"
 
 
+def test_producer_summary_is_read_only_non_blocking_observability():
+    workflow = load_workflow("snapshot-pages.yml")
+    steps = workflow["jobs"]["build"]["steps"]
+    names = [step["name"] for step in steps]
+    summary = steps[names.index("Write producer run summary")]
+
+    assert names.index("Verify snapshot-data repository object") < names.index(
+        "Write producer run summary"
+    )
+    assert summary["if"] == "always()"
+    assert summary["continue-on-error"] == "true"
+    assert "aihot_bridge.producer_summary" in summary["run"]
+    assert summary["env"]["EVENT_SCHEDULE"] == "${{ github.event.schedule }}"
+
+
 def test_health_runs_once_daily_after_both_producer_passes():
     workflow = load_workflow("snapshot-health.yml")
 

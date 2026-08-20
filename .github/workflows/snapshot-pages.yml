@@ -21,9 +21,25 @@ jobs:
       data_commit_sha: ${{ steps.data_readback.outputs.commit_sha }}
       data_blob_sha: ${{ steps.data_readback.outputs.blob_sha }}
     permissions:
+      actions: read
       contents: write
       pages: read
     steps:
+      - name: Capture workflow start
+        id: producer_context
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          started_at="$(
+            gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" \
+              --jq '.run_started_at // .created_at' 2>/dev/null || true
+          )"
+          if [[ -z "$started_at" ]]; then
+            started_at="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          fi
+          echo "started_at=$started_at" >> "$GITHUB_OUTPUT"
+
       - name: Checkout
         uses: actions/checkout@v7
 
@@ -177,6 +193,27 @@ jobs:
           --expected-commit-sha "$DATA_COMMIT_SHA"
           --attempts 5
           --interval-seconds 3
+
+      - name: Write producer run summary
+        if: always()
+        continue-on-error: true
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+          WORKFLOW_STARTED_AT: ${{ steps.producer_context.outputs.started_at }}
+          DATA_COMMIT_SHA: ${{ steps.data_publish.outputs.commit_sha }}
+          CANDIDATE_BLOB_SHA: ${{ steps.data_readback.outputs.blob_sha }}
+          REPOSITORY_READBACK_OUTCOME: ${{ steps.data_readback.outcome }}
+          REPORT_DATE: ${{ steps.snapshot_metadata.outputs.report_date }}
+        run: >-
+          python -m aihot_bridge.producer_summary
+          --candidate "dist/report-candidate/${REPORT_DATE}.json"
+          --event-name "$EVENT_NAME"
+          --event-schedule "$EVENT_SCHEDULE"
+          --workflow-started-at "$WORKFLOW_STARTED_AT"
+          --data-commit-sha "$DATA_COMMIT_SHA"
+          --candidate-blob-sha "$CANDIDATE_BLOB_SHA"
+          --repository-readback-outcome "$REPOSITORY_READBACK_OUTCOME"
 
       - name: Disable Jekyll processing
         run: touch dist/.nojekyll
