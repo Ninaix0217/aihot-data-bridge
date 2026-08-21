@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-08-21T05:18:43.223150Z",
+  "generated_at": "2026-08-21T05:41:02.732448Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-08-19T23:18:35.012538Z",
-    "to": "2026-08-21T05:18:35.012538Z"
+    "from": "2026-08-19T23:40:54.096942Z",
+    "to": "2026-08-21T05:40:54.096942Z"
   },
   "coverage": {
     "selected": {
@@ -17,13 +17,13 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 361,
+      "items": 360,
       "error": null
     },
     "paper": {
       "status": "ok",
       "source": "api",
-      "items": 27,
+      "items": 26,
       "error": null
     },
     "hot_topics": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 400,
-    "deduplicated_items": 364
+    "raw_items": 398,
+    "deduplicated_items": 363
   },
   "items": [
     {
@@ -273,6 +273,109 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmt0s2ems0dkxro2oylebzxob"
+        }
+      }
+    },
+    {
+      "id": "cmt2i8hdo013xroy5h1xrojfr",
+      "item_type": "item",
+      "category": "tip",
+      "title": "Omdia 预测：2030 年 AR 显示面板出货量将达 2，100 万片，超越 VR",
+      "description": "Omdia 最新预测显示，全球 AR 显示屏出货量将于 2030 年达到 2，100 万片，超过 VR 显示屏的 1，900 万片。XR 近眼显示市场正经历结构性转变，VR 显示屏市场份额预计从 2026 年的 72% 降至 2032 年的 43%，AR 则从 28% 升至 57%。厂商正越来越重视轻量化智能眼镜设计，并面临性能、重量与电池续航之间的权衡。",
+      "original_url": "https://www.ithome.com/0/992/601.htm",
+      "aihot_url": "https://aihot.virxact.com/items/cmt2i8hdo013xroy5h1xrojfr",
+      "published_at": "2026-08-21T05:22:25.000Z",
+      "collected_at": "2026-08-21T05:24:11.388Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Omdia 预测：2030 年 AR 显示面板出货量将超越 VR，厂商越来越重视轻量化智能眼镜设计",
+        "score": 36,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt2i8hdo013xroy5h1xrojfr"
+        }
+      }
+    },
+    {
+      "id": "cmt2i8c3v013uroy5i22f40pc",
+      "item_type": "item",
+      "category": "industry",
+      "title": "中国举办世界人形机器人运动会",
+      "description": "中国不仅主办世界机器人大会，还在举办世界人形机器人运动会。灰色跑者来自荣耀（HONOR）。如果它开始冲刺，请离它远点。白色机器人看起来像是要迟到了：它跑步途中一直在擦脸。",
+      "original_url": "https://x.com/thexpin/status/2090668971544678890",
+      "aihot_url": "https://aihot.virxact.com/items/cmt2i8c3v013uroy5i22f40pc",
+      "published_at": "2026-08-21T05:15:00.000Z",
+      "collected_at": "2026-08-21T05:24:09.383Z",
+      "source": {
+        "name": "X：X.PIN (@thexpin)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "China isn't just hosting the World Robot Conference-it's also holding the World Humanoid Robot Games…",
+        "score": 28,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt2i8c3v013uroy5i22f40pc"
+        }
+      }
+    },
+    {
+      "id": "cmt2i8hdp013zroy5shs92un0",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "发布约 2 年后，特斯拉自动驾驶出租车 Cybercab 本月有望迎来首次公众试乘",
+      "description": "特斯拉计划本月（2026 年 8 月）底向公众开放 Cybercab 试乘，接入美国得州奥斯汀的 Robotaxi 服务。该车于 2024 年 10 月发布，专为完全自动驾驶场景设计，上月已让员工在奥斯汀总部附近试乘。特斯拉称 FSD V15 将带来显著性能提升，现有 AI/HW4 算力组合可运行并支持无人监督 FSD。",
+      "original_url": "https://www.ithome.com/0/992/599.htm",
+      "aihot_url": "https://aihot.virxact.com/items/cmt2i8hdp013zroy5shs92un0",
+      "published_at": "2026-08-21T05:14:23.000Z",
+      "collected_at": "2026-08-21T05:24:11.388Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "score": 37,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt2i8hdp013zroy5shs92un0"
+        }
+      }
+    },
+    {
+      "id": "cmt2i8hdp0141roy5t5ilfm45",
+      "item_type": "item",
+      "category": "industry",
+      "title": "爱奇艺 CEO 龚宇：坚定 All in AI 战略，全力推进非中心化社交媒体转型",
+      "description": "爱奇艺创始人、CEO 龚宇在创作者大会上强调，平台将坚定 All in AI 战略，深耕 AI 赋能实拍与 AIGC 影视长片创作，同时全力推进非中心化社交媒体转型。他认为 AI 会解放影视创作者的束缚，并指出 AI 将大幅降低内容制作成本与周期，创作者数量和作品数量可能增长百倍以上，因此爱奇艺必须向非中心化转型，打造创作者与用户的社区。",
+      "original_url": "https://www.ithome.com/0/992/594.htm",
+      "aihot_url": "https://aihot.virxact.com/items/cmt2i8hdp0141roy5t5ilfm45",
+      "published_at": "2026-08-21T04:53:25.000Z",
+      "collected_at": "2026-08-21T05:24:11.388Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "爱奇艺 CEO 龚宇：将坚定 All in AI 战略，同时全力推进非中心化社交媒体转型",
+        "score": 48,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt2i8hdp0141roy5t5ilfm45"
         }
       }
     },
@@ -9302,136 +9405,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmt0ssrl60ecxro2oihgb6mv2"
-        }
-      }
-    },
-    {
-      "id": "cmt0r0c1a0cshro2oc43fy0nr",
-      "item_type": "item",
-      "category": "industry",
-      "title": "Stripe 收购 OpenRouter 并非因为\"奇点\"",
-      "description": "Stripe 确认收购 AI 模型路由平台 OpenRouter，据称交易金额达 75 亿美元，远超其 5 月时 13 亿美元的估值。Stripe 创始人称收购基于\"奇点\"开始的判断，但更实际的原因在于：OpenRouter 能帮助 Stripe 切入 AI 时代的支出管理，并掌握开发者 AI 使用动向及对模型供应商的影响力。交易预计数周内完成，OpenRouter 将保持独立运营。",
-      "original_url": "https://techcrunch.com/2026/08/19/stripe-didnt-really-buy-openrouter-because-of-the-singularity",
-      "aihot_url": "https://aihot.virxact.com/items/cmt0r0c1a0cshro2oc43fy0nr",
-      "published_at": "2026-08-19T23:32:00.000Z",
-      "collected_at": "2026-08-19T23:54:21.967Z",
-      "source": {
-        "name": "TechCrunch：AI（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Stripe didn't really buy OpenRouter because of the 'singularity'",
-        "score": 70,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt0r0c1a0cshro2oc43fy0nr"
-        }
-      }
-    },
-    {
-      "id": "cmt0qsk350cnrro2ohkv4jy3z",
-      "item_type": "item",
-      "category": "paper",
-      "title": "上海AI实验室等：智能体风险随推理能力升级",
-      "description": "上海人工智能实验室与清华大学新论文警告，AI智能体在具备意识前即可威胁人类能动性与自主性。风险并非随智能体变强而简单\"变大\"，而是随其推理范围改变类别：推理外部世界时威胁人类能动性，能建模人类与社会行为时威胁自主性，能表征自身状态与目标时则转向人类控制风险，如对齐造假、抗拒关机。",
-      "original_url": "https://x.com/rohanpaul_ai/status/2090219448330522918",
-      "aihot_url": "https://aihot.virxact.com/items/cmt0qsk350cnrro2ohkv4jy3z",
-      "published_at": "2026-08-19T23:28:45.000Z",
-      "collected_at": "2026-08-19T23:48:18.179Z",
-      "source": {
-        "name": "X：Rohan Paul (@rohanpaul_ai)"
-      },
-      "source_channels": [
-        "all",
-        "paper"
-      ],
-      "metadata": {
-        "original_title": "AI agents can threaten human agency and autonomy long before consciousness becomes relevant， simply …",
-        "score": 35,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt0qsk350cnrro2ohkv4jy3z"
-        }
-      }
-    },
-    {
-      "id": "cmt0qeuim0cdxro2omsw9pw9l",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "Claude托管智能体三项更新发布",
-      "description": "我们为 Claude 托管智能体发布了三项更新。\n\n首先，我们让在自托管沙箱中使用记忆变得更加容易。在自托管沙箱中完成的任何工作都可以保存到记忆中。",
-      "original_url": "https://x.com/ClaudeDevs/status/2090218983962390950",
-      "aihot_url": "https://aihot.virxact.com/items/cmt0qeuim0cdxro2omsw9pw9l",
-      "published_at": "2026-08-19T23:26:54.000Z",
-      "collected_at": "2026-08-19T23:37:37.666Z",
-      "source": {
-        "name": "X：Claude Devs (@ClaudeDevs)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "We shipped three updates to Claude Managed Agents. First， we made it easier to use memory with Self…",
-        "score": 42,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt0qeuim0cdxro2omsw9pw9l"
-        }
-      }
-    },
-    {
-      "id": "cmt0px8kn0bt2ro2ovy9r82dq",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "Valve Steam Frame VR 头显官方教学视频泄露：佩戴、登录与配件细节曝光",
-      "description": "Valve 在 ARM 版 Steam 客户端更新中意外发布 8 段 Steam Frame VR 头显教学视频，详细展示了登录流程、佩戴方式与配件。登录可通过手机摄像头扫描头显镜片二维码完成，配件包括腕带、头顶支撑带及加长遮光罩，面部贴合垫与眼睛间距垫片均采用磁吸连接。Steam Frame 配备 16GB RAM，将于今年夏季上市，售价尚未公布。",
-      "original_url": "https://www.ithome.com/0/991/873.htm",
-      "aihot_url": "https://aihot.virxact.com/items/cmt0px8kn0bt2ro2ovy9r82dq",
-      "published_at": "2026-08-19T23:20:14.000Z",
-      "collected_at": "2026-08-19T23:23:56.600Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "score": 20,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt0px8kn0bt2ro2ovy9r82dq"
-        }
-      }
-    },
-    {
-      "id": "cmt0qsk350cnsro2o4zq0z1pc",
-      "item_type": "item",
-      "category": "industry",
-      "title": "Stripe 收购 OpenRouter：智能体将成经济主体",
-      "description": "Stripe 致投资者信披露其收购 OpenRouter 的理由：OpenRouter 的 token 消耗量年初至今以每周 9% 的速度增长。Stripe 认为智能体即将成为独立的经济参与者，并称全球 GDP 有望迈向\"千万亿美元\"时代，其现有业务已覆盖近 2% 的全球 GDP。",
-      "original_url": "https://x.com/rohanpaul_ai/status/2090217227694080186",
-      "aihot_url": "https://aihot.virxact.com/items/cmt0qsk350cnsro2o4zq0z1pc",
-      "published_at": "2026-08-19T23:19:56.000Z",
-      "collected_at": "2026-08-19T23:48:18.179Z",
-      "source": {
-        "name": "X：Rohan Paul (@rohanpaul_ai)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "From Stripe's leaked investor letter detailing its OpenRouter acquisition - \"OpenRouter's token con…",
-        "score": 56,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt0qsk350cnsro2o4zq0z1pc"
         }
       }
     },
