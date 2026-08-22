@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-08-22T05:12:27.520333Z",
+  "generated_at": "2026-08-22T05:36:17.202209Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-08-20T23:12:17.237863Z",
-    "to": "2026-08-22T05:12:17.237863Z"
+    "from": "2026-08-20T23:36:04.985954Z",
+    "to": "2026-08-22T05:36:04.985954Z"
   },
   "coverage": {
     "selected": {
@@ -17,7 +17,7 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 321,
+      "items": 318,
       "error": null
     },
     "paper": {
@@ -40,10 +40,48 @@
     }
   },
   "summary": {
-    "raw_items": 351,
-    "deduplicated_items": 324
+    "raw_items": 348,
+    "deduplicated_items": 321
   },
   "items": [
+    {
+      "id": "cmt3wt4qm13utro6t0hb6ga3y",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "蚂蚁百灵为SGLang推出权重缓存守护进程",
+      "description": "今天，我们为 SGLang 推出 Weight Cache Daemon。🚀 在 Ling-2.6-1T FP8 上，它将权重加载时间缩短至约 0.63 秒，比磁盘加载快约 780 倍，并将引擎总启动时间从 8.8 分钟缩短至约 0.53 分钟。其工作原理如下。",
+      "original_url": "https://x.com/AntLingAGI/status/2091021795373855124",
+      "aihot_url": "https://aihot.virxact.com/items/cmt3wt4qm13utro6t0hb6ga3y",
+      "published_at": "2026-08-22T04:36:59.000Z",
+      "collected_at": "2026-08-22T05:00:00.912Z",
+      "source": {
+        "name": "X：蚂蚁百灵 (@AntLingAGI)"
+      },
+      "source_channels": [
+        "selected",
+        "all",
+        "hot_topics"
+      ],
+      "metadata": {
+        "original_title": "Today， we're introducing the Weight Cache Daemon for SGLang. 🚀 On Ling-2.6-1T FP8， it reduced weigh…",
+        "score": 53,
+        "selected": true,
+        "reason": "把权重加载从磁盘瓶颈改为缓存复用，对需要频繁扩缩容或重启推理服务的团队，启动耗时从分钟级降到秒级可能改变运维节奏。",
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt3wt4qm13utro6t0hb6ga3y"
+        },
+        "rank": 2,
+        "latest_at": "2026-08-22T05:00:00.912Z",
+        "source_count": 2,
+        "signal_count": 0,
+        "source_names": [
+          "LMSYS：Blog（Chatbot Arena 团队）",
+          "X：蚂蚁百灵 (@AntLingAGI)"
+        ],
+        "story_url": "https://aihot.virxact.com/story/d45274fb-e883-4618-9a67-286e48802868"
+      }
+    },
     {
       "id": "cmt396dpw0kj0ro6tdktqkp8s",
       "item_type": "item",
@@ -70,44 +108,6 @@
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmt396dpw0kj0ro6tdktqkp8s"
         }
-      }
-    },
-    {
-      "id": "cmt393qow0kfiro6tpe87m4nu",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "SGLang 推出 Weight Cache Daemon，实现亚秒级引擎重启",
-      "description": "SGLang 团队推出 Weight Cache Daemon，通过 CUDA IPC 零拷贝映射将模型权重加载从约 495 秒降至约 0.63 秒（约 785 倍加速），端到端启动时间减少 93.9%。该守护进程在 GPU 内存中持久化后量化权重，支持多实例共享和亚秒级主备切换，是 Fast Engine Recovery Framework 的第一阶段。",
-      "original_url": "https://www.lmsys.org/blog/2026-08-21-sglang-fast-recovery",
-      "aihot_url": "https://aihot.virxact.com/items/cmt393qow0kfiro6tpe87m4nu",
-      "published_at": "2026-08-21T17:56:25.415Z",
-      "collected_at": "2026-08-21T17:56:25.415Z",
-      "source": {
-        "name": "LMSYS：Blog（Chatbot Arena 团队）"
-      },
-      "source_channels": [
-        "selected",
-        "all",
-        "hot_topics"
-      ],
-      "metadata": {
-        "original_title": "Blog Fast Engine Recovery： Sub-Second Engine Restart for SGLang via Weight Cache Daemon Nowadays， State-of-the-Art （SOTA） models are getting much bigger and reloading the model service after a crash is very expensive. Therefore， we are introducing the Weight Cache Daemon， a persistent GP… Ant Ling Infra Team （Ant Group）， Alibaba， SGLang Team",
-        "score": 67,
-        "selected": true,
-        "reason": "权重加载从磁盘改为 CUDA IPC 零拷贝后，重启不再重复反量化与分片，让大模型服务的滚动更新和故障切换从分钟级预算变成秒级。",
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt393qow0kfiro6tpe87m4nu"
-        },
-        "rank": 2,
-        "latest_at": "2026-08-22T05:00:00.912Z",
-        "source_count": 2,
-        "signal_count": 0,
-        "source_names": [
-          "LMSYS：Blog（Chatbot Arena 团队）",
-          "X：蚂蚁百灵 (@AntLingAGI)"
-        ],
-        "story_url": "https://aihot.virxact.com/story/d45274fb-e883-4618-9a67-286e48802868"
       }
     },
     {
@@ -320,6 +320,31 @@
       }
     },
     {
+      "id": "cmt3xoil814cgro6tbzgl9jr3",
+      "item_type": "item",
+      "category": "industry",
+      "title": "国内首台抽蓄项目长斜井智能掘锚一体化装备成功应用",
+      "description": "中国电建在河南辉县九峰山抽水蓄能电站成功应用国内首台抽蓄项目长斜井智能掘锚一体化装备。该电站总装机容量210万千瓦，斜井累计总长2617米，最大倾角58度，为国内抽蓄电站斜井总长最长项目。装备由水电十一局牵头研制，已完成3号引水上斜井扩挖进尺超60米，实现常态化应用。",
+      "original_url": "https://www.ithome.com/0/992/975.htm",
+      "aihot_url": "https://aihot.virxact.com/items/cmt3xoil814cgro6tbzgl9jr3",
+      "published_at": "2026-08-22T04:45:29.000Z",
+      "collected_at": "2026-08-22T05:24:23.776Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "score": 10,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt3xoil814cgro6tbzgl9jr3"
+        }
+      }
+    },
+    {
       "id": "cmt3w93gr13ffro6t3fqb0vt7",
       "item_type": "item",
       "category": "tip",
@@ -342,32 +367,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmt3w93gr13ffro6t3fqb0vt7"
-        }
-      }
-    },
-    {
-      "id": "cmt3wt4qm13utro6t0hb6ga3y",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "蚂蚁百灵为SGLang推出权重缓存守护进程",
-      "description": "今天，我们为 SGLang 推出 Weight Cache Daemon。🚀 在 Ling-2.6-1T FP8 上，它将权重加载时间缩短至约 0.63 秒，比磁盘加载快约 780 倍，并将引擎总启动时间从 8.8 分钟缩短至约 0.53 分钟。其工作原理如下。",
-      "original_url": "https://x.com/AntLingAGI/status/2091021795373855124",
-      "aihot_url": "https://aihot.virxact.com/items/cmt3wt4qm13utro6t0hb6ga3y",
-      "published_at": "2026-08-22T04:36:59.000Z",
-      "collected_at": "2026-08-22T05:00:00.912Z",
-      "source": {
-        "name": "X：蚂蚁百灵 (@AntLingAGI)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Today， we're introducing the Weight Cache Daemon for SGLang. 🚀 On Ling-2.6-1T FP8， it reduced weigh…",
-        "score": 53,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt3wt4qm13utro6t0hb6ga3y"
         }
       }
     },
@@ -3514,6 +3513,32 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmt3a61r70m9pro6t7yd1r2ll"
+        }
+      }
+    },
+    {
+      "id": "cmt393qow0kfiro6tpe87m4nu",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "SGLang 推出 Weight Cache Daemon，实现亚秒级引擎重启",
+      "description": "SGLang 团队推出 Weight Cache Daemon，通过 CUDA IPC 零拷贝映射将模型权重加载从约 495 秒降至约 0.63 秒（约 785 倍加速），端到端启动时间减少 93.9%。该守护进程在 GPU 内存中持久化后量化权重，支持多实例共享和亚秒级主备切换，是 Fast Engine Recovery Framework 的第一阶段。",
+      "original_url": "https://www.lmsys.org/blog/2026-08-21-sglang-fast-recovery",
+      "aihot_url": "https://aihot.virxact.com/items/cmt393qow0kfiro6tpe87m4nu",
+      "published_at": "2026-08-21T17:56:25.415Z",
+      "collected_at": "2026-08-21T17:56:25.415Z",
+      "source": {
+        "name": "LMSYS：Blog（Chatbot Arena 团队）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Blog Fast Engine Recovery： Sub-Second Engine Restart for SGLang via Weight Cache Daemon Nowadays， State-of-the-Art （SOTA） models are getting much bigger and reloading the model service after a crash is very expensive. Therefore， we are introducing the Weight Cache Daemon， a persistent GP… Ant Ling Infra Team （Ant Group）， Alibaba， SGLang Team",
+        "score": 67,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt393qow0kfiro6tpe87m4nu"
         }
       }
     },
@@ -8307,108 +8332,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmt268fn10im4roov1svi24gb"
-        }
-      }
-    },
-    {
-      "id": "cmt26lvn60ixproovre6365hq",
-      "item_type": "item",
-      "category": "tip",
-      "title": "OpenAI 正在变成一家监控公司",
-      "description": "Gary Marcus 警告，OpenAI 正走向监控公司路线：据报道其正在构建 24x7 全天候监控设备，并将用户语音上传云端进行 AI 分析；同时通过含糊的法律措辞拒绝退出为美国政府监控美国公民。作者强烈建议用户不要同意此类监控行为。",
-      "original_url": "https://garymarcus.substack.com/p/openai-is-becoming-a-surveillance",
-      "aihot_url": "https://aihot.virxact.com/items/cmt26lvn60ixproovre6365hq",
-      "published_at": "2026-08-20T23:31:09.000Z",
-      "collected_at": "2026-08-20T23:58:47.556Z",
-      "source": {
-        "name": "Gary Marcus：The Road to AI We Can Trust（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "OpenAI is becoming a surveillance company",
-        "score": 39,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt26lvn60ixproovre6365hq"
-        }
-      }
-    },
-    {
-      "id": "cmt25dcg70hvmroovlcq8ovly",
-      "item_type": "item",
-      "category": "industry",
-      "title": "消息称博通拟通过最新 AI 相关债务融资，筹资超 600 亿美元",
-      "description": "博通正与多家贷款机构磋商，计划通过举债筹资超 600 亿美元（约合 4，047.64 亿元人民币），用于一项 AI 芯片融资项目，以支持 Anthropic 及其他相关企业。该方案预计包含约 300 亿美元次级债分档，并为 600 亿至 700 亿美元优先担保债分档提供部分担保，总融资规模可能推升至 1，000 亿美元。黑石与阿波罗全球管理正与博通接洽参与融资，目前仍处于讨论阶段。",
-      "original_url": "https://www.ithome.com/0/992/420.htm",
-      "aihot_url": "https://aihot.virxact.com/items/cmt25dcg70hvmroovlcq8ovly",
-      "published_at": "2026-08-20T23:24:06.000Z",
-      "collected_at": "2026-08-20T23:24:08.808Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "score": 57,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt25dcg70hvmroovlcq8ovly"
-        }
-      }
-    },
-    {
-      "id": "cmt268fmr0im1roovgwu3h9k9",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "Grok Bot 新增创建频道功能",
-      "description": "Grok Bot 现在支持创建新频道。\n\n将应用更新至 v0.23.0。",
-      "original_url": "https://x.com/cb_doge/status/2090580447248187813",
-      "aihot_url": "https://aihot.virxact.com/items/cmt268fmr0im1roovgwu3h9k9",
-      "published_at": "2026-08-20T23:23:14.000Z",
-      "collected_at": "2026-08-20T23:48:18.517Z",
-      "source": {
-        "name": "X：cb_doge (@cb_doge)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Grok Bot now supports creating new channels. Update your app to v0.23.0",
-        "score": 41,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt268fmr0im1roovgwu3h9k9"
-        }
-      }
-    },
-    {
-      "id": "cmt25dcg70hvnroovciwnw06y",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "云电脑 Windows 365 上线 5 周年，微软规划深度整合 AI 智能体体验",
-      "description": "微软庆祝 Windows 365 云电脑服务推出 5 周年，规划整合 AI 智能体，帮助用户在受管云电脑中操作应用、完成任务。新推出的 Microsoft Scout 智能体可通过 Teams 聊天指令在云电脑上执行查找文件、编辑文档等操作；Windows 365 for Agents 则为代理工作负载配置具有独立身份和权限范围的专用云电脑。",
-      "original_url": "https://www.ithome.com/0/992/419.htm",
-      "aihot_url": "https://aihot.virxact.com/items/cmt25dcg70hvnroovciwnw06y",
-      "published_at": "2026-08-20T23:16:09.000Z",
-      "collected_at": "2026-08-20T23:24:08.808Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "score": 49,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt25dcg70hvnroovciwnw06y"
         }
       }
     },
