@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-08-23T05:15:12.042669Z",
+  "generated_at": "2026-08-23T05:38:26.703862Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-08-21T23:15:05.612501Z",
-    "to": "2026-08-23T05:15:05.612501Z"
+    "from": "2026-08-21T23:38:17.728314Z",
+    "to": "2026-08-23T05:38:17.728314Z"
   },
   "coverage": {
     "selected": {
@@ -17,13 +17,13 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 181,
+      "items": 178,
       "error": null
     },
     "paper": {
       "status": "ok",
       "source": "api",
-      "items": 24,
+      "items": 23,
       "error": null
     },
     "hot_topics": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 212,
-    "deduplicated_items": 183
+    "raw_items": 208,
+    "deduplicated_items": 180
   },
   "items": [
     {
@@ -4689,85 +4689,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmt3md46s0w18ro6tinjbu2ti"
-        }
-      }
-    },
-    {
-      "id": "cmt3m2yqt0vt3ro6tf4r35k1e",
-      "item_type": "item",
-      "category": "tip",
-      "title": "Linus 用 AI 修复 Linux GPU 内核 bug",
-      "description": "Linus Torvalds 借助 AI 修复了一个棘手的 Linux 内核 GPU bug，该 bug 导致 Intel Xe GPU 压缩元数据存储被错误暴露为可用 VRAM，引发页表损坏和黑屏。",
-      "original_url": "https://x.com/steipete/status/2090946181564440727",
-      "aihot_url": "https://aihot.virxact.com/items/cmt3m2yqt0vt3ro6tf4r35k1e",
-      "published_at": "2026-08-21T23:36:32.000Z",
-      "collected_at": "2026-08-21T23:59:44.059Z",
-      "source": {
-        "name": "X：Peter Steinberger (@steipete)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "dropping new skill brb",
-        "score": 44,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt3m2yqt0vt3ro6tf4r35k1e"
-        }
-      }
-    },
-    {
-      "id": "cmt3lo9v10vhjro6tfdznqvof",
-      "item_type": "item",
-      "category": "paper",
-      "title": "智能体持续学习：超越模型参数的适配",
-      "description": "一篇新论文提出\"框架持续学习\"（HCL）框架，指出智能体无需重训模型，仅通过重写自身提示词、记忆和路由即可实现行为更新。论文将模型冻结而周边行为持续变化的现象称为\"框架级遗忘\"，并主张对提示词、记忆、技能和路由的改动应像代码变更一样进行回归测试后再持久化。",
-      "original_url": "https://x.com/rohanpaul_ai/status/2090943348081307932",
-      "aihot_url": "https://aihot.virxact.com/items/cmt3lo9v10vhjro6tfdznqvof",
-      "published_at": "2026-08-21T23:25:16.000Z",
-      "collected_at": "2026-08-21T23:48:18.451Z",
-      "source": {
-        "name": "X：Rohan Paul (@rohanpaul_ai)"
-      },
-      "source_channels": [
-        "all",
-        "paper"
-      ],
-      "metadata": {
-        "original_title": "An agent can improve without retraining the model. Once agents rewrite their own prompts， memory， a…",
-        "score": 36,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt3lo9v10vhjro6tfdznqvof"
-        }
-      }
-    },
-    {
-      "id": "cmt3kyugv0uu1ro6tft97ljgz",
-      "item_type": "item",
-      "category": "tip",
-      "title": "2026 年最佳 GPU Neocloud 排名：CoreWeave、Nebius、Lambda、Crusoe 与 Groq 按公开定价和签约电力对比",
-      "description": "五家最大 GPU neocloud 商业模式各异：CoreWeave 与 Nebius 向 SEC 报告，Lambda 和 Crusoe 私有化并筹备 IPO，Groq 在将 LPU 技术授权给 NVIDIA 后转型为推理云。",
-      "original_url": "https://www.marktechpost.com/2026/08/21/best-gpu-neoclouds-2026",
-      "aihot_url": "https://aihot.virxact.com/items/cmt3kyugv0uu1ro6tft97ljgz",
-      "published_at": "2026-08-21T23:20:12.000Z",
-      "collected_at": "2026-08-21T23:28:32.552Z",
-      "source": {
-        "name": "MarkTechPost（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Best GPU Neoclouds 2026： CoreWeave， Nebius， Lambda， Crusoe， and Groq Ranked by Published Pricing and Contracted Power",
-        "score": 51,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt3kyugv0uu1ro6tft97ljgz"
         }
       }
     },
