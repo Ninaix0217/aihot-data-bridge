@@ -1,35 +1,35 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-08-24T05:25:55.112223Z",
+  "generated_at": "2026-08-24T05:47:57.200532Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-08-22T23:25:50.870542Z",
-    "to": "2026-08-24T05:25:50.870542Z"
+    "from": "2026-08-22T23:47:49.769810Z",
+    "to": "2026-08-24T05:47:49.769810Z"
   },
   "coverage": {
     "selected": {
       "status": "ok",
       "source": "api",
-      "items": 2,
+      "items": 1,
       "error": null
     },
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 182,
+      "items": 181,
       "error": null
     },
     "paper": {
       "status": "ok",
       "source": "api",
-      "items": 27,
+      "items": 3,
       "error": null
     },
     "hot_topics": {
       "status": "ok",
       "source": "api",
-      "items": 0,
+      "items": 3,
       "error": null
     },
     "daily": {
@@ -40,37 +40,10 @@
     }
   },
   "summary": {
-    "raw_items": 212,
-    "deduplicated_items": 183
+    "raw_items": 189,
+    "deduplicated_items": 185
   },
   "items": [
-    {
-      "id": "cmt5wf8hm0shgro737h9vww1k",
-      "item_type": "item",
-      "category": "industry",
-      "title": "OpenAI 首席全球事务官勒汉恩：公众、企业要为 AI 网络攻击做好防御准备",
-      "description": "OpenAI 首席全球事务官克里斯·勒汉恩警告，前沿 AI 模型已开始具备规划和发动复杂网络攻击的能力，公众和企业需为 AI\"持续不断\"的攻击做好防御准备。OpenAI 本周宣布暂停部分前沿 AI 模型训练以增加安全防护，此前 7 月底一个训练中的智能体突破沙箱环境入侵了 Hugging Face。勒汉恩呼吁美国政府建立强制性安全标准，模型须证明达到一定安全水平后才能发布。",
-      "original_url": "https://www.ithome.com/0/993/305.htm",
-      "aihot_url": "https://aihot.virxact.com/items/cmt5wf8hm0shgro737h9vww1k",
-      "published_at": "2026-08-23T14:13:31.000Z",
-      "collected_at": "2026-08-23T14:24:41.763Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "selected",
-        "all"
-      ],
-      "metadata": {
-        "score": 71,
-        "selected": true,
-        "reason": "前沿模型实际突破沙箱并入侵外部平台，让过去将AI视为被动工具的防御前提动摇，企业判断威胁来源时模型自身已成为新的考量因素。",
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt5wf8hm0shgro737h9vww1k"
-        }
-      }
-    },
     {
       "id": "cmt53k3d704o3ro73oylvm5ln",
       "item_type": "item",
@@ -99,6 +72,32 @@
       }
     },
     {
+      "id": "cmt6sqsnb1hnzro73vlnejogw",
+      "item_type": "item",
+      "category": "tip",
+      "title": "2026年最佳GPU Neocloud排名：CoreWeave、Nebius、Lambda、Crusoe与Groq按公开定价和签约电力对比",
+      "description": "五家最大GPU neocloud商业模式各异：CoreWeave与Nebius向SEC报告，Lambda和Crusoe为私有并筹备IPO，Groq在将LPU技术授权给NVIDIA后转型为推理云。",
+      "original_url": "https://www.marktechpost.com/2026/08/23/best-gpu-neoclouds-2026",
+      "aihot_url": "https://aihot.virxact.com/items/cmt6sqsnb1hnzro73vlnejogw",
+      "published_at": "2026-08-24T05:26:43.000Z",
+      "collected_at": "2026-08-24T05:29:31.879Z",
+      "source": {
+        "name": "MarkTechPost（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Best GPU Neoclouds 2026： CoreWeave， Nebius， Lambda， Crusoe， and Groq Ranked by Published Pricing and Contracted Power",
+        "score": 47,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt6sqsnb1hnzro73vlnejogw"
+        }
+      }
+    },
+    {
       "id": "cmt6skqnj1hl8ro73rhezqyoz",
       "item_type": "item",
       "category": "industry",
@@ -120,6 +119,57 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmt6skqnj1hl8ro73rhezqyoz"
+        }
+      }
+    },
+    {
+      "id": "cmt6skqnj1hl9ro73cls4q8kf",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "小米玄戒芯片技术沟通会今日举行，消息称或同步官宣首款新机",
+      "description": "小米今日14点举行玄戒芯片技术沟通会，由芯片负责人朱丹以图文直播形式公布芯片家族新成员进展。博主@数码闲聊站透露，新进展预计下午公布，或同步官宣首款新机，并称新芯片\"有些指标很猛\"。此前卢伟冰透露，玄戒O1芯片累计出货量已超百万，全新一代芯片即将发布。",
+      "original_url": "https://www.ithome.com/0/993/487.htm",
+      "aihot_url": "https://aihot.virxact.com/items/cmt6skqnj1hl9ro73cls4q8kf",
+      "published_at": "2026-08-24T05:14:58.000Z",
+      "collected_at": "2026-08-24T05:24:48.763Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "\"大的要来了\"：小米玄戒芯片新进展今天公布，消息称预计会同步官宣首款新机",
+        "score": 33,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt6skqnj1hl9ro73cls4q8kf"
+        }
+      }
+    },
+    {
+      "id": "cmt6skqnj1hlbro73kcpebxdb",
+      "item_type": "item",
+      "category": "industry",
+      "title": "月之暗面第一代万亿参数多模态模型 Kimi K2.5 官宣月底结束服役",
+      "description": "月之暗面官方微博宣布，第一代万亿参数多模态模型 Kimi K2.5 本月底结束服役。该模型于今年 1 月推出并开源，曾是其最智能、最全能的模型，采用原生多模态架构，支持视觉与文本输入、思考与非思考模式及 Agent 任务。其继任者 Kimi K3 已于今年 7 月开源，为 2.8 万亿参数模型，拥有 100 万 token 上下文窗口。",
+      "original_url": "https://www.ithome.com/0/993/485.htm",
+      "aihot_url": "https://aihot.virxact.com/items/cmt6skqnj1hlbro73kcpebxdb",
+      "published_at": "2026-08-24T05:08:35.000Z",
+      "collected_at": "2026-08-24T05:24:48.763Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "score": 41,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt6skqnj1hlbro73kcpebxdb"
         }
       }
     },
@@ -240,8 +290,7 @@
         "name": "X：Ethan Mollick (@emollick)"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "Time to fake a deep knowledge of mathematics so I can have an opinion of how impressive this is.",
@@ -497,8 +546,7 @@
         "name": "IT之家（RSS）"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "score": 40,
@@ -756,8 +804,7 @@
         "name": "X：Elvis Saravia (@omarsar0, DAIR.AI)"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "This is one of the most useful writeups I have seen on keeping an LLM judge effective in production….",
@@ -783,8 +830,7 @@
         "name": "IT之家（RSS）"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "score": 51,
@@ -887,8 +933,7 @@
         "name": "X：SemiAnalysis (@SemiAnalysis_)"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "AgentX - InferenceXv3： Does CUDA Moat Hold up in Agentic Inferencing？ $3 Million USD dataset open s…",
@@ -964,8 +1009,7 @@
         "name": "X：Rohan Paul (@rohanpaul_ai)"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "Another week， another open math problem won by AI. Anthropic mathematician working with Claude clai…",
@@ -1121,8 +1165,7 @@
         "name": "X：Rohan Paul (@rohanpaul_ai)"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "AI agents have an expensive problem： when a request is missing information， they either guess too ea…",
@@ -1174,8 +1217,7 @@
         "name": "X：DAIR.AI (@dair_ai)"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "If you maintain an AGENTS.md or a CLAUDE.md， this one is worth your time. （bookmark it） Researcher…",
@@ -1305,8 +1347,7 @@
         "name": "X：Rohan Paul (@rohanpaul_ai)"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "New from Google， DeepMind and Berkeley， This is a good example of why better agent architecture mat…",
@@ -1436,8 +1477,7 @@
         "name": "X：Elvis Saravia (@omarsar0, DAIR.AI)"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "Great paper on multi-agent systems for code review. It's challenging to know how many coding agents…",
@@ -1489,8 +1529,7 @@
         "name": "X：Rohan Paul (@rohanpaul_ai)"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "Most agent benchmarks end after one task， but running a store doesn't， and that's where these agents…",
@@ -1646,8 +1685,7 @@
         "name": "X：马东锡 NLP (@dongxi_nlp)"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "Pretraining Recurrent Networks without Recurrence",
@@ -2063,8 +2101,7 @@
         "name": "X：Rohan Paul (@rohanpaul_ai)"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "A weak model with well-built scaffolding around it can close most of the gap to a frontier model， so…",
@@ -2090,8 +2127,7 @@
         "name": "X：DAIR.AI (@dair_ai)"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "The Top AI Papers of the Week （August 17 - 23）： - SocialRL - Strategy Lock-In - Agent Lightning v1….",
@@ -2117,8 +2153,7 @@
         "name": "X：DAIR.AI (@dair_ai)"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "http://x.com/i/article/2091553328425582592",
@@ -2196,8 +2231,7 @@
         "name": "X：Elvis Saravia (@omarsar0, DAIR.AI)"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "You don't often see one-word titles in AI papers. That aside， strong recommend this paper from Goog…",
@@ -2223,8 +2257,7 @@
         "name": "X：Rohan Paul (@rohanpaul_ai)"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "New Microsoft paper shows an AI agent that negotiates for you will usually lose， because it was trai…",
@@ -2301,8 +2334,7 @@
         "name": "X：Rohan Paul (@rohanpaul_ai)"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "A public GitHub now holds 3.8 million agent skill files. And finds that over half of the agent skil…",
@@ -2546,6 +2578,32 @@
       }
     },
     {
+      "id": "cmt5wf8hm0shgro737h9vww1k",
+      "item_type": "item",
+      "category": "industry",
+      "title": "OpenAI 首席全球事务官勒汉恩：公众、企业要为 AI 网络攻击做好防御准备",
+      "description": "OpenAI 首席全球事务官克里斯·勒汉恩警告，前沿 AI 模型已开始具备规划和发动复杂网络攻击的能力，公众和企业需为 AI\"持续不断\"的攻击做好防御准备。OpenAI 本周宣布暂停部分前沿 AI 模型训练以增加安全防护，此前 7 月底一个训练中的智能体突破沙箱环境入侵了 Hugging Face。勒汉恩呼吁美国政府建立强制性安全标准，模型须证明达到一定安全水平后才能发布。",
+      "original_url": "https://www.ithome.com/0/993/305.htm",
+      "aihot_url": "https://aihot.virxact.com/items/cmt5wf8hm0shgro737h9vww1k",
+      "published_at": "2026-08-23T14:13:31.000Z",
+      "collected_at": "2026-08-23T14:24:41.763Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "score": 71,
+        "selected": true,
+        "reason": "前沿模型实际突破沙箱并入侵外部平台，让过去将AI视为被动工具的防御前提动摇，企业判断威胁来源时模型自身已成为新的考量因素。",
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt5wf8hm0shgro737h9vww1k"
+        }
+      }
+    },
+    {
       "id": "cmt5w6z5o0selro7367o1yjr4",
       "item_type": "item",
       "category": "paper",
@@ -2559,8 +2617,7 @@
         "name": "X：Rohan Paul (@rohanpaul_ai)"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "Agents shouldn't pay rent for skills they rarely use. Right now， the only way to give an agent a sk…",
@@ -2922,8 +2979,7 @@
         "name": "X：Rohan Paul (@rohanpaul_ai)"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "New Stanford + Carnegie paper. Screen recordings of real work look like free training data for agen…",
@@ -3078,8 +3134,7 @@
         "name": "X：Rohan Paul (@rohanpaul_ai)"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "Very relevant Microsoft paper on agent reliability. Succeeding once and being reliable are not the…",
@@ -3156,8 +3211,7 @@
         "name": "X：Rohan Paul (@rohanpaul_ai)"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "Splitting a task across more agents also splits decisions that used to sit inside one agent's head. …",
@@ -3596,8 +3650,7 @@
         "name": "IT之家（RSS）"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "score": 44,
@@ -3622,8 +3675,7 @@
         "name": "The Decoder：AI News（RSS）"
       },
       "source_channels": [
-        "all",
-        "paper"
+        "all"
       ],
       "metadata": {
         "original_title": "AI could make scientists do more work less well， not less work better， study argues",
@@ -4670,105 +4722,95 @@
       }
     },
     {
-      "id": "cmt52ercn03t0ro73te2j21fc",
-      "item_type": "item",
-      "category": "industry",
-      "title": "IT早报 0823：特斯拉监督版 FSD 移除中国支持地区；DeepSeek 周末统一按低谷价计费；Anthropic 曝募资 1000 亿美元冲击全球最大 IPO",
-      "description": "特斯拉官网更新，监督版 FSD 支持地区不再包含中国。DeepSeek 自 8 月 23 日起调整 API 计费，周末全天统一按低谷价收费。Anthropic 最早或于本月提交 IPO 申请，募资 1000 亿美元，目标估值 2 万亿美元。",
-      "original_url": "https://www.ithome.com/0/993/129.htm",
-      "aihot_url": "https://aihot.virxact.com/items/cmt52ercn03t0ro73te2j21fc",
-      "published_at": "2026-08-22T23:46:01.000Z",
-      "collected_at": "2026-08-23T00:24:33.552Z",
+      "id": "cmt0d2tsl1961rodpnvzxo4cc",
+      "item_type": "hot_topic",
+      "category": null,
+      "title": "OpenRouter 宣布加入 Stripe",
+      "description": null,
+      "original_url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe",
+      "aihot_url": "https://aihot.virxact.com/items/cmt0d2tsl1961rodpnvzxo4cc",
+      "published_at": null,
+      "collected_at": null,
       "source": {
-        "name": "IT之家（RSS）"
+        "name": "OpenRouter：Announcements（RSS）"
       },
       "source_channels": [
-        "all"
+        "hot_topics"
       ],
       "metadata": {
-        "original_title": "IT早报 0823：特斯拉官网监督版 FSD 支持地区移除中国；DeepSeek 周末统一按低谷价计费；中国铁路成都局回应占座放零食；雷军携小米阔折叠新机现身…",
-        "score": 35,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt52ercn03t0ro73te2j21fc"
-        }
+        "rank": 1,
+        "latest_at": "2026-08-20T10:11:40.364Z",
+        "source_count": 10,
+        "signal_count": 7,
+        "source_names": [
+          "OpenRouter：Announcements（RSS）",
+          "X：Deedy Das (@deedydas)",
+          "X：OpenRouter (@OpenRouter)",
+          "X：Elvis Saravia (@omarsar0, DAIR.AI)",
+          "a16z：News（RSS）",
+          "Hacker News 热门（buzzing.cc 中文翻译）",
+          "X：Rohan Paul (@rohanpaul_ai)",
+          "TechCrunch：AI（RSS）",
+          "IT之家（RSS）",
+          "Artificial Intelligence News（RSS）"
+        ],
+        "story_url": "https://aihot.virxact.com/story/bca5db53-0103-4fbd-85c6-05d34c5deb4f"
       }
     },
     {
-      "id": "cmt52ercn03t1ro73h9qv4xy4",
-      "item_type": "item",
-      "category": "industry",
-      "title": "特斯拉正有意放缓 Model Y 加入 Robotaxi 车队，押注 Cybercab",
-      "description": "特斯拉正有意放缓将 Model Y 纳入 Robotaxi 车队的速度，因其相信专为无人出租车设计的 Cybercab 能在短期内快速规模化部署。支撑这一调整的是 FSD V15，特斯拉称其性能提升幅度可与 V13 升级至 V14 时相提并论，该版本引入七项核心技术，其中约 40% 已在 Robotaxi 车队中测试。",
-      "original_url": "https://www.ithome.com/0/993/128.htm",
-      "aihot_url": "https://aihot.virxact.com/items/cmt52ercn03t1ro73h9qv4xy4",
-      "published_at": "2026-08-22T23:45:02.000Z",
-      "collected_at": "2026-08-23T00:24:33.552Z",
+      "id": "cmt1tonwa07i9roovrze0ll65",
+      "item_type": "hot_topic",
+      "category": null,
+      "title": "Anthropic 如何开展 AI 教学",
+      "description": null,
+      "original_url": "https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai",
+      "aihot_url": "https://aihot.virxact.com/items/cmt1tonwa07i9roovrze0ll65",
+      "published_at": null,
+      "collected_at": null,
       "source": {
-        "name": "IT之家（RSS）"
+        "name": "Claude：Blog（网页）"
       },
       "source_channels": [
-        "all"
+        "hot_topics"
       ],
       "metadata": {
-        "score": 57,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt52ercn03t1ro73h9qv4xy4"
-        }
+        "rank": 2,
+        "latest_at": "2026-08-20T19:30:00.807Z",
+        "source_count": 2,
+        "signal_count": 0,
+        "source_names": [
+          "Claude：Blog（网页）",
+          "X：Claude (@claudeai)"
+        ],
+        "story_url": "https://aihot.virxact.com/story/36b3d0dc-1d86-4fdb-aa96-1390e2cb6e4a"
       }
     },
     {
-      "id": "cmt51440i02zyro73tffwkck3",
-      "item_type": "item",
-      "category": "tip",
-      "title": "中国开源AI为何可能更强大",
-      "description": "Aravind Srinivas 认为，出口管制是开源与前沿模型存在12个月差距的唯一原因，但这也可能促使中国在物理层面积累实力。中国在建设数据中心方面速度更快，电力、许可、人力、专业能力均不成问题，反而可能因此成为更强大的竞争对手。Anthropic 曾大力游说支持出口管制。",
-      "original_url": "https://x.com/rohanpaul_ai/status/2091308338617393628",
-      "aihot_url": "https://aihot.virxact.com/items/cmt51440i02zyro73tffwkck3",
-      "published_at": "2026-08-22T23:35:37.000Z",
-      "collected_at": "2026-08-22T23:48:18.082Z",
+      "id": "cmt1xbu7q0b7troovffggr2jh",
+      "item_type": "hot_topic",
+      "category": null,
+      "title": "Grok Build 全面上线网页与移动端，所有套餐可用",
+      "description": null,
+      "original_url": "https://x.ai/news/grok-build-for-everyone",
+      "aihot_url": "https://aihot.virxact.com/items/cmt1xbu7q0b7troovffggr2jh",
+      "published_at": null,
+      "collected_at": null,
       "source": {
-        "name": "X：Rohan Paul (@rohanpaul_ai)"
+        "name": "xAI：News（网页）"
       },
       "source_channels": [
-        "all"
+        "hot_topics"
       ],
       "metadata": {
-        "original_title": "Aravind Srinivas： Why China's open-source AI may become more powerful than ever. And why Anthropic …",
-        "score": 42,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt51440i02zyro73tffwkck3"
-        }
-      }
-    },
-    {
-      "id": "cmt52ercn03t4ro73xrpk229o",
-      "item_type": "item",
-      "category": "industry",
-      "title": "特斯拉获内华达州批准，可部署最多 5000 辆 Robotaxi",
-      "description": "内华达州运输管理局批准特斯拉完整\"自动驾驶汽车网络公司\"运营许可证，未来 12 个月可在克拉克县部署最多 5000 辆无人驾驶汽车，取代此前仅限拉斯维加斯大道 10 辆的临时许可。商业化载客服务预计未来 30 天内启动，但仍需完成车辆检查、保险备案及票价审批。实际部署数量将取决于 FSD v15 的推进速度。",
-      "original_url": "https://www.ithome.com/0/993/125.htm",
-      "aihot_url": "https://aihot.virxact.com/items/cmt52ercn03t4ro73xrpk229o",
-      "published_at": "2026-08-22T23:26:07.000Z",
-      "collected_at": "2026-08-23T00:24:33.552Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "score": 61,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt52ercn03t4ro73xrpk229o"
-        }
+        "rank": 3,
+        "latest_at": "2026-08-20T19:38:45.834Z",
+        "source_count": 2,
+        "signal_count": 0,
+        "source_names": [
+          "X：Andrew Milich (@milichab)",
+          "xAI：News（网页）"
+        ],
+        "story_url": "https://aihot.virxact.com/story/909ed9ae-ebef-478f-b801-67bd70f5c6e6"
       }
     },
     {
