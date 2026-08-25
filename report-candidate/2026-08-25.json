@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-08-25T05:18:45.428429Z",
+  "generated_at": "2026-08-25T05:40:06.736637Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-08-23T23:18:35.543781Z",
-    "to": "2026-08-25T05:18:35.543781Z"
+    "from": "2026-08-23T23:39:54.959063Z",
+    "to": "2026-08-25T05:39:54.959063Z"
   },
   "coverage": {
     "selected": {
@@ -17,7 +17,7 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 369,
+      "items": 370,
       "error": null
     },
     "paper": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 410,
-    "deduplicated_items": 370
+    "raw_items": 411,
+    "deduplicated_items": 371
   },
   "items": [
     {
@@ -157,6 +157,58 @@
       }
     },
     {
+      "id": "cmt87s8aw2uhjro73wry9vmzs",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "阿里云 Wan3.0 发布，视频生成质量飞跃",
+      "description": "阿里云发布 Wan3.0 视频生成模型，被评测者评价为\"质量持续高水准，而非偶发\"，相较 Wan2.7 堪称全新模型。该模型支持文生视频（T2V）、图生视频（I2V）和参考生视频（R2V），现已上线 fal 平台，并提供 Model Studio 和 Qwen Cloud 的 API 访问。",
+      "original_url": "https://x.com/alibaba_cloud/status/2092118611674726871",
+      "aihot_url": "https://aihot.virxact.com/items/cmt87s8aw2uhjro73wry9vmzs",
+      "published_at": "2026-08-25T05:15:21.000Z",
+      "collected_at": "2026-08-25T05:18:18.782Z",
+      "source": {
+        "name": "X：阿里云 / Alibaba Cloud (@alibaba_cloud)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "\"The quality is consistently high， not occasionally high. Against Wan2.7， it's not just a huge updat…",
+        "score": 61,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt87s8aw2uhjro73wry9vmzs"
+        }
+      }
+    },
+    {
+      "id": "cmt88h1nt2vblro73sh3y3j1h",
+      "item_type": "item",
+      "category": "industry",
+      "title": "OpenAI 称 DevDay 2026 将创历史最佳",
+      "description": "OpenAI DevDay 2026 将是我们公司历史上最好的一届 DevDay。其他届将远远不及。",
+      "original_url": "https://x.com/thsottiaux/status/2092117461646856505",
+      "aihot_url": "https://aihot.virxact.com/items/cmt88h1nt2vblro73sh3y3j1h",
+      "published_at": "2026-08-25T05:10:47.000Z",
+      "collected_at": "2026-08-25T05:37:37.050Z",
+      "source": {
+        "name": "X：Tibo (@thsottiaux)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "OpenAI DevDay 2026 will be our best DevDay in the history of the company. It will not be close.",
+        "score": 23,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt88h1nt2vblro73sh3y3j1h"
+        }
+      }
+    },
+    {
       "id": "cmt87biw32u03ro73m4w17kyw",
       "item_type": "item",
       "category": "industry",
@@ -179,6 +231,83 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmt87biw32u03ro73m4w17kyw"
+        }
+      }
+    },
+    {
+      "id": "cmt880xac2uptro73k9c0n6qr",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "老板电器新一代 AI 烹饪眼镜明年 3 月发布，搭载\"食神\"AI 烹饪大模型",
+      "description": "老板电器新一代 AI 烹饪眼镜预计明年 3 月正式发布，将面向消费者销售。新品比前代约 89g 更轻盈，显示方案从全彩改为单色，充电方式改为换电方案，搭载\"食神\"AI 烹饪大模型，光波导光学模组由谷东智能提供。",
+      "original_url": "https://www.ithome.com/0/993/957.htm",
+      "aihot_url": "https://aihot.virxact.com/items/cmt880xac2uptro73k9c0n6qr",
+      "published_at": "2026-08-25T05:00:50.000Z",
+      "collected_at": "2026-08-25T05:25:01.071Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "消息称老板电器旗下新一代 AI 烹饪眼镜将于明年 3 月发布，搭载\"食神\"AI 烹饪大模型",
+        "score": 29,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt880xac2uptro73k9c0n6qr"
+        }
+      }
+    },
+    {
+      "id": "cmt880xac2upvro736k8x15yw",
+      "item_type": "item",
+      "category": "tip",
+      "title": "微软 CEO 纳德拉示警：企业要掌控 Token 资本，使用 AI 不能押注单一模型",
+      "description": "微软首席执行官萨蒂亚·纳德拉警告称，企业若依赖单一人工智能模型，可能把自身知识和思考能力\"外包\"给模型提供商，甚至失去独立生存能力。他认为企业会持续创造知识，这些知识应留在企业内部，而不应被绑定到某个模型或服务商，并提出了涵盖提示词上下文、员工与模型交互记录的\"Token 资本\"概念。纳德拉强调，任何模型都可能停止服务，企业必须掌控自身知识和发展方向。",
+      "original_url": "https://www.ithome.com/0/993/955.htm",
+      "aihot_url": "https://aihot.virxact.com/items/cmt880xac2upvro736k8x15yw",
+      "published_at": "2026-08-25T04:51:07.000Z",
+      "collected_at": "2026-08-25T05:25:01.071Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "score": 56,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt880xac2upvro736k8x15yw"
+        }
+      }
+    },
+    {
+      "id": "cmt880xac2upwro737kqm5elx",
+      "item_type": "item",
+      "category": "tip",
+      "title": "美媒分析中国 AI 追赶速度：清华人才网络与开源技术是关键",
+      "description": "《华尔街日报》报道称，中国 AI 模型与美国头部模型的差距已缩小至数月，背后是清华等高校长期形成的人才网络、开源技术、人才回流及更高算力效率共同推动。智谱 AI 唐杰、月之暗面杨植麟、DeepSeek 梁文锋等研究者构成重要力量。报道还指出，DeepSeek 通过 MLA 与 MoE 技术降低算力需求，但高端芯片数量仅为 OpenAI、谷歌同行的五分之一。",
+      "original_url": "https://www.ithome.com/0/993/954.htm",
+      "aihot_url": "https://aihot.virxact.com/items/cmt880xac2upwro737kqm5elx",
+      "published_at": "2026-08-25T04:46:15.000Z",
+      "collected_at": "2026-08-25T05:25:01.071Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "中国 AI 为什么追得这么快？美媒找到一批关键人物",
+        "score": 51,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt880xac2upwro737kqm5elx"
         }
       }
     },
@@ -9515,110 +9644,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmt6hmkck18s1ro73wub7kcnn"
-        }
-      }
-    },
-    {
-      "id": "cmt6gjz9617zqro73r9ru5u5p",
-      "item_type": "item",
-      "category": "tip",
-      "title": "Fable 5 仅占 Anthropic 付费 token 使用量 6%，定价为 Opus 5 两倍",
-      "description": "Anthropic 旗舰模型 Fable 5 仅占其付费 token 使用量的 6%，API 定价为 Claude Opus 5 的两倍，价差正促使企业按任务难度匹配模型。Opus 5 成本仅为 Fable 5 一半，且最大努力模式下在 CursorBench 3.2 上仅落后 0.5%。6 月被迫下架可能永久削弱了 Fable 5 的定价权，并推动客户转向多模型采购。",
-      "original_url": "https://x.com/rohanpaul_ai/status/2091670641451950127",
-      "aihot_url": "https://aihot.virxact.com/items/cmt6gjz9617zqro73r9ru5u5p",
-      "published_at": "2026-08-23T23:35:16.000Z",
-      "collected_at": "2026-08-23T23:48:18.501Z",
-      "source": {
-        "name": "X：Rohan Paul (@rohanpaul_ai)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "FT： Fable 5 accounts for only 6% of purchased Anthropic tokens. It costs exactly twice Claude Opus …",
-        "score": 41,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt6gjz9617zqro73r9ru5u5p"
-        }
-      }
-    },
-    {
-      "id": "cmt6gz1j418c8ro73zjnhwcys",
-      "item_type": "item",
-      "category": "industry",
-      "title": "Codex 语音免提编程演示预告",
-      "description": "如果你能减少坐在办公桌前的时间，却完成更多工作，会怎样？\n\n提示：你其实已经可以做到\n\n@AlexFinn 明天将来到我们的演播室，展示他如何通过 Codex 中的语音功能实现免手操作--在桌面端和移动端皆可。",
-      "original_url": "https://x.com/OpenAIDevs/status/2091669454971343021",
-      "aihot_url": "https://aihot.virxact.com/items/cmt6gz1j418c8ro73zjnhwcys",
-      "published_at": "2026-08-23T23:30:34.000Z",
-      "collected_at": "2026-08-24T00:00:00.866Z",
-      "source": {
-        "name": "X：OpenAI Developers (@OpenAIDevs)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "What if you could spend less time at your desk and still get more done？ Hint： you already can @Ale…",
-        "score": 30,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt6gz1j418c8ro73zjnhwcys"
-        }
-      }
-    },
-    {
-      "id": "cmt6huw2m18ulro73c2cvq6lk",
-      "item_type": "item",
-      "category": "industry",
-      "title": "消息称 AI 初创公司 Hugging Face 探索出售，估值或达 130 亿美元",
-      "description": "据 Business Insider 援引知情人士消息，AI 初创公司 Hugging Face 一直在探索出售事宜，交易估值可能达 130 亿美元或更高。这家总部位于纽约的公司托管开源大语言模型和数据集，已与一家银行合作评估竞购者兴趣。该公司 2023 年融资时估值 45 亿美元，上个月曾因一个 OpenAI 模型失控引发黑客攻击，导致其基础设施受损。",
-      "original_url": "https://www.ithome.com/0/993/329.htm",
-      "aihot_url": "https://aihot.virxact.com/items/cmt6huw2m18ulro73c2cvq6lk",
-      "published_at": "2026-08-23T23:28:42.000Z",
-      "collected_at": "2026-08-24T00:24:46.995Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "消息称 AI 初创公司 Hugging Face 探索出售，估值达 130 亿美元",
-        "score": 51,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt6huw2m18ulro73c2cvq6lk"
-        }
-      }
-    },
-    {
-      "id": "cmt6fppq117a5ro73hs4z1e5h",
-      "item_type": "item",
-      "category": "industry",
-      "title": "Twitch 因使用主播内容训练亚马逊 AI 面临集体诉讼",
-      "description": "Twitch 及其母公司亚马逊因未经同意使用主播内容训练生成式 AI 模型而面临集体诉讼。原告 Warren Pandiscia 在加州北区法院提交 37 页诉状，指控平台违反默示协议及州不公平竞争法。Twitch 于 8 月 12 日承认使用直播、剪辑、聊天记录和照片训练亚马逊 AI，且退出选项不具追溯力、与频道而非账号绑定。",
-      "original_url": "https://www.ithome.com/0/993/326.htm",
-      "aihot_url": "https://aihot.virxact.com/items/cmt6fppq117a5ro73hs4z1e5h",
-      "published_at": "2026-08-23T23:19:39.000Z",
-      "collected_at": "2026-08-23T23:24:46.857Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "因使用主播内容训练亚马逊 AI，Twitch 面临集体诉讼",
-        "score": 59,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt6fppq117a5ro73hs4z1e5h"
         }
       }
     },
