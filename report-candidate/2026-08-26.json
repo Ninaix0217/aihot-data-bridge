@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-08-26T05:18:45.941713Z",
+  "generated_at": "2026-08-26T05:43:02.810814Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-08-24T23:18:32.835460Z",
-    "to": "2026-08-26T05:18:32.835460Z"
+    "from": "2026-08-24T23:42:53.366475Z",
+    "to": "2026-08-26T05:42:53.366475Z"
   },
   "coverage": {
     "selected": {
@@ -17,13 +17,13 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 421,
+      "items": 420,
       "error": null
     },
     "paper": {
       "status": "ok",
       "source": "api",
-      "items": 32,
+      "items": 31,
       "error": null
     },
     "hot_topics": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 466,
-    "deduplicated_items": 419
+    "raw_items": 464,
+    "deduplicated_items": 418
   },
   "items": [
     {
@@ -329,6 +329,32 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmt8zzh0w05nirolyozmvq7i0"
+        }
+      }
+    },
+    {
+      "id": "cmt9n82t80p59roly2qnlp52f",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "阿里云WonderClip×GenTube AI电影节工作坊回顾",
+      "description": "感谢所有参加我们 WonderClip × GenTube AI 电影节创作者工作坊的朋友！\n\n探索 WonderClip 的 AI 驱动叙事，将你的创意变为现实：https://www.wonderclip.ai/#/home\n\n想了解更多？预约与我们的专家一对一交流：https://click.alibabacloud.com/m/20000001260",
+      "original_url": "https://x.com/alibaba_cloud/status/2092474321352482915",
+      "aihot_url": "https://aihot.virxact.com/items/cmt9n82t80p59roly2qnlp52f",
+      "published_at": "2026-08-26T04:48:49.000Z",
+      "collected_at": "2026-08-26T05:18:18.302Z",
+      "source": {
+        "name": "X：阿里云 / Alibaba Cloud (@alibaba_cloud)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Thank you to everyone who joined our WonderClip × GenTube AI Film Festival Creator Workshop！ Explor…",
+        "score": 13,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmt9n82t80p59roly2qnlp52f"
         }
       }
     },
@@ -10882,59 +10908,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmt7vztt32jk2ro733dig1f3o"
-        }
-      }
-    },
-    {
-      "id": "cmt7we5tm2jwsro73gw74f6a3",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "Claude Code v2.1.243 发布：新增 /usage 循环统计、模型选择器自定义与无密钥登录",
-      "description": "Claude Code v2.1.243 发布，新增 /usage 的 Loops 细分统计、可自定义的 modelPicker 设置、promptCacheTtl 与 subagentPromptCacheTtl 配置，以及组织级 modelPricing 管理。",
-      "original_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.243",
-      "aihot_url": "https://aihot.virxact.com/items/cmt7we5tm2jwsro73gw74f6a3",
-      "published_at": "2026-08-24T23:40:26.000Z",
-      "collected_at": "2026-08-24T23:59:28.306Z",
-      "source": {
-        "name": "Claude Code：GitHub Releases（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "v2.1.243",
-        "score": 50,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt7we5tm2jwsro73gw74f6a3"
-        }
-      }
-    },
-    {
-      "id": "cmt7vztt32jk3ro73hp5czw2o",
-      "item_type": "item",
-      "category": "paper",
-      "title": "长程规划智能体：预训练与OPD蒸馏研究",
-      "description": "论文发现，后训练无法修复薄弱的长程规划基础：噪声轨迹会累积错误，稀疏奖励导致信用分配不当，冲突教师引发遗忘。研究建议优先训练清晰世界模型和长轨迹，奖励信号过稀疏时采用OPD（on-policy distillation），并避免合并规划策略不兼容的教师。OPD在长程噪声场景下优于结果奖励GRPO，因教师反馈贯穿整个轨迹而非仅在末端。",
-      "original_url": "https://x.com/rohanpaul_ai/status/2092032639318569357",
-      "aihot_url": "https://aihot.virxact.com/items/cmt7vztt32jk3ro73hp5czw2o",
-      "published_at": "2026-08-24T23:33:43.000Z",
-      "collected_at": "2026-08-24T23:48:18.370Z",
-      "source": {
-        "name": "X：Rohan Paul (@rohanpaul_ai)"
-      },
-      "source_channels": [
-        "all",
-        "paper"
-      ],
-      "metadata": {
-        "original_title": "No amount of post-training cleanly fixes weak long-horizon foundations： noisy trajectories compound …",
-        "score": 34,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmt7vztt32jk3ro73hp5czw2o"
         }
       }
     },
