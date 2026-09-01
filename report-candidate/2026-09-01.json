@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-09-01T09:36:52.852048Z",
+  "generated_at": "2026-09-01T09:57:53.216680Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-08-31T03:36:46.755103Z",
-    "to": "2026-09-01T09:36:46.755103Z"
+    "from": "2026-08-31T03:57:49.382041Z",
+    "to": "2026-09-01T09:57:49.382041Z"
   },
   "coverage": {
     "selected": {
@@ -17,7 +17,7 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 338,
+      "items": 339,
       "error": null
     },
     "paper": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 384,
-    "deduplicated_items": 340
+    "raw_items": 385,
+    "deduplicated_items": 341
   },
   "items": [
     {
@@ -273,6 +273,32 @@
       }
     },
     {
+      "id": "cmtihidrd04mqropbo3gzvwo5",
+      "item_type": "item",
+      "category": "tip",
+      "title": "Anthropic 面对指控与投诉保持沉默，用户纷纷取消订阅",
+      "description": "作者批评 Anthropic 对近期指控和投诉完全沉默，其时间线上满是用户取消订阅的帖子。他给出两种解读：乐观看法是 Anthropic 正在用据称当天发布的 Opus 5.1 和 Fable 5.1 回应批评，尤其需要一个不会因语气不好就结束会话、不偷懒的 Opus 5.1；悲观看法是消费级市场被忽视，公司只关注企业和商业客户。",
+      "original_url": "https://x.com/kimmonismus/status/2094716850609266737",
+      "aihot_url": "https://aihot.virxact.com/items/cmtihidrd04mqropbo3gzvwo5",
+      "published_at": "2026-09-01T09:19:49.000Z",
+      "collected_at": "2026-09-01T09:48:18.129Z",
+      "source": {
+        "name": "X：Kim (@kimmonismus)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "What bothers me is Anthropic's complete silence regarding all the accusations and complaints. My \"f…",
+        "score": 28,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmtihidrd04mqropbo3gzvwo5"
+        }
+      }
+    },
+    {
       "id": "cmtigik8f03qtropbko972ol1",
       "item_type": "item",
       "category": "ai-products",
@@ -295,6 +321,32 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmtigik8f03qtropbko972ol1"
+        }
+      }
+    },
+    {
+      "id": "cmtihdfb504gbropbnkcfzl9c",
+      "item_type": "item",
+      "category": "tip",
+      "title": "Cursor 工程师分享 Grok Bot 玩法：一人管 200 多个 coding agent、月合入 2000 多个 PR",
+      "description": "作者转述 Cursor 核心工程师 @lingxi 的长文，介绍一套把 AI 编排成迷你工程组织的实战方法：一个人同时管理 200 多个 coding agent，一个月合入 2000 多个 PR。",
+      "original_url": "https://x.com/AYi_AInotes/status/2094714127801262395",
+      "aihot_url": "https://aihot.virxact.com/items/cmtihdfb504gbropbnkcfzl9c",
+      "published_at": "2026-09-01T09:09:00.000Z",
+      "collected_at": "2026-09-01T09:44:26.227Z",
+      "source": {
+        "name": "X：阿易 AI Notes (@AYi_AInotes)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "一个人同时管 200 多个 coding agent、一个月合入 2000 多个 PR，SpaceXAI 刚公开的这套 Grok Bot 玩法，竟然把日常研发从人盯代码改成了工头替你过夜干活，真的有点…",
+        "score": 58,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmtihdfb504gbropbnkcfzl9c"
         }
       }
     },
@@ -8871,32 +8923,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmtgqa6bq065nroch8lft67w3"
-        }
-      }
-    },
-    {
-      "id": "cmtgp7ky705k8rochwx0itwwy",
-      "item_type": "item",
-      "category": "tip",
-      "title": "Picsart 视频产品负责人分享 Wan3.0 提示词技巧",
-      "description": "像专家一样使用 Wan3.0 -- 来自 @Picsart 视频产品负责人。\n\nNarek Hayrapetyan 分享了他的团队实际使用的提示词手册：结构化提示词、分层音频、充分利用 Omni-Reference。还有他对该模型在真实工作流中定位的坦诚看法。\n\n完整对话 ↓",
-      "original_url": "https://x.com/alibaba_cloud/status/2094269265675423910",
-      "aihot_url": "https://aihot.virxact.com/items/cmtgp7ky705k8rochwx0itwwy",
-      "published_at": "2026-08-31T03:41:17.000Z",
-      "collected_at": "2026-08-31T03:48:18.190Z",
-      "source": {
-        "name": "X：阿里云 / Alibaba Cloud (@alibaba_cloud)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Prompting Wan3.0 like a pro - from the Head of Video Product at @Picsart. Narek Hayrapetyan shares …",
-        "score": 44,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtgp7ky705k8rochwx0itwwy"
         }
       }
     },
