@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-09-02T09:06:49.337231Z",
+  "generated_at": "2026-09-02T09:29:19.735645Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-09-01T03:06:39.036640Z",
-    "to": "2026-09-02T09:06:39.036640Z"
+    "from": "2026-09-01T03:29:09.229032Z",
+    "to": "2026-09-02T09:29:09.229032Z"
   },
   "coverage": {
     "selected": {
@@ -17,13 +17,13 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 443,
+      "items": 440,
       "error": null
     },
     "paper": {
       "status": "ok",
       "source": "api",
-      "items": 35,
+      "items": 34,
       "error": null
     },
     "hot_topics": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 502,
-    "deduplicated_items": 445
+    "raw_items": 498,
+    "deduplicated_items": 442
   },
   "items": [
     {
@@ -180,7 +180,7 @@
         "rank": 2,
         "latest_at": "2026-09-02T08:08:23.512Z",
         "source_count": 5,
-        "signal_count": 3,
+        "signal_count": 4,
         "source_names": [
           "X：通义千问 / Qwen (@Alibaba_Qwen)",
           "X：阿里云 / Alibaba Cloud (@alibaba_cloud)",
@@ -484,6 +484,32 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmtipeu1u01a2ro9yi22t9cev"
+        }
+      }
+    },
+    {
+      "id": "cmtjvlt77059iroiyim17ebx8",
+      "item_type": "item",
+      "category": "industry",
+      "title": "2026京东全球科技探索者大会9月9日召开，将发布物理AI全景战略",
+      "description": "2026京东全球科技探索者大会将于9月9日在北京北人亦创国际会展中心召开。京东集团将在会上发布物理AI全景战略，行业大咖与技术专家将探讨技术前沿与产业实践。",
+      "original_url": "https://mp.weixin.qq.com/s?__biz=MzU0MjU0MDMzMw%3D%3D&mid=2247487469&idx=1&sn=3cd2daea61df51664e204ca6277d6e6e",
+      "aihot_url": "https://aihot.virxact.com/items/cmtjvlt77059iroiyim17ebx8",
+      "published_at": "2026-09-02T09:05:26.000Z",
+      "collected_at": "2026-09-02T09:10:29.718Z",
+      "source": {
+        "name": "公众号：京东JoyAI"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "2026JDD大会完整议程来了，速看！",
+        "score": 24,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmtjvlt77059iroiyim17ebx8"
         }
       }
     },
@@ -11497,111 +11523,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmti50j6w0aj8rofq479myr33"
-        }
-      }
-    },
-    {
-      "id": "cmti4nftc0a6trofqdeoa4ba1",
-      "item_type": "item",
-      "category": "paper",
-      "title": "Hugging Face 论文《AI Agents Push Humans Out of the Loop》：智能体自主性提升会逐渐让人类监督失效",
-      "description": "Hugging Face 研究人员（与 Data & Society 合著）发布论文《AI Agents Push Humans Out of the Loop》（arxiv.org/abs/2608.23642），认为智能体自主性增加会通过审批疲劳、过度依赖、情境意识丧失和技能退化使人类监督逐渐失效。",
-      "original_url": "https://x.com/rohanpaul_ai/status/2094628310877913101",
-      "aihot_url": "https://aihot.virxact.com/items/cmti4nftc0a6trofqdeoa4ba1",
-      "published_at": "2026-09-01T03:28:00.000Z",
-      "collected_at": "2026-09-01T03:48:18.420Z",
-      "source": {
-        "name": "X：Rohan Paul (@rohanpaul_ai)"
-      },
-      "source_channels": [
-        "all",
-        "paper"
-      ],
-      "metadata": {
-        "original_title": "New HuggingFace paper argues that increasing agent autonomy can gradually make human oversight ineff…",
-        "score": 49,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmti4nftc0a6trofqdeoa4ba1"
-        }
-      }
-    },
-    {
-      "id": "cmti3xxng09btrofqxv984bgl",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "OpenClaw 更新界面，展示并行会话体验改进",
-      "description": "OpenClaw 官方宣布界面更新，并引用用户反馈称并行会话的使用体验从未如此流畅。",
-      "original_url": "https://x.com/openclaw/status/2094628122620752353",
-      "aihot_url": "https://aihot.virxact.com/items/cmti3xxng09btrofqxv984bgl",
-      "published_at": "2026-09-01T03:27:15.000Z",
-      "collected_at": "2026-09-01T03:28:28.251Z",
-      "source": {
-        "name": "X：OpenClaw (@openclaw)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "OpenClaw got purty",
-        "score": 27,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmti3xxng09btrofqxv984bgl"
-        }
-      }
-    },
-    {
-      "id": "cmti3z4sw09k5rofqw1coej71",
-      "item_type": "item",
-      "category": "ai-models",
-      "title": "科大讯飞开源词元星火 X2.5-4B 和 1.7B 端侧模型，原生支持 100 万 Token 上下文",
-      "description": "科大讯飞旗下词元星火发布并开源星火 X2.5-4B 和 X2.5-1.7B 两款端侧通用大模型，原生支持最长 100 万 Token 上下文窗口。",
-      "original_url": "https://www.ithome.com/0/996/855.htm",
-      "aihot_url": "https://aihot.virxact.com/items/cmti3z4sw09k5rofqw1coej71",
-      "published_at": "2026-09-01T03:20:44.000Z",
-      "collected_at": "2026-09-01T03:29:25.232Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "端侧唯一百万 Token 上下文模型开源：科大讯飞词元星火 X2.5-4B&1.7B 正式发布",
-        "score": 61,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmti3z4sw09k5rofqw1coej71"
-        }
-      }
-    },
-    {
-      "id": "cmti3z4sw09karofqxirnmplq",
-      "item_type": "item",
-      "category": "tip",
-      "title": "微软高管 Ryan Roslansky 示警低质量 AI 内容进入日常办公，形成恶性循环稀释信息价值",
-      "description": "微软执行副总裁、Office 与 LinkedIn 业务负责人 Ryan Roslansky 在 LinkedIn 发文示警，低质量 AI 生成内容（AI Slop）已进入日常工作场景，形成 AI 生成、AI 阅读、AI 摘要的恶性循环，信息价值可能在反复转写中被稀释。",
-      "original_url": "https://www.ithome.com/0/996/822.htm",
-      "aihot_url": "https://aihot.virxact.com/items/cmti3z4sw09karofqxirnmplq",
-      "published_at": "2026-09-01T03:07:03.000Z",
-      "collected_at": "2026-09-01T03:29:25.232Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "微软高管示警：低质量 AI 冲击日常办公，形成恶意循环稀释信息价值",
-        "score": 44,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmti3z4sw09karofqxirnmplq"
         }
       }
     },
