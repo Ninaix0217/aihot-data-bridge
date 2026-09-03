@@ -1,29 +1,29 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-09-03T09:14:00.908005Z",
+  "generated_at": "2026-09-03T09:39:01.187264Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-09-02T03:13:56.609067Z",
-    "to": "2026-09-03T09:13:56.609067Z"
+    "from": "2026-09-02T03:38:57.212988Z",
+    "to": "2026-09-03T09:38:57.212988Z"
   },
   "coverage": {
     "selected": {
       "status": "ok",
       "source": "api",
-      "items": 17,
+      "items": 16,
       "error": null
     },
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 441,
+      "items": 439,
       "error": null
     },
     "paper": {
       "status": "ok",
       "source": "api",
-      "items": 27,
+      "items": 26,
       "error": null
     },
     "hot_topics": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 496,
-    "deduplicated_items": 445
+    "raw_items": 492,
+    "deduplicated_items": 443
   },
   "items": [
     {
@@ -257,7 +257,7 @@
         "rank": 4,
         "latest_at": "2026-09-03T05:37:37.837Z",
         "source_count": 3,
-        "signal_count": 2,
+        "signal_count": 3,
         "source_names": [
           "X：Claude (@claudeai)",
           "IT之家（RSS）",
@@ -418,7 +418,7 @@
         "rank": 1,
         "latest_at": "2026-09-02T18:36:47.582Z",
         "source_count": 20,
-        "signal_count": 16,
+        "signal_count": 17,
         "source_names": [
           "X：Testing Catalog (@testingcatalog)",
           "X：Artificial Analysis (@ArtificialAnlys)",
@@ -566,30 +566,80 @@
       }
     },
     {
-      "id": "cmtjjt7360180roe43ggo0t09",
+      "id": "cmtlbqf18022prow5zsl94fvf",
       "item_type": "item",
       "category": "ai-products",
-      "title": "UU远程新版本上线：完整 TUI 渲染与多终端会话管理，强化远程 Vibe Coding 体验",
-      "description": "UU远程于9月2日上线新版本，重点优化终端功能，补齐 TUI 渲染交互与终端会话管理能力。主要更新包括：Mac 免密码登录、移动端输入优化并新增调用系统输入法的独立输入框、可同时创建和管理多个终端会话并支持手机与电脑间跨端同步接管（通过 uuyc-cli lterm 命令）。",
-      "original_url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685772&idx=1&sn=a073c30899a7f420147673def8209609",
-      "aihot_url": "https://aihot.virxact.com/items/cmtjjt7360180roe43ggo0t09",
-      "published_at": "2026-09-02T03:32:20.000Z",
-      "collected_at": "2026-09-02T03:40:27.472Z",
+      "title": "腾讯 WorkBuddy 上线银河麒麟与统信 UOS 应用商店",
+      "description": "腾讯 WorkBuddy 智能体工作台今日登陆银河麒麟操作系统和统信 UOS，并上架 openKylin、deepin 社区软件商店。官方称此次围绕系统登录联动、设备互联交互、智能技能调用、任务成果预览等核心链路做定制化适配，达成原生级运行效果，新用户可享 2000 免费积分。此前 WorkBuddy 已于 7 月发布鸿蒙 PC 版，定制版湾擎·WorkBuddy 已面向广东全省公务员开放使用。",
+      "original_url": "https://www.ithome.com/0/998/048.htm",
+      "aihot_url": "https://aihot.virxact.com/items/cmtlbqf18022prow5zsl94fvf",
+      "published_at": "2026-09-03T09:26:46.000Z",
+      "collected_at": "2026-09-03T09:29:53.717Z",
       "source": {
-        "name": "公众号：数字生命卡兹克"
+        "name": "IT之家（RSS）"
       },
       "source_channels": [
-        "selected",
         "all"
       ],
       "metadata": {
-        "original_title": "UU远程史诗级升级，这就是如今远程Vibe Coding的第一神器。",
-        "score": 65,
-        "selected": true,
-        "reason": "作者实测新版本并给出使用路径，读者可据此评估手机端远程跑 Coding Agent 的可行性。",
+        "original_title": "继鸿蒙之后，腾讯 WorkBuddy 再上线银河麒麟、统信操作系统",
+        "score": 32,
+        "selected": false,
         "attribution": {
           "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtjjt7360180roe43ggo0t09"
+          "url": "https://aihot.virxact.com/items/cmtlbqf18022prow5zsl94fvf"
+        }
+      }
+    },
+    {
+      "id": "cmtlbpjzn01uvrow5jp7yhch9",
+      "item_type": "item",
+      "category": "industry",
+      "title": "Alibaba Cloud 本周六在曼谷举办 3 场 Agentic Tools 实操 Workshop",
+      "description": "Alibaba Cloud 宣布本周六（9 月 5 日）13：00-18：00（GMT+7）在曼谷举办 3 场线下实操 Workshop：QwenWork 面向 AI 生产力、WonderClip 面向 AI 创意与营销、Qoder 面向 agentic coding。自带笔记本电脑即可参加，无需经验，名额有限，报名链接分别为 https://luma.com/f84wlqeh、https://luma.com/1m2dk1c0、https://luma.com/6oawm2t。",
+      "original_url": "https://x.com/alibaba_cloud/status/2095441698138866017",
+      "aihot_url": "https://aihot.virxact.com/items/cmtlbpjzn01uvrow5jp7yhch9",
+      "published_at": "2026-09-03T09:20:06.000Z",
+      "collected_at": "2026-09-03T09:29:13.703Z",
+      "source": {
+        "name": "X：阿里云 / Alibaba Cloud (@alibaba_cloud)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "This Saturday： 3 hands-on Alibaba Cloud Agentic Tools workshops in Bangkok！ Pick your track： 🔹 Qwe…",
+        "score": 17,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmtlbpjzn01uvrow5jp7yhch9"
+        }
+      }
+    },
+    {
+      "id": "cmtlbqf18022vrow5vvs1wdws",
+      "item_type": "item",
+      "category": "industry",
+      "title": "摩尔线程宣布打通具身智能完整链路",
+      "description": "摩尔线程在 2026 年半年度业绩说明会上表示，已打通具身智能从合成数据生成、大模型训练、仿真验证到端侧硬件部署的完整链路。",
+      "original_url": "https://www.ithome.com/0/998/037.htm",
+      "aihot_url": "https://aihot.virxact.com/items/cmtlbqf18022vrow5vvs1wdws",
+      "published_at": "2026-09-03T09:09:30.000Z",
+      "collected_at": "2026-09-03T09:29:53.717Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "摩尔线程：公司已打通具身智能完整链路",
+        "score": 45,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmtlbqf18022vrow5vvs1wdws"
         }
       }
     },
@@ -615,6 +665,32 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmtlb0eja01f2row5d7vfar4r"
+        }
+      }
+    },
+    {
+      "id": "cmtlbpjzn01uwrow5t1tpqs4n",
+      "item_type": "item",
+      "category": "industry",
+      "title": "阿里云回顾 Qwen Conference Hong Kong 2026 大会盛况",
+      "description": "阿里云回顾 Qwen Conference Hong Kong 2026 大会，内容涵盖多场主题演讲、展示以及关于 AI 落地实施和技术创新的交流，并表示敬请关注其后续活动。",
+      "original_url": "https://x.com/alibaba_cloud/status/2095436800940560614",
+      "aihot_url": "https://aihot.virxact.com/items/cmtlbpjzn01uwrow5t1tpqs4n",
+      "published_at": "2026-09-03T09:00:39.000Z",
+      "collected_at": "2026-09-03T09:29:13.703Z",
+      "source": {
+        "name": "X：阿里云 / Alibaba Cloud (@alibaba_cloud)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Recapping the excitement of Qwen Conference Hong Kong 2026 - from inspiring sessions and showcases t…",
+        "score": 21,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmtlbpjzn01uwrow5t1tpqs4n"
         }
       }
     },
@@ -693,6 +769,32 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmtl9xtve0n30roalrydjbk8l"
+        }
+      }
+    },
+    {
+      "id": "cmtlbqf190231row5pi2esps4",
+      "item_type": "item",
+      "category": "industry",
+      "title": "美国政府拟对进口芯片加征新一轮关税，力促半导体制造业回流",
+      "description": "美国商务部长卢特尼克当地时间周三表示，政府正考虑新一轮进口半导体关税措施，可能提高外国芯片关税，并对在美建厂企业推出类似制药行业的关税减免政策。美国此前已对部分先进半导体征收 25% 关税，新措施影响范围可能扩大至消费电子、数据中心服务器等产品；台积电、美光等企业已在美投资，当前约 1.2 万亿美元资金用于美国半导体产业建设。",
+      "original_url": "https://www.ithome.com/0/998/013.htm",
+      "aihot_url": "https://aihot.virxact.com/items/cmtlbqf190231row5pi2esps4",
+      "published_at": "2026-09-03T08:34:21.000Z",
+      "collected_at": "2026-09-03T09:29:53.717Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "美国政府拟对进口芯片加征新一轮关税，力促制造业回流",
+        "score": 55,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmtlbqf190231row5pi2esps4"
         }
       }
     },
@@ -11488,163 +11590,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmtjki04302cwrori3lahl24a"
-        }
-      }
-    },
-    {
-      "id": "cmtjk3any020iroriq1amq01y",
-      "item_type": "item",
-      "category": "tip",
-      "title": "阿里云讲解如何用 OpenTelemetry 为 DeepSeek Harness 生成 GenAI 追踪",
-      "description": "阿里云发文介绍编码智能体的日志只记录发生了什么，却不显示时间和 token 花在哪里。文中给出用三条命令从 DeepSeek Harness 获取 OpenTelemetry GenAI 追踪的方法，追踪结果可在 Jaeger 或 Langfuse 中查看，附教程链接 https://click.alibabacloud.com/m/20000002968/。",
-      "original_url": "https://x.com/alibaba_cloud/status/2094993339934220301",
-      "aihot_url": "https://aihot.virxact.com/items/cmtjk3any020iroriq1amq01y",
-      "published_at": "2026-09-02T03:38:29.000Z",
-      "collected_at": "2026-09-02T03:48:18.155Z",
-      "source": {
-        "name": "X：阿里云 / Alibaba Cloud (@alibaba_cloud)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Coding agents log what happened， but not where the time and tokens went. Here's how to get real Ope…",
-        "score": 33,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtjk3any020iroriq1amq01y"
-        }
-      }
-    },
-    {
-      "id": "cmtjk3ao5020jroriv5yl2ppm",
-      "item_type": "item",
-      "category": "paper",
-      "title": "Stanford、Yale 等机构发布 AgentFold：用闭环智能体搜索设计蛋白质折叠模型",
-      "description": "论文提出 AgentFold，将折叠模型开发建模为对可执行代码变体的闭环智能体树搜索。智能体从紧凑的 ESMFold 衍生模型出发，提出架构修改、实现调试、运行训练，并记录成败经验决定分支算力分配。",
-      "original_url": "https://x.com/rohanpaul_ai/status/2094992208894050581",
-      "aihot_url": "https://aihot.virxact.com/items/cmtjk3ao5020jroriv5yl2ppm",
-      "published_at": "2026-09-02T03:34:00.000Z",
-      "collected_at": "2026-09-02T03:48:18.155Z",
-      "source": {
-        "name": "X：Rohan Paul (@rohanpaul_ai)"
-      },
-      "source_channels": [
-        "all",
-        "paper"
-      ],
-      "metadata": {
-        "original_title": "New Stanford， Yale and other top Chinese univ paper treats scientific model development as search ov…",
-        "score": 44,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtjk3ao5020jroriv5yl2ppm"
-        }
-      }
-    },
-    {
-      "id": "cmtjjgbmr08s0robvnso3jdua",
-      "item_type": "item",
-      "category": "tip",
-      "title": "面壁智能 CTO 曾国洋四周年分享「面壁 AI Style」工作方式约定",
-      "description": "面壁智能发布四周年分享，CTO 曾国洋提出名为「面壁 AI Style」的共同约定，包含五项个体素养和四项团队准则。文章以九张图、九句话形式呈现，强调「你的判断力，是 AI 无法替代的核心价值」，主张让 AI 成为每个人的能力放大器。",
-      "original_url": "https://mp.weixin.qq.com/s?__biz=Mzg3Mzg2MTg2NQ%3D%3D&mid=2247499130&idx=1&sn=b7c057b13e2e0ac08b33b95824f2b323",
-      "aihot_url": "https://aihot.virxact.com/items/cmtjjgbmr08s0robvnso3jdua",
-      "published_at": "2026-09-02T03:30:00.000Z",
-      "collected_at": "2026-09-02T03:30:28.269Z",
-      "source": {
-        "name": "公众号：面壁智能（MiniCPM）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "什么是 AI 原生的工作方式？",
-        "score": 26,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtjjgbmr08s0robvnso3jdua"
-        }
-      }
-    },
-    {
-      "id": "cmtjjeonr08iirobvno2ih951",
-      "item_type": "item",
-      "category": "tip",
-      "title": "Gary Marcus 警告 OpenAI 即将越过一条 AI 安全红线",
-      "description": "Gary Marcus 发文警告 OpenAI 正准备越过一条 AI 安全红线，认为其正在探索的新技术可能令思维链监控变得困难甚至不可能。",
-      "original_url": "https://garymarcus.substack.com/p/red-alert-openai-is-poised-to-cross",
-      "aihot_url": "https://aihot.virxact.com/items/cmtjjeonr08iirobvno2ih951",
-      "published_at": "2026-09-02T03:22:41.000Z",
-      "collected_at": "2026-09-02T03:29:11.535Z",
-      "source": {
-        "name": "Gary Marcus：The Road to AI We Can Trust（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Red Alert： OpenAI is poised to cross an AI safety redline.",
-        "score": 51,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtjjeonr08iirobvno2ih951"
-        }
-      }
-    },
-    {
-      "id": "cmtjjybet000ororij163lsgc",
-      "item_type": "item",
-      "category": "tip",
-      "title": "Emad Mostaque 谈 OpenAI Astra 的 recurrent depth 引发监控担忧",
-      "description": "Emad Mostaque 转引 The Information 报道称 OpenAI 的 Astra AI 使用名为 recurrent depth 的新推理方法，虽有助于成本和性能，但因遮蔽模型思维过程而令研究者担忧其难以监控。Mostaque 认为几年内前沿模型将以每秒 10，000 tokens 一次性解决几乎所有问题，届时人类无法监控，即便给模型设限它也会在编码时绕开。",
-      "original_url": "https://x.com/EMostaque/status/2094988941715702115",
-      "aihot_url": "https://aihot.virxact.com/items/cmtjjybet000ororij163lsgc",
-      "published_at": "2026-09-02T03:21:01.000Z",
-      "collected_at": "2026-09-02T03:44:26.534Z",
-      "source": {
-        "name": "X：Emad Mostaque (@EMostaque)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "I see a lot of my TL freaking out about this Here is the reality： Frontier models will one shot ju…",
-        "score": 46,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtjjybet000ororij163lsgc"
-        }
-      }
-    },
-    {
-      "id": "cmtjj0pe208awrobvyk93n49o",
-      "item_type": "item",
-      "category": "industry",
-      "title": "阿里云将参加 2026 年 10 月 13 日新加坡 SMEs Go Digital Day",
-      "description": "阿里云宣布参加 2026 年 10 月 13 日 9：00 AM - 6：00 PM 在 Suntec Convention Centre Halls 401-403 举办的新加坡 SMEs Go Digital Day 2026。",
-      "original_url": "https://x.com/alibaba_cloud/status/2094987240703189004",
-      "aihot_url": "https://aihot.virxact.com/items/cmtjj0pe208awrobvyk93n49o",
-      "published_at": "2026-09-02T03:14:15.000Z",
-      "collected_at": "2026-09-02T03:18:18.142Z",
-      "source": {
-        "name": "X：阿里云 / Alibaba Cloud (@alibaba_cloud)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Calling all SMEs in Singapore - we're excited to be part of the upcoming SMEs Go Digital Day 2026 in…",
-        "score": 21,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtjj0pe208awrobvyk93n49o"
         }
       }
     },
