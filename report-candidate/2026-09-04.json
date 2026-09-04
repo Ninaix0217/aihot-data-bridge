@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-09-04T09:06:51.871738Z",
+  "generated_at": "2026-09-04T09:31:19.266292Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-09-03T03:06:45.215260Z",
-    "to": "2026-09-04T09:06:45.215260Z"
+    "from": "2026-09-03T03:31:12.994703Z",
+    "to": "2026-09-04T09:31:12.994703Z"
   },
   "coverage": {
     "selected": {
@@ -23,7 +23,7 @@
     "paper": {
       "status": "ok",
       "source": "api",
-      "items": 32,
+      "items": 33,
       "error": null
     },
     "hot_topics": {
@@ -40,7 +40,7 @@
     }
   },
   "summary": {
-    "raw_items": 553,
+    "raw_items": 554,
     "deduplicated_items": 498
   },
   "items": [
@@ -590,6 +590,111 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmtl25m9c0e89roalh6qci0r5"
+        }
+      }
+    },
+    {
+      "id": "cmtmr5f4207meromyy9sej7yf",
+      "item_type": "item",
+      "category": "tip",
+      "title": "Neuralink 患者仅凭意念移动光标并下国际象棋",
+      "description": "一条 X 帖子转发了 Neuralink 患者的视频，该患者仅凭意念即可移动光标并下国际象棋。内容以视频演示为主，文字说明仅此一句，未提供更多技术细节。",
+      "original_url": "https://x.com/cb_doge/status/2095805821166956726",
+      "aihot_url": "https://aihot.virxact.com/items/cmtmr5f4207meromyy9sej7yf",
+      "published_at": "2026-09-04T09:27:00.000Z",
+      "collected_at": "2026-09-04T09:29:13.304Z",
+      "source": {
+        "name": "X：cb_doge (@cb_doge)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "This Neuralink patient is moving cursor and playing chess just by thinking. 🧠",
+        "score": 41,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmtmr5f4207meromyy9sej7yf"
+        }
+      }
+    },
+    {
+      "id": "cmtmr5f4b07mfromyko47kzz0",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "AI 日报：OpenAI 发布 GPT-6 Astra，微软上线 MAI-Transcribe-2，NVIDIA 确认收购 Hugging Face",
+      "description": "日报汇总 9 月 4 日多条动态：OpenAI 正式发布 GPT-6 Astra，称在 computer use、编码、科学和网络攻防上达到 SOTA，98% FrontierMath Tier 4。",
+      "original_url": "https://x.com/testingcatalog/status/2095805585182671319",
+      "aihot_url": "https://aihot.virxact.com/items/cmtmr5f4b07mfromyko47kzz0",
+      "published_at": "2026-09-04T09:26:04.000Z",
+      "collected_at": "2026-09-04T09:29:13.304Z",
+      "source": {
+        "name": "X：Testing Catalog (@testingcatalog)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "DAILY AI BRIEF 🗞 - Sept 4 OPENAI 🔥： > GPT-6 Astra is officially out - SOTA across computer use， c…",
+        "score": 40,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmtmr5f4b07mfromyko47kzz0"
+        }
+      }
+    },
+    {
+      "id": "cmtmqhe1t076wromyc0blto8k",
+      "item_type": "item",
+      "category": "paper",
+      "title": "HarnessEvolve：借助参考轨迹实现可靠的智能体自进化",
+      "description": "华为上海 ICT AI Compute Center 等机构在 arXiv 发布论文 HarnessEvolve，参考轨迹来定位失败运行首次偏离的步骤，将错误聚类为重复模式，并编辑提示词、技能、工具、脚本和执行逻辑等整个智能体 harness。",
+      "original_url": "https://x.com/rohanpaul_ai/status/2095800283674906842",
+      "aihot_url": "https://aihot.virxact.com/items/cmtmqhe1t076wromyc0blto8k",
+      "published_at": "2026-09-04T09:05:00.000Z",
+      "collected_at": "2026-09-04T09:10:23.693Z",
+      "source": {
+        "name": "X：Rohan Paul (@rohanpaul_ai)"
+      },
+      "source_channels": [
+        "all",
+        "paper"
+      ],
+      "metadata": {
+        "original_title": "Self-improving agents have a basic problem： when a long run fails， they often do not know which step…",
+        "score": 43,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmtmqhe1t076wromyc0blto8k"
+        }
+      }
+    },
+    {
+      "id": "cmtmqhe1b076vromyjhksa5j2",
+      "item_type": "item",
+      "category": "tip",
+      "title": "HappyHorse 1.1 与 Kling 3.0 同条件对比实测",
+      "description": "作者批评网上常见的视频模型对比不严谨，用相同提示词、相同参考图、相同时长且不剪辑的方式实测 HappyHorse 1.1 与 Kling 3.0。对比覆盖口型同步、角色与场景一致性、复杂运动、镜头控制和价格五个维度，作者认为 HappyHorse 1.1 在跨镜头一致性上明显更稳，在广告和电商场景下需要更少的重生成，更快达到可交付成片，但强调两个模型各有强项。",
+      "original_url": "https://x.com/kimmonismus/status/2095798104603976052",
+      "aihot_url": "https://aihot.virxact.com/items/cmtmqhe1b076vromyjhksa5j2",
+      "published_at": "2026-09-04T08:56:20.000Z",
+      "collected_at": "2026-09-04T09:10:23.693Z",
+      "source": {
+        "name": "X：Kim (@kimmonismus)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Okay， everyone is talking about AI video models right now， but honestly， most of the \"comparisons\" o…",
+        "score": 33,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmtmqhe1b076vromyjhksa5j2"
         }
       }
     },
@@ -12850,110 +12955,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmtkzcm390ba0roal02b2u9rm"
-        }
-      }
-    },
-    {
-      "id": "cmtkz8z7o0b8hroaleuotub8o",
-      "item_type": "item",
-      "category": "tip",
-      "title": "Gabriel 发起调查：Grokbot 与 Cowork/ChatGPT 谁更适合日常运营工作",
-      "description": "Gabriel 询问同时用过 Grokbot 和 Cowork 或 ChatGPT 做全部日常运营工作的用户更偏好哪个界面，并强调不考虑个人用途场景。",
-      "original_url": "https://x.com/gabriel1/status/2095352185135755673",
-      "aihot_url": "https://aihot.virxact.com/items/cmtkz8z7o0b8hroaleuotub8o",
-      "published_at": "2026-09-03T03:24:25.000Z",
-      "collected_at": "2026-09-03T03:40:23.829Z",
-      "source": {
-        "name": "X：Gabriel (@gabriel1)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "for those that have used both these for all daily operational work： - grokbot - cowork or chatgpt wo…",
-        "score": 14,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtkz8z7o0b8hroaleuotub8o"
-        }
-      }
-    },
-    {
-      "id": "cmtkyuld60airroalebk34e6z",
-      "item_type": "item",
-      "category": "tip",
-      "title": "Ethan Mollick 用一段提示词让 Fable 5.1 生成《伊利亚特》船目 3D 交互地图",
-      "description": "Ethan Mollick 公开一段用于 Fable 5.1 的提示词，要求生成《伊利亚特》船目（Catalog of Ships）的可探索 3D 船只地图，结合真实图像与考古数据，并用智能体测试和修订，成品见 https://homer-catalogue-of-ships.netlify.app/。",
-      "original_url": "https://x.com/emollick/status/2095352019498447090",
-      "aihot_url": "https://aihot.virxact.com/items/cmtkyuld60airroalebk34e6z",
-      "published_at": "2026-09-03T03:23:45.000Z",
-      "collected_at": "2026-09-03T03:29:13.278Z",
-      "source": {
-        "name": "X：Ethan Mollick (@emollick)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Fable 5.1： \"Create the Catalog of Ships from the Iliad with a map， etc. i should be able to explore …",
-        "score": 37,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtkyuld60airroalebk34e6z"
-        }
-      }
-    },
-    {
-      "id": "cmtkytn9z0aheroalaejs9bri",
-      "item_type": "item",
-      "category": "tip",
-      "title": "OpenClaw 播客第九期：创始人团队解读 OpenClaw 2.0",
-      "description": "OpenClaw 发布播客第九期，创始人 @steipete 与 @Pat_Erichsen、@hrudolph、@jlehman_ 讨论 OpenClaw 2.0。内容涉及重构的 Control UI、多人协作、稳定性工作、仪表盘、记忆、技能和 worker 节点。",
-      "original_url": "https://x.com/openclaw/status/2095349641005170953",
-      "aihot_url": "https://aihot.virxact.com/items/cmtkytn9z0aheroalaejs9bri",
-      "published_at": "2026-09-03T03:14:18.000Z",
-      "collected_at": "2026-09-03T03:28:28.566Z",
-      "source": {
-        "name": "X：OpenClaw (@openclaw)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Inside OpenClaw 2.0 🦞 OpenClaw founder @steipete joins @Pat_Erichsen， @hrudolph and @jlehman_ to d…",
-        "score": 49,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtkytn9z0aheroalaejs9bri"
-        }
-      }
-    },
-    {
-      "id": "cmtkyrxw90agproal1t6qj5mg",
-      "item_type": "item",
-      "category": "tip",
-      "title": "Wan 3.0 登顶 Artificial Analysis 视频编辑榜单，文生视频带音频位列第二",
-      "description": "Artificial Analysis 评测显示，阿里巴巴 Wan 3.0 在视频编辑带音频榜单首次登顶第一，文生视频带音频位列第二，图生视频带音频排名第五。该模型为一体化视频生成与编辑模型，支持最长 30 秒 1080p 原生音频输出，可接受文本、图片、视频、音频、文档和网页作为创作参考，并支持指令式编辑画面、剧情、对话和声音。",
-      "original_url": "https://x.com/ArtificialAnlys/status/2095349174799888760",
-      "aihot_url": "https://aihot.virxact.com/items/cmtkyrxw90agproal1t6qj5mg",
-      "published_at": "2026-09-03T03:12:27.000Z",
-      "collected_at": "2026-09-03T03:27:09.527Z",
-      "source": {
-        "name": "X：Artificial Analysis (@ArtificialAnlys)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Wan 3.0 debuts at #1 on the Artificial Analysis Video Editing Leaderboard， and is a close #2 in Text…",
-        "score": 69,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtkyrxw90agproal1t6qj5mg"
         }
       }
     },
