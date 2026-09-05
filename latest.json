@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-09-05T08:39:14.151217Z",
+  "generated_at": "2026-09-05T08:58:10.120348Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-09-04T02:39:09.013373Z",
-    "to": "2026-09-05T08:39:09.013373Z"
+    "from": "2026-09-04T02:58:05.248801Z",
+    "to": "2026-09-05T08:58:05.248801Z"
   },
   "coverage": {
     "selected": {
@@ -17,13 +17,13 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 364,
+      "items": 361,
       "error": null
     },
     "paper": {
       "status": "ok",
       "source": "api",
-      "items": 30,
+      "items": 31,
       "error": null
     },
     "hot_topics": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 422,
-    "deduplicated_items": 368
+    "raw_items": 420,
+    "deduplicated_items": 365
   },
   "items": [
     {
@@ -593,6 +593,33 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmto4hkdu01l8romx3cv0zw6s"
+        }
+      }
+    },
+    {
+      "id": "cmto4hkdu01lbromxd2zqp9ke",
+      "item_type": "item",
+      "category": "paper",
+      "title": "《美国医学会杂志》论文称 AI 在认知性医疗中可超越医生，引发行业反对",
+      "description": "发表于《美国医学会杂志》的新论文由伊曼纽尔和科斯拉撰写，梳理数百项 AI 医疗研究后称 AI 在获取医疗信息、诊断、开展诊断性检查、管理慢性疾病等五项基础任务上已超过医生，并预测 4 年后差距继续扩大。",
+      "original_url": "https://www.ithome.com/0/998/771.htm",
+      "aihot_url": "https://aihot.virxact.com/items/cmto4hkdu01lbromxd2zqp9ke",
+      "published_at": "2026-09-05T08:08:48.000Z",
+      "collected_at": "2026-09-05T08:30:20.924Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all",
+        "paper"
+      ],
+      "metadata": {
+        "original_title": "《美国医学会杂志》一论文称 AI 已超越人类医生，引发行业反对",
+        "score": 52,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmto4hkdu01lbromxd2zqp9ke"
         }
       }
     },
@@ -9506,109 +9533,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmtmgjoiu01c8rolu3j2l3gno"
-        }
-      }
-    },
-    {
-      "id": "cmtmebq7300z1rotx1dkmr0qi",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "后摩智能与国科亿道发布 FN008 AI 笔电，搭载飞腾 D3000M 与 160TOPS 后摩漫界 M50",
-      "description": "后摩智能宣布与国科亿道合作开发 FN008 AI 笔记本，全栈国产化，基于飞腾 D3000M 处理器，搭载后摩漫界 M50 dNPU，运行 KylinOS（Linux）。",
-      "original_url": "https://www.ithome.com/0/998/296.htm",
-      "aihot_url": "https://aihot.virxact.com/items/cmtmebq7300z1rotx1dkmr0qi",
-      "published_at": "2026-09-04T02:55:32.000Z",
-      "collected_at": "2026-09-04T03:30:08.455Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "飞腾 D3000M + 160TOPS NPU：国科亿道携手后摩智能发布 FN008 笔电",
-        "score": 38,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtmebq7300z1rotx1dkmr0qi"
-        }
-      }
-    },
-    {
-      "id": "cmtmdezgn00zwro6r2qcgrlr2",
-      "item_type": "item",
-      "category": "industry",
-      "title": "Peter Steinberger 将在 Cloudflare Connect 演讲开源构建与多人 Agent",
-      "description": "Peter Steinberger 确认出席 Cloudflare Connect 大会（10月19-21日，旧金山），并将演讲如何开放式构建和多人 Agent。他与 @evanyou、@kentonvarda 同台，大会另有 100+ 场技术议程，详情见 https://cloudflare.com/connect/。",
-      "original_url": "https://x.com/steipete/status/2095703937177584118",
-      "aihot_url": "https://aihot.virxact.com/items/cmtmdezgn00zwro6r2qcgrlr2",
-      "published_at": "2026-09-04T02:42:09.000Z",
-      "collected_at": "2026-09-04T03:04:44.293Z",
-      "source": {
-        "name": "X：Peter Steinberger (@steipete)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "See you there！ Will talk about how we build in the open and multiplayer agents.",
-        "score": 25,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtmdezgn00zwro6r2qcgrlr2"
-        }
-      }
-    },
-    {
-      "id": "cmtmdezgn00zxro6rsm6w7jso",
-      "item_type": "item",
-      "category": "tip",
-      "title": "Having a claw in your group chat is so useful！",
-      "description": null,
-      "original_url": "https://x.com/steipete/status/2095703568502468665",
-      "aihot_url": "https://aihot.virxact.com/items/cmtmdezgn00zxro6rsm6w7jso",
-      "published_at": "2026-09-04T02:40:41.000Z",
-      "collected_at": "2026-09-04T03:04:44.293Z",
-      "source": {
-        "name": "X：Peter Steinberger (@steipete)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "score": 21,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtmdezgn00zxro6rsm6w7jso"
-        }
-      }
-    },
-    {
-      "id": "cmtmebq7300z4rotxbxq9irzn",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "联想在 IFA 2026 发布搭载 AMD 锐龙 AI Max+ PRO 495 的 1.6L 迷你主机 ThinkCentre X Ultra",
-      "description": "联想在 IFA 2026 上发布 ThinkCentre X Ultra 迷你主机，搭载 AMD 锐龙 AI Max+ PRO 495 处理器，体积 1.6L，三维 183×183×51mm。",
-      "original_url": "https://www.ithome.com/0/998/290.htm",
-      "aihot_url": "https://aihot.virxact.com/items/cmtmebq7300z4rotxbxq9irzn",
-      "published_at": "2026-09-04T02:40:38.000Z",
-      "collected_at": "2026-09-04T03:30:08.455Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "联想基于 AMD 锐龙 AI Max+ PRO 495 打造 1.6L 迷你主机 ThinkCentre X Ultra",
-        "score": 39,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtmebq7300z4rotxbxq9irzn"
         }
       }
     },
