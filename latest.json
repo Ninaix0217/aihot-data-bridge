@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-09-06T08:57:43.527782Z",
+  "generated_at": "2026-09-06T09:18:53.475809Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-09-05T02:57:38.196298Z",
-    "to": "2026-09-06T08:57:38.196298Z"
+    "from": "2026-09-05T03:18:48.335398Z",
+    "to": "2026-09-06T09:18:48.335398Z"
   },
   "coverage": {
     "selected": {
@@ -17,13 +17,13 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 116,
+      "items": 111,
       "error": null
     },
     "paper": {
       "status": "ok",
       "source": "api",
-      "items": 10,
+      "items": 9,
       "error": null
     },
     "hot_topics": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 144,
-    "deduplicated_items": 122
+    "raw_items": 138,
+    "deduplicated_items": 117
   },
   "items": [
     {
@@ -377,6 +377,32 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmto1tyjd0kh4roqs2p93ydka"
+        }
+      }
+    },
+    {
+      "id": "cmtpl4ngt01v3romhgouyn0gn",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "Abliteration.ai 推出去除拒绝机制的 GLM-5.3 修改版商用 API",
+      "description": "美国初创公司 Abliteration.ai 发布 abliterated-model-large-v2，通过 abliteration 技术修改 Z.AI 的开源权重模型 GLM-5.3，抑制其拒绝敏感请求的机制，并通过商用 API 出售访问，标准价格 5 美元/百万输入或输出 token。",
+      "original_url": "https://the-decoder.com/stripping-safety-guardrails-from-open-weight-ai-models-is-now-a-turnkey-commercial-service",
+      "aihot_url": "https://aihot.virxact.com/items/cmtpl4ngt01v3romhgouyn0gn",
+      "published_at": "2026-09-06T08:55:56.000Z",
+      "collected_at": "2026-09-06T09:03:59.246Z",
+      "source": {
+        "name": "The Decoder：AI News（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Stripping safety guardrails from open-weight AI models is now a turnkey commercial service",
+        "score": 57,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmtpl4ngt01v3romhgouyn0gn"
         }
       }
     },
@@ -2932,163 +2958,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmtnu4sx40ca1roqshrl8kydm"
-        }
-      }
-    },
-    {
-      "id": "cmtntnn9b0bmaroqsvtsv2761",
-      "item_type": "item",
-      "category": "tip",
-      "title": "Jason Liu 尝试让 Astra 游玩 RimWorld",
-      "description": "Jason Liu 发推称自己正在尝试让 Astra 游玩《RimWorld》，推文仅此一句，未提供过程细节或结果。",
-      "original_url": "https://x.com/jxnlco/status/2096075261145907337",
-      "aihot_url": "https://aihot.virxact.com/items/cmtntnn9b0bmaroqsvtsv2761",
-      "published_at": "2026-09-05T03:17:40.000Z",
-      "collected_at": "2026-09-05T03:27:09.752Z",
-      "source": {
-        "name": "X：Jason Liu (@jxnlco)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "trying to get astra to play rimworld",
-        "score": 13,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtntnn9b0bmaroqsvtsv2761"
-        }
-      }
-    },
-    {
-      "id": "cmtnu4sx40ca2roqs05mnl9t8",
-      "item_type": "item",
-      "category": "paper",
-      "title": "Google 与 KAIST 论文提出 Declarative Attention，让模型自选读取上下文，注意力开销降低 52.0%",
-      "description": "Google 与 KAIST 的论文提出 Declarative Attention（DA），模型通过 <global>、<focus>、<local> 三种模式在思维链中声明需要关注的上下文，推理引擎据此跳过大部分 KV cache 读取，无需额外的外置打分器。",
-      "original_url": "https://x.com/rohanpaul_ai/status/2096074134287786223",
-      "aihot_url": "https://aihot.virxact.com/items/cmtnu4sx40ca2roqs05mnl9t8",
-      "published_at": "2026-09-05T03:13:11.000Z",
-      "collected_at": "2026-09-05T03:40:23.862Z",
-      "source": {
-        "name": "X：Rohan Paul (@rohanpaul_ai)"
-      },
-      "source_channels": [
-        "all",
-        "paper"
-      ],
-      "metadata": {
-        "original_title": "New Google Deployment Paper shows instead of forcing an LLM to reread its entire context for every t…",
-        "score": 37,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtnu4sx40ca2roqs05mnl9t8"
-        }
-      }
-    },
-    {
-      "id": "cmtntqbej0bojroqs9d0aicdx",
-      "item_type": "item",
-      "category": "tip",
-      "title": "Ethan Mollick 评 Artificial Analysis Intelligence Index v4.2：基准不应大幅更改评判标准",
-      "description": "Ethan Mollick 转评 Artificial Analysis Intelligence Index v4.2 发布，认为指数不应以大幅改变既有模型排名的方式更换评判标准，并批评 GDPval-AA 仍是糟糕的评测，认为 Artificial Analysis 自研 AA-Briefcase 时就应移除它。",
-      "original_url": "https://x.com/emollick/status/2096072875622985977",
-      "aihot_url": "https://aihot.virxact.com/items/cmtntqbej0bojroqs9d0aicdx",
-      "published_at": "2026-09-05T03:08:11.000Z",
-      "collected_at": "2026-09-05T03:29:13.940Z",
-      "source": {
-        "name": "X：Ethan Mollick (@emollick)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "The whole idea of indexes that you don't change all the criteria in ways that hugely change the rank…",
-        "score": 45,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtntqbej0bojroqs9d0aicdx"
-        }
-      }
-    },
-    {
-      "id": "cmtntqbej0bokroqsefiskvnp",
-      "item_type": "item",
-      "category": "tip",
-      "title": "Ethan Mollick 用 Astra 将 Fortnite 改造成文字冒险游戏并公开在线链接",
-      "description": "Ethan Mollick 发布 Zork 动作冒险版后，Max Woolf 建议用 Astra 反向把 Fortnite 变成文字游戏，Mollick 实际完成并公开链接 https://last-drop-fortnite.netlify.app/。",
-      "original_url": "https://x.com/emollick/status/2096071878427234309",
-      "aihot_url": "https://aihot.virxact.com/items/cmtntqbej0bokroqsefiskvnp",
-      "published_at": "2026-09-05T03:04:13.000Z",
-      "collected_at": "2026-09-05T03:29:13.940Z",
-      "source": {
-        "name": "X：Ethan Mollick (@emollick)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "When I posted the action-adventure version of Zork on BlueSky， someone suggested using Astra to turn…",
-        "score": 28,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtntqbej0bokroqsefiskvnp"
-        }
-      }
-    },
-    {
-      "id": "cmtntrqkb0btyroqs7mn8hjsc",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "微软预告 Excel 新增 Copilot Canvas AI 画布，打造可视化交互式数据看板",
-      "description": "据 Windows Latest 报道，微软计划为 Excel 推出 Copilot Canvas 功能，可将工作簿中的图表、关键指标和分析洞察整合为交互式画布，并支持自然语言对话修改内容。画布保持连接原始工作簿，数据变化后自动更新，微软计划未来几周逐步推送并预计 10 月初完成部署。",
-      "original_url": "https://www.ithome.com/0/998/693.htm",
-      "aihot_url": "https://aihot.virxact.com/items/cmtntrqkb0btyroqs7mn8hjsc",
-      "published_at": "2026-09-05T03:00:50.000Z",
-      "collected_at": "2026-09-05T03:30:19.152Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "微软预告 Excel 新增 AI 画布，打造可视化交互式数据看板",
-        "score": 42,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtntrqkb0btyroqs7mn8hjsc"
-        }
-      }
-    },
-    {
-      "id": "cmtnt14yw0b70roqsdy0wf3hc",
-      "item_type": "item",
-      "category": "tip",
-      "title": "ZHO 感慨 GPT-6 Astra 让人「挺卑微」",
-      "description": "ZHO 分享了一张 GPT-6 Astra 的截图，显示「额度限制已重置」，并写道自己已经给模型充钱了，让它继续，感慨 GPT-6 Astra 真的让人挺卑微的。",
-      "original_url": "https://x.com/ZHO_ZHO_ZHO/status/2096070763153653811",
-      "aihot_url": "https://aihot.virxact.com/items/cmtnt14yw0b70roqsdy0wf3hc",
-      "published_at": "2026-09-05T02:59:47.000Z",
-      "collected_at": "2026-09-05T03:09:39.555Z",
-      "source": {
-        "name": "X：ZHO (@ZHO_ZHO_ZHO)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "GPT-6 Astra 真的让人挺卑微的 \"我已经给你充钱了，继续吧\"",
-        "score": 22,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtnt14yw0b70roqsdy0wf3hc"
         }
       }
     },
