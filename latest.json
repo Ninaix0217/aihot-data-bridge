@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-09-08T09:09:05.115005Z",
+  "generated_at": "2026-09-08T09:33:00.479974Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-09-07T03:08:59.214915Z",
-    "to": "2026-09-08T09:08:59.214915Z"
+    "from": "2026-09-07T03:32:57.884970Z",
+    "to": "2026-09-08T09:32:57.884970Z"
   },
   "coverage": {
     "selected": {
@@ -23,7 +23,7 @@
     "paper": {
       "status": "ok",
       "source": "api",
-      "items": 10,
+      "items": 11,
       "error": null
     },
     "hot_topics": {
@@ -40,7 +40,7 @@
     }
   },
   "summary": {
-    "raw_items": 308,
+    "raw_items": 309,
     "deduplicated_items": 291
   },
   "items": [
@@ -200,6 +200,59 @@
       }
     },
     {
+      "id": "cmtsgukrp032wrodi6i34y1xy",
+      "item_type": "item",
+      "category": null,
+      "title": "AI天气预报进军能源市场，谷歌以WeatherNext 3瞄准电网运营商",
+      "description": "谷歌最新AI天气预报模型WeatherNext 3可预测100米高空风速、云量和地表太阳辐射，并每小时更新一次。该模型面向能源交易商、电网运营商及风电和太阳能开发商，这些客户目前已在为同类数据向其他公司付费。",
+      "original_url": "https://www.artificialintelligence-news.com/news/ai-weather-forecasting-google-weathernext-3-energy",
+      "aihot_url": "https://aihot.virxact.com/items/cmtsgukrp032wrodi6i34y1xy",
+      "published_at": "2026-09-08T09:27:29.052Z",
+      "collected_at": "2026-09-08T09:27:29.052Z",
+      "source": {
+        "name": "Artificial Intelligence News（网页）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "AI weather forecasting enters the energy market as Google targets grid operators with WeatherNext 3",
+        "score": 48,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmtsgukrp032wrodi6i34y1xy"
+        }
+      }
+    },
+    {
+      "id": "cmtsftp3i01v7rodiae0ox0pr",
+      "item_type": "item",
+      "category": "paper",
+      "title": "英矽智能 AI 研发的 Rentosertib 首次进入人体临床试验，6 种衰老时钟测得患者预测年龄下降",
+      "description": "英矽智能透露，AI 辅助生成的药物 Rentosertib 的临床试验数据显示患者与年龄相关的生物标志物下降，相关研究于本周一登上《自然·生物技术》。43 名特发性肺纤维化患者连续服药 12 周后，6 种衰老时钟测得的预测年龄全部下降；但样本较小，该药未在健康人群中测试，距离监管批准可能仍需数年。",
+      "original_url": "https://www.ithome.com/0/999/821.htm",
+      "aihot_url": "https://aihot.virxact.com/items/cmtsftp3i01v7rodiae0ox0pr",
+      "published_at": "2026-09-08T08:57:34.000Z",
+      "collected_at": "2026-09-08T08:58:47.068Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all",
+        "paper"
+      ],
+      "metadata": {
+        "original_title": "AI 研发\"长寿\"药物首次进入人体临床试验，有望减缓衰老过程",
+        "score": 62,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmtsftp3i01v7rodiae0ox0pr"
+        }
+      }
+    },
+    {
       "id": "cmtsfs03a01m5rodi2x9avkhg",
       "item_type": "item",
       "category": null,
@@ -326,6 +379,32 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmtsftp3i01vcrodioe8788qz"
+        }
+      }
+    },
+    {
+      "id": "cmtsftp3i01vdrodi4ncwdmfx",
+      "item_type": "item",
+      "category": null,
+      "title": "韩国电池材料企业EcoPro瞄准人形机器人，开辟电动汽车外新增长赛道",
+      "description": "韩国电池材料企业EcoPro计划进军人形机器人产业，加快高镍正极材料及下一代固态电池技术研发，以寻找电动汽车之外的新增长市场。该公司运营着一座年产能40吨的试验工厂，生产用于全固态电池的硫化物固态电解质，并计划于明年开始商业化生产。分析人士预计，人形机器人产业要到下一个十年后半段才会迎来真正的爆发节点。",
+      "original_url": "https://www.ithome.com/0/999/808.htm",
+      "aihot_url": "https://aihot.virxact.com/items/cmtsftp3i01vdrodi4ncwdmfx",
+      "published_at": "2026-09-08T08:26:06.000Z",
+      "collected_at": "2026-09-08T08:58:47.068Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "韩国电池材料企业瞄准人形机器人，开辟电动汽车外新增长赛道",
+        "score": 41,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.virxact.com/items/cmtsftp3i01vdrodi4ncwdmfx"
         }
       }
     },
@@ -7426,84 +7505,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.virxact.com/items/cmtqw0qbm00g1ro7rug7un158"
-        }
-      }
-    },
-    {
-      "id": "cmtqx3zpq036oro7ronbuwgio",
-      "item_type": "item",
-      "category": null,
-      "title": "若AGI总统存在，这必是模拟世界",
-      "description": "如果这是AGI总统，那这绝对是模拟世界。\n\n【引用 @mattshumer_】：所以，模拟理论可能是真的。\n\n我把一台模拟电脑放进了我的Astra智能体所生活的模拟环境中。其中一个智能体坐下来，构建了一个自己的模拟，里面还住着它自己的智能体。\n\n模拟层层嵌套，无穷无尽。",
-      "original_url": "https://x.com/AISafetyMemes/status/2096800747639984475",
-      "aihot_url": "https://aihot.virxact.com/items/cmtqx3zpq036oro7ronbuwgio",
-      "published_at": "2026-09-07T03:20:29.000Z",
-      "collected_at": "2026-09-07T07:27:09.350Z",
-      "source": {
-        "name": "X：AI Safety Memes (@AISafetyMemes)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "If this is the AGI president， this is definitely a simulation",
-        "score": 28,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtqx3zpq036oro7ronbuwgio"
-        }
-      }
-    },
-    {
-      "id": "cmtqx6pdy0397ro7rehr4slun",
-      "item_type": "item",
-      "category": null,
-      "title": "曾鸣：创始人应先问十年后想成为谁",
-      "description": "曾鸣指出，创始人讨论战略时，他首先问\"十年后你想成为怎样的自己\"，以此揭示其真实驱动力。有人为事业成功，有人出于纯粹好奇，而目标是建立百亿美元公司者多为外部认可的自我驱动，非内在动机。",
-      "original_url": "https://x.com/zhang_benita/status/2096800647752634801",
-      "aihot_url": "https://aihot.virxact.com/items/cmtqx6pdy0397ro7rehr4slun",
-      "published_at": "2026-09-07T03:20:05.000Z",
-      "collected_at": "2026-09-07T07:29:13.623Z",
-      "source": {
-        "name": "X：張小珺 Xiaojùn (@zhang_benita)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Zeng Ming： \"Founders often come to me to discuss strategy. The very first question I ask catches man…",
-        "score": 26,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtqx6pdy0397ro7rehr4slun"
-        }
-      }
-    },
-    {
-      "id": "cmtqx6pcr038zro7reov2qiyr",
-      "item_type": "item",
-      "category": null,
-      "title": "阿里云国际论坛聚焦AI与云趋势",
-      "description": "国际论坛为 #ApsaraConference2026 带来全球视角。聆听行业领袖与创新者探讨塑造全球企业的 AI 与云趋势、挑战和机遇。发现 AI 的下一个前沿。立即注册>> https://click.alibabacloud.com/m/20000002877/ #AgenticEra #AgentNative #AIAgentsAtApsara #BringYourAgent #AlibabaCloud",
-      "original_url": "https://x.com/alibaba_cloud/status/2096800221187465688",
-      "aihot_url": "https://aihot.virxact.com/items/cmtqx6pcr038zro7reov2qiyr",
-      "published_at": "2026-09-07T03:18:24.000Z",
-      "collected_at": "2026-09-07T07:29:13.623Z",
-      "source": {
-        "name": "X：阿里云 / Alibaba Cloud (@alibaba_cloud)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "The International Forum brings a global perspective to #ApsaraConference2026. Hear from industry lea…",
-        "score": 18,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.virxact.com/items/cmtqx6pcr038zro7reov2qiyr"
         }
       }
     },
