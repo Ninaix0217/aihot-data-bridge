@@ -8,6 +8,7 @@ from dataclasses import dataclass
 class Settings:
     api_base_url: str = "https://aihot.virxact.com"
     candidate_window_hours: int = 30
+    v2_max_pages: int = 30
     connect_timeout_seconds: float = 5.0
     request_timeout_seconds: float = 20.0
     max_retries: int = 2
@@ -22,6 +23,7 @@ class Settings:
                     "AIHOT_CANDIDATE_WINDOW_HOURS", cls.candidate_window_hours
                 )
             ),
+            v2_max_pages=int(os.getenv("AIHOT_V2_MAX_PAGES", cls.v2_max_pages)),
             connect_timeout_seconds=float(
                 os.getenv("AIHOT_CONNECT_TIMEOUT_SECONDS", cls.connect_timeout_seconds)
             ),
