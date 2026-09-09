@@ -11,10 +11,11 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass
-from datetime import date, datetime, time, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Callable
-from zoneinfo import ZoneInfo
+
+from .logical_date import BEIJING_TIMEZONE, report_window_for_date
 
 from .snapshot import (
     SnapshotRejected,
@@ -25,7 +26,6 @@ from .snapshot import (
 
 
 DATA_BRANCH = "snapshot-data"
-BEIJING_TIMEZONE = ZoneInfo("Asia/Shanghai")
 API_ROOT = "https://api.github.com"
 
 
@@ -54,12 +54,8 @@ class RepositoryCandidate:
 
 
 def report_window(report_day: date) -> tuple[datetime, datetime]:
-    report_end = datetime.combine(
-        report_day,
-        time(hour=12),
-        tzinfo=BEIJING_TIMEZONE,
-    )
-    return report_end - timedelta(days=1), report_end
+    """Backward-compatible V1 wrapper around the canonical report window."""
+    return report_window_for_date(report_day)
 
 
 def report_date_for_payload(payload: dict[str, Any]) -> date:

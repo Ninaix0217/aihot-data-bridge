@@ -1,28 +1,24 @@
 from __future__ import annotations
 
-from datetime import date, datetime, time, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 
 import httpx
 import pytest
 
 from aihot_bridge.config import Settings
+from aihot_bridge.logical_date import BEIJING_TIMEZONE, report_window_for_date
 from aihot_bridge.service import BridgeService
 from aihot_bridge.timefields import published_at_in_window
 from aihot_bridge.upstream import UpstreamClient
 from tests.test_bridge import success_handler
 
 
-CST = timezone(timedelta(hours=8), name="Asia/Shanghai")
-
-
-def report_window(report_day: date) -> tuple[datetime, datetime]:
-    end = datetime.combine(report_day, time(12, 0), tzinfo=CST)
-    return end - timedelta(days=1), end
+CST = BEIJING_TIMEZONE
 
 
 def test_original_rolling_24h_misses_1223_window_prefix():
     snapshot_time = datetime(2026, 8, 18, 12, 23, tzinfo=CST)
-    report_start, _ = report_window(date(2026, 8, 18))
+    report_start, _ = report_window_for_date(date(2026, 8, 18))
     rolling_start = snapshot_time - timedelta(hours=24)
 
     assert rolling_start == datetime(2026, 8, 17, 12, 23, tzinfo=CST)
@@ -58,7 +54,7 @@ async def test_30_hour_candidate_covers_fixed_daily_window(
     generated_at: datetime,
 ):
     payload = await snapshot_at(generated_at)
-    report_start, report_end = report_window(date(2026, 8, 18))
+    report_start, report_end = report_window_for_date(date(2026, 8, 18))
     candidate_start = datetime.fromisoformat(
         payload["window"]["from"].replace("Z", "+00:00")
     )
@@ -71,7 +67,7 @@ async def test_30_hour_candidate_covers_fixed_daily_window(
 
 
 def test_fixed_window_is_start_inclusive_and_end_exclusive():
-    start, end = report_window(date(2026, 8, 18))
+    start, end = report_window_for_date(date(2026, 8, 18))
     cases = {
         "before": "2026-08-17T11:59:59+08:00",
         "start": "2026-08-17T12:00:00+08:00",
@@ -89,7 +85,7 @@ def test_fixed_window_is_start_inclusive_and_end_exclusive():
 
 
 def test_missing_published_at_is_not_replaced_by_collected_at():
-    start, end = report_window(date(2026, 8, 18))
+    start, end = report_window_for_date(date(2026, 8, 18))
     item = {
         "published_at": None,
         "collected_at": "2026-08-18T03:00:00Z",
@@ -99,7 +95,7 @@ def test_missing_published_at_is_not_replaced_by_collected_at():
 
 
 def test_utc_and_asia_shanghai_timestamps_have_identical_membership():
-    start, end = report_window(date(2026, 8, 18))
+    start, end = report_window_for_date(date(2026, 8, 18))
     utc_item = {"published_at": "2026-08-17T04:00:00Z"}
     cst_item = {"published_at": "2026-08-17T12:00:00+08:00"}
 
