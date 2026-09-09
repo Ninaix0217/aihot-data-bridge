@@ -11,11 +11,22 @@ from .timefields import parse_timestamp
 
 
 SCHEMA_VERSION = "aihot-bridge/v2"
+PRODUCER_CONTRACT_VERSION = "aihot-v2-candidate/1"
+SOURCE_RANGE_CONTRACT_VERSION = "aihot-v2-published-desc-range/1"
 PRIMARY_CHANNELS = ("selected", "all", "paper")
 SUPPLEMENTARY_CHANNELS = ("hot_topics", "daily")
 ALL_CHANNELS = PRIMARY_CHANNELS + SUPPLEMENTARY_CHANNELS
 MAX_BACKFILL_DAYS = 4
 RETENTION_GUARD = timedelta(days=6)
+
+
+def primary_query_contract() -> dict[str, dict[str, Any]]:
+    """Return the business-relevant primary query identity."""
+    return {
+        "selected": {"mode": "selected", "category": None, "limit": 100},
+        "all": {"mode": "all", "category": None, "limit": 100},
+        "paper": {"mode": "all", "category": "paper", "limit": 100},
+    }
 
 
 class SourceRangeState(str, Enum):
@@ -256,6 +267,10 @@ def _validate_candidate_payload(payload: Any) -> CandidateV2Metadata:
     root = _require_dict(payload, "payload")
     if root.get("schema_version") != SCHEMA_VERSION:
         _schema_error(f"schema_version must be {SCHEMA_VERSION!r}")
+    if root.get("producer_contract_version") != PRODUCER_CONTRACT_VERSION:
+        _schema_error(
+            f"producer_contract_version must be {PRODUCER_CONTRACT_VERSION!r}"
+        )
 
     report_day = _parse_report_date(root.get("target_report_date"))
     report_start, report_end = report_window_for_date(report_day)
@@ -278,6 +293,17 @@ def _validate_candidate_payload(payload: Any) -> CandidateV2Metadata:
         _schema_error("retrieval.upstream_window must be 7d")
     if retrieval.get("by") != "published":
         _schema_error("retrieval.by must be published")
+    if retrieval.get("ordering") != "publishedAtDesc":
+        _schema_error("retrieval.ordering must be publishedAtDesc")
+    if (
+        retrieval.get("source_range_contract_version")
+        != SOURCE_RANGE_CONTRACT_VERSION
+    ):
+        _schema_error(
+            "retrieval.source_range_contract_version must match the V2 evaluator"
+        )
+    if retrieval.get("primary_queries") != primary_query_contract():
+        _schema_error("retrieval.primary_queries does not match the V2 contract")
     if retrieval_as_of < report_end_utc:
         raise CandidateV2Error(
             CandidateV2ErrorReason.REPORT_WINDOW_NOT_CLOSED,

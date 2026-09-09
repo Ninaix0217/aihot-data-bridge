@@ -11,6 +11,8 @@ from typing import Any
 
 from .candidate_v2 import (
     PRIMARY_CHANNELS,
+    PRODUCER_CONTRACT_VERSION,
+    SOURCE_RANGE_CONTRACT_VERSION,
     CandidateV2Error,
     CandidateV2ErrorReason,
     SourceRangeEvidence,
@@ -19,6 +21,7 @@ from .candidate_v2 import (
     format_timestamp,
     latest_closed_report_date,
     make_source_range_evidence,
+    primary_query_contract,
     validate_backfill_admission,
 )
 from .config import Settings
@@ -136,6 +139,7 @@ class V2CandidateService:
         items = _deterministic_deduplicate(primary_items)
         payload = {
             "schema_version": "aihot-bridge/v2",
+            "producer_contract_version": PRODUCER_CONTRACT_VERSION,
             "target_report_date": target_report_date.isoformat(),
             "generated_at": format_timestamp(generated_at),
             "report_window": {
@@ -148,6 +152,9 @@ class V2CandidateService:
                 "as_of": format_timestamp(retrieval_as_of),
                 "upstream_window": "7d",
                 "by": "published",
+                "ordering": "publishedAtDesc",
+                "source_range_contract_version": SOURCE_RANGE_CONTRACT_VERSION,
+                "primary_queries": primary_query_contract(),
             },
             "coverage": coverage,
             "summary": {

@@ -83,6 +83,26 @@ def test_complete_candidate_validates():
     assert evaluation.metadata == metadata
 
 
+def test_candidate_contract_version_is_required():
+    payload = complete_candidate_payload()
+    payload.pop("producer_contract_version")
+
+    assert_reason(
+        CandidateV2ErrorReason.SCHEMA_INVALID,
+        lambda: validate_candidate_v2(payload),
+    )
+
+
+def test_primary_query_contract_is_required():
+    payload = complete_candidate_payload()
+    payload["retrieval"]["primary_queries"]["paper"]["category"] = "news"
+
+    assert_reason(
+        CandidateV2ErrorReason.SCHEMA_INVALID,
+        lambda: validate_candidate_v2(payload),
+    )
+
+
 def test_empty_but_proven_complete_candidate_is_valid():
     payload = complete_candidate_payload(empty=True)
 

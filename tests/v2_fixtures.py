@@ -5,9 +5,12 @@ from datetime import date, datetime, timedelta, timezone
 
 from aihot_bridge.candidate_v2 import (
     PRIMARY_CHANNELS,
+    PRODUCER_CONTRACT_VERSION,
+    SOURCE_RANGE_CONTRACT_VERSION,
     SourceRangeProofBasis,
     format_timestamp,
     make_source_range_evidence,
+    primary_query_contract,
 )
 from aihot_bridge.logical_date import report_window_for_date
 
@@ -77,6 +80,7 @@ def complete_candidate_payload(
     items = [] if empty else [item]
     return {
         "schema_version": "aihot-bridge/v2",
+        "producer_contract_version": PRODUCER_CONTRACT_VERSION,
         "target_report_date": report_day.isoformat(),
         "generated_at": format_timestamp(generated_at),
         "report_window": {
@@ -89,6 +93,9 @@ def complete_candidate_payload(
             "as_of": format_timestamp(as_of),
             "upstream_window": "7d",
             "by": "published",
+            "ordering": "publishedAtDesc",
+            "source_range_contract_version": SOURCE_RANGE_CONTRACT_VERSION,
+            "primary_queries": primary_query_contract(),
         },
         "coverage": coverage,
         "summary": {
