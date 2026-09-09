@@ -55,3 +55,37 @@ def test_health_runs_once_daily_after_both_producer_passes():
     command = workflow["jobs"]["freshness"]["steps"][-1]["run"]
     assert "aihot_bridge.repository_data health" in command
     assert "--branch snapshot-data" in command
+
+
+def test_v2_rehearsal_is_dispatch_only_with_explicit_inputs():
+    workflow = load_workflow("v2-rehearsal.yml")
+
+    assert set(workflow["on"]) == {"workflow_dispatch"}
+    inputs = workflow["on"]["workflow_dispatch"]["inputs"]
+    assert inputs["target_report_date"]["required"] == "true"
+    assert "default" not in inputs["target_report_date"]
+    assert inputs["mode"]["required"] == "true"
+    assert inputs["mode"]["options"] == ["MANUAL", "RECOVERY", "BACKFILL"]
+
+
+def test_v2_rehearsal_shares_concurrency_but_not_production_workflow():
+    workflow = load_workflow("v2-rehearsal.yml")
+
+    assert workflow["concurrency"] == {
+        "group": "aihot-daily-producer",
+        "cancel-in-progress": "false",
+    }
+    assert workflow["permissions"] == {"contents": "write"}
+    assert set(workflow["jobs"]) == {"rehearsal"}
+
+
+def test_v2_rehearsal_uses_explicit_dispatch_runner_without_pages():
+    workflow = load_workflow("v2-rehearsal.yml")
+    steps = workflow["jobs"]["rehearsal"]["steps"]
+    command = steps[-1]["run"]
+
+    assert "aihot_bridge.rehearsal_v2" in command
+    assert "--report-date" in command
+    assert "--mode" in command
+    assert "GITHUB_STEP_SUMMARY" in command
+    assert "pages" not in workflow["permissions"]

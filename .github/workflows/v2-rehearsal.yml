@@ -1,0 +1,54 @@
+name: AI HOT V2 Repository Rehearsal
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_report_date:
+        description: "Beijing report date D (YYYY-MM-DD)"
+        required: true
+        type: string
+      mode:
+        description: "Explicit dispatch mode"
+        required: true
+        type: choice
+        options:
+          - MANUAL
+          - RECOVERY
+          - BACKFILL
+
+concurrency:
+  group: aihot-daily-producer
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  rehearsal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+
+      - name: Install runtime dependencies
+        run: python -m pip install .
+
+      - name: Build, publish, and read back V2 candidate
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          TARGET_REPORT_DATE: ${{ inputs.target_report_date }}
+          DISPATCH_MODE: ${{ inputs.mode }}
+        run: |
+          python -m aihot_bridge.rehearsal_v2 \
+            --repository "${GITHUB_REPOSITORY}" \
+            --report-date "${TARGET_REPORT_DATE}" \
+            --mode "${DISPATCH_MODE}" \
+            --summary "${GITHUB_STEP_SUMMARY}"
