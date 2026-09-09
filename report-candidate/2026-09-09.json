@@ -1,17 +1,17 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-09-09T09:14:11.894036Z",
+  "generated_at": "2026-09-09T09:36:21.790614Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-09-08T03:14:03.802528Z",
-    "to": "2026-09-09T09:14:03.802528Z"
+    "from": "2026-09-08T03:36:12.428980Z",
+    "to": "2026-09-09T09:36:12.428980Z"
   },
   "coverage": {
     "selected": {
       "status": "ok",
       "source": "api",
-      "items": 20,
+      "items": 21,
       "error": null
     },
     "all": {
@@ -40,10 +40,48 @@
     }
   },
   "summary": {
-    "raw_items": 559,
+    "raw_items": 560,
     "deduplicated_items": 503
   },
   "items": [
+    {
+      "id": "cmttwa2j30pktrofpw67b9pby",
+      "item_type": "item",
+      "category": "industry",
+      "title": "NSA、FBI 和 CISA 指控 DeepSeek、月之暗面等六家中国 AI 公司大规模提取美国模型知识",
+      "description": "NSA、FBI 和 CISA 指控 DeepSeek、月之暗面（Moonshot AI）、阿里巴巴、MiniMax、阶跃星辰（StepFun）和 Z.ai 至少自 2024 年起以产业规模从美国模型中提取知识。机构称其通过多渠道路由请求以绕过规则并提升数学与编码能力；蒸馏在获授权时合法，争议核心在于访问与同意。美国开发商被敦促立即行动并共享情报，相关公司暂未回应。",
+      "original_url": "https://x.com/thexpin/status/2097615997616406833",
+      "aihot_url": "https://aihot.news/items/cmttwa2j30pktrofpw67b9pby",
+      "published_at": "2026-09-09T09:20:00.000Z",
+      "collected_at": "2026-09-09T09:27:09.511Z",
+      "source": {
+        "name": "X：X.PIN (@thexpin)"
+      },
+      "source_channels": [
+        "selected",
+        "all",
+        "hot_topics"
+      ],
+      "metadata": {
+        "original_title": "The NSA， FBI and CISA accused DeepSeek， Moonshot AI， Alibaba， MiniMax， StepFun and http://Z.ai of ex…",
+        "score": 82,
+        "selected": true,
+        "reason": "报道点名六家中国 AI 公司被美国三部门指控，并说明争议核心在访问与授权，有助于理解知识蒸馏的法律边界。",
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmttwa2j30pktrofpw67b9pby"
+        },
+        "rank": 9,
+        "latest_at": "2026-09-09T09:27:09.511Z",
+        "source_count": 2,
+        "signal_count": 0,
+        "source_names": [
+          "X：Rohan Paul (@rohanpaul_ai)",
+          "X：X.PIN (@thexpin)"
+        ],
+        "story_url": "https://aihot.virxact.com/story/868e20ea-e407-415a-9338-b367eca351aa"
+      }
+    },
     {
       "id": "cmttulwa90npwrofpsde4lc0k",
       "item_type": "item",
@@ -158,7 +196,7 @@
         "rank": 4,
         "latest_at": "2026-09-09T06:59:12.167Z",
         "source_count": 2,
-        "signal_count": 7,
+        "signal_count": 8,
         "source_names": [
           "X：X.PIN (@thexpin)",
           "IT之家（RSS）"
@@ -232,7 +270,7 @@
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmttcqkx404pprofp0jwc34zu"
         },
-        "rank": 9,
+        "rank": 10,
         "latest_at": "2026-09-09T00:20:10.825Z",
         "source_count": 1,
         "signal_count": 1,
@@ -417,8 +455,7 @@
       },
       "source_channels": [
         "selected",
-        "all",
-        "hot_topics"
+        "all"
       ],
       "metadata": {
         "original_title": "OpenAI fought dirty on career-making math problem， says NYU mathematician",
@@ -428,17 +465,7 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmtsz2a0q02ciro5w7oz3a0ix"
-        },
-        "rank": 10,
-        "latest_at": "2026-09-08T17:57:22.807Z",
-        "source_count": 3,
-        "signal_count": 0,
-        "source_names": [
-          "X：AI Safety Memes (@AISafetyMemes)",
-          "The Decoder：AI News（RSS）",
-          "TechCrunch：AI（RSS）"
-        ],
-        "story_url": "https://aihot.virxact.com/story/2bfa2880-986d-483d-b254-6f774796e12f"
+        }
       }
     },
     {
@@ -733,6 +760,32 @@
           "X：Thomas Wolf（Hugging Face 联创/CSO） (@Thom_Wolf)"
         ],
         "story_url": "https://aihot.virxact.com/story/0aae4e4a-8436-422f-8277-d105655302a5"
+      }
+    },
+    {
+      "id": "cmttwayge0pltrofpuwuaiaim",
+      "item_type": "item",
+      "category": "industry",
+      "title": "Suno 与 Believe 及 TuneCore 达成全球战略合作",
+      "description": "Suno 宣布与 Believe 及其自助发行平台 TuneCore 达成全球战略合作，Believe 将参与 Suno 与音乐行业共同开发的新音乐模型，用 Suno 新行业伙伴模型创作的歌曲将有资格通过 Believe 和 TuneCore 分发。",
+      "original_url": "https://suno.com/blog/believe-partnership",
+      "aihot_url": "https://aihot.news/items/cmttwayge0pltrofpuwuaiaim",
+      "published_at": "2026-09-09T09:27:51.252Z",
+      "collected_at": "2026-09-09T09:27:51.252Z",
+      "source": {
+        "name": "Suno：Blog（网页）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "A New Partnership with Believe and TuneCore By Mikey Shulman， Co-Founder & CEO·Sep 8， 2026 Working with our industry partners to support a healthy music ecosystem Announcements Partnerships",
+        "score": 59,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmttwayge0pltrofpuwuaiaim"
+        }
       }
     },
     {
@@ -2465,6 +2518,32 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmttoul2y0gp6rofp0v02opng"
+        }
+      }
+    },
+    {
+      "id": "cmttw3wd50pfwrofpjbgo3zwj",
+      "item_type": "item",
+      "category": null,
+      "title": "AI 面临\"发现难题\"：能力藏在空白提示框后，用户无从知晓能做什么",
+      "description": "AI 普及的最大瓶颈是\"发现难题\"：能力被锁在空白提示框后，用户不知道能问什么，可能性因此不可见。模板和上下文感知只能部分缓解，无法根治。系统应主动、按上下文逐步揭示自身能力，而非把发现可能性的负担全推给用户。",
+      "original_url": "https://mhacevedo.com/posts/the-discovery-problem",
+      "aihot_url": "https://aihot.news/items/cmttw3wd50pfwrofpjbgo3zwj",
+      "published_at": "2026-09-09T04:59:26.000Z",
+      "collected_at": "2026-09-09T09:22:24.503Z",
+      "source": {
+        "name": "Hacker News：AI 热帖"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "AI Has a Discovery Problem",
+        "score": 48,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmttw3wd50pfwrofpjbgo3zwj"
         }
       }
     },
@@ -13174,84 +13253,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmts4ox2002yjro468pgf5kci"
-        }
-      }
-    },
-    {
-      "id": "cmts4g7rl02qsro46da9rs4er",
-      "item_type": "item",
-      "category": null,
-      "title": "长上下文模型新法：重跑推理赢26/27对比",
-      "description": "论文提出\"Trace as State\"方法，针对长上下文任务，将模型先前的推理轨迹作为条件状态，让模型带着已知重点重新阅读上下文。该方法在27项对比中赢得26项，有效解决模型处理长提示时\"发现重点太晚\"而无法回溯修正的问题。",
-      "original_url": "https://x.com/rohanpaul_ai/status/2097166535865286894",
-      "aihot_url": "https://aihot.news/items/cmts4g7rl02qsro46da9rs4er",
-      "published_at": "2026-09-08T03:34:00.000Z",
-      "collected_at": "2026-09-08T03:40:23.066Z",
-      "source": {
-        "name": "X：Rohan Paul (@rohanpaul_ai)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "For hard long-context tasks， the paper suggests a simple fix： run the model again with its previous …",
-        "score": 46,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmts4g7rl02qsro46da9rs4er"
-        }
-      }
-    },
-    {
-      "id": "cmts55mw603quro46hgcxiukn",
-      "item_type": "item",
-      "category": "tip",
-      "title": "实测个人AI助手Today：记忆可改可删，晨间简报按日程偏好自动调整",
-      "description": "作者以自己的日历、跑步训练和睡眠数据实测个人生活AI助手Today（Public Beta），认为其定位是个人生活连续性管理而非任务交付型工作Agent。文中记录了三个体验：日程被临时打乱时生成晨间简报并建议同步日历、睡眠不足时自动顺延非紧急待办、记忆面板可查看编辑删除每条事实且改动即时生效。作者建议按阶梯信任逐步开放权限，并指出语言切换不同步等早期产品问题。",
-      "original_url": "https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw%3D%3D&mid=2247510740&idx=1&sn=be92b4520c222962c33b59336ffea996",
-      "aihot_url": "https://aihot.news/items/cmts55mw603quro46hgcxiukn",
-      "published_at": "2026-09-08T03:30:38.000Z",
-      "collected_at": "2026-09-08T04:00:10.764Z",
-      "source": {
-        "name": "公众号：卡尔的AI沃茨"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "可算有一个总能先我一步调整好日常待办的个人AI了",
-        "score": 53,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmts55mw603quro46hgcxiukn"
-        }
-      }
-    },
-    {
-      "id": "cmts4c2m202moro468tq23ud1",
-      "item_type": "item",
-      "category": "ai-models",
-      "title": "面壁智能联合 OpenBMB 开源 MiniCPM5-2B，AA 榜单 4B 以下综合第一",
-      "description": "9 月 8 日，面壁智能联合 OpenBMB 开源 2B 端侧基座模型 MiniCPM5-2B，支持工具调用、深度搜索、代码生成。",
-      "original_url": "https://mp.weixin.qq.com/s?__biz=Mzg3Mzg2MTg2NQ%3D%3D&mid=2247499182&idx=1&sn=63164223aa7a0e4f1bf8a36a9593d36b",
-      "aihot_url": "https://aihot.news/items/cmts4c2m202moro468tq23ud1",
-      "published_at": "2026-09-08T03:30:08.000Z",
-      "collected_at": "2026-09-08T03:37:10.812Z",
-      "source": {
-        "name": "公众号：面壁智能（MiniCPM）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "面壁智能开源 MiniCPM5-2B：AA 榜单全球 4B 以下第一，初具端侧通用 Agent 能力",
-        "score": 58,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmts4c2m202moro468tq23ud1"
         }
       }
     },
