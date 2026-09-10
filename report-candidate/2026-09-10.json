@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-09-10T09:13:37.942723Z",
+  "generated_at": "2026-09-10T09:35:45.289564Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-09-09T03:13:29.503422Z",
-    "to": "2026-09-10T09:13:29.503422Z"
+    "from": "2026-09-09T03:35:37.640986Z",
+    "to": "2026-09-10T09:35:37.640986Z"
   },
   "coverage": {
     "selected": {
@@ -17,7 +17,7 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 515,
+      "items": 512,
       "error": null
     },
     "paper": {
@@ -29,7 +29,7 @@
     "hot_topics": {
       "status": "ok",
       "source": "api",
-      "items": 8,
+      "items": 10,
       "error": null
     },
     "daily": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 560,
-    "deduplicated_items": 511
+    "raw_items": 559,
+    "deduplicated_items": 508
   },
   "items": [
     {
@@ -87,7 +87,8 @@
       },
       "source_channels": [
         "selected",
-        "all"
+        "all",
+        "hot_topics"
       ],
       "metadata": {
         "original_title": "DeepSeek just released V4.1-Flash with a new architecture， six weeks after its July V4-Flash update….",
@@ -97,7 +98,16 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmtva1qh206burok9zip2wdid"
-        }
+        },
+        "rank": 8,
+        "latest_at": "2026-09-10T09:00:03.000Z",
+        "source_count": 2,
+        "signal_count": 1,
+        "source_names": [
+          "X：Kim (@kimmonismus)",
+          "X：X.PIN (@thexpin)"
+        ],
+        "story_url": "https://aihot.virxact.com/story/bbf32fc9-61b8-4492-9946-994ef673ab36"
       }
     },
     {
@@ -127,10 +137,10 @@
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmtv7kmzk02vdrok9y0y8njiv"
         },
-        "rank": 3,
-        "latest_at": "2026-09-10T08:25:09.000Z",
+        "rank": 4,
+        "latest_at": "2026-09-10T08:49:36.000Z",
         "source_count": 5,
-        "signal_count": 18,
+        "signal_count": 14,
         "source_names": [
           "X：DeepSeek (@deepseek_ai)",
           "X：Testing Catalog (@testingcatalog)",
@@ -284,7 +294,7 @@
         "rank": 6,
         "latest_at": "2026-09-09T19:58:55.000Z",
         "source_count": 4,
-        "signal_count": 9,
+        "signal_count": 11,
         "source_names": [
           "X：Anthropic (@AnthropicAI)",
           "X：Kim (@kimmonismus)",
@@ -309,7 +319,8 @@
       },
       "source_channels": [
         "selected",
-        "all"
+        "all",
+        "hot_topics"
       ],
       "metadata": {
         "original_title": "Modernizing complex legacy code with AI agents. Lessons from 40，000 lines of Fortran.",
@@ -319,7 +330,15 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmtugpn561cgnrofplpzs3udv"
-        }
+        },
+        "rank": 9,
+        "latest_at": "2026-09-09T18:59:11.761Z",
+        "source_count": 1,
+        "signal_count": 0,
+        "source_names": [
+          "Mistral AI：News（网页）"
+        ],
+        "story_url": "https://aihot.virxact.com/story/491b9bd5-2654-484c-a177-3769deff526e"
       }
     },
     {
@@ -350,15 +369,16 @@
           "url": "https://aihot.news/items/cmtugou9e1cddrofptz3jwh4j"
         },
         "rank": 1,
-        "latest_at": "2026-09-10T07:45:13.000Z",
-        "source_count": 5,
-        "signal_count": 57,
+        "latest_at": "2026-09-10T09:09:10.000Z",
+        "source_count": 6,
+        "signal_count": 50,
         "source_names": [
           "X：Kim (@kimmonismus)",
           "Apple：Newsroom（RSS）",
           "TechCrunch：AI（RSS）",
           "The Verge：AI（RSS）",
-          "X：Testing Catalog (@testingcatalog)"
+          "X：Testing Catalog (@testingcatalog)",
+          "X：ZHO (@ZHO_ZHO_ZHO)"
         ],
         "story_url": "https://aihot.virxact.com/story/5ecd7305-9b58-4df4-958f-33dcfea5e6e9"
       }
@@ -421,7 +441,7 @@
         "rank": 5,
         "latest_at": "2026-09-10T07:45:13.000Z",
         "source_count": 3,
-        "signal_count": 11,
+        "signal_count": 13,
         "source_names": [
           "Apple：Newsroom（RSS）",
           "TechCrunch：AI（RSS）",
@@ -709,15 +729,40 @@
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmttqzqw30jwkrofpxrj00ngg"
         },
-        "rank": 8,
+        "rank": 10,
         "latest_at": "2026-09-09T06:42:44.000Z",
         "source_count": 2,
-        "signal_count": 6,
+        "signal_count": 1,
         "source_names": [
           "IT之家（RSS）",
           "X：X.PIN (@thexpin)"
         ],
         "story_url": "https://aihot.virxact.com/story/adc6a951-9694-467e-a82f-8598cd642379"
+      }
+    },
+    {
+      "id": "cmtvbgwvp08gprok95qjzil1e",
+      "item_type": "item",
+      "category": null,
+      "title": "火种说|三天一个 Demo，上百个应用：一个 OpenBMB 社区开发者的 AI 语音炼化之路",
+      "description": "深圳耐思人工智能技术负责人大明哥基于 OpenBMB 开源社区的 VoxCPM 语音合成模型，自研 S2S、MDN、QUIC 三条全语音链路，提出\"前端挂起式打断\"交互思路，并搭建面向数字分身人格刻画的六库系统。",
+      "original_url": "https://mp.weixin.qq.com/s?__biz=Mzg3Mzg2MTg2NQ%3D%3D&mid=2247499221&idx=1&sn=f8de936748235f5a6f614565833ed083",
+      "aihot_url": "https://aihot.news/items/cmtvbgwvp08gprok95qjzil1e",
+      "published_at": "2026-09-10T09:18:44.000Z",
+      "collected_at": "2026-09-10T09:20:11.967Z",
+      "source": {
+        "name": "公众号：面壁智能（MiniCPM）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "score": 37,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmtvbgwvp08gprok95qjzil1e"
+        }
       }
     },
     {
@@ -743,6 +788,32 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmtvb3d5u084frok9uhg41j0i"
+        }
+      }
+    },
+    {
+      "id": "cmtvbpv9j08rirok95bmag7r9",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "DeepSeek 合并快速、专家、识图模式，计划推出 V4.1 Flash 并下线 V4 Pro",
+      "description": "DeepSeek 将快速、专家、识图三种模式合并升级，移除独立的专家模式选项，新模型同时具备日常对话、图片理解与复杂问题解决能力。公司计划在北京时间 9 月 10 日前后推出原生多模态的 V4.1 Flash；V4 Pro 服务定于北京时间 9 月 14 日中午结束，之后请求将被路由到 V4.1 Flash 并按其费率计费。",
+      "original_url": "https://x.com/thexpin/status/2097973367374778569",
+      "aihot_url": "https://aihot.news/items/cmtvbpv9j08rirok95bmag7r9",
+      "published_at": "2026-09-10T09:00:03.000Z",
+      "collected_at": "2026-09-10T09:27:09.686Z",
+      "source": {
+        "name": "X：X.PIN (@thexpin)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "DeepSeek has unified its Fast， Expert and Image Recognition modes， removing the standalone Expert op…",
+        "score": 58,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmtvbpv9j08rirok95bmag7r9"
         }
       }
     },
@@ -10853,7 +10924,7 @@
         "rank": 7,
         "latest_at": "2026-09-09T20:06:28.000Z",
         "source_count": 3,
-        "signal_count": 7,
+        "signal_count": 8,
         "source_names": [
           "X：Rohan Paul (@rohanpaul_ai)",
           "X：X.PIN (@thexpin)",
@@ -13219,176 +13290,6 @@
       }
     },
     {
-      "id": "cmttjvryo0bohrofpi2jr2eok",
-      "item_type": "item",
-      "category": null,
-      "title": "昆仑万维方汉做客北京卫视：谈AI创新如何从实验室走向市场",
-      "description": "昆仑万维董事长兼CEO方汉亮相北京卫视《转在北京》栏目，分享企业在北京科创生态支持下跨越合规、算力、场景和市场门槛，实现AI技术从实验室到产品落地的实践。方汉透露，昆仑万维AI产品年收入已突破8亿美元，并称将继续扎根北京，向更多创作者与创业者开放AI能力。",
-      "original_url": "https://mp.weixin.qq.com/s?__biz=MzI1MzE1NDc3Mg%3D%3D&mid=2247510280&idx=2&sn=5779cd50d7c65c592384355c11b4b98a",
-      "aihot_url": "https://aihot.news/items/cmttjvryo0bohrofpi2jr2eok",
-      "published_at": "2026-09-09T03:30:14.000Z",
-      "collected_at": "2026-09-09T03:40:11.099Z",
-      "source": {
-        "name": "公众号：昆仑万维（天工）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "昆仑万维方汉做客北京卫视：让AI创新从实验室走向市场",
-        "score": 24,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmttjvryo0bohrofpi2jr2eok"
-        }
-      }
-    },
-    {
-      "id": "cmttjvryo0bogrofpe03ucbiz",
-      "item_type": "item",
-      "category": null,
-      "title": "SkyProduction 限免活动第二期：MiniMax H3 会员限时免费无限用",
-      "description": "SkyProduction（天工工作台）9月9日至14日推出第二期限免活动，会员可免费无限使用自部署的 MiniMax H3 768P 模型。该通用多模态生成模型支持文生视频及参考图片、视频、音频联合生成，并输出原生立体声。平台同期提供剧本翻译、出海转绘、3D导演台及直出10分钟视频等短剧制作工具。",
-      "original_url": "https://mp.weixin.qq.com/s?__biz=MzI1MzE1NDc3Mg%3D%3D&mid=2247510280&idx=1&sn=ad53075e92be8b74c5db5d0a59f78d82",
-      "aihot_url": "https://aihot.news/items/cmttjvryo0bogrofpe03ucbiz",
-      "published_at": "2026-09-09T03:30:14.000Z",
-      "collected_at": "2026-09-09T03:40:11.099Z",
-      "source": {
-        "name": "公众号：昆仑万维（天工）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "SkyProduction限免活动第二期：MiniMax H3会员限时免费无限用！",
-        "score": 30,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmttjvryo0bogrofpe03ucbiz"
-        }
-      }
-    },
-    {
-      "id": "cmttjzpgy0bqurofpq19vgxmc",
-      "item_type": "item",
-      "category": null,
-      "title": "Muse 早期使用量远超预期十倍",
-      "description": "Muse 的早期使用量已远超我们的预期。如今 Muse 用户的使用量是我们测试群体的 10 倍以上。尽情享受吧！",
-      "original_url": "https://x.com/alexandr_wang/status/2097527621206921612",
-      "aihot_url": "https://aihot.news/items/cmttjzpgy0bqurofpq19vgxmc",
-      "published_at": "2026-09-09T03:28:49.000Z",
-      "collected_at": "2026-09-09T03:43:13.057Z",
-      "source": {
-        "name": "X：Alexandr Wang（Scale AI 创始人/Meta 首席 AI 官） (@alexandr_wang)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "the early usage on muse has blown way past our projections. muse's users today are using 10x more th…",
-        "score": 21,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmttjzpgy0bqurofpq19vgxmc"
-        }
-      }
-    },
-    {
-      "id": "cmttjf24h0bbfrofps8hbrf34",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "Artificial Analysis 推出 Model Release 页面，可按 effort 档位对比模型智能、成本与速度",
-      "description": "Artificial Analysis 发布 Model Release 页面，可对比同一模型在不同 effort 档位下的智能、成本与速度。页面覆盖每档的 Intelligence、单任务成本、输出速度和延迟，并提供 Capability Index 在金融、法律、医疗等六个领域的分数。",
-      "original_url": "https://x.com/ArtificialAnlys/status/2097526916760703097",
-      "aihot_url": "https://aihot.news/items/cmttjf24h0bbfrofps8hbrf34",
-      "published_at": "2026-09-09T03:26:01.000Z",
-      "collected_at": "2026-09-09T03:27:09.750Z",
-      "source": {
-        "name": "X：Artificial Analysis (@ArtificialAnlys)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "You can now easily compare the intelligence， cost， and speed on different effort levels for your pre…",
-        "score": 53,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmttjf24h0bbfrofps8hbrf34"
-        }
-      }
-    },
-    {
-      "id": "cmttkk7aw0ccsrofp7bmchgzp",
-      "item_type": "item",
-      "category": "industry",
-      "title": "京东云宣布与摩尔线程规划建设 10 万卡 AI 工厂",
-      "description": "在 2026 京东全球科技探索者大会上，京东云总裁曹鹏公布 AI 基建进展，京东云已与摩尔线程等打造国产万卡集群，并规划建设 10 万卡集群。数据方面京东云正推进 1，000 万小时数据采集，模型方面已形成覆盖多模态、世界模型和具身模型的 JoyAI 基础模型矩阵。摩尔线程张建中表示该 AI 工厂可用于训练大模型、生产词元和智能体，并希望服务各行业打造具身智能。",
-      "original_url": "https://www.ithome.com/1/000/095.htm",
-      "aihot_url": "https://aihot.news/items/cmttkk7aw0ccsrofp7bmchgzp",
-      "published_at": "2026-09-09T03:24:41.000Z",
-      "collected_at": "2026-09-09T03:59:09.621Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "score": 53,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmttkk7aw0ccsrofp7bmchgzp"
-        }
-      }
-    },
-    {
-      "id": "cmtt0pw2p018pro9owlhpi092",
-      "item_type": "hot_topic",
-      "category": null,
-      "title": "OpenAI 发布 ChatGPT Images 2.5 图像模型",
-      "description": null,
-      "original_url": "https://openai.com/index/introducing-chatgpt-images-2-5",
-      "aihot_url": "https://aihot.news/items/cmtt0pw2p018pro9owlhpi092",
-      "published_at": null,
-      "collected_at": null,
-      "source": {
-        "name": "OpenAI：官网动态（RSS · 排除企业/客户案例）"
-      },
-      "source_channels": [
-        "hot_topics"
-      ],
-      "metadata": {
-        "rank": 2,
-        "latest_at": "2026-09-10T07:20:58.000Z",
-        "source_count": 15,
-        "signal_count": 32,
-        "source_names": [
-          "OpenAI：官网动态（RSS · 排除企业/客户案例）",
-          "X：OpenAI (@OpenAI)",
-          "X：OpenAI Developers (@OpenAIDevs)",
-          "X：Testing Catalog (@testingcatalog)",
-          "X：Greg Brockman (@gdb)",
-          "Hacker News 热门（buzzing.cc 中文翻译）",
-          "X：Rohan Paul (@rohanpaul_ai)",
-          "X：Sam Altman (@sama)",
-          "The Verge：AI（RSS）",
-          "Simon Willison 博客",
-          "IT之家（RSS）",
-          "公众号：卡尔的AI沃茨",
-          "X：ZHO (@ZHO_ZHO_ZHO)",
-          "The Decoder：AI News（RSS）",
-          "X：Luma AI (@LumaLabsAI)"
-        ],
-        "story_url": "https://aihot.virxact.com/story/9a02120a-837d-4a20-987a-4688ac3df838"
-      }
-    },
-    {
       "id": "cmtszna9e04isro5woti0ixg6",
       "item_type": "hot_topic",
       "category": null,
@@ -13405,10 +13306,10 @@
         "hot_topics"
       ],
       "metadata": {
-        "rank": 4,
+        "rank": 2,
         "latest_at": "2026-09-09T21:16:34.000Z",
         "source_count": 16,
-        "signal_count": 26,
+        "signal_count": 28,
         "source_names": [
           "OpenAI：官网动态（RSS · 排除企业/客户案例）",
           "X：OpenAI (@OpenAI)",
@@ -13428,6 +13329,47 @@
           "X：Thomas Wolf（Hugging Face 联创/CSO） (@Thom_Wolf)"
         ],
         "story_url": "https://aihot.virxact.com/story/c569fed6-5ad5-4c71-b7f2-6de4d75eb33f"
+      }
+    },
+    {
+      "id": "cmtt0pw2p018pro9owlhpi092",
+      "item_type": "hot_topic",
+      "category": null,
+      "title": "OpenAI 发布 ChatGPT Images 2.5 图像模型",
+      "description": null,
+      "original_url": "https://openai.com/index/introducing-chatgpt-images-2-5",
+      "aihot_url": "https://aihot.news/items/cmtt0pw2p018pro9owlhpi092",
+      "published_at": null,
+      "collected_at": null,
+      "source": {
+        "name": "OpenAI：官网动态（RSS · 排除企业/客户案例）"
+      },
+      "source_channels": [
+        "hot_topics"
+      ],
+      "metadata": {
+        "rank": 3,
+        "latest_at": "2026-09-10T07:20:58.000Z",
+        "source_count": 15,
+        "signal_count": 30,
+        "source_names": [
+          "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+          "X：OpenAI (@OpenAI)",
+          "X：OpenAI Developers (@OpenAIDevs)",
+          "X：Testing Catalog (@testingcatalog)",
+          "X：Greg Brockman (@gdb)",
+          "Hacker News 热门（buzzing.cc 中文翻译）",
+          "X：Rohan Paul (@rohanpaul_ai)",
+          "X：Sam Altman (@sama)",
+          "The Verge：AI（RSS）",
+          "Simon Willison 博客",
+          "IT之家（RSS）",
+          "公众号：卡尔的AI沃茨",
+          "X：ZHO (@ZHO_ZHO_ZHO)",
+          "The Decoder：AI News（RSS）",
+          "X：Luma AI (@LumaLabsAI)"
+        ],
+        "story_url": "https://aihot.virxact.com/story/9a02120a-837d-4a20-987a-4688ac3df838"
       }
     },
     {
