@@ -5,6 +5,7 @@ import asyncio
 import hashlib
 import json
 import os
+import re
 import sys
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
@@ -92,8 +93,20 @@ def run_rehearsal(
     target_report_date: str,
     mode: str,
     token: str,
+    request_id: str | None = None,
+    trigger_source: str | None = None,
     summary_path: Path | None = None,
 ) -> dict[str, Any]:
+    correlation_request_id = _optional_correlation(
+        request_id,
+        name="request_id",
+        max_length=128,
+    )
+    correlation_source = _optional_correlation(
+        trigger_source,
+        name="trigger_source",
+        max_length=64,
+    )
     started_at = datetime.now(timezone.utc)
     trigger = resolve_workflow_dispatch(
         target_report_date=target_report_date,
@@ -174,6 +187,8 @@ def run_rehearsal(
         "trigger_type": trigger.trigger_type.value,
         "identity_status": trigger.identity_status.value,
         "mode": trigger.mode.value if trigger.mode is not None else None,
+        "request_id": correlation_request_id,
+        "trigger_source": correlation_source,
         "target_report_date": metadata.target_report_date.isoformat(),
         "report_start": metadata.report_start.isoformat(),
         "report_end": metadata.report_end.isoformat(),
@@ -271,6 +286,8 @@ def _append_summary(path: Path, result: Mapping[str, Any]) -> None:
         f"- trigger_type: `{result['trigger_type']}`",
         f"- identity_status: `{result['identity_status']}`",
         f"- mode: `{result['mode']}`",
+        f"- request_id: `{result['request_id'] or 'NONE'}`",
+        f"- trigger_source: `{result['trigger_source'] or 'NONE'}`",
         f"- target_report_date: `{result['target_report_date']}`",
         f"- report_start: `{result['report_start']}`",
         f"- report_end: `{result['report_end']}`",
@@ -327,6 +344,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--repository", required=True)
     parser.add_argument("--report-date", required=True)
     parser.add_argument("--mode", required=True, choices=("MANUAL", "RECOVERY", "BACKFILL"))
+    parser.add_argument("--request-id")
+    parser.add_argument("--trigger-source")
     parser.add_argument("--summary", type=Path)
     return parser.parse_args()
 
@@ -343,6 +362,8 @@ def main() -> int:
             target_report_date=args.report_date,
             mode=args.mode,
             token=token,
+            request_id=args.request_id,
+            trigger_source=args.trigger_source,
             summary_path=args.summary,
         )
     except Exception as exc:
@@ -361,6 +382,21 @@ def main() -> int:
         return 1
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0
+
+
+def _optional_correlation(
+    value: str | None,
+    *,
+    name: str,
+    max_length: int,
+) -> str | None:
+    if value in (None, ""):
+        return None
+    if not isinstance(value, str) or len(value) > max_length:
+        raise ValueError(f"{name} exceeds its observability bound")
+    if re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._:/-]*", value) is None:
+        raise ValueError(f"{name} contains unsafe observability characters")
+    return value
 
 
 if __name__ == "__main__":

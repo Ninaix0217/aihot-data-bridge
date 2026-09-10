@@ -67,6 +67,10 @@ def test_v2_rehearsal_is_dispatch_only_with_explicit_inputs():
     assert "default" not in inputs["target_report_date"]
     assert inputs["mode"]["required"] == "true"
     assert inputs["mode"]["options"] == ["MANUAL", "RECOVERY", "BACKFILL"]
+    assert inputs["request_id"]["required"] == "false"
+    assert inputs["trigger_source"]["required"] == "false"
+    assert "default" not in inputs["request_id"]
+    assert "default" not in inputs["trigger_source"]
 
 
 def test_v2_rehearsal_shares_concurrency_but_not_production_workflow():
@@ -144,7 +148,7 @@ def test_phase_e_does_not_change_v1_or_dispatch_writer_workflows():
             "fa8049a2ccdc28e297b6e64e0f7f8d43d7d03c5ddb20574fb03ce4382560b874"
         ),
         "v2-rehearsal.yml": (
-            "1cb35a7b72082cce678e4988609f7397fb6278fb7c163a49d9bbcd5e8feff353"
+            "0191a0852017fe01a7fda9485b03b7d0aa80617c5c41e31327058e46f4811c19"
         ),
     }
 
@@ -152,3 +156,50 @@ def test_phase_e_does_not_change_v1_or_dispatch_writer_workflows():
         content = (ROOT / ".github" / "workflows" / filename).read_bytes()
         content = content.replace(b"\r\n", b"\n")
         assert hashlib.sha256(content).hexdigest() == expected_sha256
+
+
+def test_external_relay_is_push_only_for_control_branch_and_path():
+    workflow = load_workflow("v2-external-relay.yml")
+
+    assert set(workflow["on"]) == {"push"}
+    assert workflow["on"]["push"] == {
+        "branches": ["aihot-scheduler-control"],
+        "paths": [".aihot-control/trigger.json"],
+    }
+
+
+def test_external_relay_permissions_are_read_plus_fixed_dispatch_only():
+    workflow = load_workflow("v2-external-relay.yml")
+
+    assert workflow["permissions"] == {
+        "contents": "read",
+        "actions": "write",
+    }
+    assert workflow["permissions"].get("contents") != "write"
+    for forbidden in ("pages", "id-token", "issues", "pull-requests"):
+        assert forbidden not in workflow["permissions"]
+
+
+def test_external_relay_executes_main_code_but_reads_control_event_by_sha():
+    workflow = load_workflow("v2-external-relay.yml")
+    steps = workflow["jobs"]["relay"]["steps"]
+    checkout = steps[0]
+    command = steps[-1]["run"]
+    rendered = (
+        ROOT / ".github" / "workflows" / "v2-external-relay.yml"
+    ).read_text(encoding="utf-8")
+
+    assert checkout["with"] == {"ref": "main", "path": "code"}
+    assert "aihot_bridge.external_relay_v2" in command
+    assert "github.event.before" in rendered
+    assert "github.event.after" in rendered
+    assert "github.actor" in rendered
+    for forbidden in (
+        "schedule:",
+        "workflow_dispatch:",
+        "repository_v2",
+        "publish_v2_candidate",
+        "snapshot-data",
+        "git push",
+    ):
+        assert forbidden not in rendered

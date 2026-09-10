@@ -1,4 +1,5 @@
 name: AI HOT V2 Repository Rehearsal
+run-name: AI HOT V2 ${{ inputs.target_report_date }} ${{ inputs.mode }} ${{ inputs.request_id || 'direct' }}
 
 on:
   workflow_dispatch:
@@ -15,6 +16,14 @@ on:
           - MANUAL
           - RECOVERY
           - BACKFILL
+      request_id:
+        description: "Optional external-trigger correlation ID"
+        required: false
+        type: string
+      trigger_source:
+        description: "Optional external-trigger source"
+        required: false
+        type: string
 
 concurrency:
   group: aihot-daily-producer
@@ -46,9 +55,13 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           TARGET_REPORT_DATE: ${{ inputs.target_report_date }}
           DISPATCH_MODE: ${{ inputs.mode }}
+          REQUEST_ID: ${{ inputs.request_id }}
+          TRIGGER_SOURCE: ${{ inputs.trigger_source }}
         run: |
           python -m aihot_bridge.rehearsal_v2 \
             --repository "${GITHUB_REPOSITORY}" \
             --report-date "${TARGET_REPORT_DATE}" \
             --mode "${DISPATCH_MODE}" \
+            --request-id "${REQUEST_ID}" \
+            --trigger-source "${TRIGGER_SOURCE}" \
             --summary "${GITHUB_STEP_SUMMARY}"

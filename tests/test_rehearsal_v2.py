@@ -2,12 +2,15 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from aihot_bridge.candidate_v2 import validated_candidate_bytes
 from aihot_bridge.rehearsal_v2 import (
     PathEvidence,
     RepositorySnapshot,
     _append_summary,
+    _optional_correlation,
     verify_v1_preservation,
 )
+from tests.v2_fixtures import complete_candidate_payload
 
 
 def snapshot(paths: dict[str, str], *, head: str = "head") -> RepositorySnapshot:
@@ -78,6 +81,8 @@ def test_step_summary_contains_required_repository_evidence(tmp_path: Path):
         "trigger_type": "WORKFLOW_DISPATCH",
         "identity_status": "EXPLICIT",
         "mode": "MANUAL",
+        "request_id": None,
+        "trigger_source": None,
         "target_report_date": "2026-09-10",
         "report_start": "2026-09-09T04:00:00+00:00",
         "report_end": "2026-09-10T04:00:00+00:00",
@@ -120,8 +125,84 @@ def test_step_summary_contains_required_repository_evidence(tmp_path: Path):
 
     assert "AI HOT V2 Repository Rehearsal" in rendered
     assert "identity_status: `EXPLICIT`" in rendered
+    assert "request_id: `NONE`" in rendered
     assert "immutable: `PASS`" in rendered
     assert "final: `PASS`" in rendered
     assert "V1 preservation: `PASS`" in rendered
     assert "Consumer: `NOT_CHANGED`" in rendered
     assert "Pages: `NOT_USED`" in rendered
+
+
+def test_optional_external_correlation_is_observability_only_and_bounded():
+    assert _optional_correlation(None, name="request_id", max_length=128) is None
+    assert _optional_correlation("", name="request_id", max_length=128) is None
+    assert (
+        _optional_correlation(
+            "2026-09-10/request-1",
+            name="request_id",
+            max_length=128,
+        )
+        == "2026-09-10/request-1"
+    )
+
+
+def test_external_correlation_does_not_change_v2_business_artifact_bytes():
+    payload = complete_candidate_payload()
+    before = validated_candidate_bytes(payload)
+
+    assert _optional_correlation(
+        "2026-09-10/request-1", name="request_id", max_length=128
+    )
+    assert _optional_correlation(
+        "external-scheduler", name="trigger_source", max_length=64
+    )
+
+    assert validated_candidate_bytes(payload) == before
+
+
+def test_external_correlation_appears_in_summary_without_candidate_fields(tmp_path: Path):
+    path = tmp_path / "summary.md"
+    result = {
+        "trigger_type": "WORKFLOW_DISPATCH",
+        "identity_status": "EXPLICIT",
+        "mode": "RECOVERY",
+        "request_id": "2026-09-10/request-1",
+        "trigger_source": "external-scheduler",
+        "target_report_date": "2026-09-10",
+        "report_start": "2026-09-09T04:00:00+00:00",
+        "report_end": "2026-09-10T04:00:00+00:00",
+        "retrieval_as_of": "2026-09-10T05:00:00+00:00",
+        "generated_at": "2026-09-10T05:01:00+00:00",
+        "coverage": {
+            channel: {
+                "status": "ok",
+                "pages": 1,
+                "proof": "CROSSED_REPORT_START",
+                "oldest": "2026-09-09T03:59:59Z",
+            }
+            for channel in ("selected", "all", "paper")
+        },
+        "candidate_state": "VALID_COMPLETE",
+        "content_hash": "content",
+        "artifact_sha256": "artifact",
+        "repository": {
+            "previous_head": "old",
+            "decision": "REPLACE_WITH_NEW",
+            "reason": "NEWER_COMPLETE_CANDIDATE",
+            "write_dated": True,
+            "write_latest": True,
+            "cas_attempts": 1,
+            "created_commit": "commit",
+            "final_head": "commit",
+            "dated_blob": "blob",
+            "latest_blob": "blob",
+        },
+        "readback": {"immutable": "PASS", "final": "PASS"},
+        "v1_preservation": {"result": "PASS"},
+        "changed_paths": ["v2/latest.json"],
+    }
+
+    _append_summary(path, result)
+    rendered = path.read_text(encoding="utf-8")
+    assert "request_id: `2026-09-10/request-1`" in rendered
+    assert "trigger_source: `external-scheduler`" in rendered
