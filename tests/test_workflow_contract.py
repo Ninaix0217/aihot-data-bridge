@@ -141,13 +141,14 @@ def test_v2_shadow_runs_build_only_entrypoint_without_publication_commands():
 def test_phase_e_does_not_change_v1_or_dispatch_writer_workflows():
     expected = {
         "snapshot-pages.yml": (
-            "735d2202855e7c04f8dc887377e25927cf60b726132535b28f99b952b43a1b0b"
+            "fa8049a2ccdc28e297b6e64e0f7f8d43d7d03c5ddb20574fb03ce4382560b874"
         ),
         "v2-rehearsal.yml": (
-            "be02ad9129adf3f9b6715076723b9e7377882000829b2dd4c468205385b4b248"
+            "1cb35a7b72082cce678e4988609f7397fb6278fb7c163a49d9bbcd5e8feff353"
         ),
     }
 
     for filename, expected_sha256 in expected.items():
         content = (ROOT / ".github" / "workflows" / filename).read_bytes()
+        content = content.replace(b"\r\n", b"\n")
         assert hashlib.sha256(content).hexdigest() == expected_sha256
