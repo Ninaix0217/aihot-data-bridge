@@ -1,3 +1,4 @@
+import hashlib
 from pathlib import Path
 
 import yaml
@@ -89,3 +90,64 @@ def test_v2_rehearsal_uses_explicit_dispatch_runner_without_pages():
     assert "--mode" in command
     assert "GITHUB_STEP_SUMMARY" in command
     assert "pages" not in workflow["permissions"]
+
+
+def test_v2_shadow_has_exact_production_schedule_identities_only():
+    workflow = load_workflow("v2-shadow.yml")
+
+    assert set(workflow["on"]) == {"schedule"}
+    assert [entry["cron"] for entry in workflow["on"]["schedule"]] == [
+        "50 4 * * *",
+        "10 5 * * *",
+    ]
+
+
+def test_v2_shadow_is_read_only_and_uses_separate_concurrency():
+    workflow = load_workflow("v2-shadow.yml")
+
+    assert workflow["concurrency"] == {
+        "group": "aihot-v2-shadow",
+        "cancel-in-progress": "false",
+    }
+    assert workflow["concurrency"]["group"] != "aihot-daily-producer"
+    assert workflow["permissions"] == {
+        "contents": "read",
+        "actions": "read",
+    }
+    assert "pages" not in workflow["permissions"]
+
+
+def test_v2_shadow_runs_build_only_entrypoint_without_publication_commands():
+    workflow = load_workflow("v2-shadow.yml")
+    rendered = (ROOT / ".github" / "workflows" / "v2-shadow.yml").read_text(
+        encoding="utf-8"
+    )
+    command = workflow["jobs"]["shadow"]["steps"][-1]["run"]
+
+    assert "aihot_bridge.shadow_v2" in command
+    assert "github.event.schedule" in rendered
+    for forbidden in (
+        "repository_v2",
+        "github_repository_v2",
+        "publish_v2_candidate",
+        "git push",
+        "snapshot-data",
+        "upload-pages-artifact",
+        "deploy-pages",
+    ):
+        assert forbidden not in rendered
+
+
+def test_phase_e_does_not_change_v1_or_dispatch_writer_workflows():
+    expected = {
+        "snapshot-pages.yml": (
+            "735d2202855e7c04f8dc887377e25927cf60b726132535b28f99b952b43a1b0b"
+        ),
+        "v2-rehearsal.yml": (
+            "be02ad9129adf3f9b6715076723b9e7377882000829b2dd4c468205385b4b248"
+        ),
+    }
+
+    for filename, expected_sha256 in expected.items():
+        content = (ROOT / ".github" / "workflows" / filename).read_bytes()
+        assert hashlib.sha256(content).hexdigest() == expected_sha256
