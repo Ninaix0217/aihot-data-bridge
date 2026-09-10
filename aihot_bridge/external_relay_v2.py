@@ -73,10 +73,13 @@ class GitHubExternalRelayAdapter:
         if ahead_by != 1 or total_commits != 1:
             _scope_error("control push must advance exactly one commit")
         base = _object(payload.get("base_commit"), "compare.base_commit")
-        head = _object(payload.get("head_commit"), "compare.head_commit")
         if _sha(base.get("sha"), "compare.base_commit.sha") != before_sha:
             _io_error("compare base SHA does not match push before")
-        if _sha(head.get("sha"), "compare.head_commit.sha") != after_sha:
+        commits_payload = payload.get("commits")
+        if not isinstance(commits_payload, list) or len(commits_payload) != 1:
+            _io_error("compare.commits must contain the single pushed commit")
+        head = _object(commits_payload[0], "compare.commits[0]")
+        if _sha(head.get("sha"), "compare.commits[0].sha") != after_sha:
             _io_error("compare head SHA does not match push after")
         files = payload.get("files")
         if not isinstance(files, list):

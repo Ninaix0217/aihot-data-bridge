@@ -213,7 +213,7 @@ def test_github_adapter_reads_compare_payload_and_dispatches_fixed_request():
                     "ahead_by": 1,
                     "total_commits": 1,
                     "base_commit": {"sha": BEFORE},
-                    "head_commit": {"sha": AFTER},
+                    "commits": [{"sha": AFTER}],
                     "files": [{"filename": CONTROL_PATH}],
                 },
             )
@@ -276,7 +276,7 @@ def test_dispatch_http_failure_is_fail_closed(status):
                     "ahead_by": 1,
                     "total_commits": 1,
                     "base_commit": {"sha": BEFORE},
-                    "head_commit": {"sha": AFTER},
+                    "commits": [{"sha": AFTER}],
                     "files": [{"filename": CONTROL_PATH}],
                 },
             )
@@ -322,7 +322,7 @@ def test_compare_malformed_or_multi_commit_is_fail_closed():
             "ahead_by": 2,
             "total_commits": 2,
             "base_commit": {"sha": BEFORE},
-            "head_commit": {"sha": AFTER},
+            "commits": [{"sha": "c" * 40}, {"sha": AFTER}],
             "files": [{"filename": CONTROL_PATH}],
         },
     ]
