@@ -1,5 +1,9 @@
 {
-  "kind": "BOOTSTRAP",
-  "enabled": false,
-  "schema_version": "aihot-external-trigger/v1"
+  "schema_version": "aihot-external-trigger/v1",
+  "enabled": true,
+  "target_report_date": "2026-09-10",
+  "mode": "RECOVERY",
+  "request_id": "2026-09-10/c86458d8-93d9-44bd-91c0-75ac55080706",
+  "requested_at": "2026-09-10T14:55:10.188727Z",
+  "source": "external-scheduler"
 }
