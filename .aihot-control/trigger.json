@@ -1,0 +1,5 @@
+{
+  "schema_version": "aihot-external-trigger/v1",
+  "enabled": false,
+  "kind": "BOOTSTRAP"
+}
