@@ -4,3 +4,6 @@ __pycache__/
 *.py[cod]
 *.egg-info/
 dist/
+external-scheduler/node_modules/
+external-scheduler/.wrangler/
+external-scheduler/.dev.vars*

@@ -1,0 +1,18 @@
+{
+  "name": "aihot-independent-recovery-scheduler",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "dev:scheduled": "wrangler dev --test-scheduled"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-plugin": "1.1.7",
+    "@cloudflare/workers-types": "5.20260910.1",
+    "typescript": "5.9.3",
+    "vitest": "4.1.11",
+    "wrangler": "4.131.0"
+  }
+}

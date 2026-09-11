@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "aihot-v2-independent-recovery-scheduler",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-10",
+  "triggers": {
+    "crons": []
+  },
+  "vars": {
+    "DEPLOYMENT_MODE": "production"
+  }
+}
