@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-09-11T09:10:26.351857Z",
+  "generated_at": "2026-09-11T09:33:46.637814Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-09-10T03:10:19.244438Z",
-    "to": "2026-09-11T09:10:19.244438Z"
+    "from": "2026-09-10T03:33:39.216877Z",
+    "to": "2026-09-11T09:33:39.216877Z"
   },
   "coverage": {
     "selected": {
@@ -521,6 +521,58 @@
       }
     },
     {
+      "id": "cmtwr7ph108smrow7k0rf94na",
+      "item_type": "item",
+      "category": "industry",
+      "title": "菲尔兹奖得主 Jacob Tsimerman 创立 Mathematical A.I. Safety Institute，拟用数学方法证明 AI 安全",
+      "description": "加拿大数学家、新科菲尔兹奖得主 Jacob Tsimerman 宣布创立独立研究机构 Mathematical A.I. Safety Institute（MAISI），据《纽约时报》报道，机构位于旧金山湾区，计划 2027 年 1 月启动，招募 10 至 30 名数学家研究 AI 安全。",
+      "original_url": "https://the-decoder.com/the-mathematical-ai-safety-institute-wants-to-prove-ai-is-safe-the-way-cryptographers-prove-codes-are-unbreakable",
+      "aihot_url": "https://aihot.news/items/cmtwr7ph108smrow7k0rf94na",
+      "published_at": "2026-09-11T09:15:10.000Z",
+      "collected_at": "2026-09-11T09:28:42.705Z",
+      "source": {
+        "name": "The Decoder：AI News（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "The Mathematical AI Safety Institute wants to prove AI is safe the way cryptographers prove codes are unbreakable",
+        "score": 54,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmtwr7ph108smrow7k0rf94na"
+        }
+      }
+    },
+    {
+      "id": "cmtwr5plj08qdrow7npo57bgl",
+      "item_type": "item",
+      "category": "industry",
+      "title": "AI 芯片公司燧原科技登陆上交所科创板，首日高开大涨",
+      "description": "AI 芯片公司燧原科技（Enflame）今日登陆上海科创板，开盘价 410 元人民币，远高于 142.18 元的发行价，盘中最高涨至 460 元。此次发行募资约 61.2 亿元人民币，发行估值约 611.9 亿元，发行价为今年新股中第三高，对应 2025 年销售额 61.8 倍的市销率。",
+      "original_url": "https://x.com/thexpin/status/2098335741264675002",
+      "aihot_url": "https://aihot.news/items/cmtwr5plj08qdrow7npo57bgl",
+      "published_at": "2026-09-11T09:00:00.000Z",
+      "collected_at": "2026-09-11T09:27:09.053Z",
+      "source": {
+        "name": "X：X.PIN (@thexpin)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Chinese AI chipmaker Enflame debuted on Shanghai's STAR Market today， opening at RMB410 versus its R…",
+        "score": 54,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmtwr5plj08qdrow7npo57bgl"
+        }
+      }
+    },
+    {
       "id": "cmtwq5v8e07fbrow7qwq630tq",
       "item_type": "item",
       "category": null,
@@ -595,6 +647,32 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmtwq5v8s07fcrow7r5jl0zvd"
+        }
+      }
+    },
+    {
+      "id": "cmtwqmrto08d7row7clbtj3uo",
+      "item_type": "item",
+      "category": null,
+      "title": "Dr Eggbot 安装体验",
+      "description": "当你安装了 dr eggbot 的视角",
+      "original_url": "https://x.com/poteto/status/2098331406464356705",
+      "aihot_url": "https://aihot.news/items/cmtwqmrto08d7row7clbtj3uo",
+      "published_at": "2026-09-11T08:42:47.000Z",
+      "collected_at": "2026-09-11T09:12:23.942Z",
+      "source": {
+        "name": "X：Lauren Tan (@poteto)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "pov u installed dr eggbot",
+        "score": 10,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmtwqmrto08d7row7clbtj3uo"
         }
       }
     },
@@ -853,6 +931,32 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmtwoe252062prow7ad7355hl"
+        }
+      }
+    },
+    {
+      "id": "cmtwq6wli07jwrow7yt7fjg23",
+      "item_type": "item",
+      "category": null,
+      "title": "七彩虹灵创 Mini Pro 迷你主机亮相：AMD 锐龙 AI Max PRO 400 + 192GB 统一内存",
+      "description": "七彩虹 COLORFIRE 灵创 Mini Pro 迷你主机在 AMD 北京媒体沙龙上首次亮相，搭载 AMD 锐龙 AI Max PRO 400 系列处理器，配备 192GB 统一内存，其中 160GB 可划拨给显存，面向本地大模型推理、多模态交互与轻量化智能体部署。",
+      "original_url": "https://www.ithome.com/1/001/326.htm",
+      "aihot_url": "https://aihot.news/items/cmtwq6wli07jwrow7yt7fjg23",
+      "published_at": "2026-09-11T08:02:53.000Z",
+      "collected_at": "2026-09-11T09:00:04.443Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "七彩虹灵创 Mini Pro 迷你主机亮相，搭载 192GB 统一内存、AMD 处理器",
+        "score": 39,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmtwq6wli07jwrow7yt7fjg23"
         }
       }
     },
@@ -12530,110 +12634,6 @@
       }
     },
     {
-      "id": "cmtuyxk7a0jqhrorpxsdho02v",
-      "item_type": "item",
-      "category": null,
-      "title": "阿里云 AI 算力额度上限提至 15 万美元",
-      "description": "阿里云将 AI 算力信用额度上限从 5 万美元提升至 15 万美元，新客户可在统一平台接入 Qwen、DeepSeek、Kimi 等多款模型。同时提供 7000 万免费 token、200 美元即时云 credits，以及最高 20% 的月度返利（持续 3 个月）。",
-      "original_url": "https://x.com/alibaba_cloud/status/2097889145725042774",
-      "aihot_url": "https://aihot.news/items/cmtuyxk7a0jqhrorpxsdho02v",
-      "published_at": "2026-09-10T03:25:23.000Z",
-      "collected_at": "2026-09-10T03:29:13.296Z",
-      "source": {
-        "name": "X：阿里云 / Alibaba Cloud (@alibaba_cloud)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "🚀 The AI stack that pays you back. We've just raised our AI compute credit cap from $50K to a massi…",
-        "score": 28,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmtuyxk7a0jqhrorpxsdho02v"
-        }
-      }
-    },
-    {
-      "id": "cmtv00lp60kqerorpbvh071k2",
-      "item_type": "item",
-      "category": "industry",
-      "title": "宇树科技股价跌破 500 元/股，市值较上市首日高点蒸发超 2400 亿元",
-      "description": "宇树科技股价 9 月 10 日早盘首次跌破 500 元关口，最低报 499.0 元/股，跌超 2.7%，总市值 2022 亿元，较上市首日最高点 4449 亿元蒸发超 2400 亿元。公司于 8 月 19 日登陆科创板，发行价 150.80 元/股，开盘价曾达 1100 元/股；2026 年上半年营收 11.52 亿元，同比增长 48.5%，归母净利润 2.74 亿元，扭亏为盈。",
-      "original_url": "https://www.ithome.com/1/000/628.htm",
-      "aihot_url": "https://aihot.news/items/cmtv00lp60kqerorpbvh071k2",
-      "published_at": "2026-09-10T03:24:20.000Z",
-      "collected_at": "2026-09-10T03:59:32.498Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "宇树科技股价跌破 500 元 / 股，市值较上市首日高点蒸发超 2400 亿元",
-        "score": 59,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmtv00lp60kqerorpbvh071k2"
-        }
-      }
-    },
-    {
-      "id": "cmtv00lp70kqgrorppwl2g4ps",
-      "item_type": "item",
-      "category": "industry",
-      "title": "蚂蚁国际联合 Visa、万事达卡开发 AI 支付新标准，推出 KYA 互操作框架",
-      "description": "蚂蚁国际宣布与 Visa 和 Mastercard 万事达卡合作，共同制定 AI 支付新标准，核心是名为 Know-Your-Agent（KYA）的互操作性框架，用于在各方保留各自验证和风险管理流程的前提下跨支付生态识别受信任的 AI 智能体。",
-      "original_url": "https://www.ithome.com/1/000/625.htm",
-      "aihot_url": "https://aihot.news/items/cmtv00lp70kqgrorppwl2g4ps",
-      "published_at": "2026-09-10T03:17:15.000Z",
-      "collected_at": "2026-09-10T03:59:32.498Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "蚂蚁国际联合 Visa、万事达卡合作开发 AI 支付新标准",
-        "score": 64,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmtv00lp70kqgrorppwl2g4ps"
-        }
-      }
-    },
-    {
-      "id": "cmtuyuxg40jmyrorpoqxzeszl",
-      "item_type": "item",
-      "category": null,
-      "title": "前 DeepMind 员工曝内部曾禁谈人类灭绝风险",
-      "description": "前 Google DeepMind 传播与政策团队成员 v_maini 披露，2018-2022 年任职期间，公司禁止任何人对外谈论人类灭绝的可能性，研究人员被 PR 培训用\"危言耸听无用\"等话术回应存在性风险。",
-      "original_url": "https://x.com/AISafetyMemes/status/2097885676431974708",
-      "aihot_url": "https://aihot.news/items/cmtuyuxg40jmyrorpoqxzeszl",
-      "published_at": "2026-09-10T03:11:36.000Z",
-      "collected_at": "2026-09-10T03:27:09.939Z",
-      "source": {
-        "name": "X：AI Safety Memes (@AISafetyMemes)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "\"When I first joined Google DeepMind， external communication about the possibility of human extincti…",
-        "score": 48,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmtuyuxg40jmyrorpoqxzeszl"
-        }
-      }
-    },
-    {
       "id": "cmtugou9e1cddrofptz3jwh4j",
       "item_type": "hot_topic",
       "category": null,
@@ -12652,10 +12652,9 @@
       "metadata": {
         "rank": 1,
         "latest_at": "2026-09-10T14:17:31.967Z",
-        "source_count": 7,
-        "signal_count": 105,
+        "source_count": 6,
+        "signal_count": 103,
         "source_names": [
-          "X：Kim (@kimmonismus)",
           "Apple：Newsroom（RSS）",
           "TechCrunch：AI（RSS）",
           "The Verge：AI（RSS）",
@@ -12714,10 +12713,9 @@
       "metadata": {
         "rank": 4,
         "latest_at": "2026-09-11T06:17:03.000Z",
-        "source_count": 5,
-        "signal_count": 23,
+        "source_count": 4,
+        "signal_count": 22,
         "source_names": [
-          "X：Thomas Wolf（Hugging Face 联创/CSO） (@Thom_Wolf)",
           "IT之家（RSS）",
           "X：Kim (@kimmonismus)",
           "The Verge：AI（RSS）",
@@ -12756,17 +12754,17 @@
       }
     },
     {
-      "id": "cmttwa2j30pktrofpw67b9pby",
+      "id": "cmtujwqj41fx1rofpgspjur6i",
       "item_type": "hot_topic",
       "category": null,
-      "title": "NSA、FBI 和 CISA 指控 DeepSeek、月之暗面等六家中国 AI 公司大规模提取美国模型知识",
+      "title": "NSA、CISA 与 FBI 指控 DeepSeek 等六家中国 AI 公司大规模蒸馏美国前沿模型",
       "description": null,
-      "original_url": "https://x.com/thexpin/status/2097615997616406833",
-      "aihot_url": "https://aihot.news/items/cmttwa2j30pktrofpw67b9pby",
+      "original_url": "https://arstechnica.com/tech-policy/2026/09/six-chinese-ai-firms-accused-of-aggressively-copying-us-frontier-models",
+      "aihot_url": "https://aihot.news/items/cmtujwqj41fx1rofpgspjur6i",
       "published_at": null,
       "collected_at": null,
       "source": {
-        "name": "X：X.PIN (@thexpin)"
+        "name": "Ars Technica：AI（RSS）"
       },
       "source_channels": [
         "hot_topics"
@@ -12774,10 +12772,9 @@
       "metadata": {
         "rank": 7,
         "latest_at": "2026-09-09T20:06:28.000Z",
-        "source_count": 2,
+        "source_count": 1,
         "signal_count": 20,
         "source_names": [
-          "X：X.PIN (@thexpin)",
           "Ars Technica：AI（RSS）"
         ],
         "story_url": "https://aihot.virxact.com/story/212a965c-6fd8-4067-9263-5d5125d5b4fc"
@@ -12803,7 +12800,7 @@
         "rank": 8,
         "latest_at": "2026-09-11T06:17:03.000Z",
         "source_count": 4,
-        "signal_count": 14,
+        "signal_count": 13,
         "source_names": [
           "IT之家（RSS）",
           "The Decoder：AI News（RSS）",
