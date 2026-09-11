@@ -23,6 +23,12 @@ for the nominal occurrence. Duplicate delivery is suppressed by reading the
 current control file and comparing request IDs; no KV, D1, or Durable Object is
 introduced.
 
+A temporary real-cron probe instead requires an explicit target date and one
+explicit safe probe request ID. All nominal cron occurrences during propagation
+and removal reuse that identity, making later occurrences control-write no-ops.
+Production rejects configured probe fields and retains nominal-occurrence
+identity unchanged.
+
 GitHub reads and writes use bounded retry only for transport failures, HTTP 429,
 and 5xx. Authentication, missing configuration, malformed state, and semantic
 failures are not retried. A stale-SHA 409/422 is followed by one read: the same

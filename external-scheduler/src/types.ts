@@ -4,6 +4,7 @@ export interface SchedulerEnv {
   GITHUB_APP_PRIVATE_KEY: string;
   DEPLOYMENT_MODE?: "production" | "probe";
   PROBE_TARGET_REPORT_DATE?: string;
+  PROBE_REQUEST_ID?: string;
 }
 
 export interface RuntimeDependencies {
@@ -19,6 +20,11 @@ export interface ScheduleContext {
   scheduleLagSeconds: number;
   targetReportDate: string;
   requestId: string;
+}
+
+export interface ProbeIdentity {
+  readonly targetReportDate: string;
+  readonly requestId: string;
 }
 
 export interface ExternalTriggerPayload {

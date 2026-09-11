@@ -52,7 +52,10 @@ Never paste or commit the PEM, a Cloudflare API token, an App JWT, or an
 installation token. Installation tokens are freshly requested for each
 invocation and restricted to this repository with `contents: write`.
 
-Probe deployments may set `DEPLOYMENT_MODE=probe` and an explicit
-`PROBE_TARGET_REPORT_DATE`. Production mode rejects this override. A temporary
-probe cron must be removed after evidence is collected; recurring recovery is
-not part of Phase G1.
+Probe deployments must set `DEPLOYMENT_MODE=probe`, an explicit
+`PROBE_TARGET_REPORT_DATE`, and one safe `PROBE_REQUEST_ID` for the entire probe
+window. Every nominal occurrence of the temporary cron then uses that same
+request ID, so only the first invocation can create a control commit and later
+occurrences become `NOOP_DUPLICATE`. Production mode rejects either probe field.
+A temporary probe cron must be removed after evidence is collected; recurring
+recovery is not part of Phase G1.

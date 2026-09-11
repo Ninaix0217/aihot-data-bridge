@@ -55,4 +55,68 @@ describe("scheduler orchestration", () => {
     expect(rendered).not.toContain("installation-secret-token");
     expect(rendered).not.toContain("eyJ");
   });
+
+  it("writes the first probe occurrence and no-ops later occurrences with the same probe ID", async () => {
+    const privateKey = await testPrivateKeyPem();
+    let currentBytes = encoder.encode(
+      '{"schema_version":"aihot-external-trigger/v1","enabled":false,"kind":"BOOTSTRAP"}\n',
+    );
+    const fetcher = vi.fn<typeof fetch>(async (_input, init) => {
+      if (init?.method === "POST") {
+        return Response.json({
+          token: "installation-secret-token",
+          expires_at: "2026-09-11T09:00:00Z",
+          permissions: { contents: "write" },
+        }, { status: 201 });
+      }
+      if (init?.method === "GET") {
+        return contentResponse(currentBytes, await gitBlobSha(currentBytes));
+      }
+      if (init?.method === "PUT") {
+        const body = JSON.parse(String(init.body));
+        currentBytes = Uint8Array.from(atob(body.content), (character) =>
+          character.charCodeAt(0),
+        );
+        return Response.json({
+          content: { sha: await gitBlobSha(currentBytes) },
+          commit: { sha: "c".repeat(40) },
+        });
+      }
+      throw new Error("unexpected request");
+    });
+    const dependencies: RuntimeDependencies = {
+      fetch: fetcher,
+      now: () => NOW,
+      sleep: async () => undefined,
+      log: () => undefined,
+    };
+    const probeRequestId =
+      "2026-09-10/cf-probe-123e4567-e89b-12d3-a456-426614174000";
+    const env: SchedulerEnv = {
+      GITHUB_APP_CLIENT_ID: "Iv1.test-client",
+      GITHUB_INSTALLATION_ID: "12345",
+      GITHUB_APP_PRIVATE_KEY: privateKey,
+      DEPLOYMENT_MODE: "probe",
+      PROBE_TARGET_REPORT_DATE: "2026-09-10",
+      PROBE_REQUEST_ID: probeRequestId,
+    };
+
+    const first = await runScheduledRecovery(
+      { scheduledTime: SCHEDULED_TIME, cron: "*/5 * * * *" },
+      env,
+      dependencies,
+    );
+    const second = await runScheduledRecovery(
+      { scheduledTime: SCHEDULED_TIME + 300_000, cron: "*/5 * * * *" },
+      env,
+      dependencies,
+    );
+
+    expect(first.result).toBe("WRITTEN");
+    expect(second.result).toBe("NOOP_DUPLICATE");
+    expect(first.request_id).toBe(probeRequestId);
+    expect(second.request_id).toBe(probeRequestId);
+    expect(first.scheduled_at).not.toBe(second.scheduled_at);
+    expect(fetcher.mock.calls.filter(([, init]) => init?.method === "PUT")).toHaveLength(1);
+  });
 });

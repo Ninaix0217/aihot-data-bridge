@@ -4,11 +4,11 @@ import {
   beijingDateForScheduledTime,
   buildExternalTrigger,
   requestIdForOccurrence,
-  resolveProbeTarget,
+  resolveProbeIdentity,
   scheduleContext,
 } from "../src/scheduler";
 import { SchedulerErrorReason } from "../src/types";
-import { SCHEDULED_TIME } from "./helpers";
+import { NOW, SCHEDULED_TIME } from "./helpers";
 
 describe("logical schedule identity", () => {
   it("derives Beijing D from the nominal scheduledTime", () => {
@@ -47,17 +47,63 @@ describe("logical schedule identity", () => {
     });
   });
 
-  it("permits target override only in explicit probe mode", () => {
-    expect(resolveProbeTarget("probe", "2026-09-10")).toBe("2026-09-10");
-    expect(resolveProbeTarget("production", undefined)).toBeUndefined();
-    for (const [mode, target] of [
-      ["production", "2026-09-10"],
-      ["probe", undefined],
-      ["other", "2026-09-10"],
+  it("keeps production D and request ID derived from scheduledTime", () => {
+    const identity = resolveProbeIdentity("production", undefined, undefined);
+    const context = scheduleContext(SCHEDULED_TIME, NOW, identity);
+    expect(identity).toBeUndefined();
+    expect(context.targetReportDate).toBe("2026-09-11");
+    expect(context.requestId).toBe(`2026-09-11/cf-${SCHEDULED_TIME}`);
+  });
+
+  it("fixes probe D and request ID across different nominal occurrences", () => {
+    const identity = resolveProbeIdentity(
+      "probe",
+      "2026-09-10",
+      "2026-09-10/cf-probe-123e4567-e89b-12d3-a456-426614174000",
+    );
+    const first = scheduleContext(SCHEDULED_TIME, NOW, identity);
+    const second = scheduleContext(SCHEDULED_TIME + 300_000, NOW, identity);
+    expect(first.targetReportDate).toBe("2026-09-10");
+    expect(second.targetReportDate).toBe("2026-09-10");
+    expect(first.requestId).toBe(identity?.requestId);
+    expect(second.requestId).toBe(identity?.requestId);
+    expect(first.scheduledAt).not.toBe(second.scheduledAt);
+  });
+
+  it("fails closed when probe identity is incomplete or malformed", () => {
+    for (const [target, requestId] of [
+      [undefined, "2026-09-10/cf-probe-valid"],
+      ["2026-09-10", undefined],
+      ["2026-09-10", "contains spaces"],
+      ["2026-02-30", "2026-09-10/cf-probe-valid"],
     ] as const) {
-      expect(() => resolveProbeTarget(mode, target)).toThrowError(
+      expect(() => resolveProbeIdentity("probe", target, requestId)).toThrowError(
         expect.objectContaining({ reason: SchedulerErrorReason.INVALID_CONFIGURATION }),
       );
     }
+  });
+
+  it("fails closed when either probe field leaks into production", () => {
+    for (const [target, requestId] of [
+      ["2026-09-10", undefined],
+      [undefined, "2026-09-10/cf-probe-valid"],
+      ["", ""],
+    ] as const) {
+      expect(() => resolveProbeIdentity("production", target, requestId)).toThrowError(
+        expect.objectContaining({ reason: SchedulerErrorReason.INVALID_CONFIGURATION }),
+      );
+    }
+  });
+
+  it("rejects unknown deployment modes", () => {
+    expect(() =>
+      resolveProbeIdentity(
+        "other",
+        "2026-09-10",
+        "2026-09-10/cf-probe-valid",
+      ),
+    ).toThrowError(
+      expect.objectContaining({ reason: SchedulerErrorReason.INVALID_CONFIGURATION }),
+    );
   });
 });

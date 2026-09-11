@@ -1,5 +1,6 @@
 import {
   type ExternalTriggerPayload,
+  type ProbeIdentity,
   type ScheduleContext,
   SchedulerError,
   SchedulerErrorReason,
@@ -7,6 +8,7 @@ import {
 
 const BEIJING_TIME_ZONE = "Asia/Shanghai";
 const REPORT_DATE = /^\d{4}-\d{2}-\d{2}$/;
+const REQUEST_ID = /^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$/;
 
 export function beijingDateForScheduledTime(scheduledTime: number): string {
   const scheduled = checkedDate(scheduledTime);
@@ -36,7 +38,7 @@ export function requestIdForOccurrence(
 export function scheduleContext(
   scheduledTime: number,
   startedAt: Date,
-  probeTargetReportDate?: string,
+  probeIdentity?: ProbeIdentity,
 ): ScheduleContext {
   const scheduled = checkedDate(scheduledTime);
   if (!(startedAt instanceof Date) || !Number.isFinite(startedAt.getTime())) {
@@ -45,7 +47,8 @@ export function scheduleContext(
       "started_at must be a valid instant",
     );
   }
-  const targetReportDate = probeTargetReportDate ?? beijingDateForScheduledTime(scheduledTime);
+  const targetReportDate =
+    probeIdentity?.targetReportDate ?? beijingDateForScheduledTime(scheduledTime);
   if (!isCanonicalReportDate(targetReportDate)) {
     throw new SchedulerError(
       SchedulerErrorReason.INVALID_CONFIGURATION,
@@ -57,7 +60,8 @@ export function scheduleContext(
     startedAt: startedAt.toISOString(),
     scheduleLagSeconds: (startedAt.getTime() - scheduledTime) / 1000,
     targetReportDate,
-    requestId: requestIdForOccurrence(targetReportDate, scheduledTime),
+    requestId:
+      probeIdentity?.requestId ?? requestIdForOccurrence(targetReportDate, scheduledTime),
   };
 }
 
@@ -75,27 +79,37 @@ export function buildExternalTrigger(
   };
 }
 
-export function resolveProbeTarget(
+export function resolveProbeIdentity(
   deploymentMode: string | undefined,
   configuredTarget: string | undefined,
-): string | undefined {
+  configuredRequestId: string | undefined,
+): ProbeIdentity | undefined {
   const mode = deploymentMode ?? "production";
   if (mode === "production") {
-    if (configuredTarget !== undefined && configuredTarget !== "") {
+    if (configuredTarget !== undefined || configuredRequestId !== undefined) {
       throw new SchedulerError(
         SchedulerErrorReason.INVALID_CONFIGURATION,
-        "production mode forbids a target date override",
+        "production mode forbids probe identity overrides",
       );
     }
     return undefined;
   }
-  if (mode !== "probe" || !configuredTarget || !isCanonicalReportDate(configuredTarget)) {
+  if (
+    mode !== "probe" ||
+    !configuredTarget ||
+    !isCanonicalReportDate(configuredTarget) ||
+    !configuredRequestId ||
+    !REQUEST_ID.test(configuredRequestId)
+  ) {
     throw new SchedulerError(
       SchedulerErrorReason.INVALID_CONFIGURATION,
-      "probe mode requires an explicit canonical target report date",
+      "probe mode requires an explicit canonical target report date and safe request ID",
     );
   }
-  return configuredTarget;
+  return {
+    targetReportDate: configuredTarget,
+    requestId: configuredRequestId,
+  };
 }
 
 function checkedDate(milliseconds: number): Date {

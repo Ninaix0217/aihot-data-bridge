@@ -6,7 +6,7 @@ import {
 import { GitHubControlClient } from "./github-control";
 import {
   buildExternalTrigger,
-  resolveProbeTarget,
+  resolveProbeIdentity,
   scheduleContext,
 } from "./scheduler";
 import {
@@ -26,7 +26,11 @@ export async function runScheduledRecovery(
   const context = scheduleContext(
     controller.scheduledTime,
     started,
-    resolveProbeTarget(env.DEPLOYMENT_MODE, env.PROBE_TARGET_REPORT_DATE),
+    resolveProbeIdentity(
+      env.DEPLOYMENT_MODE,
+      env.PROBE_TARGET_REPORT_DATE,
+      env.PROBE_REQUEST_ID,
+    ),
   );
   const trigger = buildExternalTrigger(context);
   const observation: Record<string, unknown> = {
