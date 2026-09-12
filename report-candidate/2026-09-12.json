@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-09-12T08:52:18.374283Z",
+  "generated_at": "2026-09-12T09:12:00.382331Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-09-11T02:52:11.530807Z",
-    "to": "2026-09-12T08:52:11.530807Z"
+    "from": "2026-09-11T03:11:55.266291Z",
+    "to": "2026-09-12T09:11:55.266291Z"
   },
   "coverage": {
     "selected": {
@@ -17,7 +17,7 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 383,
+      "items": 384,
       "error": null
     },
     "paper": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 415,
-    "deduplicated_items": 382
+    "raw_items": 416,
+    "deduplicated_items": 381
   },
   "items": [
     {
@@ -71,13 +71,14 @@
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmtxvt03h068vrous6ilk8ds7"
         },
-        "rank": 7,
-        "latest_at": "2026-09-12T05:37:39.339Z",
-        "source_count": 2,
+        "rank": 4,
+        "latest_at": "2026-09-12T08:07:48.000Z",
+        "source_count": 3,
         "signal_count": 0,
         "source_names": [
           "Hacker News：AI 热帖",
-          "Hacker News 热门（buzzing.cc 中文翻译）"
+          "Hacker News 热门（buzzing.cc 中文翻译）",
+          "IT之家（RSS）"
         ],
         "story_url": "https://aihot.virxact.com/story/18cfba38-1b9d-4a60-a301-ea8dbc5fa95d"
       }
@@ -110,7 +111,7 @@
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmtxnd7fw06wcroi31psxg2c6"
         },
-        "rank": 4,
+        "rank": 3,
         "latest_at": "2026-09-12T00:42:25.000Z",
         "source_count": 4,
         "signal_count": 0,
@@ -150,7 +151,7 @@
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmtxmd06905q5roi3ds616hwo"
         },
-        "rank": 10,
+        "rank": 9,
         "latest_at": "2026-09-12T01:43:03.000Z",
         "source_count": 2,
         "signal_count": 0,
@@ -245,7 +246,7 @@
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmtx0v3dg030mroedwvkdfyvw"
         },
-        "rank": 9,
+        "rank": 8,
         "latest_at": "2026-09-11T17:18:21.000Z",
         "source_count": 3,
         "signal_count": 0,
@@ -272,7 +273,8 @@
       },
       "source_channels": [
         "selected",
-        "all"
+        "all",
+        "hot_topics"
       ],
       "metadata": {
         "original_title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
@@ -282,7 +284,16 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmtx7f9mi09psroed4b1w3nsv"
-        }
+        },
+        "rank": 10,
+        "latest_at": "2026-09-12T00:07:04.000Z",
+        "source_count": 2,
+        "signal_count": 0,
+        "source_names": [
+          "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+          "IT之家（RSS）"
+        ],
+        "story_url": "https://aihot.virxact.com/story/59dba7fd-45a2-4c52-acb7-85264464e1e8"
       }
     },
     {
@@ -314,6 +325,57 @@
       }
     },
     {
+      "id": "cmty5nlsx02y8ro8qkit5t3uy",
+      "item_type": "item",
+      "category": null,
+      "title": "阿里 Qoder CLI 个人版 v1.1.50 开放自定义模型接入",
+      "description": "阿里 Qoder CLI 从 v1.1.50 起向个人版用户开放自定义模型接入，用户填入 API 地址、模型 ID 和 API Key 即可使用自带模型。该功能同时支持国际版和 CN 版，免费及付费个人版账号均可使用；上下文容量留空时按 128K 管理。",
+      "original_url": "https://www.ithome.com/1/001/597.htm",
+      "aihot_url": "https://aihot.news/items/cmty5nlsx02y8ro8qkit5t3uy",
+      "published_at": "2026-09-12T08:59:28.000Z",
+      "collected_at": "2026-09-12T09:00:44.230Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "score": 42,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmty5nlsx02y8ro8qkit5t3uy"
+        }
+      }
+    },
+    {
+      "id": "cmty5nlsy02y9ro8qtl718qn8",
+      "item_type": "item",
+      "category": null,
+      "title": "中国电信研究院：2026 年我国 Token 年消耗量预计达 10 亿亿",
+      "description": "中国电信研究院《智能体时代 AI 基础设施发展研究报告（2026）》预计，2026 年我国 Token 年消耗量将达 10 亿亿，2030 年超过 3500 亿亿，年复合增长率接近 12 倍。报告还预计未来 2~3 年我国算力需求平均每年增长近 10 倍，2029 年推理算力市场占比将达 80%。",
+      "original_url": "https://www.ithome.com/1/001/596.htm",
+      "aihot_url": "https://aihot.news/items/cmty5nlsy02y9ro8qtl718qn8",
+      "published_at": "2026-09-12T08:46:56.000Z",
+      "collected_at": "2026-09-12T09:00:44.230Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "我国词元需求呈现爆发式增长，预计今年消耗量将达 10 亿亿",
+        "score": 46,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmty5nlsy02y9ro8qtl718qn8"
+        }
+      }
+    },
+    {
       "id": "cmty4whoe02ycrolydk8x409x",
       "item_type": "item",
       "category": null,
@@ -336,6 +398,32 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmty4whoe02ycrolydk8x409x"
+        }
+      }
+    },
+    {
+      "id": "cmty5lh2o02rwro8qjqiq37eo",
+      "item_type": "item",
+      "category": "tip",
+      "title": "25 位菲尔兹奖得主联合警告：AI 或在伤害数学及所有智力工作",
+      "description": "25 位菲尔兹奖得主发布联合声明，警告 AI 行业与数学的目标严重错位，用 AI 批量攻克难题可能破坏学科真正的目的即概念性理解。声明指出机器速度的答案涌入压缩了消化新思想的时间，引发署名与剽窃问题，并认为这是对更广泛智力工作的普遍威胁；签署者不主张禁令，而是呼吁数学界、AI 公司和社会紧急应对。签署者包括 Terence Tao、Peter Scholze、Maryna Viazovska 等。",
+      "original_url": "https://the-decoder.com/leading-mathematicians-fear-ai-is-making-their-field-dumber-and-warn-the-rest-of-us-is-next",
+      "aihot_url": "https://aihot.news/items/cmty5lh2o02rwro8qjqiq37eo",
+      "published_at": "2026-09-12T08:28:53.000Z",
+      "collected_at": "2026-09-12T08:59:05.248Z",
+      "source": {
+        "name": "The Decoder：AI News（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Leading mathematicians fear AI is making their field dumber， and warn the rest of us is next",
+        "score": 64,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmty5lh2o02rwro8qjqiq37eo"
         }
       }
     },
@@ -391,6 +479,32 @@
       }
     },
     {
+      "id": "cmty5nlsy02yaro8qq657xart",
+      "item_type": "item",
+      "category": "industry",
+      "title": "Minitap 指控谷歌 Artemis 盗用其开源项目 mobile-use 代码且未注明出处",
+      "description": "Minitap 联合创始人兼 CEO 尼古拉·德汉舒韦克公开指控谷歌在 Artemis 移动自动化代码库中未经署名使用其开源项目 mobile-use 的代码、提示词和测试用例，部分代码逐字一致，列有 Minitap 作者姓名的文件在 8 月被强制推送替换。",
+      "original_url": "https://www.ithome.com/1/001/590.htm",
+      "aihot_url": "https://aihot.news/items/cmty5nlsy02yaro8qq657xart",
+      "published_at": "2026-09-12T08:07:48.000Z",
+      "collected_at": "2026-09-12T09:00:44.230Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "开源 AI 移动自动化项目 Minitap 指控谷歌盗用自家代码，且起初未注明出处",
+        "score": 52,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmty5nlsy02yaro8qq657xart"
+        }
+      }
+    },
+    {
       "id": "cmty3tx9r04k1ro4loymjmq5n",
       "item_type": "item",
       "category": null,
@@ -413,6 +527,32 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmty3tx9r04k1ro4loymjmq5n"
+        }
+      }
+    },
+    {
+      "id": "cmty5nlsy02ybro8q7e31j7sx",
+      "item_type": "item",
+      "category": "industry",
+      "title": "Anthropic 研究员警告 AI 灭绝风险后，美国两党议员呼吁政府加强监管",
+      "description": "Anthropic 研究员考克森辞职并警告 AI 可能致人类灭绝，科学家胡宾格称认为十年内发生概率超过 10%。随后美国两党议员呼吁政府采取更多行动，参议员凯利与克鲁兹、众议员卢娜分别发声，特朗普则表示不担心灭绝风险，更担心输掉 AI 竞争。Anthropic 称将继续测试危险能力模型，OpenAI 表示支持强制性全国 AI 安全要求，公司正筹备上市。",
+      "original_url": "https://www.ithome.com/1/001/587.htm",
+      "aihot_url": "https://aihot.news/items/cmty5nlsy02ybro8q7e31j7sx",
+      "published_at": "2026-09-12T07:54:20.000Z",
+      "collected_at": "2026-09-12T09:00:44.230Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Anthropic 研究员警告\"AI 灭绝人类\"后，美国两党议员呼吁政府采取更多行动",
+        "score": 67,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmty5nlsy02ybro8q7e31j7sx"
         }
       }
     },
@@ -9718,162 +9858,6 @@
       }
     },
     {
-      "id": "cmtwdrrvv0d9grolk213r1lgl",
-      "item_type": "item",
-      "category": null,
-      "title": "RSM-full：分组记忆让受限智能体省 68% token",
-      "description": "RSM-full 在 AMA-Bench 约 4k prompt token 预算下，保留了完整历史输入 83% 的质量，token 成本仅为后者的 32%。它按记忆到达顺序将相关记忆分组，需要时整组召回，而非检索孤立片段。作者认为，对内存受限的智能体，先组织好过去比优化检索更有效。",
-      "original_url": "https://x.com/rohanpaul_ai/status/2098247684620726776",
-      "aihot_url": "https://aihot.news/items/cmtwdrrvv0d9grolk213r1lgl",
-      "published_at": "2026-09-11T03:10:06.000Z",
-      "collected_at": "2026-09-11T03:12:23.744Z",
-      "source": {
-        "name": "X：Rohan Paul (@rohanpaul_ai)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "For memory-limited agents， organize the past before you optimize search： grouping related memories a…",
-        "score": 44,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmtwdrrvv0d9grolk213r1lgl"
-        }
-      }
-    },
-    {
-      "id": "cmtweccfh0dnwrolkppmdbntr",
-      "item_type": "item",
-      "category": "industry",
-      "title": "Google 将在芬兰投资 130 亿欧元并购买 Loviisa 核电站一半电力",
-      "description": "Google 宣布在芬兰进行 130 亿欧元投资，为其在欧洲最大单笔投资，将购买 Loviisa 核电站最多 50% 的电力输出，与 Fortum 签订 22 年合同。资金用于在 Kajaani、Muhos 和 Vaala 新建三座数据中心并扩建 Hamina 现有设施，以支撑 Gemini、Search 等服务的 AI 算力需求，建设计划在 2027 至 2028 年进行。",
-      "original_url": "https://www.bbc.com/news/articles/c8r6y4me2g6o",
-      "aihot_url": "https://aihot.news/items/cmtweccfh0dnwrolkppmdbntr",
-      "published_at": "2026-09-11T03:01:33.436Z",
-      "collected_at": "2026-09-11T03:28:24.382Z",
-      "source": {
-        "name": "Hacker News 热门（buzzing.cc 中文翻译）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "谷歌将购买一家核电站一半的电力",
-        "score": 73,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmtweccfh0dnwrolkppmdbntr"
-        }
-      }
-    },
-    {
-      "id": "cmtwd9v5o0c4xrolkcf6fyf6s",
-      "item_type": "item",
-      "category": null,
-      "title": "腾讯混元预告更多 AI 即将发布",
-      "description": "更多 AI 即将到来 ❤️\n\n【引用 @ivanfioravanti】：今天上午我参观了腾讯北京总部！从建筑到令人惊叹的展厅，我真正理解了腾讯所传递的价值与服务。\n\n感谢北京的 @TencentHunyuan 团队共进午餐，一起聊了混合 AI 场景等话题！\n\nHy4 Preview 只是冰山一角，还有更多即将到来！@TencentAI_news 迫不及待想看到并体验你们在不久的将来带来的成果 🚀",
-      "original_url": "https://x.com/TencentHunyuan/status/2098244685982798008",
-      "aihot_url": "https://aihot.news/items/cmtwd9v5o0c4xrolkcf6fyf6s",
-      "published_at": "2026-09-11T02:58:11.000Z",
-      "collected_at": "2026-09-11T02:58:28.333Z",
-      "source": {
-        "name": "X：腾讯混元 (@TencentHunyuan)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Much more AI coming ❤️",
-        "score": 19,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmtwd9v5o0c4xrolkcf6fyf6s"
-        }
-      }
-    },
-    {
-      "id": "cmtwdbvzv0cekrolkn0hlbi7j",
-      "item_type": "item",
-      "category": "industry",
-      "title": "龙芯中科胡伟武：9A1000 显卡预计明年上半年开售，第六代高性能 CPU 核已开展研发",
-      "description": "龙芯中科在 2026 年半年度业绩说明会上，董事长胡伟武透露 9A1000 显卡预计明年上半年开售，价格主要取决于显存（LPDDR4）价格。该卡既是显卡也是 AI 加速卡，图形功能对标 RX 550，AI 算力 40TOPS，可满足大多数具身智能应用需求，已有用户研制基于它的智能体；第六代高性能 CPU 核已开展研发，用于龙芯 7000 系列下一代 CPU。",
-      "original_url": "https://www.ithome.com/1/001/140.htm",
-      "aihot_url": "https://aihot.news/items/cmtwdbvzv0cekrolkn0hlbi7j",
-      "published_at": "2026-09-11T02:57:18.000Z",
-      "collected_at": "2026-09-11T03:00:02.298Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "score": 50,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmtwdbvzv0cekrolkn0hlbi7j"
-        }
-      }
-    },
-    {
-      "id": "cmtwficmu0eubrolkw0ufoa7x",
-      "item_type": "item",
-      "category": null,
-      "title": "真格基金最早期两轮投资，燧原科技登陆科创板",
-      "description": null,
-      "original_url": "https://elsewhere.news/zh/zhenfund/enflame-backed-by-zhenfund-in-its-two-earliest-funding-round",
-      "aihot_url": "https://aihot.news/items/cmtwficmu0eubrolkw0ufoa7x",
-      "published_at": "2026-09-11T02:52:23.000Z",
-      "collected_at": "2026-09-11T04:01:04.675Z",
-      "source": {
-        "name": "elsewhere：文章（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "score": 41,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmtwficmu0eubrolkw0ufoa7x"
-        }
-      }
-    },
-    {
-      "id": "cmtugou9e1cddrofptz3jwh4j",
-      "item_type": "hot_topic",
-      "category": null,
-      "title": "Apple 发布首款折叠屏 iPhone Duo，起售价 $1,999",
-      "description": null,
-      "original_url": "https://www.apple.com/newsroom/2026/09/apple-unveils-iphone-duo",
-      "aihot_url": "https://aihot.news/items/cmtugou9e1cddrofptz3jwh4j",
-      "published_at": null,
-      "collected_at": null,
-      "source": {
-        "name": "Apple：Newsroom（RSS）"
-      },
-      "source_channels": [
-        "hot_topics"
-      ],
-      "metadata": {
-        "rank": 1,
-        "latest_at": "2026-09-10T14:17:31.967Z",
-        "source_count": 2,
-        "signal_count": 18,
-        "source_names": [
-          "X：ZHO (@ZHO_ZHO_ZHO)",
-          "Hacker News 热门（buzzing.cc 中文翻译）"
-        ],
-        "story_url": "https://aihot.virxact.com/story/5ecd7305-9b58-4df4-958f-33dcfea5e6e9"
-      }
-    },
-    {
       "id": "cmtvj9kae0aq1ronbfyxuewfb",
       "item_type": "hot_topic",
       "category": null,
@@ -9890,10 +9874,10 @@
         "hot_topics"
       ],
       "metadata": {
-        "rank": 2,
+        "rank": 1,
         "latest_at": "2026-09-10T23:44:30.000Z",
         "source_count": 4,
-        "signal_count": 11,
+        "signal_count": 9,
         "source_names": [
           "X：Thomas Wolf（Hugging Face 联创/CSO） (@Thom_Wolf)",
           "X：SemiAnalysis (@SemiAnalysis_)",
@@ -9920,7 +9904,7 @@
         "hot_topics"
       ],
       "metadata": {
-        "rank": 3,
+        "rank": 2,
         "latest_at": "2026-09-11T16:35:55.000Z",
         "source_count": 7,
         "signal_count": 0,
@@ -10018,7 +10002,7 @@
         "hot_topics"
       ],
       "metadata": {
-        "rank": 8,
+        "rank": 7,
         "latest_at": "2026-09-11T12:25:06.000Z",
         "source_count": 4,
         "signal_count": 0,
