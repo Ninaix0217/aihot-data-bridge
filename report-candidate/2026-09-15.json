@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-09-15T09:37:52.423843Z",
+  "generated_at": "2026-09-15T09:58:34.963627Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-09-14T03:37:46.634790Z",
-    "to": "2026-09-15T09:37:46.634790Z"
+    "from": "2026-09-14T03:58:29.072255Z",
+    "to": "2026-09-15T09:58:29.072255Z"
   },
   "coverage": {
     "selected": {
@@ -17,7 +17,7 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 470,
+      "items": 467,
       "error": null
     },
     "paper": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 501,
-    "deduplicated_items": 465
+    "raw_items": 498,
+    "deduplicated_items": 462
   },
   "items": [
     {
@@ -12047,83 +12047,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmu0q0pg6067xrox2abkywwr8"
-        }
-      }
-    },
-    {
-      "id": "cmu0q8o6506nzrox260ss9cjx",
-      "item_type": "item",
-      "category": null,
-      "title": "Vinod Khosla：为何不看好 AI 副驾驶模式",
-      "description": "Vinod Khosla 表示他不偏好\"AI 副驾驶\"，因为人类会拖慢副驾驶、阻碍真正的变革。他认为会计师、程序员等从业者因担心岗位不保而抵触这类工具，因此他更倾向于构建能独立完成整个工作的 AI，比如完整的软件工程师。他预计到 2030 年，这些岗位大多将由纯 AI 工作者承担，而非人类加副驾驶。",
-      "original_url": "https://x.com/rohanpaul_ai/status/2099346368209002889",
-      "aihot_url": "https://aihot.news/items/cmu0q8o6506nzrox260ss9cjx",
-      "published_at": "2026-09-14T03:55:52.000Z",
-      "collected_at": "2026-09-14T04:12:24.352Z",
-      "source": {
-        "name": "X：Rohan Paul (@rohanpaul_ai)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Vinod Khosla on why he does not really prefer \"AI co-pilots\". Because he thinks \"humans get in the …",
-        "score": 40,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu0q8o6506nzrox260ss9cjx"
-        }
-      }
-    },
-    {
-      "id": "cmu0q8o6506o0rox2lrjigcnk",
-      "item_type": "item",
-      "category": null,
-      "title": "Elymi 上线：AI 角色开场即入戏并记住对话",
-      "description": "Elymi 正式上线，iOS 和 Android 均可免费下载。它让 AI 角色一打开就已在场景中移动、说话，用户回复即可延续剧情，角色还会记住细节。创作者可自定义角色性格、对话风格和开场场景，由用户回复决定后续走向。",
-      "original_url": "https://x.com/rohanpaul_ai/status/2099343487758213245",
-      "aihot_url": "https://aihot.news/items/cmu0q8o6506o0rox2lrjigcnk",
-      "published_at": "2026-09-14T03:44:26.000Z",
-      "collected_at": "2026-09-14T04:12:24.352Z",
-      "source": {
-        "name": "X：Rohan Paul (@rohanpaul_ai)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "An empty chat box is a terrible way to meet a character. @Elymi_official starts with something alre…",
-        "score": 47,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu0q8o6506o0rox2lrjigcnk"
-        }
-      }
-    },
-    {
-      "id": "cmu1be9o9077tro7zvc2kvc5u",
-      "item_type": "item",
-      "category": null,
-      "title": "用一块全球最轻薄的AI随身屏，治好你的Todo焦虑 | Linear Voice",
-      "description": null,
-      "original_url": "https://elsewhere.news/zh/linearcapital/aitodo-linear-voice",
-      "aihot_url": "https://aihot.news/items/cmu1be9o9077tro7zvc2kvc5u",
-      "published_at": "2026-09-14T03:39:00.000Z",
-      "collected_at": "2026-09-14T14:04:46.614Z",
-      "source": {
-        "name": "elsewhere：文章（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "score": 19,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu1be9o9077tro7zvc2kvc5u"
         }
       }
     },
