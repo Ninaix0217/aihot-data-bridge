@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-09-16T09:32:59.290207Z",
+  "generated_at": "2026-09-16T09:50:59.925914Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-09-15T03:32:50.980699Z",
-    "to": "2026-09-16T09:32:50.980699Z"
+    "from": "2026-09-15T03:50:49.714929Z",
+    "to": "2026-09-16T09:50:49.714929Z"
   },
   "coverage": {
     "selected": {
@@ -17,7 +17,7 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 519,
+      "items": 516,
       "error": null
     },
     "paper": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 549,
-    "deduplicated_items": 520
+    "raw_items": 546,
+    "deduplicated_items": 517
   },
   "items": [
     {
@@ -165,7 +165,7 @@
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmu2xqfxz02zhroc1hxuzi6jm"
         },
-        "rank": 4,
+        "rank": 3,
         "latest_at": "2026-09-16T08:32:20.000Z",
         "source_count": 14,
         "signal_count": 0,
@@ -393,6 +393,83 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmu2d4jj405xcro25xm50v262"
+        }
+      }
+    },
+    {
+      "id": "cmu3x476t0iogroc1ms2go036",
+      "item_type": "item",
+      "category": null,
+      "title": "Meshy 科隆首届 Creator Day 回顾",
+      "description": "90 秒带你走进我们在科隆的首届 Creator Day--快问快答，满屋子的创意。打开声音。🔊\n\n特别感谢我们出色的演讲嘉宾：Joshua Schiergens、Cees Middel 和 @KirinKarWai，展示了 Meshy 在真实项目中的可能性。",
+      "original_url": "https://x.com/MeshyAI/status/2100155799893094710",
+      "aihot_url": "https://aihot.news/items/cmu3x476t0iogroc1ms2go036",
+      "published_at": "2026-09-16T09:32:16.000Z",
+      "collected_at": "2026-09-16T09:48:18.419Z",
+      "source": {
+        "name": "X：Meshy (@MeshyAI)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "90 seconds inside our first Creator Day in Cologne - quick questions， real answers， and a room full …",
+        "score": 18,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmu3x476t0iogroc1ms2go036"
+        }
+      }
+    },
+    {
+      "id": "cmu3worz90ibproc1y4vl6xj3",
+      "item_type": "item",
+      "category": null,
+      "title": "Mistral AI 与 Mozilla 达成合作",
+      "description": "今天，我们宣布与 @mozilla 达成合作，为使用 AI 浏览网页的用户带来隐私、控制权和选择权。🦊🐈\n\nhttps://mistral.ai/news/mistral-x-mozilla",
+      "original_url": "https://x.com/MistralAI/status/2100153489787633694",
+      "aihot_url": "https://aihot.news/items/cmu3worz90ibproc1y4vl6xj3",
+      "published_at": "2026-09-16T09:23:05.000Z",
+      "collected_at": "2026-09-16T09:36:19.813Z",
+      "source": {
+        "name": "X：Mistral AI (@MistralAI)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Today， we are announcing a partnership with @mozilla to bring privacy， control and choice to people …",
+        "score": 39,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmu3worz90ibproc1y4vl6xj3"
+        }
+      }
+    },
+    {
+      "id": "cmu3wt2230ifxroc1sifuxlet",
+      "item_type": "item",
+      "category": null,
+      "title": "在和 AI 的对话里，看到 AI 说到自己的名字，始终会有种诡异感，一种信息权力让位于一个非人智能 的错位感和恐惧感",
+      "description": "在和 AI 的对话里，看到 AI 说到自己的名字，始终会有种诡异感，一种信息权力让位于一个非人智能 的错位感和恐惧感",
+      "original_url": "https://x.com/ZHO_ZHO_ZHO/status/2100151320514904570",
+      "aihot_url": "https://aihot.news/items/cmu3wt2230ifxroc1sifuxlet",
+      "published_at": "2026-09-16T09:14:28.000Z",
+      "collected_at": "2026-09-16T09:39:39.365Z",
+      "source": {
+        "name": "X：ZHO (@ZHO_ZHO_ZHO)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "score": 18,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmu3wt2230ifxroc1sifuxlet"
         }
       }
     },
@@ -13233,161 +13310,6 @@
       }
     },
     {
-      "id": "cmu25pf1m04ubro9vf8k7i0ih",
-      "item_type": "item",
-      "category": null,
-      "title": "muse 帮用户省话费",
-      "description": "muse 帮你省钱！\n\n【引用 @williamgeronco】：@alexandr_wang 在线和 Verizon 客服聊天，把我的账单从每月 $516 降到了 $386。我本来只是让它登录看看我的账单，但后来我抱怨说费用太高了。简单一句 yes，我每月就省下几百块。",
-      "original_url": "https://x.com/alexandr_wang/status/2099706890666315874",
-      "aihot_url": "https://aihot.news/items/cmu25pf1m04ubro9vf8k7i0ih",
-      "published_at": "2026-09-15T03:48:28.000Z",
-      "collected_at": "2026-09-15T04:13:13.035Z",
-      "source": {
-        "name": "X：Alexandr Wang（Scale AI 创始人/Meta 首席 AI 官） (@alexandr_wang)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "muse saves you money！",
-        "score": 32,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu25pf1m04ubro9vf8k7i0ih"
-        }
-      }
-    },
-    {
-      "id": "cmu263f9205gzro9vxpk0ik8y",
-      "item_type": "item",
-      "category": null,
-      "title": "国家统计局：截至 6 月末我国已建成 70 余条算力大通道",
-      "description": "国家统计局在国新办发布会上介绍，截至 6 月末，我国已围绕算力枢纽建成 70 余条算力大通道。前八个月，与\"六张网\"相关的互联网和相关服务业投资同比增长 42%，电力供应业投资增长 12.7%。\"六张网\"是 2026 年 4 月中央政治局会议提出的建设方向，包含算力网、新一代通信网等。",
-      "original_url": "https://www.ithome.com/1/002/511.htm",
-      "aihot_url": "https://aihot.news/items/cmu263f9205gzro9vxpk0ik8y",
-      "published_at": "2026-09-15T03:45:19.000Z",
-      "collected_at": "2026-09-15T04:24:07.735Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "score": 44,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu263f9205gzro9vxpk0ik8y"
-        }
-      }
-    },
-    {
-      "id": "cmu24l2o50342ro9vqwk9j62v",
-      "item_type": "item",
-      "category": null,
-      "title": "Preferred Networks 的「タレスカAI面接」在冲绳蜂窝电话实习筛选中验证了「书面材料无法呈现的潜力」的可视化",
-      "description": "Preferred Networks 的「タレスカAI面接」在冲绳蜂窝电话（沖縄セルラー電話）的实习选拔中，确认能够可视化「书面材料无法呈现的潜力」。该结果来自 PFN 官网公布的采用案例，正文未披露具体评测指标或选拔规模。",
-      "original_url": "https://www.preferred.jp/ja/news/pr20260915",
-      "aihot_url": "https://aihot.news/items/cmu24l2o50342ro9vqwk9j62v",
-      "published_at": "2026-09-15T03:41:49.475Z",
-      "collected_at": "2026-09-15T03:41:49.475Z",
-      "source": {
-        "name": "Preferred Networks：AI 研究与产品"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Preferred Networksの「タレスカAI面接」が沖縄セルラー電話のインターンシップ選考において「書類では見えないポテンシャル」の可視化を確認",
-        "score": 25,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu24l2o50342ro9vqwk9j62v"
-        }
-      }
-    },
-    {
-      "id": "cmu25kui004mbro9vnhc10une",
-      "item_type": "item",
-      "category": "ai-models",
-      "title": "上海人工智能实验室发布 Atria Dawn Preview，744B 纯文本模型主打可验证交付",
-      "description": "上海人工智能实验室发布 Atria Dawn Preview，一个 744B MoE 纯文本模型，宣称代码和权重按 MIT 协议开源但权重和本地部署尚未就绪，实测先走 API。",
-      "original_url": "https://x.com/AYi_AInotes/status/2099705084590293304",
-      "aihot_url": "https://aihot.news/items/cmu25kui004mbro9vnhc10une",
-      "published_at": "2026-09-15T03:41:17.000Z",
-      "collected_at": "2026-09-15T04:09:39.355Z",
-      "source": {
-        "name": "X：阿易 AI Notes (@AYi_AInotes)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "卧槽兄弟们，一只踩着自行车往前蹬的白鹈鹕， 一枚自己揪出装配错误的长征七号， 一架能剖开看起落架的战斗机， 还有一个能把你玩爽的火灾逃生训练场。 这四个八竿子打不着的东西， 竟然全是由同一个纯文本大模…",
-        "score": 64,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu25kui004mbro9vnhc10une"
-        }
-      }
-    },
-    {
-      "id": "cmu2bucaw04fcro25agcq2kfk",
-      "item_type": "item",
-      "category": null,
-      "title": "OpenAI Astra 是对具身模型的降维打击吗？两场圆桌的七个观点",
-      "description": "围绕 OpenAI Astra 是否对具身模型构成降维打击，两场圆桌讨论提出七个观点，核心追问是 Astra 惊艳亮相之后具身公司是否还有护城河。",
-      "original_url": "https://elsewhere.news/zh/crossing/openai-astra",
-      "aihot_url": "https://aihot.news/items/cmu2bucaw04fcro25agcq2kfk",
-      "published_at": "2026-09-15T03:41:00.000Z",
-      "collected_at": "2026-09-15T07:05:02.907Z",
-      "source": {
-        "name": "elsewhere：文章（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "OpenAI Astra 是对具身模型的降维打击吗？|两场圆桌的七个观点",
-        "score": 27,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu2bucaw04fcro25agcq2kfk"
-        }
-      }
-    },
-    {
-      "id": "cmu24lsbc035pro9v2cs5wfqp",
-      "item_type": "item",
-      "category": null,
-      "title": "VoiceArena 推出 Jarvis Bench v0.5 语音智能体评测",
-      "description": "VoiceArena 发布 Jarvis Bench v0.5，将语音智能体评测拆分为任务完成度与自然度两项，由真人实时对话、另一组人类盲测成对投票，榜单中还包含一个人类\"智能体\"。结果显示任务完成度上人类与模型差距较小，自然度上差距明显。",
-      "original_url": "https://x.com/rohanpaul_ai/status/2099703670719774924",
-      "aihot_url": "https://aihot.news/items/cmu24lsbc035pro9v2cs5wfqp",
-      "published_at": "2026-09-15T03:35:40.000Z",
-      "collected_at": "2026-09-15T03:42:23.463Z",
-      "source": {
-        "name": "X：Rohan Paul (@rohanpaul_ai)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "I really like how @voicearena_ai designed this evaluation. Instead of asking whether one voice mode…",
-        "score": 44,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu24lsbc035pro9v2cs5wfqp"
-        }
-      }
-    },
-    {
       "id": "cmu1ju3b00pmgrocnrgwe6e9e",
       "item_type": "hot_topic",
       "category": null,
@@ -13419,41 +13341,6 @@
       }
     },
     {
-      "id": "cmu0kxqno0swyrory88jvk2pn",
-      "item_type": "hot_topic",
-      "category": null,
-      "title": "Anthropic 提出 3 步 Pace the Frontier 放缓计划，获 OpenAI、xAI 和 Microsoft 声援",
-      "description": null,
-      "original_url": "https://www.marktechpost.com/2026/09/13/anthropics-3-step-pace-the-frontier-plan-wins-openai-xai-and-microsoft-support-is-it-too-late-to-slow-ai-down",
-      "aihot_url": "https://aihot.news/items/cmu0kxqno0swyrory88jvk2pn",
-      "published_at": null,
-      "collected_at": null,
-      "source": {
-        "name": "MarkTechPost（RSS）"
-      },
-      "source_channels": [
-        "hot_topics"
-      ],
-      "metadata": {
-        "rank": 2,
-        "latest_at": "2026-09-16T08:33:21.000Z",
-        "source_count": 9,
-        "signal_count": 15,
-        "source_names": [
-          "IT之家（RSS）",
-          "X：X.PIN (@thexpin)",
-          "X：Kim (@kimmonismus)",
-          "The Decoder：AI News（RSS）",
-          "Hacker News 热门（buzzing.cc 中文翻译）",
-          "X：Rohan Paul (@rohanpaul_ai)",
-          "Ars Technica：AI（RSS）",
-          "The Verge：AI（RSS）",
-          "X：阿易 AI Notes (@AYi_AInotes)"
-        ],
-        "story_url": "https://aihot.virxact.com/story/d11fb65f-023b-4b2b-8569-1974cebba02c"
-      }
-    },
-    {
       "id": "cmu1n7bh7041hroxj150kzuwy",
       "item_type": "hot_topic",
       "category": null,
@@ -13470,18 +13357,53 @@
         "hot_topics"
       ],
       "metadata": {
-        "rank": 3,
+        "rank": 2,
         "latest_at": "2026-09-16T00:25:24.000Z",
         "source_count": 5,
-        "signal_count": 19,
+        "signal_count": 17,
         "source_names": [
-          "IT之家（RSS）",
-          "The Decoder：AI News（RSS）",
           "X：Rohan Paul (@rohanpaul_ai)",
           "Ars Technica：AI（RSS）",
-          "The Verge：AI（RSS）"
+          "The Verge：AI（RSS）",
+          "IT之家（RSS）",
+          "The Decoder：AI News（RSS）"
         ],
         "story_url": "https://aihot.virxact.com/story/50f43968-6229-4d02-aee7-f811dd269c70"
+      }
+    },
+    {
+      "id": "cmu0kxqno0swyrory88jvk2pn",
+      "item_type": "hot_topic",
+      "category": null,
+      "title": "Anthropic 提出 3 步 Pace the Frontier 放缓计划，获 OpenAI、xAI 和 Microsoft 声援",
+      "description": null,
+      "original_url": "https://www.marktechpost.com/2026/09/13/anthropics-3-step-pace-the-frontier-plan-wins-openai-xai-and-microsoft-support-is-it-too-late-to-slow-ai-down",
+      "aihot_url": "https://aihot.news/items/cmu0kxqno0swyrory88jvk2pn",
+      "published_at": null,
+      "collected_at": null,
+      "source": {
+        "name": "MarkTechPost（RSS）"
+      },
+      "source_channels": [
+        "hot_topics"
+      ],
+      "metadata": {
+        "rank": 4,
+        "latest_at": "2026-09-16T08:33:21.000Z",
+        "source_count": 9,
+        "signal_count": 11,
+        "source_names": [
+          "X：X.PIN (@thexpin)",
+          "X：Kim (@kimmonismus)",
+          "The Decoder：AI News（RSS）",
+          "Hacker News 热门（buzzing.cc 中文翻译）",
+          "X：Rohan Paul (@rohanpaul_ai)",
+          "Ars Technica：AI（RSS）",
+          "The Verge：AI（RSS）",
+          "X：阿易 AI Notes (@AYi_AInotes)",
+          "IT之家（RSS）"
+        ],
+        "story_url": "https://aihot.virxact.com/story/d11fb65f-023b-4b2b-8569-1974cebba02c"
       }
     },
     {
