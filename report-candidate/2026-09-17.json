@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-09-17T09:40:57.881591Z",
+  "generated_at": "2026-09-17T09:56:51.203396Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-09-16T03:40:50.251385Z",
-    "to": "2026-09-17T09:40:50.251385Z"
+    "from": "2026-09-16T03:56:20.011461Z",
+    "to": "2026-09-17T09:56:20.011461Z"
   },
   "coverage": {
     "selected": {
@@ -17,7 +17,7 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 530,
+      "items": 527,
       "error": null
     },
     "paper": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 559,
-    "deduplicated_items": 522
+    "raw_items": 556,
+    "deduplicated_items": 519
   },
   "items": [
     {
@@ -322,6 +322,32 @@
           "Hacker News 热门（buzzing.cc 中文翻译）"
         ],
         "story_url": "https://aihot.virxact.com/story/fc1c06e2-09e0-41ee-ab9e-95681f1b49a1"
+      }
+    },
+    {
+      "id": "cmu5cmygr047lro7nbedfw2ez",
+      "item_type": "item",
+      "category": "tip",
+      "title": "Bloomberg 开发者用 OpenAI GPT-6 Astra 十小时破解悬置83年的 Enigma 密电",
+      "description": "Bloomberg 产品开发教练 Carter Leffen 自述用 OpenAI 的 GPT-6 Astra（Extra High 变体）耗时约十小时，破解了一条1941年发出、83年未解的82字符 Enigma 密电，内容是一名士兵请求行军路线和即时无线电回复。",
+      "original_url": "https://the-decoder.com/openais-gpt-6-astra-decrypts-a-nazi-radio-message-in-ten-hours-that-went-unsolved-for-83-years",
+      "aihot_url": "https://aihot.news/items/cmu5cmygr047lro7nbedfw2ez",
+      "published_at": "2026-09-17T09:45:55.000Z",
+      "collected_at": "2026-09-17T09:50:35.564Z",
+      "source": {
+        "name": "The Decoder：AI News（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "OpenAI's GPT-6 Astra decrypts a Nazi radio message in ten hours that went unsolved for 83 years",
+        "score": 54,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmu5cmygr047lro7nbedfw2ez"
+        }
       }
     },
     {
@@ -631,6 +657,32 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmu5asx6g05xmro8tfsfrt1o9"
+        }
+      }
+    },
+    {
+      "id": "cmu5ce77103ydro7n1aii3u5m",
+      "item_type": "item",
+      "category": null,
+      "title": "争议帖文称 AI 安全运动\"主要是一个性爱邪教\"",
+      "description": "一篇 Hacker News 热帖称 AI 安全运动的核心源自 Eliezer Yudkowsky 及其《哈利·波特与理性之道》同人圈，并指该群体以\"理性主义社区\"名义活动、多聚居伯克利\"群居屋\"。",
+      "original_url": "https://skywriter.blue/@segyges.bsky.social/3mvom4b4dn22q",
+      "aihot_url": "https://aihot.news/items/cmu5ce77103ydro7n1aii3u5m",
+      "published_at": "2026-09-17T08:36:37.000Z",
+      "collected_at": "2026-09-17T09:43:45.730Z",
+      "source": {
+        "name": "Hacker News：AI 热帖"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "AI Safety Is Mostly a Sex Cult",
+        "score": 35,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmu5ce77103ydro7n1aii3u5m"
         }
       }
     },
@@ -2968,6 +3020,32 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmu4yufyl04foroqbzo6mm6xx"
+        }
+      }
+    },
+    {
+      "id": "cmu5ce77103yero7nv5wgcznx",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "TypeSafe 开源浏览器智能体 Jev Ultrafast，7.1 秒完成 Google Flights 搜索",
+      "description": "TypeSafe 发布开源浏览器智能体 Jev Ultrafast，采用动态、带索引的动作空间，每次决策只发一次网络请求，小 LLM 仅在 TYPE_TEXT 操作时生成文本。",
+      "original_url": "https://github.com/browser-use/jev-ultrafast",
+      "aihot_url": "https://aihot.news/items/cmu5ce77103yero7nv5wgcznx",
+      "published_at": "2026-09-17T03:12:05.000Z",
+      "collected_at": "2026-09-17T09:43:45.730Z",
+      "source": {
+        "name": "Hacker News：AI 热帖"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Jev Ultrafast： A browser agent with a dynamic， indexed action space",
+        "score": 64,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmu5ce77103yero7nv5wgcznx"
         }
       }
     },
@@ -13426,162 +13504,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmu3mmg6k046proc18bdrhs1l"
-        }
-      }
-    },
-    {
-      "id": "cmu3lff3c05yrroo4phy7gg76",
-      "item_type": "item",
-      "category": "tip",
-      "title": "开发者实测 Tripo P2.0 加 GPT-6 Astra 的 UE5.8 四足机器人动画制作管线",
-      "description": "Tripo 官方转发开发者 @koguGameDev 的实测：用 GPT image 2 生成参考图、Tripo P2.0 做 3D 生成，再让 Astra 通过 MCP 操作 Blender 完成拓扑、UV 与 IK 绑定，导入 UE5.8 实现四足机器人动画。动画实现两次失败，作者认为模型在把需求转化为设计与实现时仍需懂行者衔接，但 AI 带来的能力普惠会催生更多涌现。",
-      "original_url": "https://x.com/tripoai/status/2100070583375671763",
-      "aihot_url": "https://aihot.news/items/cmu3lff3c05yrroo4phy7gg76",
-      "published_at": "2026-09-16T03:53:39.000Z",
-      "collected_at": "2026-09-16T04:21:06.312Z",
-      "source": {
-        "name": "Tripo（官方 X）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Perfecting production workflows！ This creator is balancing Tripo P2.0's generation with @OpenAIDevs…",
-        "score": 57,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu3lff3c05yrroo4phy7gg76"
-        }
-      }
-    },
-    {
-      "id": "cmu44d4hi08ziro4wk02173gq",
-      "item_type": "item",
-      "category": null,
-      "title": "Musk 认同 p（abundance） 更值得关注",
-      "description": "True\n\n【引用 @dhh】：p（doom） 的讨论占据了所有头条，但 p（abundance） 的前景更有可能实现，值得更多的关注。",
-      "original_url": "https://x.com/elonmusk/status/2100070216902594669",
-      "aihot_url": "https://aihot.news/items/cmu44d4hi08ziro4wk02173gq",
-      "published_at": "2026-09-16T03:52:11.000Z",
-      "collected_at": "2026-09-16T13:11:11.762Z",
-      "source": {
-        "name": "X：Elon Musk (@elonmusk, xAI)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "True",
-        "score": 24,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu44d4hi08ziro4wk02173gq"
-        }
-      }
-    },
-    {
-      "id": "cmu3ljhlm064troo459c2ljbw",
-      "item_type": "item",
-      "category": null,
-      "title": "vivo 应用商店开放个人开发者通道，AI 应用等有序开放",
-      "description": "vivo 在 2026 vivo 开发者大会上宣布应用商店开放个人开发者通道，个人仅需实名认证即可入驻。官方将有序开放 AI 应用、蓝河应用、IoT 应用，并表示 AI 让应用开发门槛大幅降低，希望让更多创新被看见。",
-      "original_url": "https://www.ithome.com/1/002/984.htm",
-      "aihot_url": "https://aihot.news/items/cmu3ljhlm064troo459c2ljbw",
-      "published_at": "2026-09-16T03:51:30.000Z",
-      "collected_at": "2026-09-16T04:24:17.576Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "AI 让人人都能开发 App，vivo 应用商店开放个人开发者通道",
-        "score": 44,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu3ljhlm064troo459c2ljbw"
-        }
-      }
-    },
-    {
-      "id": "cmu3kkls104swroo42r69yxig",
-      "item_type": "item",
-      "category": null,
-      "title": "Anthropic 联创 Jack Clark 呼吁 AI 发展减速",
-      "description": "Anthropic 联合创始人 Jack Clark 警告，面对比人类最聪明者还聪明 100 倍的 AI，人类存活概率很低，若不立即行动将大幅增加 AI 失控风险，世界需要放慢脚步。此番表态正值 Dario Amodei 的 p（doom） 升至 25%。",
-      "original_url": "https://x.com/AISafetyMemes/status/2100069034494726270",
-      "aihot_url": "https://aihot.news/items/cmu3kkls104swroo42r69yxig",
-      "published_at": "2026-09-16T03:47:29.000Z",
-      "collected_at": "2026-09-16T03:57:09.367Z",
-      "source": {
-        "name": "X：AI Safety Memes (@AISafetyMemes)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Anthropic founder Jack Clark： \"How well do you fancy dealing with the risks of an AI 100x smarter t…",
-        "score": 33,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu3kkls104swroo42r69yxig"
-        }
-      }
-    },
-    {
-      "id": "cmu3l471y05gmroo4vefyqz07",
-      "item_type": "item",
-      "category": "tip",
-      "title": "OpenAI 模型上周在 OpenRouter 支出份额首次超过 Anthropic",
-      "description": "据 OpenRouter 数据，上周用户在 OpenAI 模型上的支出超过 Anthropic 模型，为 2.5 年多以来首次。图表显示上一次出现这种情况是在 2024 年 2 月 26 日当周。",
-      "original_url": "https://x.com/rohanpaul_ai/status/2100069022184390975",
-      "aihot_url": "https://aihot.news/items/cmu3l471y05gmroo4vefyqz07",
-      "published_at": "2026-09-16T03:47:26.000Z",
-      "collected_at": "2026-09-16T04:12:23.579Z",
-      "source": {
-        "name": "X：Rohan Paul (@rohanpaul_ai)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "OpenAI is so back. for the first time in more than 2.5 years， OpenAI models took a larger share of…",
-        "score": 60,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu3l471y05gmroo4vefyqz07"
-        }
-      }
-    },
-    {
-      "id": "cmu3ljhln064vroo4nk0knlmu",
-      "item_type": "item",
-      "category": null,
-      "title": "三星电子扩大通用存储器模组外包，自有产能转向 AI 半导体后端",
-      "description": "三星电子正扩大通用存储器模组制造外包规模，将更多资源分配至 AI 半导体后端生产。韩媒 THE ELEC 报道称，三星认为用韩国温阳、天安封装厂生产 DDR5 内存模组、固态硬盘等通用产品是在浪费资源。Dreamtech、HANYANGDGT、SFA Semiconductor 等合作方正分别在印度、越南、菲律宾扩充产能。",
-      "original_url": "https://www.ithome.com/1/002/981.htm",
-      "aihot_url": "https://aihot.news/items/cmu3ljhln064vroo4nk0knlmu",
-      "published_at": "2026-09-16T03:41:07.000Z",
-      "collected_at": "2026-09-16T04:24:17.576Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "消息称三星电子扩大通用存储器模组制造外包规模，自有产能聚焦高阶产品",
-        "score": 38,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu3ljhln064vroo4nk0knlmu"
         }
       }
     },
