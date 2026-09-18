@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-09-18T09:14:19.244505Z",
+  "generated_at": "2026-09-18T09:37:04.803534Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-09-17T03:14:10.756962Z",
-    "to": "2026-09-18T09:14:10.756962Z"
+    "from": "2026-09-17T03:36:55.655345Z",
+    "to": "2026-09-18T09:36:55.655345Z"
   },
   "coverage": {
     "selected": {
@@ -17,7 +17,7 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 528,
+      "items": 524,
       "error": null
     },
     "paper": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 571,
-    "deduplicated_items": 521
+    "raw_items": 567,
+    "deduplicated_items": 517
   },
   "items": [
     {
@@ -168,7 +168,7 @@
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmu66hcff0ci8rofjhs1az9qz"
         },
-        "rank": 9,
+        "rank": 10,
         "latest_at": "2026-09-17T23:36:26.000Z",
         "source_count": 4,
         "signal_count": 0,
@@ -561,6 +561,84 @@
       }
     },
     {
+      "id": "cmu6r8os8089xrowk4b57vns0",
+      "item_type": "item",
+      "category": "industry",
+      "title": "美国 Federal Register 网站使用阿里 Qwen 做 AI 搜索后于周三下线该功能",
+      "description": "据 Reuters 报道，美国 Federal Register 网站在 AI 搜索中使用阿里巴巴的 Qwen，尽管 FBI 指控阿里不当复制 Anthropic 技术。该功能于周三在社交媒体关注后下线，上线时间不明。专家指出该网站处理公开信息，开源权重模型可本地运行，仅使用 Qwen 不能证明政府数据流向了阿里。",
+      "original_url": "https://x.com/thexpin/status/2100878746496663915",
+      "aihot_url": "https://aihot.news/items/cmu6r8os8089xrowk4b57vns0",
+      "published_at": "2026-09-18T09:25:00.000Z",
+      "collected_at": "2026-09-18T09:27:09.477Z",
+      "source": {
+        "name": "X：X.PIN (@thexpin)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "The Federal Register website used Alibaba's Qwen for AI search despite FBI allegations that Alibaba …",
+        "score": 56,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmu6r8os8089xrowk4b57vns0"
+        }
+      }
+    },
+    {
+      "id": "cmu6qze3m07worowk6nu34uut",
+      "item_type": "item",
+      "category": null,
+      "title": "Fulcra 推出通用多智能体通信，支持 Claude、ChatGPT、Hermes、OpenClaw 等任意 agent 互联",
+      "description": "Fulcra Dynamics 发布通用 agent 间通信能力，任何使用 Claude、ChatGPT、Hermes、OpenClaw 等 agent harness 的用户都可接入 Fulcra 实现跨平台智能体互通。",
+      "original_url": "https://www.artificialintelligence-news.com/news/fulcra-brings-universal-multiplayer-to-any-agents-you-choose",
+      "aihot_url": "https://aihot.news/items/cmu6qze3m07worowk6nu34uut",
+      "published_at": "2026-09-18T09:19:56.047Z",
+      "collected_at": "2026-09-18T09:19:56.047Z",
+      "source": {
+        "name": "Artificial Intelligence News（网页）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Fulcra Brings Universal Multiplayer to Any Agents You Choose",
+        "score": 47,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmu6qze3m07worowk6nu34uut"
+        }
+      }
+    },
+    {
+      "id": "cmu6r8orx089wrowkv9edk3lm",
+      "item_type": "item",
+      "category": null,
+      "title": "Grok 回复区需要 System 1 反射",
+      "description": "@elonmusk X 的回复区需要的是 System 1 反射，而不是 System 2 哲学：\n\n评论：\"你想看看我的福吗？\" Grok（3500ms）：这是中国网络俚语，不是字面意义上问\"fortune\"或\"blessing\"………. Jev（70ms）：{\"ban\"： true}（成本：$0.00004）",
+      "original_url": "https://x.com/karminski3/status/2100873867321647496",
+      "aihot_url": "https://aihot.news/items/cmu6r8orx089wrowkv9edk3lm",
+      "published_at": "2026-09-18T09:05:36.000Z",
+      "collected_at": "2026-09-18T09:27:09.477Z",
+      "source": {
+        "name": "X：karminski (@karminski3)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "@elonmusk The X reply section needs System 1 reflex， not System 2 philosophy： Comment： \"你想看看我的福吗？\"…",
+        "score": 31,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmu6r8orx089wrowkv9edk3lm"
+        }
+      }
+    },
+    {
       "id": "cmu6qm7fj07brrowke145qkdw",
       "item_type": "item",
       "category": null,
@@ -583,6 +661,110 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmu6qm7fj07brrowke145qkdw"
+        }
+      }
+    },
+    {
+      "id": "cmu6r0wep07zcrowk2lvlr67y",
+      "item_type": "item",
+      "category": "tip",
+      "title": "ComfyUI 动画工作流：概念图经 Tripo 生成 3D 模型再转任意角度",
+      "description": "ComfyUI 分享一个概念图转任意角度的动画工作流，其中 3D 生成步骤由 Tripo 完成。工作流分三步：概念图经 Tripo 生成并保存为 GLB 模型；静止画面用 Load 3D 输出视角后由 GPT Image 2 渲染成同风格插画；镜头运动则在视口中录制路径，作为 Seedance 2.0 的运动参考生成镜头。文末附工作流运行链接。",
+      "original_url": "https://x.com/tripoai/status/2100872579989086502",
+      "aihot_url": "https://aihot.news/items/cmu6r0wep07zcrowk2lvlr67y",
+      "published_at": "2026-09-18T09:00:30.000Z",
+      "collected_at": "2026-09-18T09:21:06.930Z",
+      "source": {
+        "name": "Tripo（官方 X）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Thrilled to see Tripo powering the 3D generation step in this incredibly smooth @ComfyUI animation w…",
+        "score": 59,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmu6r0wep07zcrowk2lvlr67y"
+        }
+      }
+    },
+    {
+      "id": "cmu6r5jgm083zrowkxn6e41gr",
+      "item_type": "item",
+      "category": null,
+      "title": "飞牛 fnOS：升级 ColorOS 17 的 OPPO、一加、真我手机支持原生相册直接备份",
+      "description": "飞牛 fnOS 宣布，升级 ColorOS 17 的 OPPO、一加、真我手机均支持原生相册直接备份至飞牛 fnOS 智能存储。手机可自动识别局域网飞牛设备并完成连接初始化，控制中心提供系统级入口查看设备运行状态，后台备份即使本地为压缩缩略图也会从云端取回原图，无需下载飞牛 App 即可在手机相册直接浏览 NAS 照片。",
+      "original_url": "https://www.ithome.com/1/004/213.htm",
+      "aihot_url": "https://aihot.news/items/cmu6r5jgm083zrowkxn6e41gr",
+      "published_at": "2026-09-18T08:56:41.000Z",
+      "collected_at": "2026-09-18T09:24:43.506Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "飞牛：升级 ColorOS 17 的 OPPO、一加、真我手机，均支持原生相册直接备份至飞牛 fnOS 智能存储",
+        "score": 38,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmu6r5jgm083zrowkxn6e41gr"
+        }
+      }
+    },
+    {
+      "id": "cmu6r5jgm0842rowk0ue37q2g",
+      "item_type": "item",
+      "category": "industry",
+      "title": "消息称长鑫存储计划进军 NAND 闪存市场，将与三星、SK 海力士、美光竞争",
+      "description": "据路透社援引三位知情人士报道，长鑫存储计划在北京新工厂建设 NAND 闪存研发生产线，并已就 NAND 业务与客户接洽。TrendForce 数据显示，2026 年第二季度三星以 29.3% 营收份额居全球闪存市场首位；同期长鑫 DRAM 营收达 146.24 亿美元，环比增长 99.3%，市占率从 7.6% 升至 9.5%。",
+      "original_url": "https://www.ithome.com/1/004/209.htm",
+      "aihot_url": "https://aihot.news/items/cmu6r5jgm0842rowk0ue37q2g",
+      "published_at": "2026-09-18T08:43:37.000Z",
+      "collected_at": "2026-09-18T09:24:43.506Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "消息称长鑫正准备进入闪存市场，与三星、海力士、美光正面竞争",
+        "score": 55,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmu6r5jgm0842rowk0ue37q2g"
+        }
+      }
+    },
+    {
+      "id": "cmu6r5jgn0843rowkq91ka2rt",
+      "item_type": "item",
+      "category": null,
+      "title": "第 140 届广交会 10 月 15 日开幕，首次推出 16 项 AI 特色应用",
+      "description": "第 140 届广交会将于 10 月 15 日至 11 月 4 日在广州分三期举办，首次推出 22 个智慧应用场景和 16 项 AI 特色应用，并在国内展览业率先实现全馆展位级导航和展位 AR 信息展示。3.2 万家参展企业中优质企业超 1.1 万家，64% 应用工业互联网、人工智能等新技术，电子消费品成为绝对主力。",
+      "original_url": "https://www.ithome.com/1/004/208.htm",
+      "aihot_url": "https://aihot.news/items/cmu6r5jgn0843rowkq91ka2rt",
+      "published_at": "2026-09-18T08:43:05.000Z",
+      "collected_at": "2026-09-18T09:24:43.506Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "\"中国第一展\"第 140 届广交会 10 月 15 日开幕，电子消费品成为绝对主力",
+        "score": 30,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmu6r5jgn0843rowkq91ka2rt"
         }
       }
     },
@@ -660,6 +842,57 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmu6pwgr706e6rowk1t88ll1h"
+        }
+      }
+    },
+    {
+      "id": "cmu6r5jgn0844rowkd9p931vo",
+      "item_type": "item",
+      "category": "industry",
+      "title": "第 20 届亚运会新增虚拟跆拳道项目，选手戴 VR 头显真踢腿对决",
+      "description": "第 20 届亚运会开幕前不到三个月，亚奥理事会批准新增虚拟跆拳道分项，归入跆拳道大项而非电子竞技。选手头戴 VR 设备并绑定动作追踪传感器，在 4 米×4 米场地以三局两胜、每局 60 秒的规则凭生命值判定胜负，不划分性别和体重级别，多名参赛者将兼项传统跆拳道。",
+      "original_url": "https://www.ithome.com/1/004/205.htm",
+      "aihot_url": "https://aihot.news/items/cmu6r5jgn0844rowkd9p931vo",
+      "published_at": "2026-09-18T08:32:18.000Z",
+      "collected_at": "2026-09-18T09:24:43.506Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "戴着 VR 头显对打，第 20 届亚运会\"压哨\"新增虚拟跆拳道项目",
+        "score": 55,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmu6r5jgn0844rowkd9p931vo"
+        }
+      }
+    },
+    {
+      "id": "cmu6r5jgn0846rowkx57mb84n",
+      "item_type": "item",
+      "category": null,
+      "title": "亚马逊：AI 模型必须经过严格测试，确认足够安全才能发布",
+      "description": "亚马逊表态称 AI 模型必须经过严格测试、确认具备足够安全保障后才能发布，由此加入围绕 AI 发展节奏的讨论。发言人汤姆·帕内尔表示，进步与安全并非只能二选一，若整个行业不能共同做到严格测试和强有力安全保障就会产生风险，并相信行业会与政府合作制定适当保护措施。亚马逊既是 OpenAI、Anthropic 等企业的合作伙伴和投资者，也在开发自己的大语言模型。",
+      "original_url": "https://www.ithome.com/1/004/200.htm",
+      "aihot_url": "https://aihot.news/items/cmu6r5jgn0846rowkx57mb84n",
+      "published_at": "2026-09-18T08:29:30.000Z",
+      "collected_at": "2026-09-18T09:24:43.506Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "score": 32,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmu6r5jgn0846rowkx57mb84n"
         }
       }
     },
@@ -13288,341 +13521,6 @@
       }
     },
     {
-      "id": "cmu50zmgd06xzroqbsk2bm91b",
-      "item_type": "item",
-      "category": null,
-      "title": "宏碁、华硕和联想 Googlebook 笔记本渲染图曝光：配彩色 Glowbar 灯带",
-      "description": "宏碁、华硕和联想三款 Googlebook 笔记本渲染图曝光，均配备彩色 Glowbar 灯带，预估 9 月 21 日集体亮相。宏碁 GP714-91N 代号 Moonstone，配 14 英寸 2.8K OLED 屏和实体 Gemini 按键；华硕 CX9406 代号 Lapis，重不到 1 公斤；联想 Googlebook 15 内置 70Wh 电池，续航最长 11 小时。",
-      "original_url": "https://www.ithome.com/1/003/445.htm",
-      "aihot_url": "https://aihot.news/items/cmu50zmgd06xzroqbsk2bm91b",
-      "published_at": "2026-09-17T03:34:33.000Z",
-      "collected_at": "2026-09-17T04:24:30.911Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "score": 26,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu50zmgd06xzroqbsk2bm91b"
-        }
-      }
-    },
-    {
-      "id": "cmu4zqfic05dfroqbqzsvf5d2",
-      "item_type": "item",
-      "category": null,
-      "title": "TechCrunch Disrupt 2026：Gusto、Insight Partners 与 Leland 谈 AI 智能体如何改变初创团队招聘",
-      "description": "TechCrunch Disrupt 2026 的 Builders Stage 将举办\"Hiring When AI Is a Co-Founder\"对谈，Gusto CEO Josh Reeves。",
-      "original_url": "https://techcrunch.com/2026/09/16/your-startups-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-leland-explain-what-that-changes-at-techcrunch-disrupt-2026",
-      "aihot_url": "https://aihot.news/items/cmu4zqfic05dfroqbqzsvf5d2",
-      "published_at": "2026-09-17T03:30:00.000Z",
-      "collected_at": "2026-09-17T03:49:23.832Z",
-      "source": {
-        "name": "TechCrunch：AI（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Your startup's next teammate might be an AI agent： Gusto， Insight Partners， and Leland explain what that changes at TechCrunch Disrupt 2026",
-        "score": 29,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu4zqfic05dfroqbqzsvf5d2"
-        }
-      }
-    },
-    {
-      "id": "cmu4zbdcm04ziroqbn8f5qsoy",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "面壁智能转发 Dubedo 测试版上线，基于 VoxCPM2 支持 30 种语言配音",
-      "description": "面壁智能（OpenBMB）转发 Dubedo 的测试版发布，称这是 VoxCPM2 希望促成的产品形态。Dubedo 支持 30 种语言配音、按说话人克隆声音，并在同一编辑器内微调台词和时间轴，beta 入口为 https://dev.dubedo.com。",
-      "original_url": "https://x.com/OpenBMB/status/2100426127361855998",
-      "aihot_url": "https://aihot.news/items/cmu4zbdcm04ziroqbn8f5qsoy",
-      "published_at": "2026-09-17T03:26:27.000Z",
-      "collected_at": "2026-09-17T03:37:37.956Z",
-      "source": {
-        "name": "X：面壁智能 OpenBMB (@OpenBMB)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "This is exactly the kind of product we hoped VoxCPM2 would enable - speaker-aware cloning， multiling…",
-        "score": 52,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu4zbdcm04ziroqbn8f5qsoy"
-        }
-      }
-    },
-    {
-      "id": "cmu4zik0f0564roqbfxljdoem",
-      "item_type": "item",
-      "category": null,
-      "title": "Node.js 作者新作 muse 获好评",
-      "description": "出自 nodejs 作者之手！！muse\"好得惊人\"！！\n\n@rough__sea：muse 好得惊人--他们把简洁性做到了极致。它正迅速成为我日常个人 AI 的首选",
-      "original_url": "https://x.com/alexandr_wang/status/2100425714726326408",
-      "aihot_url": "https://aihot.news/items/cmu4zik0f0564roqbfxljdoem",
-      "published_at": "2026-09-17T03:24:49.000Z",
-      "collected_at": "2026-09-17T03:43:13.537Z",
-      "source": {
-        "name": "X：Alexandr Wang（Scale AI 创始人/Meta 首席 AI 官） (@alexandr_wang)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "from the creator of nodejs！！ muse is \"shockingly good\"！！",
-        "score": 23,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu4zik0f0564roqbfxljdoem"
-        }
-      }
-    },
-    {
-      "id": "cmu4zhgwy0548roqbvqqrmk58",
-      "item_type": "item",
-      "category": "tip",
-      "title": "Mozilla 报告解读：中国开源模型从能力追赶走向分发优势",
-      "description": "Rohan Paul 引述 Mozilla 91 页报告指出，开源模型与前沿差距仅约 4 个月，中国开源模型的领先正变成分发优势：Qwen 达 942M Hugging Face 下载，超过其后八家组织之和，中国开源模型占 OpenRouter token 从不足 2% 升至超 45%。",
-      "original_url": "https://x.com/rohanpaul_ai/status/2100425684871201146",
-      "aihot_url": "https://aihot.news/items/cmu4zhgwy0548roqbvqqrmk58",
-      "published_at": "2026-09-17T03:24:41.000Z",
-      "collected_at": "2026-09-17T03:42:23.545Z",
-      "source": {
-        "name": "X：Rohan Paul (@rohanpaul_ai)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Beyond model capability， China's open-model lead is becoming a distribution advantage： Qwen hit 94…",
-        "score": 61,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu4zhgwy0548roqbvqqrmk58"
-        }
-      }
-    },
-    {
-      "id": "cmu4zik0f0565roqb5dec87b2",
-      "item_type": "item",
-      "category": null,
-      "title": "Meta muse 帮你搞定拖延琐事",
-      "description": "muse 会帮你搞定所有你一直拖着没做的事！\n\n【引用 @ArmandDoma】：muse 真的很神奇。我一直拖着没订酒店、没找新公寓、没清理订阅，它几分钟就全搞定了",
-      "original_url": "https://x.com/alexandr_wang/status/2100425564893106677",
-      "aihot_url": "https://aihot.news/items/cmu4zik0f0565roqb5dec87b2",
-      "published_at": "2026-09-17T03:24:13.000Z",
-      "collected_at": "2026-09-17T03:43:13.537Z",
-      "source": {
-        "name": "X：Alexandr Wang（Scale AI 创始人/Meta 首席 AI 官） (@alexandr_wang)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "muse will help you get to all the things you've been procrastinating！",
-        "score": 27,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu4zik0f0565roqb5dec87b2"
-        }
-      }
-    },
-    {
-      "id": "cmu4yufyl04fnroqbqtysds3u",
-      "item_type": "item",
-      "category": null,
-      "title": "OPPO ColorOS 17 发布：全新\"流体设计\"、新一代小布",
-      "description": "OPPO 在 ColorOS 17 发布暨开发者大会上正式发布 ColorOS 17，口号\"超流畅，更懂你\"，带来\"流体设计\"与升级的流畅双引擎，后台稳定保活率提升 55.6%。",
-      "original_url": "https://www.ithome.com/1/003/439.htm",
-      "aihot_url": "https://aihot.news/items/cmu4yufyl04fnroqbqtysds3u",
-      "published_at": "2026-09-17T03:24:02.000Z",
-      "collected_at": "2026-09-17T03:24:29.907Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "score": 39,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu4yufyl04fnroqbqtysds3u"
-        }
-      }
-    },
-    {
-      "id": "cmu4zik0f0566roqbt10fy313",
-      "item_type": "item",
-      "category": null,
-      "title": "Muse 智能体帮用户省下 2120 美元",
-      "description": "muse 帮这家伙赚了 2120.95 美元，还在涨！\n\n【引用 @armand_ruiz】：我的个人 @muse 智能体已经帮我搞到 2120.95 美元了 🤯：\n• 每年 300 美元 - 把我的 AT&T 账单谈下来了\n• 192 美元 - 我一直没处理的 Amazon 退货\n• 47 美元 - 更多退货在路上\n• 230 美元 - IKEA ALEX 9 抽屉柜，全程退货\n• 516 美元 - 为我的狗提交的兽医理赔\n• 836 美元 - 名下未认领财产\n\n我下个月要卖车--你们觉得我该让 Muse 来处理吗？",
-      "original_url": "https://x.com/alexandr_wang/status/2100425403022328003",
-      "aihot_url": "https://aihot.news/items/cmu4zik0f0566roqbt10fy313",
-      "published_at": "2026-09-17T03:23:34.000Z",
-      "collected_at": "2026-09-17T03:43:13.537Z",
-      "source": {
-        "name": "X：Alexandr Wang（Scale AI 创始人/Meta 首席 AI 官） (@alexandr_wang)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "muse got this guy $2，120.95 and counting！",
-        "score": 35,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu4zik0f0566roqbt10fy313"
-        }
-      }
-    },
-    {
-      "id": "cmu4zik0f0567roqb89qigoj2",
-      "item_type": "item",
-      "category": null,
-      "title": "Meta muse 获好评：适合所有人",
-      "description": "兄弟们也一样！muse 对所有人都好！\n\n【引用 @NeerajKA】：我妻子告诉我 muse 很好，\"适合女生们\"",
-      "original_url": "https://x.com/alexandr_wang/status/2100425295878922547",
-      "aihot_url": "https://aihot.news/items/cmu4zik0f0567roqb89qigoj2",
-      "published_at": "2026-09-17T03:23:09.000Z",
-      "collected_at": "2026-09-17T03:43:13.537Z",
-      "source": {
-        "name": "X：Alexandr Wang（Scale AI 创始人/Meta 首席 AI 官） (@alexandr_wang)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "and the boys！ muse is good for everyone！",
-        "score": 12,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu4zik0f0567roqb89qigoj2"
-        }
-      }
-    },
-    {
-      "id": "cmu4zik0f0568roqb84k2adqe",
-      "item_type": "item",
-      "category": null,
-      "title": "Muse 帮用户砍价省网费",
-      "description": "是的，Muse 帮人省钱！！💵\n\n@kwuchu：Muse 帮我把网费谈下来了。现在正让它帮我谈车险和租房保险 👀 我太喜欢这个了",
-      "original_url": "https://x.com/alexandr_wang/status/2100425213888668051",
-      "aihot_url": "https://aihot.news/items/cmu4zik0f0568roqb84k2adqe",
-      "published_at": "2026-09-17T03:22:49.000Z",
-      "collected_at": "2026-09-17T03:43:13.537Z",
-      "source": {
-        "name": "X：Alexandr Wang（Scale AI 创始人/Meta 首席 AI 官） (@alexandr_wang)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "yesss muse saving people money！！ 💵",
-        "score": 38,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu4zik0f0568roqb84k2adqe"
-        }
-      }
-    },
-    {
-      "id": "cmu4z3rpe04u4roqbtjim24vw",
-      "item_type": "item",
-      "category": "industry",
-      "title": "Fountain 0 发布 AI 长片 ODYSSEY： The Fall，全片由 Kling 3.0 生成",
-      "description": "Kling AI 官方宣布，Fountain 0 的新长片 ODYSSEUS： The Fall 已完整上线，全片每个镜头均由 Kling 3.0 生成，由 Ash Koosha 执导。同一团队的 Dreams of Violets 曾入围 2026 Tribeca，是首部进入主要电影节的 AI 长片。",
-      "original_url": "https://x.com/Kling_ai/status/2100424655840387292",
-      "aihot_url": "https://aihot.news/items/cmu4z3rpe04u4roqbtjim24vw",
-      "published_at": "2026-09-17T03:20:36.000Z",
-      "collected_at": "2026-09-17T03:31:44.441Z",
-      "source": {
-        "name": "X：可灵 Kling AI (@Kling_ai)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "ODYSSEUS： The Fall is here！ Here's a first look of a scene from the film. Fountain 0's new feature…",
-        "score": 57,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu4z3rpe04u4roqbtjim24vw"
-        }
-      }
-    },
-    {
-      "id": "cmu4zik0f0569roqbazrq5rwv",
-      "item_type": "item",
-      "category": null,
-      "title": "Muse 在 iPhone 上驱动操作演示",
-      "description": "只要用心去做，你的 muse 能做的事可不少！\n\n【引用 @jamiepinheiro】：> 它在 iOS 上能用吗？\n\n能！这是 @Muse 在操控我的 iPhone",
-      "original_url": "https://x.com/alexandr_wang/status/2100424442090561575",
-      "aihot_url": "https://aihot.news/items/cmu4zik0f0569roqbazrq5rwv",
-      "published_at": "2026-09-17T03:19:45.000Z",
-      "collected_at": "2026-09-17T03:43:13.537Z",
-      "source": {
-        "name": "X：Alexandr Wang（Scale AI 创始人/Meta 首席 AI 官） (@alexandr_wang)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "if you really work at it， your muse can do a lot！",
-        "score": 19,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu4zik0f0569roqbazrq5rwv"
-        }
-      }
-    },
-    {
-      "id": "cmu4yufyl04foroqbzo6mm6xx",
-      "item_type": "item",
-      "category": null,
-      "title": "OPPO 发布全天候主动式 AI 硬件\"心力球\"，今年晚些时候到来",
-      "description": "OPPO 在 2026 开发者大会发布全天候主动式 AI 硬件\"心力球\"，将于今年晚些时候推出。该产品重 9.8g、续航 24 小时，可夹在衣服上使用，支持与办公软件搭配进行会议记录。安全方面具备低保真录音、文本单次解析转完即删、多层 PCC 私密云计算及私人密钥等特性。",
-      "original_url": "https://www.ithome.com/1/003/435.htm",
-      "aihot_url": "https://aihot.news/items/cmu4yufyl04foroqbzo6mm6xx",
-      "published_at": "2026-09-17T03:15:50.000Z",
-      "collected_at": "2026-09-17T03:24:29.907Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "score": 32,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu4yufyl04foroqbzo6mm6xx"
-        }
-      }
-    },
-    {
       "id": "cmu4e3eba0k1oro4wqa10kw30",
       "item_type": "hot_topic",
       "category": null,
@@ -13648,8 +13546,8 @@
           "X：Claude (@claudeai)",
           "X：Boris Cherny (@bcherny)",
           "Hacker News：AI 热帖",
-          "TechCrunch：AI（RSS）",
           "The Verge：AI（RSS）",
+          "TechCrunch：AI（RSS）",
           "The Decoder：AI News（RSS）",
           "X：Testing Catalog (@testingcatalog)",
           "Hacker News 热门（buzzing.cc 中文翻译）",
@@ -13675,7 +13573,7 @@
         "hot_topics"
       ],
       "metadata": {
-        "rank": 8,
+        "rank": 9,
         "latest_at": "2026-09-17T14:00:00.000Z",
         "source_count": 6,
         "signal_count": 2,
