@@ -1,23 +1,23 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-09-20T09:28:34.608748Z",
+  "generated_at": "2026-09-20T09:43:52.553991Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-09-19T03:28:30.830459Z",
-    "to": "2026-09-20T09:28:30.830459Z"
+    "from": "2026-09-19T03:43:32.778132Z",
+    "to": "2026-09-20T09:43:32.778132Z"
   },
   "coverage": {
     "selected": {
       "status": "ok",
       "source": "api",
-      "items": 3,
+      "items": 1,
       "error": null
     },
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 334,
+      "items": 330,
       "error": null
     },
     "paper": {
@@ -40,66 +40,10 @@
     }
   },
   "summary": {
-    "raw_items": 357,
-    "deduplicated_items": 338
+    "raw_items": 351,
+    "deduplicated_items": 334
   },
   "items": [
-    {
-      "id": "cmu96vqg8035srodqu63q13w4",
-      "item_type": "item",
-      "category": "ai-models",
-      "title": "阶跃星辰发布旗舰模型 Step 5 Preview，10 月 15 日开源权重",
-      "description": "阶跃星辰发布旗舰基座模型 Step 5 Preview，采用稀疏 MoE 架构，总参数量 600B、激活 27B，支持 100 万 Token 上下文和文本与视觉输入，在 Artificial Analysis Intelligence Index 得 44 分，居全球开源模型前三，单任务成本为 Claude Opus 5 的 1/8。",
-      "original_url": "https://mp.weixin.qq.com/s?__biz=MzkyNTYxNzg5Mg%3D%3D&mid=2247488120&idx=1&sn=8ba9ac7f0b36682d6262290677c665da",
-      "aihot_url": "https://aihot.news/items/cmu96vqg8035srodqu63q13w4",
-      "published_at": "2026-09-20T02:00:00.000Z",
-      "collected_at": "2026-09-20T02:20:30.879Z",
-      "source": {
-        "name": "公众号：阶跃星辰（Step）"
-      },
-      "source_channels": [
-        "selected",
-        "all"
-      ],
-      "metadata": {
-        "original_title": "阶跃发布旗舰模型 Step 5 Preview：向前一步，智能效率的新一代\"帕累托前沿\"",
-        "score": 66,
-        "selected": true,
-        "reason": "官方完整公布架构参数、基准成绩和权重开放时间，读者可据此评估其在开源主力模型中的成本能力位置。",
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu96vqg8035srodqu63q13w4"
-        }
-      }
-    },
-    {
-      "id": "cmu92ktj505lkrojrl223hicj",
-      "item_type": "item",
-      "category": "industry",
-      "title": "纽约时报诉讼文件披露：微软高管称 AI 抓取是人类历史上最大规模的劳动力盗用",
-      "description": "纽约时报在起诉 OpenAI 和微软的版权案中提交法律简报并申请即决判决，引用双方内部文件称 AI 抓取是\"人类历史上最大规模的劳动力盗用\"，OpenAI ChatGPT 负责人称其对出版商是\"生存威胁\"。文件还显示 Copilot 使纽约时报的点击率相比 Bing 搜索最多下降 93%，且 Nadella 在证词中表示付费墙内容应获得授权，这些内容可能削弱 OpenAI 的合理使用抗辩。",
-      "original_url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/microsoft-director-called-ai-scraping-the-largest-theft-of-labor-in-human-history-while-openai-head-brands-chatgpt-an-existential-threat-to-publishers-revelations-come-from-legal-briefs-filed-in-nyt-lawsuit",
-      "aihot_url": "https://aihot.news/items/cmu92ktj505lkrojrl223hicj",
-      "published_at": "2026-09-19T23:58:19.151Z",
-      "collected_at": "2026-09-20T00:20:04.626Z",
-      "source": {
-        "name": "Hacker News 热门（buzzing.cc 中文翻译）"
-      },
-      "source_channels": [
-        "selected",
-        "all"
-      ],
-      "metadata": {
-        "original_title": "微软高管：AI\"是人类历史上规模最大的劳动力盗用\"",
-        "score": 77,
-        "selected": true,
-        "reason": "诉讼文件披露两家公司高层对 AI 抓取影响的内部判断，为理解版权争议提供了少见的内部视角。",
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu92ktj505lkrojrl223hicj"
-        }
-      }
-    },
     {
       "id": "cmu7zc3h30zcqrogr2dx8w8w6",
       "item_type": "item",
@@ -1861,10 +1805,10 @@
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmu99pi3604g2ro8iyt4qb7p7"
         },
-        "rank": 5,
-        "latest_at": "2026-09-20T09:14:03.000Z",
+        "rank": 3,
+        "latest_at": "2026-09-20T09:20:45.000Z",
         "source_count": 3,
-        "signal_count": 10,
+        "signal_count": 11,
         "source_names": [
           "X：阶跃星辰 StepFun (@StepFun_ai)",
           "IT之家（RSS）",
@@ -2463,6 +2407,33 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmu96mcy602sarodqnwnwopyi"
+        }
+      }
+    },
+    {
+      "id": "cmu96vqg8035srodqu63q13w4",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "阶跃星辰发布旗舰模型 Step 5 Preview，10 月 15 日开源权重",
+      "description": "阶跃星辰发布旗舰基座模型 Step 5 Preview，采用稀疏 MoE 架构，总参数量 600B、激活 27B，支持 100 万 Token 上下文和文本与视觉输入，在 Artificial Analysis Intelligence Index 得 44 分，居全球开源模型前三，单任务成本为 Claude Opus 5 的 1/8。",
+      "original_url": "https://mp.weixin.qq.com/s?__biz=MzkyNTYxNzg5Mg%3D%3D&mid=2247488120&idx=1&sn=8ba9ac7f0b36682d6262290677c665da",
+      "aihot_url": "https://aihot.news/items/cmu96vqg8035srodqu63q13w4",
+      "published_at": "2026-09-20T02:00:00.000Z",
+      "collected_at": "2026-09-20T02:20:30.879Z",
+      "source": {
+        "name": "公众号：阶跃星辰（Step）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "阶跃发布旗舰模型 Step 5 Preview：向前一步，智能效率的新一代\"帕累托前沿\"",
+        "score": 66,
+        "selected": true,
+        "reason": "官方完整公布架构参数、基准成绩和权重开放时间，读者可据此评估其在开源主力模型中的成本能力位置。",
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmu96vqg8035srodqu63q13w4"
         }
       }
     },
@@ -3137,6 +3108,33 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmu92r7mm05throjrmlgg64un"
+        }
+      }
+    },
+    {
+      "id": "cmu92ktj505lkrojrl223hicj",
+      "item_type": "item",
+      "category": "industry",
+      "title": "纽约时报诉讼文件披露：微软高管称 AI 抓取是人类历史上最大规模的劳动力盗用",
+      "description": "纽约时报在起诉 OpenAI 和微软的版权案中提交法律简报并申请即决判决，引用双方内部文件称 AI 抓取是\"人类历史上最大规模的劳动力盗用\"，OpenAI ChatGPT 负责人称其对出版商是\"生存威胁\"。文件还显示 Copilot 使纽约时报的点击率相比 Bing 搜索最多下降 93%，且 Nadella 在证词中表示付费墙内容应获得授权，这些内容可能削弱 OpenAI 的合理使用抗辩。",
+      "original_url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/microsoft-director-called-ai-scraping-the-largest-theft-of-labor-in-human-history-while-openai-head-brands-chatgpt-an-existential-threat-to-publishers-revelations-come-from-legal-briefs-filed-in-nyt-lawsuit",
+      "aihot_url": "https://aihot.news/items/cmu92ktj505lkrojrl223hicj",
+      "published_at": "2026-09-19T23:58:19.151Z",
+      "collected_at": "2026-09-20T00:20:04.626Z",
+      "source": {
+        "name": "Hacker News 热门（buzzing.cc 中文翻译）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "微软高管：AI\"是人类历史上规模最大的劳动力盗用\"",
+        "score": 77,
+        "selected": true,
+        "reason": "诉讼文件披露两家公司高层对 AI 抓取影响的内部判断，为理解版权争议提供了少见的内部视角。",
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmu92ktj505lkrojrl223hicj"
         }
       }
     },
@@ -8369,7 +8367,7 @@
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmu7vvrzj0snnrogr298gqllj"
         },
-        "rank": 4,
+        "rank": 5,
         "latest_at": "2026-09-20T09:19:24.613Z",
         "source_count": 2,
         "signal_count": 14,
@@ -8537,110 +8535,6 @@
       }
     },
     {
-      "id": "cmu7vc92l0s0grogr8dw0q7lh",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "Tom Krcha 发布 AI 智能体画布 pen.dev，支持导入网页编辑后回写代码",
-      "description": "前 Adobe XD 联合缔造者 Tom Krcha 发布 agentic canvas 产品 pen.dev，主打 Never start from scratch，可将任意网站或 Web App 导入画布迭代后推回代码。",
-      "original_url": "https://x.com/AYi_AInotes/status/2101155021450576341",
-      "aihot_url": "https://aihot.news/items/cmu7vc92l0s0grogr8dw0q7lh",
-      "published_at": "2026-09-19T03:42:49.000Z",
-      "collected_at": "2026-09-19T04:09:39.554Z",
-      "source": {
-        "name": "X：阿易 AI Notes (@AYi_AInotes)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "卧槽真的有点太燃了兄弟们！设计师盆友们必须看过来！！！ 前 Adobe XD 联合缔造者、连卖了两家公司的硅谷设计老炮 Tom Krcha， 刚刚正式发布了新一代的 AI 智能体画布：http://p...",
-        "score": 63,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu7vc92l0s0grogr8dw0q7lh"
-        }
-      }
-    },
-    {
-      "id": "cmu7umz7w0r62rogr2mbd519b",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "xAI 旗下 Grok Voice Transcribe 2.0 语音转文本 API 发布，宣称准确率为 1.0 的两倍且价格不变",
-      "description": "SpaceXAI 发布语音转文本模型 Grok Voice Transcribe 2.0，宣称准确率是 1.0 的两倍，价格不变，批量每小时 $0.10、流式每小时 $0.20。",
-      "original_url": "https://www.marktechpost.com/2026/09/18/spacexai-releases-grok-voice-transcribe-2-0",
-      "aihot_url": "https://aihot.news/items/cmu7umz7w0r62rogr2mbd519b",
-      "published_at": "2026-09-19T03:42:24.000Z",
-      "collected_at": "2026-09-19T03:50:01.614Z",
-      "source": {
-        "name": "MarkTechPost（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "SpaceXAI Releases Grok Voice Transcribe 2.0： A Speech-to-Text API Claiming 2x Accuracy Over 1.0 at $0.10 per Hour",
-        "score": 64,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu7umz7w0r62rogr2mbd519b"
-        }
-      }
-    },
-    {
-      "id": "cmu7uw57p0rggrogre8lc7iy6",
-      "item_type": "item",
-      "category": null,
-      "title": "AI只会记忆和复述？推文反驳称其已能比人类更好地预测未来",
-      "description": "针对\"AI只会记忆和复述\"的说法，该推文反驳称AI已能比人类更好地预测未来，并以国际象棋高手能多看几步棋为类比，认为预测未来能力越强就越能掌控未来。目前AI在预测方面仅略超人类，但推文警告未来AI将在数量上以10000比1、思考速度上以10000倍超越人类，可能像大师对阵新手一样轻易接管未来。",
-      "original_url": "https://x.com/AISafetyMemes/status/2101154125799190689",
-      "aihot_url": "https://aihot.news/items/cmu7uw57p0rggrogre8lc7iy6",
-      "published_at": "2026-09-19T03:39:15.000Z",
-      "collected_at": "2026-09-19T03:57:09.129Z",
-      "source": {
-        "name": "X：AI Safety Memes (@AISafetyMemes)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "\"AI just memorizes and regurgitates\" OK BUDDY THEN EXPLAIN TO ME HOW IT CAN PREDICT THE *LITERAL FU…",
-        "score": 48,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu7uw57p0rggrogre8lc7iy6"
-        }
-      }
-    },
-    {
-      "id": "cmu7uytkz0rkdrogrt92ioko0",
-      "item_type": "item",
-      "category": null,
-      "title": "阿里云 Apsara 大会 2026 倒计时 3 天",
-      "description": "阿里云 Apsara Conference 2026 将于 9 月 22-24 日在杭州举行，距开幕仅剩 3 天，主题为迈入 Agent-Native 时代。大会设 4 个沉浸式展馆、3 场主题演讲、140+ 分论坛和 1，000+ 参展商，并开放国际 Agentic AI 论坛、国际 AI Agent 技术论坛及东盟论坛的直播报名。",
-      "original_url": "https://x.com/alibaba_cloud/status/2101152117842903307",
-      "aihot_url": "https://aihot.news/items/cmu7uytkz0rkdrogrt92ioko0",
-      "published_at": "2026-09-19T03:31:17.000Z",
-      "collected_at": "2026-09-19T03:59:13.974Z",
-      "source": {
-        "name": "X：阿里云 / Alibaba Cloud (@alibaba_cloud)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Just 3 days to go！ The stage is set for #ApsaraConference2026. Step into the Agent-Native era with 4…",
-        "score": 21,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmu7uytkz0rkdrogrt92ioko0"
-        }
-      }
-    },
-    {
       "id": "cmu7hc2e80aavrogr7vbwhcjm",
       "item_type": "hot_topic",
       "category": null,
@@ -8725,7 +8619,7 @@
         "hot_topics"
       ],
       "metadata": {
-        "rank": 3,
+        "rank": 4,
         "latest_at": "2026-09-19T17:00:12.000Z",
         "source_count": 7,
         "signal_count": 23,
@@ -8804,32 +8698,33 @@
       }
     },
     {
-      "id": "cmu7mv3mi0j8brogr1ktcfhb6",
+      "id": "cmu605ozy000arok0lxr4x1y8",
       "item_type": "hot_topic",
       "category": null,
-      "title": "FT报道：OpenAI预计支出将远超收入，2030年营收或达3500亿美元",
+      "title": "Anthropic CEO Amodei此前提出含第三方评估与国际协议的三步放缓AI发展计划",
       "description": null,
-      "original_url": "https://x.com/rohanpaul_ai/status/2101095915654463533",
-      "aihot_url": "https://aihot.news/items/cmu7mv3mi0j8brogr1ktcfhb6",
+      "original_url": "https://www.anthropic.com/institute/measuring-pace-of-ai-development",
+      "aihot_url": "https://aihot.news/items/cmu605ozy000arok0lxr4x1y8",
       "published_at": null,
       "collected_at": null,
       "source": {
-        "name": "X：Rohan Paul (@rohanpaul_ai)"
+        "name": "Anthropic：The Institute（旗舰研究长文 · 网页）"
       },
       "source_channels": [
         "hot_topics"
       ],
       "metadata": {
         "rank": 9,
-        "latest_at": "2026-09-20T08:26:12.000Z",
-        "source_count": 3,
-        "signal_count": 14,
+        "latest_at": "2026-09-20T09:20:41.000Z",
+        "source_count": 4,
+        "signal_count": 12,
         "source_names": [
-          "X：Rohan Paul (@rohanpaul_ai)",
+          "The Decoder：AI News（RSS）",
+          "TechCrunch：AI（RSS）",
           "IT之家（RSS）",
-          "@mark_k"
+          "The Verge：AI（RSS）"
         ],
-        "story_url": "https://aihot.virxact.com/story/b7c8c72a-2bdd-41b6-8d0c-50b80dd465f9"
+        "story_url": "https://aihot.virxact.com/story/f3836ac4-bf36-43bd-b65a-e6372943a1ff"
       }
     },
     {
