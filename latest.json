@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-09-22T09:30:18.245518Z",
+  "generated_at": "2026-09-22T09:51:38.412933Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-09-21T03:30:03.913768Z",
-    "to": "2026-09-22T09:30:03.913768Z"
+    "from": "2026-09-21T03:51:31.422860Z",
+    "to": "2026-09-22T09:51:31.422860Z"
   },
   "coverage": {
     "selected": {
@@ -17,7 +17,7 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 477,
+      "items": 479,
       "error": null
     },
     "paper": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 508,
-    "deduplicated_items": 473
+    "raw_items": 510,
+    "deduplicated_items": 475
   },
   "items": [
     {
@@ -515,6 +515,32 @@
       }
     },
     {
+      "id": "cmuch03lu05vtroede87im0y6",
+      "item_type": "item",
+      "category": null,
+      "title": "Qwen4 家族首次曝光",
+      "description": "卧槽5-10T？？？\n\nQwen4 家族首次曝光：在 2026 云栖大会开幕式上，新任阿里云 Qwen LLM 负责人刘大一恒官宣即将到来的 Qwen4 家族，包含 Qwen4-Max、Qwen4-Flash & Qwen4-Plus，还有 Qwen4-27B。未来 Qwen 会训 5-10T 的模型。",
+      "original_url": "https://x.com/karminski3/status/2102324062743863695",
+      "aihot_url": "https://aihot.news/items/cmuch03lu05vtroede87im0y6",
+      "published_at": "2026-09-22T09:08:10.000Z",
+      "collected_at": "2026-09-22T09:27:09.999Z",
+      "source": {
+        "name": "X：karminski (@karminski3)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "卧槽5-10T？？？",
+        "score": 45,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmuch03lu05vtroede87im0y6"
+        }
+      }
+    },
+    {
       "id": "cmucgxxqc05r6roed6h3d0jdv",
       "item_type": "item",
       "category": "industry",
@@ -775,6 +801,32 @@
       }
     },
     {
+      "id": "cmucgxxqd05rcroedwk0idfva",
+      "item_type": "item",
+      "category": "industry",
+      "title": "Omdia：全球 AI 眼镜 2026H1 出货 420 万副，同比增长 127%",
+      "description": "Omdia 数据显示，全球 AI 眼镜 2026 年上半年出货 420 万副，同比增长 127%，增长主要由 Meta 动能和中国市场推动。Meta 以 340 万副占 81.3% 份额，Even Realities 以 2.4% 居第二；中国出货同比激增 306%，市场高度分散，阿里巴巴、影目、小米合计市占仅 46.1%。",
+      "original_url": "https://www.ithome.com/1/005/825.htm",
+      "aihot_url": "https://aihot.news/items/cmucgxxqd05rcroedwk0idfva",
+      "published_at": "2026-09-22T08:37:28.000Z",
+      "collected_at": "2026-09-22T09:25:29.666Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Omdia 数据：全球 AI 眼镜 2026H1 出货 420 万副，同比增长 127%",
+        "score": 56,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmucgxxqd05rcroedwk0idfva"
+        }
+      }
+    },
+    {
       "id": "cmucfm4qn046droedir2bm5gv",
       "item_type": "item",
       "category": null,
@@ -822,6 +874,32 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmucgxxqd05rdroedwxvfnjqd"
+        }
+      }
+    },
+    {
+      "id": "cmucgxxqd05reroedubgry0mi",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "阿里千问办公发布首款桌面机器人 QwenNote Eva，售价 899 元",
+      "description": "阿里千问办公在 2026 云栖大会期间发布首款桌面机器人 QwenNote Eva（不含屏幕），售价 899 元，今晚 8 点开售，适配安卓、iOS 与鸿蒙设备。产品内置千问办公并以钉钉为协同底座，支持一句话指令交付任务、会议日程、AI 听记、情绪陪伴与桌面充电，语音与情绪能力标注为 Powered by qwen-audio，采用 GaN 快充方案最大输出 65W。",
+      "original_url": "https://www.ithome.com/1/005/803.htm",
+      "aihot_url": "https://aihot.news/items/cmucgxxqd05reroedubgry0mi",
+      "published_at": "2026-09-22T08:29:19.000Z",
+      "collected_at": "2026-09-22T09:25:29.666Z",
+      "source": {
+        "name": "IT之家（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "阿里千问办公首款桌面机器人 QwenNote Eva 发布：集办公助理、情绪陪伴、桌面充电于一体，售价 899 元",
+        "score": 58,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmucgxxqd05reroedubgry0mi"
         }
       }
     },
@@ -2196,6 +2274,32 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmuc61r6z0ar3rots36dst5fg"
+        }
+      }
+    },
+    {
+      "id": "cmuchmrcc06g0roedvmh49lm7",
+      "item_type": "item",
+      "category": "tip",
+      "title": "MiMo-V2.6-Pro 智能水平、性能与价格分析",
+      "description": "Artificial Analysis 页面显示，小米的 MiMo-V2.6-Pro 在 Artificial Analysis Intelligence Index 得分 46，远高于同类开源权重模型中位数 18。",
+      "original_url": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
+      "aihot_url": "https://aihot.news/items/cmuchmrcc06g0roedvmh49lm7",
+      "published_at": "2026-09-22T04:02:09.000Z",
+      "collected_at": "2026-09-22T09:44:47.882Z",
+      "source": {
+        "name": "Hacker News：AI 热帖"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "MiMo-v2.6-Pro： Intelligence， Performance and Price Analysis",
+        "score": 62,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmuchmrcc06g0roedvmh49lm7"
         }
       }
     },
@@ -5261,8 +5365,8 @@
           "url": "https://aihot.news/items/cmubox8pl0510ro4vw01ibnin"
         },
         "rank": 2,
-        "latest_at": "2026-09-22T03:57:17.000Z",
-        "source_count": 7,
+        "latest_at": "2026-09-22T04:02:09.000Z",
+        "source_count": 8,
         "signal_count": 4,
         "source_names": [
           "X：Nathan Lambert (@natolambert)",
@@ -5271,7 +5375,8 @@
           "X：Arena (@arena)",
           "X：Testing Catalog (@testingcatalog)",
           "X：罗福莉 (@_LuoFuli)",
-          "IT之家（RSS）"
+          "IT之家（RSS）",
+          "Hacker News：AI 热帖"
         ],
         "story_url": "https://aihot.virxact.com/story/fb460b24-bf56-45b0-87a5-fe8eec08a784"
       }
@@ -5563,9 +5668,9 @@
           "url": "https://aihot.news/items/cmuboxfwa0516ro4v0onr2jut"
         },
         "rank": 1,
-        "latest_at": "2026-09-22T04:10:04.000Z",
+        "latest_at": "2026-09-22T09:19:46.000Z",
         "source_count": 16,
-        "signal_count": 11,
+        "signal_count": 12,
         "source_names": [
           "xAI：News（网页）",
           "Hacker News：AI 热帖",
@@ -12215,58 +12320,6 @@
       }
     },
     {
-      "id": "cmuaqs1g90tf6ro5tam73ph38",
-      "item_type": "item",
-      "category": null,
-      "title": "天目山九号系留式高层营救飞行平台发布：100 米高空救援，单次可载 3 人",
-      "description": "天目山实验室与天峋创新联合实验室研制的\"天目山九号\"高鲁棒性系留式高层营救飞行平台于 9 月 19 日发布，救援作业高度可达 100 米，单次可运输 3 名成年人。现场演示中，该平台搭载搜救机器狗飞至楼顶悬停，依托地面系留供电完成模拟受困人员转移。截至 2026 年 7 月阶段检查，总体设计、结构、动力、飞控、高压供电、指挥运输车六项已完成，救援任务模块与场景适配仍在推进。",
-      "original_url": "https://www.ithome.com/1/005/119.htm",
-      "aihot_url": "https://aihot.news/items/cmuaqs1g90tf6ro5tam73ph38",
-      "published_at": "2026-09-21T03:34:06.000Z",
-      "collected_at": "2026-09-21T04:25:16.859Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "能在 100 米高空救援的无人机：\"天目山九号\"飞行平台发布，一次能载 3 个人",
-        "score": 36,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmuaqs1g90tf6ro5tam73ph38"
-        }
-      }
-    },
-    {
-      "id": "cmuaq7d6x0soero5t9pkeoa5t",
-      "item_type": "item",
-      "category": null,
-      "title": "百曜科技联合《麻省理工科技评论》发布 AI 虚拟细胞（AIVC）研究报告",
-      "description": "9 月 21 日，百曜科技发起、《麻省理工科技评论》中国团队调研撰写的《AI 虚拟细胞（AIVC）技术趋势、产业生态与应用前景研究报告》正式发布，报告在中关村科学城管理委员会指导下完成。报告立足全球视角，调研了全球数十家科研机构与企业，聚焦 AIVC 的技术趋势、产业生态与应用前景。",
-      "original_url": "https://elsewhere.news/zh/daltonventure/aivc-family",
-      "aihot_url": "https://aihot.news/items/cmuaq7d6x0soero5t9pkeoa5t",
-      "published_at": "2026-09-21T03:30:50.000Z",
-      "collected_at": "2026-09-21T04:09:14.419Z",
-      "source": {
-        "name": "elsewhere：文章（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "为了看清 AIVC 的下一步，百曜科技联合《麻省理工科技评论》发布了一项深度研究|道彤Family",
-        "score": 26,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmuaq7d6x0soero5t9pkeoa5t"
-        }
-      }
-    },
-    {
       "id": "cmu7hc2e80aavrogr7vbwhcjm",
       "item_type": "hot_topic",
       "category": null,
@@ -12409,9 +12462,9 @@
       ],
       "metadata": {
         "rank": 10,
-        "latest_at": "2026-09-22T08:00:49.000Z",
+        "latest_at": "2026-09-22T09:10:13.000Z",
         "source_count": 4,
-        "signal_count": 0,
+        "signal_count": 1,
         "source_names": [
           "腾讯混元：Research（API）",
           "X：腾讯混元 (@TencentHunyuan)",
