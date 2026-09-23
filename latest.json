@@ -1,23 +1,23 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-09-23T09:34:44.355632Z",
+  "generated_at": "2026-09-23T09:53:24.056225Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-09-22T03:34:35.577418Z",
-    "to": "2026-09-23T09:34:35.577418Z"
+    "from": "2026-09-22T03:53:17.346490Z",
+    "to": "2026-09-23T09:53:17.346490Z"
   },
   "coverage": {
     "selected": {
       "status": "ok",
       "source": "api",
-      "items": 30,
+      "items": 31,
       "error": null
     },
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 535,
+      "items": 530,
       "error": null
     },
     "paper": {
@@ -40,10 +40,38 @@
     }
   },
   "summary": {
-    "raw_items": 579,
-    "deduplicated_items": 525
+    "raw_items": 575,
+    "deduplicated_items": 520
   },
   "items": [
+    {
+      "id": "cmudwte2x0aqtroghe1b5cxfd",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "Qwen 发布 Qwen-Audio-3.1 全家桶，ASR、TTS、Realtime 升级并新增 TTS-Next 与 ASR-Next",
+      "description": "Qwen 发布 Qwen-Audio-3.1，ASR、TTS 与 Realtime 全面升级，并新增音频创作模型 TTS-Next 和音频理解模型 ASR-Next，共五个模型覆盖理解、生成、交互与创作。全线降价，TTS 约 70% off、Realtime 约 85% off、ASR 最高 95% off；Realtime 可边说边听、随时打断，检测到低落情绪时会放慢语速并共情回应。",
+      "original_url": "https://x.com/Alibaba_Qwen/status/2102687258990026993",
+      "aihot_url": "https://aihot.news/items/cmudwte2x0aqtroghe1b5cxfd",
+      "published_at": "2026-09-23T09:11:23.000Z",
+      "collected_at": "2026-09-23T09:37:37.169Z",
+      "source": {
+        "name": "X：通义千问 / Qwen (@Alibaba_Qwen)"
+      },
+      "source_channels": [
+        "selected",
+        "all"
+      ],
+      "metadata": {
+        "original_title": "⚡ Meet Qwen-Audio-3.1！ ASR， TTS & Realtime are fully upgraded， joined by two new models： TTS-Next fo…",
+        "score": 67,
+        "selected": true,
+        "reason": "官方一次性给出五个音频模型的能力细节和三档降价幅度，读者可对照自身场景评估替换成本。",
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cmudwte2x0aqtroghe1b5cxfd"
+        }
+      }
+    },
     {
       "id": "cmudnpv0k0hrrrogg9gcyun5n",
       "item_type": "item",
@@ -13512,161 +13540,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/cmuc5rbyk0a9crotsexvcng8u"
-        }
-      }
-    },
-    {
-      "id": "cmuc5hyi909xhrotsberfe6wf",
-      "item_type": "item",
-      "category": null,
-      "title": "Kimi K3 上线 Amazon Bedrock",
-      "description": "Kimi K3 现已登陆 Amazon Bedrock！\n\n借助 Bedrock 的访问、加密和审计控制，运行编码、文档分析和扩展智能体工作流。支持显式 prompt caching。\n\n在 AWS 上开始用 K3 构建 👉 https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-moonshot-ai-kimi-k3.html",
-      "original_url": "https://x.com/Kimi_Moonshot/status/2102244258531213596",
-      "aihot_url": "https://aihot.news/items/cmuc5hyi909xhrotsberfe6wf",
-      "published_at": "2026-09-22T03:51:03.000Z",
-      "collected_at": "2026-09-22T04:05:05.126Z",
-      "source": {
-        "name": "X：Kimi.ai (@Kimi_Moonshot)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Kimi K3 is now on Amazon Bedrock！ Run coding， document analysis， and extended agent workflows with …",
-        "score": 42,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmuc5hyi909xhrotsberfe6wf"
-        }
-      }
-    },
-    {
-      "id": "cmuc50akq09e1rots4dcczuqh",
-      "item_type": "item",
-      "category": "industry",
-      "title": "高等研究院设立数学与人工智能咨询小组，正就 OpenAI 内部模型产出的数学成果发布向数学界征询意见",
-      "description": "数学与人工智能咨询小组宣布成立，设于普林斯顿高等研究院，官网为 agmai.org，成员包括 Timothy Gowers、Martin Hairer、Edward Witten 等数学家。",
-      "original_url": "https://terrytao.wordpress.com/2026/09/21/advisory-group-on-mathematics-and-artificial-intelligence",
-      "aihot_url": "https://aihot.news/items/cmuc50akq09e1rots4dcczuqh",
-      "published_at": "2026-09-22T03:47:37.312Z",
-      "collected_at": "2026-09-22T03:51:24.735Z",
-      "source": {
-        "name": "Hacker News 热门（buzzing.cc 中文翻译）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "数学与人工智能咨询小组",
-        "score": 71,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmuc50akq09e1rots4dcczuqh"
-        }
-      }
-    },
-    {
-      "id": "cmuct8d140n8rroedr6i3jwmy",
-      "item_type": "item",
-      "category": null,
-      "title": "阶跃应该在桌上而不是桌底",
-      "description": null,
-      "original_url": "https://elsewhere.news/zh/funeralai/stepfun-should-be-on-the-table-not-under-it",
-      "aihot_url": "https://aihot.news/items/cmuct8d140n8rroedr6i3jwmy",
-      "published_at": "2026-09-22T03:46:00.000Z",
-      "collected_at": "2026-09-22T15:09:31.119Z",
-      "source": {
-        "name": "elsewhere：文章（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "score": 13,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmuct8d140n8rroedr6i3jwmy"
-        }
-      }
-    },
-    {
-      "id": "cmuc6833k0aywrotsdkjrr1s0",
-      "item_type": "item",
-      "category": "industry",
-      "title": "阿里公布大模型进展：Qwen4 训练中，后继模型将扩展至 5-10T 参数",
-      "description": "阿里巴巴在 2026 云栖大会公布大模型一系列进展：Qwen4 已在训练中，未来 Qwen4.5、Qwen5 等版本将扩展至 5-10T 参数，下一代视频生成模型将于 11 月发布。",
-      "original_url": "https://www.ithome.com/1/005/633.htm",
-      "aihot_url": "https://aihot.news/items/cmuc6833k0aywrotsdkjrr1s0",
-      "published_at": "2026-09-22T03:41:58.000Z",
-      "collected_at": "2026-09-22T04:25:27.278Z",
-      "source": {
-        "name": "IT之家（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "阿里 Qwen4 和下代视频模型训练中，Qwen4.5 后模型将扩展至 5-10T 参数",
-        "score": 60,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmuc6833k0aywrotsdkjrr1s0"
-        }
-      }
-    },
-    {
-      "id": "cmuc5adaj09qorotsoe0yy1yd",
-      "item_type": "item",
-      "category": null,
-      "title": "PixVerse 恐怖电影场景创作",
-      "description": "@vert_ink 你一定要把这个系列继续做下去 😭 我太喜欢了！\n\n【引用 @vert_ink】：THE PEARL\n没人会像我这样爱你\n\n在 @PixVerse 里创建我最爱的恐怖电影场景\n\n#pixverse #pixversecpp @PixVerseCreator",
-      "original_url": "https://x.com/PixVerse/status/2102241968197869788",
-      "aihot_url": "https://aihot.news/items/cmuc5adaj09qorotsoe0yy1yd",
-      "published_at": "2026-09-22T03:41:57.000Z",
-      "collected_at": "2026-09-22T03:59:13.029Z",
-      "source": {
-        "name": "X：PixVerse (@PixVerse)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "@vert_ink You have to keep this series going 😭 I absolutely love it！",
-        "score": 14,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmuc5adaj09qorotsoe0yy1yd"
-        }
-      }
-    },
-    {
-      "id": "cmuc5hyhs09xgrotsqg2zythq",
-      "item_type": "item",
-      "category": null,
-      "title": "华为云推出双版本智能体平台",
-      "description": "在 HUAWEI CONNECT 2026 上，华为董事、华为云 CEO 周跃峰博士介绍了智能体平台开发的双路径：商业版与开源版。\n\n通过 AgentArts 和 openJiuwen，华为云正在构建企业级智能体平台，简化智能体的开发、使用和管理。这两个版本目前已服务超过 100 家企业。\n\n了解更多：https://tinyurl.com/484y6vbe #HUAWEICONNECT #AgenticAI #Agent #HuaweiCloud",
-      "original_url": "https://x.com/HuaweiCloud1/status/2102241140141649970",
-      "aihot_url": "https://aihot.news/items/cmuc5hyhs09xgrotsqg2zythq",
-      "published_at": "2026-09-22T03:38:40.000Z",
-      "collected_at": "2026-09-22T04:05:05.126Z",
-      "source": {
-        "name": "X：华为云 (@HuaweiCloud1)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "At HUAWEI CONNECT 2026， Dr. Peter Zhou， Director of the Board at Huawei and CEO of Huawei Cloud， int…",
-        "score": 40,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/cmuc5hyhs09xgrotsqg2zythq"
         }
       }
     },
