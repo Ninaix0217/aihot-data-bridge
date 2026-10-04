@@ -2,8 +2,9 @@
 
 ## Status
 
-Implemented on isolated branch `codex/v22-proof-diagnostics`, with remote CI and
-one real opt-in V2 repository rehearsal verified. Not integrated into main.
+Implemented and tested on isolated branch `codex/v22-proof-diagnostics`, with
+remote CI and one real opt-in V2 repository rehearsal verified. Normal integration
+does not activate partial mode automatically: new partial writes require opt-in.
 V2 rehearsal wrote data; V1, control branch, schedules and consumers are unchanged.
 This is not a consumer cutover or a successful Scheduled Task/Gmail E2E.
 
@@ -91,7 +92,7 @@ This is current live evidence, not proof of every historical run's failure cause
 
 - Temporary branch CI and real V2 repository rehearsal passed: see
   [pinned evidence and one-time consumer test contract](partial-consumer-rehearsal.md).
-  This does not integrate the branch or enable partial consumer behavior by itself.
+  This does not enable partial consumer behavior by itself.
 - Version/identify the consumer acceptance policy before enabling PARTIAL
   consumption; existing consumers may correctly reject these artifacts.
 - Decide the actual daily readiness deadline and report freeze/version policy.
