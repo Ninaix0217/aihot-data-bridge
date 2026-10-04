@@ -43,6 +43,7 @@ class SourceRangeProofBasis(str, Enum):
 
 class CandidateCompletenessState(str, Enum):
     VALID_COMPLETE = "VALID_COMPLETE"
+    VALID_PARTIAL = "VALID_PARTIAL"
     INVALID = "INVALID"
 
 
@@ -229,9 +230,11 @@ def derive_source_range_state(
     return SourceRangeState.COMPLETE if complete else SourceRangeState.INCOMPLETE
 
 
-def evaluate_candidate_completeness(payload: Any) -> CandidateEvaluation:
+def evaluate_candidate_completeness(
+    payload: Any, *, allow_partial: bool = False,
+) -> CandidateEvaluation:
     try:
-        metadata = _validate_candidate_payload(payload)
+        metadata = _validate_candidate_payload(payload, allow_partial=allow_partial)
     except CandidateV2Error as exc:
         return CandidateEvaluation(
             CandidateCompletenessState.INVALID,
@@ -239,31 +242,40 @@ def evaluate_candidate_completeness(payload: Any) -> CandidateEvaluation:
             exc.detail,
             None,
         )
+    partial = any(
+        payload["coverage"][channel]["source_range"]["state"] != "COMPLETE"
+        for channel in PRIMARY_CHANNELS
+    )
     return CandidateEvaluation(
-        CandidateCompletenessState.VALID_COMPLETE,
+        CandidateCompletenessState.VALID_PARTIAL if partial
+        else CandidateCompletenessState.VALID_COMPLETE,
         None,
         None,
         metadata,
     )
 
 
-def validate_candidate_v2(payload: Any) -> CandidateV2Metadata:
-    evaluation = evaluate_candidate_completeness(payload)
-    if evaluation.state is not CandidateCompletenessState.VALID_COMPLETE:
+def validate_candidate_v2(
+    payload: Any, *, allow_partial: bool = False,
+) -> CandidateV2Metadata:
+    evaluation = evaluate_candidate_completeness(payload, allow_partial=allow_partial)
+    if evaluation.state is CandidateCompletenessState.INVALID:
         assert evaluation.reason is not None and evaluation.detail is not None
         raise CandidateV2Error(evaluation.reason, evaluation.detail)
     assert evaluation.metadata is not None
     return evaluation.metadata
 
 
-def validated_candidate_bytes(payload: Any) -> bytes:
-    validate_candidate_v2(payload)
+def validated_candidate_bytes(payload: Any, *, allow_partial: bool = False) -> bytes:
+    validate_candidate_v2(payload, allow_partial=allow_partial)
     return (
         json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
     ).encode("utf-8")
 
 
-def _validate_candidate_payload(payload: Any) -> CandidateV2Metadata:
+def _validate_candidate_payload(
+    payload: Any, *, allow_partial: bool = False,
+) -> CandidateV2Metadata:
     root = _require_dict(payload, "payload")
     if root.get("schema_version") != SCHEMA_VERSION:
         _schema_error(f"schema_version must be {SCHEMA_VERSION!r}")
@@ -338,15 +350,25 @@ def _validate_candidate_payload(payload: Any) -> CandidateV2Metadata:
             _schema_error(f"coverage.{channel}.source_range.state is inconsistent")
         if applicable:
             primary_raw_items += item_count
-            if derived is not SourceRangeState.COMPLETE:
+            partial_for_unknown_time = (
+                allow_partial
+                and evidence.invalid_published_at_items > 0
+                and derive_source_range_state(
+                    replace(evidence, invalid_published_at_items=0),
+                    report_start=report_start_utc,
+                    applicable=True,
+                ) is SourceRangeState.COMPLETE
+            )
+            if derived is not SourceRangeState.COMPLETE and not partial_for_unknown_time:
                 raise CandidateV2Error(
                     CandidateV2ErrorReason.SOURCE_RANGE_INCOMPLETE,
                     f"{channel} source range is not complete",
                 )
-            if entry.get("status") != "ok" or entry.get("source") != "api":
+            expected_status = "partial" if partial_for_unknown_time else "ok"
+            if entry.get("status") != expected_status or entry.get("source") != "api":
                 raise CandidateV2Error(
                     CandidateV2ErrorReason.TRUST_INVALID,
-                    f"{channel} complete range must come from a successful API response",
+                    f"{channel} range must come from an API response with status {expected_status}",
                 )
 
     summary = _require_dict(root.get("summary"), "summary")

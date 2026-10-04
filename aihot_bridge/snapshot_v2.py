@@ -48,6 +48,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--report-date")
     parser.add_argument("--output", type=Path)
     parser.add_argument("--check", type=Path)
+    parser.add_argument(
+        "--allow-partial", action="store_true",
+        help="Explicitly allow disclosed unknown-publication gaps; other gates stay strict",
+    )
     return parser.parse_args()
 
 
@@ -58,11 +62,14 @@ def main() -> int:
             if args.report_date is not None or args.output is not None:
                 raise ValueError("--check cannot be combined with --report-date or --output")
             payload = _load_json(args.check)
-            metadata = validate_candidate_v2(payload)
+            metadata = validate_candidate_v2(payload, allow_partial=args.allow_partial)
+            evaluation = evaluate_candidate_completeness(
+                payload, allow_partial=args.allow_partial,
+            )
             print(
                 json.dumps(
                     {
-                        "state": "VALID_COMPLETE",
+                        "state": evaluation.state.value,
                         "target_report_date": metadata.target_report_date.isoformat(),
                         "path": str(args.check),
                     },
@@ -75,10 +82,10 @@ def main() -> int:
             raise ValueError("--report-date and --output are required for generation")
         report_day = _parse_report_date(args.report_date)
         result = asyncio.run(build_live_candidate(report_day))
-        content = validated_candidate_bytes(result.payload)
+        content = validated_candidate_bytes(result.payload, allow_partial=args.allow_partial)
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_bytes(content)
-        _print_build_summary(result, args.output, content)
+        _print_build_summary(result, args.output, content, allow_partial=args.allow_partial)
         return 0
     except (CandidateV2Error, OSError, ValueError, json.JSONDecodeError) as exc:
         print(f"V2 candidate failed: {exc}", file=sys.stderr)
@@ -108,9 +115,11 @@ def _print_build_summary(
     result: CandidateBuildResult,
     output: Path,
     content: bytes,
+    *,
+    allow_partial: bool = False,
 ) -> None:
     payload = result.payload
-    evaluation = evaluate_candidate_completeness(payload)
+    evaluation = evaluate_candidate_completeness(payload, allow_partial=allow_partial)
     channels = {}
     for channel in ("selected", "all", "paper", "hot_topics", "daily"):
         coverage = payload["coverage"][channel]
@@ -123,6 +132,7 @@ def _print_build_summary(
             "oldest_published_at": source_range["oldest_published_at"],
             "proof_basis": source_range["proof_basis"],
             "source_range_state": source_range["state"],
+            "invalid_published_at_items": source_range["invalid_published_at_items"],
         }
     print(
         json.dumps(

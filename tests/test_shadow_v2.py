@@ -3,11 +3,13 @@ from __future__ import annotations
 from copy import deepcopy
 from datetime import date, datetime, timezone
 from pathlib import Path
+from types import SimpleNamespace
 
 import httpx
 import pytest
 
 from aihot_bridge import repository_v2, snapshot
+from aihot_bridge import shadow_v2
 from aihot_bridge.candidate_v2 import CandidateV2Error
 from aihot_bridge.logical_date import LogicalDateError, LogicalDateErrorReason
 from aihot_bridge.retrieval_v2 import CandidateBuildResult
@@ -317,3 +319,114 @@ def test_shadow_summary_contains_timing_proof_and_isolation(tmp_path: Path):
         "Pages: `NOT_USED`",
     ):
         assert required in rendered
+
+
+def incomplete_observation() -> CandidateBuildResult:
+    payload = complete_candidate_payload()
+    selected = payload["coverage"]["selected"]
+    selected["status"] = "partial"
+    selected["source_range"]["state"] = "INCOMPLETE"
+    selected["source_range"]["invalid_published_at_items"] = 2
+    return CandidateBuildResult(payload, logical_requests=7, duration_seconds=0.5)
+
+
+def test_failure_diagnostics_preserve_all_channels_without_changing_payload():
+    build = incomplete_observation()
+    build.payload["unexpected_secret"] = "DO_NOT_LOG"
+    before = deepcopy(build.payload)
+    observed = shadow_v2._build_diagnostics(build)
+
+    assert observed["validation_state"] == "RAW_OBSERVATION_NOT_VALIDATED"
+    assert observed["coverage"]["selected"]["invalid_published_at_items"] == 2
+    assert observed["coverage"]["selected"]["source_range_state"] == "INCOMPLETE"
+    assert observed["coverage"]["all"]["source_range_state"] == "COMPLETE"
+    assert observed["coverage"]["paper"]["source_range_state"] == "COMPLETE"
+    assert "DO_NOT_LOG" not in str(observed)
+    assert "items" not in observed  # Never dump item bodies or arbitrary metadata.
+    assert build.payload == before
+
+
+def test_failure_diagnostics_handle_malformed_payload_without_masking_error():
+    build = CandidateBuildResult({"coverage": None}, 0, 0.1)
+    observed = shadow_v2._build_diagnostics(build)
+    assert observed["coverage"]["selected"]["source_range_state"] is None
+
+
+def test_cli_failure_keeps_proof_in_summary_and_log_without_publication(
+    monkeypatch, tmp_path, capsys,
+):
+    summary = tmp_path / "summary.md"
+    build = incomplete_observation()
+    before = deepcopy(build.payload)
+    monkeypatch.setattr(shadow_v2, "parse_args", lambda: SimpleNamespace(
+        repository="owner/repo", run_id="123", event_schedule=PASS_A,
+        runner_fallback_started_at="2026-09-08T04:51:00Z", summary=summary,
+    ))
+
+    def observe(*_args, **_kwargs):
+        return StartedAtObservation(
+            utc("2026-09-08T04:51:00Z"), StartedAtSource.ACTIONS_RUN_API,
+        )
+
+    monkeypatch.setattr(shadow_v2, "observe_started_at", observe)
+
+    async def builder(report_day):
+        assert report_day == date(2026, 9, 8)
+        return build
+
+    mutation_calls = []
+    monkeypatch.setattr(shadow_v2, "build_live_candidate", builder)
+    def forbidden(*_args, **_kwargs):
+        mutation_calls.append("mutation")
+        raise AssertionError("shadow attempted publication")
+
+    monkeypatch.setattr(repository_v2, "publish_v2_candidate", forbidden)
+    monkeypatch.setattr(snapshot, "write_snapshot", forbidden)
+    assert shadow_v2.main() == 1
+    rendered = summary.read_text(encoding="utf-8")
+    for required in ("FAIL_CLOSED", "invalid_published_at_items: `2`",
+                     "### selected", "### all", "### paper",
+                     "RAW_OBSERVATION_NOT_VALIDATED", "Repository WRITE_ATTEMPTED: `NO`"):
+        assert required in rendered
+    assert rendered.count("## AI HOT V2 Scheduled Shadow") == 1
+    logged = capsys.readouterr().err
+    assert '"invalid_published_at_items": 2' in logged
+    assert "SOURCE_RANGE_INCOMPLETE" in logged
+    assert build.payload == before
+    assert mutation_calls == []
+
+
+@pytest.mark.parametrize("build_fails", [False, True])
+def test_cli_success_or_prebuild_failure_preserves_existing_contract(
+    monkeypatch, tmp_path, capsys, build_fails,
+):
+    from aihot_bridge.candidate_versioning import artifact_sha256
+
+    summary = tmp_path / "summary.md"
+    payload = complete_candidate_payload()
+    before_hash = artifact_sha256(payload)
+    monkeypatch.setattr(shadow_v2, "parse_args", lambda: SimpleNamespace(
+        repository="owner/repo", run_id="123", event_schedule=PASS_A,
+        runner_fallback_started_at="2026-09-08T04:51:00Z", summary=summary,
+    ))
+    monkeypatch.setattr(shadow_v2, "observe_started_at", lambda *args, **kwargs:
+        StartedAtObservation(utc("2026-09-08T04:51:00Z"), StartedAtSource.ACTIONS_RUN_API))
+
+    async def builder(_report_day):
+        if build_fails:
+            raise ValueError("fixture retrieval failed before a payload existed")
+        return CandidateBuildResult(payload, logical_requests=1, duration_seconds=0.1)
+
+    monkeypatch.setattr(shadow_v2, "build_live_candidate", builder)
+    assert shadow_v2.main() == (1 if build_fails else 0)
+    rendered = summary.read_text(encoding="utf-8")
+    logged = capsys.readouterr()
+    if build_fails:
+        assert "FAIL_CLOSED" in rendered
+        assert "fixture retrieval failed" in logged.err
+        assert "build_observations" not in logged.err
+    else:
+        assert "VALID_COMPLETE" in rendered
+        assert before_hash in logged.out
+        assert logged.err == ""
+    assert artifact_sha256(payload) == before_hash

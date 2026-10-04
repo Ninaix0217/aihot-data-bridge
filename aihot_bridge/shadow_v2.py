@@ -176,6 +176,51 @@ def _sha256(content: bytes) -> str:
     return hashlib.sha256(content).hexdigest()
 
 
+def _build_diagnostics(build: CandidateBuildResult) -> dict[str, Any]:
+    """Project allowlisted observations, not a validated business artifact."""
+    def mapping(value: Any) -> Mapping[str, Any]:
+        return value if isinstance(value, Mapping) else {}
+
+    def scalar(value: Any) -> Any:
+        return value if value is None or isinstance(value, (str, int, float, bool)) else None
+
+    payload = mapping(build.payload)
+    coverage = mapping(payload.get("coverage"))
+    channels = {}
+    proof_fields = (
+        "pages_fetched", "proof_basis", "oldest_published_at", "cursor_exhausted",
+        "ordering_verified", "query_verified", "page_metadata_verified",
+        "invalid_published_at_items", "max_pages_reached", "repeated_cursor",
+    )
+    for channel in ("selected", "all", "paper"):
+        observed = mapping(coverage.get(channel))
+        proof = mapping(observed.get("source_range"))
+        channels[channel] = {
+            "status": scalar(observed.get("status")),
+            "source": scalar(observed.get("source")),
+            "items": scalar(observed.get("items")),
+            "source_range_state": scalar(proof.get("state")),
+            **{field: scalar(proof.get(field)) for field in proof_fields},
+        }
+    return {
+        "validation_state": "RAW_OBSERVATION_NOT_VALIDATED",
+        "target_report_date": scalar(payload.get("target_report_date")),
+        "report_window": {
+            field: scalar(mapping(payload.get("report_window")).get(field))
+            for field in ("from", "to")
+        },
+        "retrieval_as_of": scalar(mapping(payload.get("retrieval")).get("as_of")),
+        "generated_at": scalar(payload.get("generated_at")),
+        "coverage": channels,
+        "summary": {
+            field: scalar(mapping(payload.get("summary")).get(field))
+            for field in ("raw_items", "deduplicated_items")
+        },
+        "logical_requests": build.logical_requests,
+        "duration_seconds": round(build.duration_seconds, 3),
+    }
+
+
 def _append_summary(path: Path, result: Mapping[str, Any]) -> None:
     trigger = result["trigger"]
     report = result["report"]
@@ -252,6 +297,7 @@ def _append_failure_summary(
     event_schedule: str,
     started_at: StartedAtObservation | None,
     error: Exception,
+    diagnostics: Mapping[str, Any] | None = None,
 ) -> None:
     observed = _format_utc(started_at.started_at) if started_at else "UNAVAILABLE"
     source = started_at.source.value if started_at else "UNAVAILABLE"
@@ -282,13 +328,33 @@ def _append_failure_summary(
         "- result: `FAIL_CLOSED`",
         f"- error: `{str(error).replace('`', '')}`",
         "",
+    ]
+    if diagnostics is not None:
+        lines.extend([
+            "### Build observations (not a valid candidate)",
+            f"- validation_state: `{diagnostics['validation_state']}`",
+            f"- report_start: `{diagnostics['report_window']['from']}`",
+            f"- report_end: `{diagnostics['report_window']['to']}`",
+            f"- retrieval.as_of: `{diagnostics['retrieval_as_of']}`",
+            f"- generated_at: `{diagnostics['generated_at']}`",
+            f"- raw_items: `{diagnostics['summary']['raw_items']}`",
+            f"- deduplicated_items: `{diagnostics['summary']['deduplicated_items']}`",
+            f"- HTTP logical page requests: `{diagnostics['logical_requests']}`",
+            f"- wall clock duration_seconds: `{diagnostics['duration_seconds']}`",
+            "",
+        ])
+        for channel, observed in diagnostics["coverage"].items():
+            lines.extend([f"### {channel}", ""])
+            lines.extend(f"- {field}: `{value}`" for field, value in observed.items())
+            lines.append("")
+    lines.extend([
         "### Isolation",
         "- Repository WRITE_ATTEMPTED: `NO`",
         "- V1: `NOT_TOUCHED`",
         "- Consumer: `NOT_TOUCHED`",
         "- Pages: `NOT_USED`",
         "",
-    ]
+    ])
     with path.open("a", encoding="utf-8") as handle:
         handle.write("\n".join(lines))
 
@@ -314,6 +380,13 @@ def main() -> int:
     if token:
         headers["Authorization"] = f"Bearer {token}"
     observation: StartedAtObservation | None = None
+    build: CandidateBuildResult | None = None
+
+    async def build_with_evidence(report_day: date) -> CandidateBuildResult:
+        nonlocal build
+        build = await build_live_candidate(report_day)
+        return build
+
     try:
         with httpx.Client(
             base_url="https://api.github.com",
@@ -331,16 +404,21 @@ def main() -> int:
             event_schedule=args.event_schedule,
             started_at=observation,
             summary_path=args.summary,
+            candidate_builder=build_with_evidence,
         )
     except Exception as exc:
+        diagnostics = _build_diagnostics(build) if build is not None else None
         if args.summary is not None:
             _append_failure_summary(
                 args.summary,
                 event_schedule=args.event_schedule,
                 started_at=observation,
                 error=exc,
+                diagnostics=diagnostics,
             )
         print(f"V2 scheduled shadow failed: {exc}", file=sys.stderr)
+        if diagnostics is not None:
+            print(json.dumps({"build_observations": diagnostics}), file=sys.stderr)
         return 1
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0
