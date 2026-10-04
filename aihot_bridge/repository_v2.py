@@ -122,6 +122,7 @@ def should_update_latest(
     accepted_candidate: Any,
     *,
     accepted_decision: CandidateDecision,
+    allow_partial: bool = False,
 ) -> bool:
     if accepted_decision not in {
         CandidateDecision.ACCEPT_NEW,
@@ -129,20 +130,20 @@ def should_update_latest(
         CandidateDecision.EQUIVALENT_BUT_FRESHER,
     }:
         return False
-    accepted = evaluate_candidate_completeness(accepted_candidate)
-    if accepted.state is not CandidateCompletenessState.VALID_COMPLETE:
+    accepted = evaluate_candidate_completeness(accepted_candidate, allow_partial=allow_partial)
+    if accepted.state is CandidateCompletenessState.INVALID:
         raise RepositoryV2Error(
             RepositoryV2ErrorReason.CANDIDATE_INCOMPLETE,
-            "accepted candidate is not VALID_COMPLETE",
+            "accepted candidate is invalid under the requested acceptance policy",
         )
     assert accepted.metadata is not None
     if existing_latest is None:
         return True
-    latest = evaluate_candidate_completeness(existing_latest)
-    if latest.state is not CandidateCompletenessState.VALID_COMPLETE:
+    latest = evaluate_candidate_completeness(existing_latest, allow_partial=True)
+    if latest.state is CandidateCompletenessState.INVALID:
         raise RepositoryV2Error(
             RepositoryV2ErrorReason.REPOSITORY_STATE_INVALID,
-            "v2/latest.json is malformed or not VALID_COMPLETE",
+            "v2/latest.json is malformed or not a trusted candidate",
         )
     assert latest.metadata is not None
     return accepted.metadata.target_report_date >= latest.metadata.target_report_date
@@ -153,14 +154,15 @@ def plan_repository_update(
     new_candidate: Any,
     existing_dated_candidate: Any | None,
     existing_latest_candidate: Any | None,
+    allow_partial: bool = False,
 ) -> RepositoryUpdatePlan:
-    comparison = compare_candidates(existing_dated_candidate, new_candidate)
+    comparison = compare_candidates(existing_dated_candidate, new_candidate, allow_partial=allow_partial)
     if comparison.reason is CandidateDecisionReason.EXISTING_CANDIDATE_INVALID:
         raise RepositoryV2Error(
             RepositoryV2ErrorReason.EXISTING_CANDIDATE_INVALID,
             "existing dated V2 candidate is malformed or incomplete",
         )
-    new_evaluation = evaluate_candidate_completeness(new_candidate)
+    new_evaluation = evaluate_candidate_completeness(new_candidate, allow_partial=allow_partial)
     metadata = new_evaluation.metadata
     _validate_latest_consistency(
         existing_dated_candidate=existing_dated_candidate,
@@ -179,13 +181,14 @@ def plan_repository_update(
             existing_latest_candidate,
             new_candidate,
             accepted_decision=comparison.decision,
+            allow_partial=allow_partial,
         )
     elif existing_latest_candidate is not None:
-        latest = evaluate_candidate_completeness(existing_latest_candidate)
-        if latest.state is not CandidateCompletenessState.VALID_COMPLETE:
+        latest = evaluate_candidate_completeness(existing_latest_candidate, allow_partial=True)
+        if latest.state is CandidateCompletenessState.INVALID:
             raise RepositoryV2Error(
                 RepositoryV2ErrorReason.REPOSITORY_STATE_INVALID,
-                "v2/latest.json is malformed or not VALID_COMPLETE",
+                "v2/latest.json is malformed or not a trusted candidate",
             )
     return RepositoryUpdatePlan(
         comparison=comparison,
@@ -205,20 +208,21 @@ def publish_v2_candidate(
     new_candidate: dict[str, Any],
     *,
     max_cas_attempts: int = MAX_CAS_ATTEMPTS,
+    allow_partial: bool = False,
 ) -> RepositoryPublishResult:
     if max_cas_attempts < 1:
         raise ValueError("max_cas_attempts must be at least 1")
-    new_evaluation = evaluate_candidate_completeness(new_candidate)
-    if new_evaluation.state is not CandidateCompletenessState.VALID_COMPLETE:
+    new_evaluation = evaluate_candidate_completeness(new_candidate, allow_partial=allow_partial)
+    if new_evaluation.state is CandidateCompletenessState.INVALID:
         raise RepositoryV2Error(
             RepositoryV2ErrorReason.CANDIDATE_INCOMPLETE,
-            "new candidate is not VALID_COMPLETE",
+            "new candidate is invalid under the requested acceptance policy",
         )
     assert new_evaluation.metadata is not None
     target_path = v2_candidate_path(new_evaluation.metadata.target_report_date)
-    expected_bytes = _candidate_bytes(new_candidate)
-    expected_artifact_hash = artifact_sha256(new_candidate)
-    expected_content_hash = semantic_candidate_hash(new_candidate)
+    expected_bytes = _candidate_bytes(new_candidate, allow_partial=allow_partial)
+    expected_artifact_hash = artifact_sha256(new_candidate, allow_partial=allow_partial)
+    expected_content_hash = semantic_candidate_hash(new_candidate, allow_partial=allow_partial)
     first_head: str | None = None
 
     for attempt in range(1, max_cas_attempts + 1):
@@ -250,6 +254,7 @@ def publish_v2_candidate(
                     if existing_latest_object is None
                     else existing_latest_object.payload
                 ),
+                allow_partial=allow_partial,
             )
             if plan.decision is CandidateDecision.CONFLICT:
                 reason = (
@@ -343,8 +348,8 @@ def publish_v2_candidate(
     )
 
 
-def _candidate_bytes(candidate: dict[str, Any]) -> bytes:
-    return validated_candidate_bytes(candidate)
+def _candidate_bytes(candidate: dict[str, Any], *, allow_partial: bool = False) -> bytes:
+    return validated_candidate_bytes(candidate, allow_partial=allow_partial)
 
 
 def _safe_candidate_path(candidate: Any) -> str | None:
@@ -370,11 +375,11 @@ def _validate_latest_consistency(
 ) -> None:
     if existing_latest_candidate is None:
         return
-    latest = evaluate_candidate_completeness(existing_latest_candidate)
-    if latest.state is not CandidateCompletenessState.VALID_COMPLETE:
+    latest = evaluate_candidate_completeness(existing_latest_candidate, allow_partial=True)
+    if latest.state is CandidateCompletenessState.INVALID:
         raise RepositoryV2Error(
             RepositoryV2ErrorReason.REPOSITORY_STATE_INVALID,
-            "v2/latest.json is malformed or not VALID_COMPLETE",
+            "v2/latest.json is malformed or not a trusted candidate",
         )
     assert latest.metadata is not None
     if target_metadata is None or (
@@ -386,14 +391,14 @@ def _validate_latest_consistency(
             RepositoryV2ErrorReason.REPOSITORY_STATE_INVALID,
             "v2/latest.json targets D but the matching dated candidate is missing",
         )
-    dated = evaluate_candidate_completeness(existing_dated_candidate)
-    if dated.state is not CandidateCompletenessState.VALID_COMPLETE:
+    dated = evaluate_candidate_completeness(existing_dated_candidate, allow_partial=True)
+    if dated.state is CandidateCompletenessState.INVALID:
         raise RepositoryV2Error(
             RepositoryV2ErrorReason.EXISTING_CANDIDATE_INVALID,
-            "matching dated candidate is malformed or not VALID_COMPLETE",
+            "matching dated candidate is malformed or not a trusted candidate",
         )
-    if artifact_sha256(existing_latest_candidate) != artifact_sha256(
-        existing_dated_candidate
+    if artifact_sha256(existing_latest_candidate, allow_partial=True) != artifact_sha256(
+        existing_dated_candidate, allow_partial=True,
     ):
         raise RepositoryV2Error(
             RepositoryV2ErrorReason.REPOSITORY_STATE_INVALID,
@@ -446,8 +451,8 @@ def _verify_existing_latest_invariant(
 ) -> None:
     if latest is None:
         return
-    latest_evaluation = evaluate_candidate_completeness(latest.payload)
-    if latest_evaluation.state is not CandidateCompletenessState.VALID_COMPLETE:
+    latest_evaluation = evaluate_candidate_completeness(latest.payload, allow_partial=True)
+    if latest_evaluation.state is CandidateCompletenessState.INVALID:
         return
     assert latest_evaluation.metadata is not None
     matching_path = v2_candidate_path(latest_evaluation.metadata.target_report_date)
@@ -518,8 +523,8 @@ def _verify_immutable_commit(
     assert observed_content is not None
     payload = _decode_candidate_bytes(observed_content, path="immutable candidate")
     if (
-        artifact_sha256(payload) != expected_artifact_hash
-        or semantic_candidate_hash(payload) != expected_content_hash
+        artifact_sha256(payload, allow_partial=True) != expected_artifact_hash
+        or semantic_candidate_hash(payload, allow_partial=True) != expected_content_hash
     ):
         raise RepositoryV2Error(
             RepositoryV2ErrorReason.REPOSITORY_READBACK_FAILED,
@@ -553,8 +558,8 @@ def _verify_final_branch(
     payload = _read_optional_candidate(adapter, tree, target_path)
     assert payload is not None
     if (
-        artifact_sha256(payload) != expected_artifact_hash
-        or semantic_candidate_hash(payload) != expected_content_hash
+        artifact_sha256(payload, allow_partial=True) != expected_artifact_hash
+        or semantic_candidate_hash(payload, allow_partial=True) != expected_content_hash
     ):
         raise RepositoryV2Error(
             RepositoryV2ErrorReason.REPOSITORY_READBACK_FAILED,

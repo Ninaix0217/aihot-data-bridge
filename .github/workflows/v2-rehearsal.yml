@@ -24,6 +24,11 @@ on:
         description: "Optional external-trigger source"
         required: false
         type: string
+      allow_partial:
+        description: "Explicitly accept disclosed unknown-publication gaps (never override COMPLETE)"
+        required: false
+        default: false
+        type: boolean
 
 concurrency:
   group: aihot-daily-producer
@@ -57,11 +62,17 @@ jobs:
           DISPATCH_MODE: ${{ inputs.mode }}
           REQUEST_ID: ${{ inputs.request_id }}
           TRIGGER_SOURCE: ${{ inputs.trigger_source }}
+          ALLOW_PARTIAL: ${{ inputs.allow_partial }}
         run: |
+          partial_args=()
+          if [ "${ALLOW_PARTIAL}" = "true" ]; then
+            partial_args+=(--allow-partial)
+          fi
           python -m aihot_bridge.rehearsal_v2 \
             --repository "${GITHUB_REPOSITORY}" \
             --report-date "${TARGET_REPORT_DATE}" \
             --mode "${DISPATCH_MODE}" \
             --request-id "${REQUEST_ID}" \
             --trigger-source "${TRIGGER_SOURCE}" \
-            --summary "${GITHUB_STEP_SUMMARY}"
+            --summary "${GITHUB_STEP_SUMMARY}" \
+            "${partial_args[@]}"

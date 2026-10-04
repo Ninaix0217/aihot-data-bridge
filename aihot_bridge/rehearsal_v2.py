@@ -14,7 +14,11 @@ from typing import Any, Mapping
 
 import httpx
 
-from .candidate_v2 import validate_candidate_v2, validated_candidate_bytes
+from .candidate_v2 import (
+    evaluate_candidate_completeness,
+    validate_candidate_v2,
+    validated_candidate_bytes,
+)
 from .candidate_versioning import artifact_sha256, semantic_candidate_hash
 from .github_repository_v2 import GitHubGitDataAdapter
 from .logical_date import resolve_workflow_dispatch
@@ -96,6 +100,7 @@ def run_rehearsal(
     request_id: str | None = None,
     trigger_source: str | None = None,
     summary_path: Path | None = None,
+    allow_partial: bool = False,
 ) -> dict[str, Any]:
     correlation_request_id = _optional_correlation(
         request_id,
@@ -114,10 +119,11 @@ def run_rehearsal(
         started_at=started_at,
     )
     build = asyncio.run(build_live_candidate(trigger.target_report_date))
-    metadata = validate_candidate_v2(build.payload)
-    candidate_bytes = validated_candidate_bytes(build.payload)
-    content_hash = semantic_candidate_hash(build.payload)
-    artifact_hash = artifact_sha256(build.payload)
+    metadata = validate_candidate_v2(build.payload, allow_partial=allow_partial)
+    candidate_bytes = validated_candidate_bytes(build.payload, allow_partial=allow_partial)
+    content_hash = semantic_candidate_hash(build.payload, allow_partial=allow_partial)
+    artifact_hash = artifact_sha256(build.payload, allow_partial=allow_partial)
+    attempted_state = evaluate_candidate_completeness(build.payload, allow_partial=allow_partial).state.value
 
     timeout = httpx.Timeout(30.0, connect=10.0)
     with httpx.Client(
@@ -131,7 +137,7 @@ def run_rehearsal(
     ) as client:
         adapter = GitHubGitDataAdapter(client, repository=repository)
         before = capture_repository_snapshot(adapter)
-        publication = publish_v2_candidate(adapter, build.payload)
+        publication = publish_v2_candidate(adapter, build.payload, allow_partial=allow_partial)
         after = capture_repository_snapshot(adapter)
         preserved, changed_paths = verify_v1_preservation(before, after)
         if not preserved:
@@ -159,12 +165,21 @@ def run_rehearsal(
             adapter.read_blob(dated.blob_sha),
             path=target_path,
         )
-        dated_metadata = validate_candidate_v2(dated_payload)
+        dated_metadata = validate_candidate_v2(dated_payload, allow_partial=True)
+        accepted_content_hash = semantic_candidate_hash(dated_payload, allow_partial=True)
+        accepted_artifact_hash = artifact_sha256(dated_payload, allow_partial=True)
+        comparison = publication.plan.comparison
+        expected_content_hash = (
+            content_hash if publication.plan.write_dated else comparison.existing_content_hash
+        )
+        expected_artifact_hash = (
+            artifact_hash if publication.plan.write_dated else comparison.existing_artifact_sha256
+        )
         if (
             dated_metadata.target_report_date != metadata.target_report_date
-            or semantic_candidate_hash(dated_payload) != content_hash
-            or artifact_sha256(dated_payload) != artifact_hash
-            or dated.sha256 != hashlib.sha256(candidate_bytes).hexdigest()
+            or accepted_content_hash != expected_content_hash
+            or accepted_artifact_hash != expected_artifact_hash
+            or dated.sha256 != accepted_artifact_hash
         ):
             raise RepositoryV2Error(
                 RepositoryV2ErrorReason.REPOSITORY_READBACK_FAILED,
@@ -175,14 +190,14 @@ def run_rehearsal(
         assert latest is not None
         latest_bytes = adapter.read_blob(latest.blob_sha)
         latest_payload = _candidate_payload(latest_bytes, path=V2_LATEST_PATH)
-        latest_metadata = validate_candidate_v2(latest_payload)
+        latest_metadata = validate_candidate_v2(latest_payload, allow_partial=True)
         if publication.plan.write_latest and latest_bytes != candidate_bytes:
             raise RepositoryV2Error(
                 RepositoryV2ErrorReason.REPOSITORY_READBACK_FAILED,
                 "final latest is not byte-identical to the accepted dated candidate",
             )
 
-    coverage = build.payload["coverage"]
+    coverage = dated_payload["coverage"]
     result = {
         "trigger_type": trigger.trigger_type.value,
         "identity_status": trigger.identity_status.value,
@@ -192,20 +207,28 @@ def run_rehearsal(
         "target_report_date": metadata.target_report_date.isoformat(),
         "report_start": metadata.report_start.isoformat(),
         "report_end": metadata.report_end.isoformat(),
-        "retrieval_as_of": metadata.retrieval_as_of.isoformat(),
-        "generated_at": metadata.generated_at.isoformat(),
+        "retrieval_as_of": dated_metadata.retrieval_as_of.isoformat(),
+        "generated_at": dated_metadata.generated_at.isoformat(),
         "coverage": {
             channel: {
                 "status": coverage[channel]["status"],
                 "pages": coverage[channel]["source_range"]["pages_fetched"],
                 "proof": coverage[channel]["source_range"]["proof_basis"],
                 "oldest": coverage[channel]["source_range"]["oldest_published_at"],
+                "invalid_published_at_items": coverage[channel]["source_range"]["invalid_published_at_items"],
             }
             for channel in ("selected", "all", "paper")
         },
-        "candidate_state": "VALID_COMPLETE",
-        "content_hash": content_hash,
-        "artifact_sha256": artifact_hash,
+        "candidate_state": evaluate_candidate_completeness(dated_payload, allow_partial=True).state.value,
+        "content_hash": accepted_content_hash,
+        "artifact_sha256": accepted_artifact_hash,
+        "summary": dated_payload["summary"],
+        "attempted_candidate": {
+            "state": attempted_state,
+            "content_hash": content_hash,
+            "artifact_sha256": artifact_hash,
+            "retrieval_as_of": metadata.retrieval_as_of.isoformat(),
+        },
         "logical_requests": build.logical_requests,
         "duration_seconds": round(build.duration_seconds, 3),
         "repository": {
@@ -304,12 +327,15 @@ def _append_summary(path: Path, result: Mapping[str, Any]) -> None:
                 f"- pages: `{value['pages']}`",
                 f"- proof: `{value['proof']}`",
                 f"- oldest: `{value['oldest']}`",
+                f"- invalid_published_at_items: `{value.get('invalid_published_at_items', 0)}`",
                 "",
             ]
         )
     lines.extend(
         [
             f"- candidate_state: `{result['candidate_state']}`",
+            f"- raw_items: `{result.get('summary', {}).get('raw_items', 'NOT_RECORDED')}`",
+            f"- deduplicated_items: `{result.get('summary', {}).get('deduplicated_items', 'NOT_RECORDED')}`",
             f"- CONTENT_HASH: `{result['content_hash']}`",
             f"- ARTIFACT_SHA256: `{result['artifact_sha256']}`",
             "",
@@ -335,6 +361,10 @@ def _append_summary(path: Path, result: Mapping[str, Any]) -> None:
             "",
         ]
     )
+    if "attempted_candidate" in result:
+        lines.extend(["### Attempted candidate (may have been kept out)", ""])
+        lines.extend(f"- {key}: `{value}`" for key, value in result["attempted_candidate"].items())
+        lines.append("")
     with path.open("a", encoding="utf-8") as handle:
         handle.write("\n".join(lines))
 
@@ -347,6 +377,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--request-id")
     parser.add_argument("--trigger-source")
     parser.add_argument("--summary", type=Path)
+    parser.add_argument(
+        "--allow-partial", action="store_true",
+        help="Explicitly accept disclosed unknown-publication gaps; never override COMPLETE",
+    )
     return parser.parse_args()
 
 
@@ -365,6 +399,7 @@ def main() -> int:
             request_id=args.request_id,
             trigger_source=args.trigger_source,
             summary_path=args.summary,
+            allow_partial=args.allow_partial,
         )
     except Exception as exc:
         if args.summary is not None:

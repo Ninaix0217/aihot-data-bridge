@@ -36,6 +36,9 @@ class CandidateDecisionReason(str, Enum):
     SAME_AS_OF_CONFLICT = "SAME_AS_OF_CONFLICT"
     EQUIVALENT_CONTENT_NEWER = "EQUIVALENT_CONTENT_NEWER"
     NEWER_COMPLETE_CANDIDATE = "NEWER_COMPLETE_CANDIDATE"
+    NEWER_PARTIAL_CANDIDATE = "NEWER_PARTIAL_CANDIDATE"
+    QUALITY_REGRESSION = "QUALITY_REGRESSION"
+    QUALITY_UPGRADE = "QUALITY_UPGRADE"
     CANDIDATE_CONTRACT_MISMATCH = "CANDIDATE_CONTRACT_MISMATCH"
 
 
@@ -65,25 +68,32 @@ def candidate_contract_compatible(old: Any, new: Any) -> bool:
     return _contract_projection(old) == _contract_projection(new)
 
 
-def semantic_candidate_hash(candidate: Any) -> str:
+def semantic_candidate_hash(candidate: Any, *, allow_partial: bool = False) -> str:
     """Hash business semantics while excluding observation-time noise."""
-    validate_candidate_v2(candidate)
+    validate_candidate_v2(candidate, allow_partial=allow_partial)
     projection = _semantic_projection(candidate)
     return hashlib.sha256(_canonical_json(projection)).hexdigest()
 
 
-def artifact_sha256(candidate: Any) -> str:
+def artifact_sha256(candidate: Any, *, allow_partial: bool = False) -> str:
     """Hash the complete deterministic V2 JSON artifact bytes."""
-    return hashlib.sha256(validated_candidate_bytes(candidate)).hexdigest()
+    return hashlib.sha256(
+        validated_candidate_bytes(candidate, allow_partial=allow_partial)
+    ).hexdigest()
 
 
-def compare_candidates(existing: Any | None, new: Any) -> CandidateComparison:
+def compare_candidates(
+    existing: Any | None, new: Any, *, allow_partial: bool = False,
+) -> CandidateComparison:
+    # Reading a disclosed partial is safe even when the new attempt is strict:
+    # otherwise a later COMPLETE attempt could not upgrade it.
     existing_evaluation = (
-        None if existing is None else evaluate_candidate_completeness(existing)
+        None if existing is None
+        else evaluate_candidate_completeness(existing, allow_partial=True)
     )
     if (
         existing_evaluation is not None
-        and existing_evaluation.state is not CandidateCompletenessState.VALID_COMPLETE
+        and existing_evaluation.state is CandidateCompletenessState.INVALID
     ):
         return _comparison(
             CandidateDecision.CONFLICT,
@@ -92,8 +102,8 @@ def compare_candidates(existing: Any | None, new: Any) -> CandidateComparison:
             new_metadata=None,
         )
 
-    new_evaluation = evaluate_candidate_completeness(new)
-    if new_evaluation.state is not CandidateCompletenessState.VALID_COMPLETE:
+    new_evaluation = evaluate_candidate_completeness(new, allow_partial=allow_partial)
+    if new_evaluation.state is CandidateCompletenessState.INVALID:
         if existing is not None and not candidate_contract_compatible(existing, new):
             return _comparison(
                 CandidateDecision.CONFLICT,
@@ -114,8 +124,8 @@ def compare_candidates(existing: Any | None, new: Any) -> CandidateComparison:
 
     new_metadata = new_evaluation.metadata
     assert new_metadata is not None
-    new_content_hash = semantic_candidate_hash(new)
-    new_artifact_hash = artifact_sha256(new)
+    new_content_hash = semantic_candidate_hash(new, allow_partial=allow_partial)
+    new_artifact_hash = artifact_sha256(new, allow_partial=allow_partial)
     if existing is None:
         return _comparison(
             CandidateDecision.ACCEPT_NEW,
@@ -136,8 +146,8 @@ def compare_candidates(existing: Any | None, new: Any) -> CandidateComparison:
             new_metadata=new_metadata,
         )
 
-    existing_content_hash = semantic_candidate_hash(existing)
-    existing_artifact_hash = artifact_sha256(existing)
+    existing_content_hash = semantic_candidate_hash(existing, allow_partial=True)
+    existing_artifact_hash = artifact_sha256(existing, allow_partial=True)
     if new_metadata.retrieval_as_of < existing_metadata.retrieval_as_of:
         decision = CandidateDecision.KEEP_EXISTING
         reason = CandidateDecisionReason.STALE_ATTEMPT
@@ -148,12 +158,28 @@ def compare_candidates(existing: Any | None, new: Any) -> CandidateComparison:
         else:
             decision = CandidateDecision.CONFLICT
             reason = CandidateDecisionReason.SAME_AS_OF_CONFLICT
+    elif (
+        existing_evaluation.state is CandidateCompletenessState.VALID_COMPLETE
+        and new_evaluation.state is CandidateCompletenessState.VALID_PARTIAL
+    ):
+        decision = CandidateDecision.KEEP_EXISTING
+        reason = CandidateDecisionReason.QUALITY_REGRESSION
+    elif (
+        existing_evaluation.state is CandidateCompletenessState.VALID_PARTIAL
+        and new_evaluation.state is CandidateCompletenessState.VALID_COMPLETE
+    ):
+        decision = CandidateDecision.REPLACE_WITH_NEW
+        reason = CandidateDecisionReason.QUALITY_UPGRADE
     elif new_content_hash == existing_content_hash:
         decision = CandidateDecision.EQUIVALENT_BUT_FRESHER
         reason = CandidateDecisionReason.EQUIVALENT_CONTENT_NEWER
     else:
         decision = CandidateDecision.REPLACE_WITH_NEW
-        reason = CandidateDecisionReason.NEWER_COMPLETE_CANDIDATE
+        reason = (
+            CandidateDecisionReason.NEWER_COMPLETE_CANDIDATE
+            if new_evaluation.state is CandidateCompletenessState.VALID_COMPLETE
+            else CandidateDecisionReason.NEWER_PARTIAL_CANDIDATE
+        )
 
     return _comparison(
         decision,
@@ -246,6 +272,9 @@ def _semantic_projection(candidate: dict[str, Any]) -> dict[str, Any]:
             "items": entry.get("items"),
             "source_range_state": entry["source_range"].get("state"),
         }
+        invalid_times = entry["source_range"].get("invalid_published_at_items", 0)
+        if invalid_times:
+            stable_coverage[channel]["invalid_published_at_items"] = invalid_times
     items = []
     for value in candidate["items"]:
         item = deepcopy(value)

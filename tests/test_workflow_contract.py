@@ -142,13 +142,10 @@ def test_v2_shadow_runs_build_only_entrypoint_without_publication_commands():
         assert forbidden not in rendered
 
 
-def test_phase_e_does_not_change_v1_or_dispatch_writer_workflows():
+def test_formal_v1_workflow_remains_byte_identical():
     expected = {
         "snapshot-pages.yml": (
             "fa8049a2ccdc28e297b6e64e0f7f8d43d7d03c5ddb20574fb03ce4382560b874"
-        ),
-        "v2-rehearsal.yml": (
-            "0191a0852017fe01a7fda9485b03b7d0aa80617c5c41e31327058e46f4811c19"
         ),
     }
 
@@ -156,6 +153,19 @@ def test_phase_e_does_not_change_v1_or_dispatch_writer_workflows():
         content = (ROOT / ".github" / "workflows" / filename).read_bytes()
         content = content.replace(b"\r\n", b"\n")
         assert hashlib.sha256(content).hexdigest() == expected_sha256
+
+
+def test_partial_rehearsal_is_optional_default_strict_and_shell_gated():
+    workflow = load_workflow("v2-rehearsal.yml")
+    option = workflow["on"]["workflow_dispatch"]["inputs"]["allow_partial"]
+    assert option["required"] == "false"
+    assert option["default"] == "false"
+    assert option["type"] == "boolean"
+    step = workflow["jobs"]["rehearsal"]["steps"][-1]
+    assert step["env"]["ALLOW_PARTIAL"] == "${{ inputs.allow_partial }}"
+    assert 'if [ "${ALLOW_PARTIAL}" = "true" ]; then' in step["run"]
+    assert "partial_args+=(--allow-partial)" in step["run"]
+    assert '"${partial_args[@]}"' in step["run"]
 
 
 def test_external_relay_is_push_only_for_control_branch_and_path():

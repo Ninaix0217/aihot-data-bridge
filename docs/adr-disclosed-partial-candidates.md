@@ -32,8 +32,28 @@ HTTP failure, RSS fallback, query/order mismatch, repeated cursor and safety-cap
 termination do not become acceptable merely because partial mode is selected.
 
 Existing complete candidate bytes are identical with or without the opt-in.
-Repository dominance/publication, scheduled shadow and workflows retain their
-strict default: PARTIAL cannot replace an existing COMPLETE candidate.
+Repository dominance/publication and the dispatch-only V2 rehearsal support the
+same explicit opt-in. The workflow input `allow_partial` is optional and defaults
+to false. Existing manual and relay dispatches therefore remain strict. Scheduled
+shadow, native schedules, the control branch and formal consumers are unchanged.
+
+## Replacement and readback
+
+Existing trusted PARTIAL candidates can be read without opting in to a new partial
+attempt, so a strict later COMPLETE attempt can upgrade them. For the same D and
+compatible contract, older attempts remain stale and same-as-of semantic changes
+remain conflicts. For later attempts, COMPLETE cannot regress to PARTIAL; PARTIAL
+can upgrade to COMPLETE. Within the same quality tier, later observations follow
+the existing temporal version rule, without item-count or superset requirements.
+
+Unknown-publication counts enter semantic equality when nonzero; page packing
+does not. Existing COMPLETE semantic hashes and artifact bytes are unchanged.
+Non-force CAS, immutable/final readback and V1 path preservation remain mandatory.
+
+Rehearsal now distinguishes the attempted artifact from the accepted repository
+artifact. KEEP/NOOP verifies and summarizes the existing accepted version rather
+than wrongly requiring its bytes to equal the new attempt. Both sets of hashes
+remain observable. Repository publication is still rehearsal, not consumer E2E.
 
 ## Observability
 
@@ -67,9 +87,9 @@ This is current live evidence, not proof of every historical run's failure cause
 
 ## Remaining integration work
 
-- Define an explicit repository acceptance policy for PARTIAL without permitting
-  a worse candidate to replace COMPLETE, and retain all existing non-force/CAS
-  and readback safeguards. Existing v2 publication remains COMPLETE-only.
+- Verify opt-in PARTIAL publication through a temporary branch CI and a real V2
+  repository rehearsal. This does not integrate the branch or enable partial
+  consumer behavior by itself.
 - Version/identify the consumer acceptance policy before enabling PARTIAL
   consumption; existing consumers may correctly reject these artifacts.
 - Decide the actual daily readiness deadline and report freeze/version policy.
