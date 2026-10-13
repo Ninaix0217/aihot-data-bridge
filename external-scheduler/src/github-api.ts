@@ -2,6 +2,7 @@ import { SchedulerError, SchedulerErrorReason } from "./types";
 
 export const GITHUB_API_ROOT = "https://api.github.com";
 export const GITHUB_API_VERSION = "2026-03-10";
+export const GITHUB_USER_AGENT = "aihot-v2-independent-recovery-scheduler/1.0";
 export const MAX_TRANSPORT_ATTEMPTS = 3;
 const REQUEST_TIMEOUT_MS = 10_000;
 
@@ -29,6 +30,7 @@ export async function githubRequest(
           Authorization: `Bearer ${options.token}`,
           "X-GitHub-Api-Version": GITHUB_API_VERSION,
           "Content-Type": "application/json",
+          "User-Agent": GITHUB_USER_AGENT,
         },
         signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
       };
