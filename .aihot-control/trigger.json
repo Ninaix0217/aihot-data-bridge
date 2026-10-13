@@ -1,9 +1,9 @@
 {
   "schema_version": "aihot-external-trigger/v1",
   "enabled": true,
-  "target_report_date": "2026-09-10",
+  "target_report_date": "2026-10-13",
   "mode": "RECOVERY",
-  "request_id": "2026-09-10/c86458d8-93d9-44bd-91c0-75ac55080706",
-  "requested_at": "2026-09-10T14:55:10.188727Z",
-  "source": "external-scheduler"
+  "request_id": "2026-10-13/cf-1791852600000",
+  "requested_at": "2026-10-13T00:50:00.547Z",
+  "source": "cloudflare-worker"
 }
