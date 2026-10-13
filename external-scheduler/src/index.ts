@@ -5,6 +5,7 @@ import {
 } from "./github-app";
 import { GitHubControlClient } from "./github-control";
 import {
+  admitScheduledCron,
   buildExternalTrigger,
   resolveProbeIdentity,
   scheduleContext,
@@ -23,25 +24,12 @@ export async function runScheduledRecovery(
   dependencies: RuntimeDependencies = runtimeDependencies(),
 ): Promise<Record<string, unknown>> {
   const started = dependencies.now();
-  const context = scheduleContext(
-    controller.scheduledTime,
-    started,
-    resolveProbeIdentity(
-      env.DEPLOYMENT_MODE,
-      env.PROBE_TARGET_REPORT_DATE,
-      env.PROBE_REQUEST_ID,
-    ),
-  );
-  const trigger = buildExternalTrigger(context);
   const observation: Record<string, unknown> = {
     phase: "G1",
     scheduler: "cloudflare",
     cron: controller.cron,
-    scheduled_at: context.scheduledAt,
-    started_at: context.startedAt,
-    schedule_lag_seconds: context.scheduleLagSeconds,
-    target_report_date: context.targetReportDate,
-    request_id: context.requestId,
+    scheduled_time: controller.scheduledTime,
+    started_at: started.toISOString(),
     github_auth: {
       app_jwt_created: "NO",
       installation_token_created: "NO",
@@ -51,6 +39,23 @@ export async function runScheduledRecovery(
   };
 
   try {
+    admitScheduledCron(controller.cron, env);
+    const context = scheduleContext(
+      controller.scheduledTime,
+      started,
+      resolveProbeIdentity(
+        env.DEPLOYMENT_MODE,
+        env.PROBE_TARGET_REPORT_DATE,
+        env.PROBE_REQUEST_ID,
+      ),
+    );
+    const trigger = buildExternalTrigger(context);
+    Object.assign(observation, {
+      scheduled_at: context.scheduledAt,
+      schedule_lag_seconds: context.scheduleLagSeconds,
+      target_report_date: context.targetReportDate,
+      request_id: context.requestId,
+    });
     const privateKey = normalizePrivateKey(env.GITHUB_APP_PRIVATE_KEY);
     const auth = observation.github_auth as Record<string, unknown>;
     const jwt = await createGitHubAppJwt(

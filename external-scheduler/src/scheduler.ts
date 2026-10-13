@@ -2,6 +2,7 @@ import {
   type ExternalTriggerPayload,
   type ProbeIdentity,
   type ScheduleContext,
+  type SchedulerEnv,
   SchedulerError,
   SchedulerErrorReason,
 } from "./types";
@@ -9,6 +10,36 @@ import {
 const BEIJING_TIME_ZONE = "Asia/Shanghai";
 const REPORT_DATE = /^\d{4}-\d{2}-\d{2}$/;
 const REQUEST_ID = /^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$/;
+export const PRODUCTION_CRON = "25 5 * * *";
+
+export function admitScheduledCron(
+  cron: string,
+  env: Pick<SchedulerEnv, "DEPLOYMENT_MODE" | "PROBE_ALLOWED_CRON" | "PROBE_TARGET_REPORT_DATE" | "PROBE_REQUEST_ID">,
+): void {
+  const mode = env.DEPLOYMENT_MODE ?? "production";
+  if (mode !== "production" && mode !== "probe") {
+    throw new SchedulerError(SchedulerErrorReason.INVALID_CONFIGURATION, "unknown deployment mode");
+  }
+  let allowedCron: string;
+  if (mode === "production") {
+    if (
+      env.PROBE_ALLOWED_CRON !== undefined ||
+      env.PROBE_TARGET_REPORT_DATE !== undefined ||
+      env.PROBE_REQUEST_ID !== undefined
+    ) {
+      throw new SchedulerError(SchedulerErrorReason.INVALID_CONFIGURATION, "production mode forbids probe configuration");
+    }
+    allowedCron = PRODUCTION_CRON;
+  } else {
+    if (typeof env.PROBE_ALLOWED_CRON !== "string" || env.PROBE_ALLOWED_CRON.trim() === "") {
+      throw new SchedulerError(SchedulerErrorReason.INVALID_CONFIGURATION, "probe mode requires an explicit allowed cron");
+    }
+    allowedCron = env.PROBE_ALLOWED_CRON;
+  }
+  if (cron !== allowedCron) {
+    throw new SchedulerError(SchedulerErrorReason.UNEXPECTED_CRON, "scheduled cron does not match the admitted deployment cron");
+  }
+}
 
 export function beijingDateForScheduledTime(scheduledTime: number): string {
   const scheduled = checkedDate(scheduledTime);

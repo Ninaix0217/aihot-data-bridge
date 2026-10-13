@@ -99,6 +99,7 @@ describe("scheduler orchestration", () => {
       DEPLOYMENT_MODE: "probe",
       PROBE_TARGET_REPORT_DATE: "2026-09-10",
       PROBE_REQUEST_ID: probeRequestId,
+      PROBE_ALLOWED_CRON: "*/5 * * * *",
     };
 
     const first = await runScheduledRecovery(

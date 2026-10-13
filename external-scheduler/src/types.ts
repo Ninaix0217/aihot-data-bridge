@@ -5,6 +5,7 @@ export interface SchedulerEnv {
   DEPLOYMENT_MODE?: "production" | "probe";
   PROBE_TARGET_REPORT_DATE?: string;
   PROBE_REQUEST_ID?: string;
+  PROBE_ALLOWED_CRON?: string;
 }
 
 export interface RuntimeDependencies {
@@ -56,6 +57,7 @@ export type ControlWriteResult =
     };
 
 export enum SchedulerErrorReason {
+  UNEXPECTED_CRON = "UNEXPECTED_CRON",
   INVALID_SCHEDULED_TIME = "INVALID_SCHEDULED_TIME",
   INVALID_CONFIGURATION = "INVALID_CONFIGURATION",
   GITHUB_APP_AUTH_FAILED = "GITHUB_APP_AUTH_FAILED",

@@ -53,9 +53,14 @@ installation token. Installation tokens are freshly requested for each
 invocation and restricted to this repository with `contents: write`.
 
 Probe deployments must set `DEPLOYMENT_MODE=probe`, an explicit
-`PROBE_TARGET_REPORT_DATE`, and one safe `PROBE_REQUEST_ID` for the entire probe
+`PROBE_TARGET_REPORT_DATE`, an explicit `PROBE_ALLOWED_CRON`, and one safe
+`PROBE_REQUEST_ID` for the entire probe
 window. Every nominal occurrence of the temporary cron then uses that same
 request ID, so only the first invocation can create a control commit and later
-occurrences become `NOOP_DUPLICATE`. Production mode rejects either probe field.
+occurrences become `NOOP_DUPLICATE`. Probe events must exactly match
+`PROBE_ALLOWED_CRON`. Production mode rejects all three probe fields and only
+admits the exact cron `25 5 * * *`. A different cron fails with `UNEXPECTED_CRON`
+before date/request identity, GitHub JWT signing, token exchange, or control access.
+This admission rule does not enable a Cron Trigger; committed triggers remain empty.
 A temporary probe cron must be removed after evidence is collected; recurring
 recovery is not part of Phase G1.
