@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-10-15T09:27:53.088751Z",
+  "generated_at": "2026-10-15T09:47:03.933917Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-10-14T03:27:46.818527Z",
-    "to": "2026-10-15T09:27:46.818527Z"
+    "from": "2026-10-14T03:46:51.406078Z",
+    "to": "2026-10-15T09:46:51.406078Z"
   },
   "coverage": {
     "selected": {
@@ -17,7 +17,7 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 419,
+      "items": 422,
       "error": null
     },
     "paper": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 478,
-    "deduplicated_items": 425
+    "raw_items": 481,
+    "deduplicated_items": 428
   },
   "items": [
     {
@@ -296,10 +296,11 @@
           "url": "https://aihot.news/items/v5sbitu4hw1bozz0nlopcl3t8"
         },
         "rank": 5,
-        "latest_at": "2026-10-14T23:39:08.393Z",
-        "source_count": 2,
+        "latest_at": "2026-10-15T09:11:28.000Z",
+        "source_count": 3,
         "signal_count": 15,
         "source_names": [
+          "X：Rohan Paul (@rohanpaul_ai)",
           "IT之家·人工智能",
           "The Verge：AI（RSS）"
         ],
@@ -616,6 +617,58 @@
       }
     },
     {
+      "id": "vjh5imzogddmjxk4rhib5akrt",
+      "item_type": "item",
+      "category": "industry",
+      "title": "OpenAI 工程师 Abdulrahman Alfozan 因会议室窃听装置被美国司法部起诉",
+      "description": "35 岁的 OpenAI 工程师 Abdulrahman Alfozan 因高管会议室隐藏录音装置被美国司法部起诉。据 FT 报道的解封文件，他和妻子及另一亲属持有 10 月 12 日（被捕 3 天后）飞往沙特阿拉伯的单程机票，检察官以有潜逃手段和动机为由，于 10 月 8 日申请密封起诉书。",
+      "original_url": "https://x.com/rohanpaul_ai/status/2110664946430435519",
+      "aihot_url": "https://aihot.news/items/vjh5imzogddmjxk4rhib5akrt",
+      "published_at": "2026-10-15T09:31:52.000Z",
+      "collected_at": "2026-10-15T09:39:28.638Z",
+      "source": {
+        "name": "X：Rohan Paul (@rohanpaul_ai)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "This is Abdulrahman Alfozan, the 35-year-old OpenAI engineer now charged by the US Justice Department over a hidden recording device in a...",
+        "score": 71,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/vjh5imzogddmjxk4rhib5akrt"
+        }
+      }
+    },
+    {
+      "id": "sribonx210h1b1skxvyeh0l4l",
+      "item_type": "item",
+      "category": "industry",
+      "title": "DeepSeek 就 10 月 15 日 API 故障致歉并全额补偿 7 日消耗金额",
+      "description": "DeepSeek 说明北京时间 10 月 15 日 8:11 至 13:04 期间 API 服务因系统故障无法正常使用，已启动服务稳定性排查并剥离单点依赖。补偿方面，将按账号 10.8-10.14 的消耗金额以赠金形式全额返还，赠金自动到账，API 计费先从赠金账户扣除。",
+      "original_url": "https://x.com/tianyi/status/2110663080246132855",
+      "aihot_url": "https://aihot.news/items/sribonx210h1b1skxvyeh0l4l",
+      "published_at": "2026-10-15T09:24:27.000Z",
+      "collected_at": "2026-10-15T09:41:27.756Z",
+      "source": {
+        "name": "X：Tianyi Cui（@tianyi）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Between 8:11 and 13:04 (Beijing Time) on October 15, 2026, DeepSeek API service system experienced a failure that prevented the API servi...",
+        "score": 60,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/sribonx210h1b1skxvyeh0l4l"
+        }
+      }
+    },
+    {
       "id": "p11a5wescgr1igcm73x01lc1z",
       "item_type": "item",
       "category": "ai-models",
@@ -642,6 +695,58 @@
       }
     },
     {
+      "id": "msude2fq8mt2rsicw5wqnwx4h",
+      "item_type": "item",
+      "category": "industry",
+      "title": "美国八个州分别在州法院起诉 OpenAI，指控 ChatGPT 对儿童不安全",
+      "description": "据 Reuters，Iowa、Kansas、Nebraska、West Virginia、Arkansas、Arizona、Idaho 和 Montana 八个州分别向州法院起诉 OpenAI，指控 ChatGPT 对儿童不安全且公司误导家长，涉及消费者保护违规和危害居民健康的公共妨害。诉讼直指产品设计，称 ChatGPT 被设计得讨人喜欢、让人信任，进而强化妄想、鼓励危险行为并协助策划暴力。",
+      "original_url": "https://x.com/rohanpaul_ai/status/2110659816079413664",
+      "aihot_url": "https://aihot.news/items/msude2fq8mt2rsicw5wqnwx4h",
+      "published_at": "2026-10-15T09:11:28.000Z",
+      "collected_at": "2026-10-15T09:39:28.645Z",
+      "source": {
+        "name": "X：Rohan Paul (@rohanpaul_ai)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Reuters: Eight states have sued OpenAI separately in their own courts, alleging ChatGPT is unsafe for children and that the company misle...",
+        "score": 72,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/msude2fq8mt2rsicw5wqnwx4h"
+        }
+      }
+    },
+    {
+      "id": "l58w3m1mazzcq35n5r4n5uuey",
+      "item_type": "item",
+      "category": "industry",
+      "title": "美国银行二季度聘用 1000 名外包人员修复 Anthropic Mythos 等 AI 模型发现的软件漏洞",
+      "description": "据 CNBC 报道，美国银行 CEO 莫伊尼汉透露，该行二季度聘用 1000 名外包人员，与 3000 名内部员工协作修复 Anthropic Mythos 等前沿 AI 模型发现的软件漏洞。三季度在漏洞修复和反洗钱合规上的支出超过数亿美元；该行目前约有 130 个内部 AI 项目，预计成本节约从今年 3 亿美元增至明年 7 亿美元。",
+      "original_url": "https://www.ithome.com/1/013/488.htm",
+      "aihot_url": "https://aihot.news/items/l58w3m1mazzcq35n5r4n5uuey",
+      "published_at": "2026-10-15T09:10:53.457Z",
+      "collected_at": "2026-10-15T09:32:26.619Z",
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "美国银行聘请 1000 名外包人员，修复 Mythos 等 AI 模型发现的软件漏洞",
+        "score": 60,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/l58w3m1mazzcq35n5r4n5uuey"
+        }
+      }
+    },
+    {
       "id": "fgdmgch9sewtz2ryf8jhegaba",
       "item_type": "item",
       "category": "ai-models",
@@ -664,6 +769,31 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/fgdmgch9sewtz2ryf8jhegaba"
+        }
+      }
+    },
+    {
+      "id": "q8r14gh9ji7c7gjdipf6x9p41",
+      "item_type": "item",
+      "category": "industry",
+      "title": "Anthropic 在新加坡设立办事处，与新加坡政府达成合作",
+      "description": "Anthropic 宣布在新加坡设立办事处，并与新加坡数字发展及新闻部签署谅解备忘录，合作方包括新加坡政府科技局、Grab 和星展银行。双方将合作评估 AI 安全、网络安全与大模型安全，推动负责任使用 AI。据 Anthropic 最新《经济指数》，按人口规模计算的 Claude.ai 使用情况排名中，新加坡在 121 个国家/地区中位列第二，实际使用水平接近人口规模预测值的 6 倍。",
+      "original_url": "https://www.ithome.com/1/013/479.htm",
+      "aihot_url": "https://aihot.news/items/q8r14gh9ji7c7gjdipf6x9p41",
+      "published_at": "2026-10-15T08:55:29.610Z",
+      "collected_at": "2026-10-15T09:32:26.626Z",
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "score": 47,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/q8r14gh9ji7c7gjdipf6x9p41"
         }
       }
     },
@@ -1031,10 +1161,11 @@
           "url": "https://aihot.news/items/vo248l7ock6kltan370y7gmcd"
         },
         "rank": 4,
-        "latest_at": "2026-10-15T07:05:20.000Z",
-        "source_count": 2,
+        "latest_at": "2026-10-15T09:24:27.000Z",
+        "source_count": 3,
         "signal_count": 15,
         "source_names": [
+          "X：Tianyi Cui（@tianyi）",
           "X：邵猛 (@shao__meng)",
           "IT之家·人工智能"
         ],
@@ -10962,58 +11093,6 @@
       }
     },
     {
-      "id": "fthfe0qt0cqujchyavi2w0aun",
-      "item_type": "item",
-      "category": "opinion",
-      "title": "Chollet：科学理想是百万AI辅助科学家",
-      "description": "科学的理想结果不是几个实验室用专有模型和数百万美元去攻克奖杯式难题，而是拥有数百万由AI辅助的人类科学家，他们追随自己的好奇心，变得雄心勃勃得多",
-      "original_url": "https://x.com/fchollet/status/2110214967228236242",
-      "aihot_url": "https://aihot.news/items/fthfe0qt0cqujchyavi2w0aun",
-      "published_at": "2026-10-14T03:43:48.000Z",
-      "collected_at": "2026-10-14T03:47:44.396Z",
-      "source": {
-        "name": "X：Francois Chollet (@fchollet)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "The ideal outcome for science isn't a couple of labs using proprietary models and millions of dollars to crack trophy problems, it's to h...",
-        "score": 21,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/fthfe0qt0cqujchyavi2w0aun"
-        }
-      }
-    },
-    {
-      "id": "itl0lv49nrs9bu19ekmkmka6x",
-      "item_type": "item",
-      "category": "ai-models",
-      "title": "Qwen3.8-Flash-Next 推理达 685 tokens/s",
-      "description": "祝贺 @lightseekorg 取得令人瞩目的 TokenSpeed 成果！🚀 很高兴看到 Qwen3.8-Flash-Next 在 Nvida GPU 上达到每用户 685 output tokens/s。期待社区进一步释放 Qwen 的推理潜力！",
-      "original_url": "https://x.com/Alibaba_Qwen/status/2110214931559899630",
-      "aihot_url": "https://aihot.news/items/itl0lv49nrs9bu19ekmkmka6x",
-      "published_at": "2026-10-14T03:43:40.000Z",
-      "collected_at": "2026-10-14T03:45:44.521Z",
-      "source": {
-        "name": "X：通义千问 / Qwen (@Alibaba_Qwen)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Congrats to @lightseekorg on the impressive TokenSpeed results! 🚀 Great to see Qwen3.8-Flash-Next reaching 685 output tokens/s per user ...",
-        "score": 36,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/itl0lv49nrs9bu19ekmkmka6x"
-        }
-      }
-    },
-    {
       "id": "smxxtw5ca2c9jscojk4ppe5hf",
       "item_type": "hot_topic",
       "category": null,
@@ -11065,7 +11144,7 @@
       ],
       "metadata": {
         "rank": 2,
-        "latest_at": "2026-10-15T08:45:21.000Z",
+        "latest_at": "2026-10-15T09:31:52.000Z",
         "source_count": 6,
         "signal_count": 67,
         "source_names": [
@@ -11132,7 +11211,7 @@
         "rank": 7,
         "latest_at": "2026-10-14T23:46:15.000Z",
         "source_count": 3,
-        "signal_count": 22,
+        "signal_count": 21,
         "source_names": [
           "X：AI at Meta (@AIatMeta)",
           "X：Arena (@arena)",
