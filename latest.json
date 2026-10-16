@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-10-16T09:20:04.292577Z",
+  "generated_at": "2026-10-16T09:39:47.049345Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-10-15T03:19:53.009200Z",
-    "to": "2026-10-16T09:19:53.009200Z"
+    "from": "2026-10-15T03:39:40.202781Z",
+    "to": "2026-10-16T09:39:40.202781Z"
   },
   "coverage": {
     "selected": {
@@ -17,13 +17,13 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 530,
+      "items": 527,
       "error": null
     },
     "paper": {
       "status": "ok",
       "source": "api",
-      "items": 23,
+      "items": 22,
       "error": null
     },
     "hot_topics": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 594,
-    "deduplicated_items": 536
+    "raw_items": 590,
+    "deduplicated_items": 533
   },
   "items": [
     {
@@ -661,10 +661,10 @@
           "name": "AIHOT",
           "url": "https://aihot.news/items/l9jgzg24ei3a7m8xu1xfhy9n7"
         },
-        "rank": 4,
+        "rank": 3,
         "latest_at": "2026-10-15T19:53:50.000Z",
         "source_count": 20,
-        "signal_count": 8,
+        "signal_count": 9,
         "source_names": [
           "MarkTechPost（RSS）",
           "X：opencode (@opencode)",
@@ -845,7 +845,7 @@
           "name": "AIHOT",
           "url": "https://aihot.news/items/allv4n9g9lhfy72m1pg725apv"
         },
-        "rank": 3,
+        "rank": 4,
         "latest_at": "2026-10-16T00:54:07.827Z",
         "source_count": 6,
         "signal_count": 22,
@@ -13891,85 +13891,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/tqjgaf61cclykzl44bk8x8ysi"
-        }
-      }
-    },
-    {
-      "id": "xwjbba0b6wmkh4jh18x0bqy1q",
-      "item_type": "item",
-      "category": "tip",
-      "title": "Databricks 把 Qwen 3.8 27B 微调时间从 7 小时 44 分压到 1 小时 17 分",
-      "description": "Databricks 分享在 AI Runtime 上微调 Qwen 3.8 27B 的调优全过程，SFT 时间从 7 小时 44 分降到 1 小时 17 分，提速 6 倍。",
-      "original_url": "https://x.com/shao__meng/status/2110573261302202853",
-      "aihot_url": "https://aihot.news/items/xwjbba0b6wmkh4jh18x0bqy1q",
-      "published_at": "2026-10-15T03:27:32.000Z",
-      "collected_at": "2026-10-15T03:28:28.798Z",
-      "source": {
-        "name": "X：邵猛 (@shao__meng)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "把 Qwen 微调提速 6 倍的实战经验分享",
-        "score": 61,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/xwjbba0b6wmkh4jh18x0bqy1q"
-        }
-      }
-    },
-    {
-      "id": "pchpeyjsiuqf4biupja4p4af4",
-      "item_type": "item",
-      "category": "paper",
-      "title": "上海人工智能实验室团队用书生 S2 大模型完成三维 Ghys 猜想证明",
-      "description": "上海人工智能实验室发文宣布，许地生团队依托书生科学多模态大模型 S2，通过人机协同完成困扰数学界 30 余年的三维 Ghys 猜想证明。北京大学董彬、刘若川院士团队用 SHEAF 框架完成形式化验证，论文已发布于 arXiv，形式化代码开源在 GitHub。上海人工智能实验室表示该范式可推广至其他搜索空间大而专家稀缺的基础研究领域。",
-      "original_url": "https://www.ithome.com/1/013/269.htm",
-      "aihot_url": "https://aihot.news/items/pchpeyjsiuqf4biupja4p4af4",
-      "published_at": "2026-10-15T03:23:31.590Z",
-      "collected_at": "2026-10-15T03:40:27.521Z",
-      "source": {
-        "name": "IT之家·人工智能"
-      },
-      "source_channels": [
-        "all",
-        "paper"
-      ],
-      "metadata": {
-        "original_title": "中国科学家首次用中国大模型攻克世界级数学难题，曾困扰学界 30 余年",
-        "score": 72,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/pchpeyjsiuqf4biupja4p4af4"
-        }
-      }
-    },
-    {
-      "id": "t4i1wpgyusrm4sgrk0uv154yo",
-      "item_type": "item",
-      "category": "ai-models",
-      "title": "阶跃星辰开放 Step 5 Preview 权重，支持 100 万 token 上下文窗口",
-      "description": "阶跃星辰开放 Step 5 Preview 模型权重，含 BF16 与 FP8 权重、技术博客和开源开发工具，已上线 Hugging Face 和 ModelScope。",
-      "original_url": "https://www.ithome.com/1/013/268.htm",
-      "aihot_url": "https://aihot.news/items/t4i1wpgyusrm4sgrk0uv154yo",
-      "published_at": "2026-10-15T03:22:04.580Z",
-      "collected_at": "2026-10-15T03:40:27.528Z",
-      "source": {
-        "name": "IT之家·人工智能"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "阶跃 Step 5 Preview 大模型权重开放，支持 100 万 token 上下文窗口",
-        "score": 70,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/t4i1wpgyusrm4sgrk0uv154yo"
         }
       }
     },
