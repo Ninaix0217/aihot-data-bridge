@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-10-17T08:51:34.567492Z",
+  "generated_at": "2026-10-17T09:12:13.175377Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-10-16T02:51:24.731225Z",
-    "to": "2026-10-17T08:51:24.731225Z"
+    "from": "2026-10-16T03:12:03.639119Z",
+    "to": "2026-10-17T09:12:03.639119Z"
   },
   "coverage": {
     "selected": {
@@ -17,7 +17,7 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 331,
+      "items": 332,
       "error": null
     },
     "paper": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 370,
-    "deduplicated_items": 338
+    "raw_items": 371,
+    "deduplicated_items": 339
   },
   "items": [
     {
@@ -127,14 +127,16 @@
           "name": "AIHOT",
           "url": "https://aihot.news/items/x7hxr1lvyddc8hrbrugfx4uyg"
         },
-        "rank": 10,
-        "latest_at": "2026-10-17T08:42:59.000Z",
-        "source_count": 3,
-        "signal_count": 5,
+        "rank": 2,
+        "latest_at": "2026-10-17T08:54:16.000Z",
+        "source_count": 5,
+        "signal_count": 9,
         "source_names": [
+          "X：Testing Catalog (@testingcatalog)",
           "X：OpenRouter (@OpenRouter)",
-          "IT之家·人工智能",
-          "公众号：DeepSeek（深度求索）"
+          "X：Tianyi Cui（@tianyi）",
+          "X：DeepSeek (@deepseek_ai)",
+          "IT之家·人工智能"
         ],
         "story_url": "https://aihot.virxact.com/story/f8045374-7106-49b1-8fd8-ce824a952e45"
       }
@@ -194,7 +196,7 @@
           "name": "AIHOT",
           "url": "https://aihot.news/items/rq32az1hr7zpbipiyega9ehjr"
         },
-        "rank": 3,
+        "rank": 4,
         "latest_at": "2026-10-16T23:54:20.000Z",
         "source_count": 6,
         "signal_count": 11,
@@ -236,7 +238,7 @@
           "name": "AIHOT",
           "url": "https://aihot.news/items/p11tj593iq5nrtiotvoxllop4"
         },
-        "rank": 2,
+        "rank": 3,
         "latest_at": "2026-10-17T01:30:54.000Z",
         "source_count": 5,
         "signal_count": 13,
@@ -307,6 +309,84 @@
       }
     },
     {
+      "id": "a0batory42lpikbb6srujrcm7",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "DeepSeek 发布开源权重模型 DeepSeek-V4.1-Flash-1017",
+      "description": "DeepSeek 发布开源权重模型 DeepSeek-V4.1-Flash-1017，在 DeepSWE 1.1 基准上取得 77% Pass@1，据称超过 GLM-5.3、Kimi K3、GPT-5.6 Sol 和 Opus 5。模型已上线 DeepSeek Chat、API 和 HuggingFace，官方称相比上一版性能更强、任务完成更快、输出更短，并在性能与成本上实现 Pareto 改进。",
+      "original_url": "https://x.com/testingcatalog/status/2111380259295653976",
+      "aihot_url": "https://aihot.news/items/a0batory42lpikbb6srujrcm7",
+      "published_at": "2026-10-17T08:54:16.000Z",
+      "collected_at": "2026-10-17T09:06:36.519Z",
+      "source": {
+        "name": "X：Testing Catalog (@testingcatalog)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "BREAKING 🔥: DeepSeek released DeepSeek-V4.1-Flash-1017, a new open-weight model with frontier performance.",
+        "score": 73,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/a0batory42lpikbb6srujrcm7"
+        }
+      }
+    },
+    {
+      "id": "czfaqu0vajok6bnt9iw5eebd1",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "DeepSeek 开放搜索 API 并更新 V4.1 Flash 1017",
+      "description": "DeepSeek 向开发者开放其 App 背后的搜索引擎，新增 Search 和 Fetch API 端点，定价为每 1,000 次调用 5 元（约 $0.70），并过滤 SEO 垃圾和低质 AI 内容。V4.1 Flash 也发布 1017 更新，运行更快更便宜并开放权重，基准对比图显示其在多项测试中较旧版提升。",
+      "original_url": "https://x.com/thexpin/status/2111378855155896448",
+      "aihot_url": "https://aihot.news/items/czfaqu0vajok6bnt9iw5eebd1",
+      "published_at": "2026-10-17T08:48:41.000Z",
+      "collected_at": "2026-10-17T09:06:36.529Z",
+      "source": {
+        "name": "X：X.PIN (@thexpin)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "DeepSeek is opening the search engine behind its own app to developers. New Search and Fetch API endpoints cost RMB 5 (about $0.70) per 1...",
+        "score": 64,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/czfaqu0vajok6bnt9iw5eebd1"
+        }
+      }
+    },
+    {
+      "id": "g7u9yu8oksyg0ztwiddqusjtz",
+      "item_type": "item",
+      "category": null,
+      "title": "Opus 5.5 分镜配 Seedance 2.5 动画",
+      "description": "用 Opus 5.5 先制作动态分镜，再用 Seedance 2.5 来制作成片动画～！\n\n彩猫糕上菊初黄，祝大家重阳安康～！",
+      "original_url": "https://x.com/ring_hyacinth/status/2111378795219632209",
+      "aihot_url": "https://aihot.news/items/g7u9yu8oksyg0ztwiddqusjtz",
+      "published_at": "2026-10-17T08:48:26.000Z",
+      "collected_at": "2026-10-17T09:04:37.242Z",
+      "source": {
+        "name": "X：Ring Hyacinth (@ring_hyacinth)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "用Opus 5.5 先制作动态分镜，再用 Seedance 2.5 来制作成片动画～！",
+        "score": 20,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/g7u9yu8oksyg0ztwiddqusjtz"
+        }
+      }
+    },
+    {
       "id": "nmdm1jltt10h5qovhjpnzwp7i",
       "item_type": "item",
       "category": "ai-products",
@@ -329,6 +409,58 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/nmdm1jltt10h5qovhjpnzwp7i"
+        }
+      }
+    },
+    {
+      "id": "pajhl5y869re0ngqb3yzv7qrl",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "DeepSeek 发布 DeepSeek-V4.1-Flash-1017，官网、App 和 API 已可用",
+      "description": "DeepSeek 发布 DeepSeek-V4.1-Flash-1017，官方称相比上一版性能更强、任务完成更快、输出更短，已在官网、App 和 API 上线。引用内容称其性能与成本实现 Pareto 改进，并针对 DeepSeek Harness、Tencent CodeBuddy、WorkBuddy 等优化，建议升级 DeepSeek Harness v0.2.1-rc.1 或以上版本；对比图显示其在 HLE（无工具）42.6/44.0、Terminal-Bench 4.0 42.3、DeepSWE v1.1 77.0 等基准上的成绩。",
+      "original_url": "https://x.com/tianyi/status/2111376782717035007",
+      "aihot_url": "https://aihot.news/items/pajhl5y869re0ngqb3yzv7qrl",
+      "published_at": "2026-10-17T08:40:27.000Z",
+      "collected_at": "2026-10-17T09:06:36.536Z",
+      "source": {
+        "name": "X：Tianyi Cui（@tianyi）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "为充分发挥新模型 DeepSeek-V4.1-Flash-1017 的能力，请升级至 DeepSeek Harness 0.2.1-rc.1 及以上版本。",
+        "score": 53,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/pajhl5y869re0ngqb3yzv7qrl"
+        }
+      }
+    },
+    {
+      "id": "lsnm2pguig9q1vk82qt22531f",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "DeepSeek-V4.1-Flash-1017 发布",
+      "description": "🚀 DeepSeek-V4.1-Flash-1017 来了！\n\n相比上一版本，基准测试表现更强、任务完成更快、输出更短——性能与成本上的帕累托改进。现已在我们的网站、App 和 API 上线。\n\n🛠️ 针对 @DeepSeekHarness、腾讯 CodeBuddy、WorkBuddy 等进行了优化。升级到 DeepSeek Harness v0.2.1-rc.1 或更高版本，以获得新模型的最佳体验。\n\n1/4",
+      "original_url": "https://x.com/deepseek_ai/status/2111375640717033777",
+      "aihot_url": "https://aihot.news/items/lsnm2pguig9q1vk82qt22531f",
+      "published_at": "2026-10-17T08:35:54.000Z",
+      "collected_at": "2026-10-17T08:55:37.059Z",
+      "source": {
+        "name": "X：DeepSeek (@deepseek_ai)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "🚀 DeepSeek-V4.1-Flash-1017 is here!",
+        "score": 49,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/lsnm2pguig9q1vk82qt22531f"
         }
       }
     },
@@ -8592,110 +8724,6 @@
       }
     },
     {
-      "id": "wx2nxgo7w5rhno5kh2qt4wa83",
-      "item_type": "item",
-      "category": "industry",
-      "title": "美国推动全球以\"SI\"取代\"AI\"，谋求写入IMFC共识声明",
-      "description": "路透社 10 月 15 日报道称，美国正力推以\"超级智能\"（SI）取代\"人工智能\"（AI）的通用称呼，并希望写入国际货币与金融委员会（IMFC）共识声明。美国财政部副部长艾琳·布朗在曼谷 IMF 与世界银行年会上称 SI 更准确概括这项技术，美国上月已要求联邦政府各机构改用该表述，并借 G20 轮值主席国身份推动国际采纳。",
-      "original_url": "https://www.ithome.com/1/013/788.htm",
-      "aihot_url": "https://aihot.news/items/wx2nxgo7w5rhno5kh2qt4wa83",
-      "published_at": "2026-10-16T03:11:31.210Z",
-      "collected_at": "2026-10-16T03:50:46.291Z",
-      "source": {
-        "name": "IT之家·人工智能"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "美国推动全球“AI”改口“SI”，谋求写入国际货币基金组织声明",
-        "score": 54,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/wx2nxgo7w5rhno5kh2qt4wa83"
-        }
-      }
-    },
-    {
-      "id": "ckgswmlupkmb0d4n6watx7d8g",
-      "item_type": "item",
-      "category": "industry",
-      "title": "MiniMax 将参加开源 AI 周活动",
-      "description": "明天将在 The Midway 与 @huggingface 一起拉开 Open Source AI Week 的序幕 🪩\n\n在舞池里找到 MiniMax 团队，我们准备了一些可爱的周边。\n\n最新日程：https://opensourceaiweek.com\n\n@open_intel_fdn #OpenSourceAIWeek #OpenIntelligence",
-      "original_url": "https://x.com/MiniMax_AI/status/2110930213798584388",
-      "aihot_url": "https://aihot.news/items/ckgswmlupkmb0d4n6watx7d8g",
-      "published_at": "2026-10-16T03:05:56.000Z",
-      "collected_at": "2026-10-16T03:19:46.326Z",
-      "source": {
-        "name": "X：MiniMax (@MiniMax_AI)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Kicking off Open Source AI Week tomorrow with @huggingface at The Midway 🪩",
-        "score": 32,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/ckgswmlupkmb0d4n6watx7d8g"
-        }
-      }
-    },
-    {
-      "id": "c3sr2b6fbgvdu00echcbvywkj",
-      "item_type": "item",
-      "category": "industry",
-      "title": "微软发布自研模型 MAI-Base-2，称仅用 OpenAI 1/4 算力即超越同类模型",
-      "description": "微软 AI 业务 CEO 穆斯塔法·苏莱曼 10 月 15 日在员工大会上称，微软自研预训练基础模型 MAI-Base-2（当日发布）性能超过目前驱动 GPT-5.6 Sol 的模型（代号 Spud），训练算力只有 OpenAI 的四分之一。",
-      "original_url": "https://www.ithome.com/1/013/761.htm",
-      "aihot_url": "https://aihot.news/items/c3sr2b6fbgvdu00echcbvywkj",
-      "published_at": "2026-10-16T02:58:34.100Z",
-      "collected_at": "2026-10-16T03:08:44.184Z",
-      "source": {
-        "name": "IT之家·人工智能"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "在 OpenAI 擅长的领域打败 OpenAI：微软称自研模型仅凭对方 1/4 算力就超越同类产品",
-        "score": 54,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/c3sr2b6fbgvdu00echcbvywkj"
-        }
-      }
-    },
-    {
-      "id": "gwbnl2rjnzw759bfju22ietae",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "GPT Live 1.1 发布，强化多语言支持",
-      "description": "LFG！GPT Live 1.1 发布，重点提升多语言支持！\n\n更新了法语、德语、印地语、墨西哥西班牙语、韩语和日语。\n\n额外福利：更少的“checking…”\n\n正在 Codex、ChatGPT 和 Dots 中逐步推出——API 即将上线 ；)",
-      "original_url": "https://x.com/reach_vb/status/2110927444316406049",
-      "aihot_url": "https://aihot.news/items/gwbnl2rjnzw759bfju22ietae",
-      "published_at": "2026-10-16T02:54:56.000Z",
-      "collected_at": "2026-10-16T03:11:46.549Z",
-      "source": {
-        "name": "X：Vaibhav Srivastav（OpenAI）(@reach_vb)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "LFG! GPT Live 1.1 is out with the focus on better multilingual support!",
-        "score": 39,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/gwbnl2rjnzw759bfju22ietae"
-        }
-      }
-    },
-    {
       "id": "s80tw5g2v22j1se4bmqejyaq4",
       "item_type": "hot_topic",
       "category": null,
@@ -8746,7 +8774,7 @@
         "hot_topics"
       ],
       "metadata": {
-        "rank": 4,
+        "rank": 5,
         "latest_at": "2026-10-16T00:54:07.827Z",
         "source_count": 5,
         "signal_count": 14,
@@ -8777,7 +8805,7 @@
         "hot_topics"
       ],
       "metadata": {
-        "rank": 5,
+        "rank": 6,
         "latest_at": "2026-10-16T07:34:44.337Z",
         "source_count": 4,
         "signal_count": 17,
@@ -8807,7 +8835,7 @@
         "hot_topics"
       ],
       "metadata": {
-        "rank": 6,
+        "rank": 7,
         "latest_at": "2026-10-16T15:00:00.000Z",
         "source_count": 5,
         "signal_count": 14,
@@ -8838,7 +8866,7 @@
         "hot_topics"
       ],
       "metadata": {
-        "rank": 7,
+        "rank": 8,
         "latest_at": "2026-10-15T19:53:50.000Z",
         "source_count": 14,
         "signal_count": 11,
@@ -8872,7 +8900,7 @@
         "hot_topics"
       ],
       "metadata": {
-        "rank": 8,
+        "rank": 9,
         "latest_at": "2026-10-17T00:31:53.593Z",
         "source_count": 5,
         "signal_count": 10,
@@ -8903,7 +8931,7 @@
         "hot_topics"
       ],
       "metadata": {
-        "rank": 9,
+        "rank": 10,
         "latest_at": "2026-10-16T18:30:03.000Z",
         "source_count": 9,
         "signal_count": 6,
