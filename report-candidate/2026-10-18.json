@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-10-18T09:09:05.595825Z",
+  "generated_at": "2026-10-18T09:28:32.809427Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-10-17T03:09:01.566994Z",
-    "to": "2026-10-18T09:09:01.566994Z"
+    "from": "2026-10-17T03:28:29.987564Z",
+    "to": "2026-10-18T09:28:29.987564Z"
   },
   "coverage": {
     "selected": {
@@ -17,7 +17,7 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 139,
+      "items": 140,
       "error": null
     },
     "paper": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 161,
-    "deduplicated_items": 146
+    "raw_items": 162,
+    "deduplicated_items": 147
   },
   "items": [
     {
@@ -125,6 +125,58 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/ffpkck4k06le4smuaz4slhvcz"
+        }
+      }
+    },
+    {
+      "id": "pxejkapnxmlb0xx6x2yncjnbx",
+      "item_type": "item",
+      "category": "industry",
+      "title": "Anthropic 员工调查：59% 称 AI 把适合任务耗时压缩到四分之一",
+      "description": "Rohan Paul 转引调查显示，59% 的 Anthropic 员工称 AI 已把适合任务的耗时压缩到原来的四分之一，平均预期到 2030 年 AI 可承担其 75% 的工作时间。引用内容补充：Anthropic 技术岗位中初级员工占比从 21% 降至 14%，同期公司规模扩大三倍，约三分之一的 ML 管理者和五分之一的 SWE 管理者表示因 AI 减少招聘，其 Agent 记录的工作时长达到人类的 6 倍。",
+      "original_url": "https://x.com/rohanpaul_ai/status/2111744320982425948",
+      "aihot_url": "https://aihot.news/items/pxejkapnxmlb0xx6x2yncjnbx",
+      "published_at": "2026-10-18T09:00:55.000Z",
+      "collected_at": "2026-10-18T09:15:33.733Z",
+      "source": {
+        "name": "X：Rohan Paul (@rohanpaul_ai)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "59% of Anthropic staff say AI already cuts well-suited tasks to a quarter of the time, and on average they expect AI to be able to do 75%...",
+        "score": 60,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/pxejkapnxmlb0xx6x2yncjnbx"
+        }
+      }
+    },
+    {
+      "id": "lmw3jeg4jgb1yal2udg4oykjf",
+      "item_type": "item",
+      "category": null,
+      "title": "水上漂",
+      "description": "水上漂",
+      "original_url": "https://x.com/oran_ge/status/2111741348361740653",
+      "aihot_url": "https://aihot.news/items/lmw3jeg4jgb1yal2udg4oykjf",
+      "published_at": "2026-10-18T08:49:06.000Z",
+      "collected_at": "2026-10-18T09:14:38.461Z",
+      "source": {
+        "name": "X：Oran Ge (@oran_ge)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "水上漂",
+        "score": 5,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/lmw3jeg4jgb1yal2udg4oykjf"
         }
       }
     },
@@ -3672,32 +3724,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/aeif9q3kl7tr3m1pxnd86zqvs"
-        }
-      }
-    },
-    {
-      "id": "n359jkj1qhw7sjm2x1lamkg2s",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "Viggle Animate 2 开放限量私测",
-      "description": "AI 电影人和视频创作者：想抢先体验 Viggle Animate 2 吗？\n\n仅限本周末，我们开放少量独家私测名额。\n\n试用后告诉我们你的想法，并在 X 上分享你的作品。\n\n在此回复或私信我们获取早期访问权限！",
-      "original_url": "https://x.com/ViggleAI/status/2111295702001205617",
-      "aihot_url": "https://aihot.news/items/n359jkj1qhw7sjm2x1lamkg2s",
-      "published_at": "2026-10-17T03:18:15.000Z",
-      "collected_at": "2026-10-17T03:25:29.534Z",
-      "source": {
-        "name": "X：Viggle AI (@ViggleAI)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "AI filmmakers & video creators: want to try Viggle Animate 2 before everyone else?",
-        "score": 25,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/n359jkj1qhw7sjm2x1lamkg2s"
         }
       }
     },
