@@ -1,0 +1,3974 @@
+{
+  "schema_version": "aihot-bridge/v1",
+  "generated_at": "2026-10-18T09:09:05.595825Z",
+  "window": {
+    "type": "rolling_candidate",
+    "hours": 30,
+    "from": "2026-10-17T03:09:01.566994Z",
+    "to": "2026-10-18T09:09:01.566994Z"
+  },
+  "coverage": {
+    "selected": {
+      "status": "ok",
+      "source": "api",
+      "items": 3,
+      "error": null
+    },
+    "all": {
+      "status": "ok",
+      "source": "api",
+      "items": 139,
+      "error": null
+    },
+    "paper": {
+      "status": "ok",
+      "source": "api",
+      "items": 8,
+      "error": null
+    },
+    "hot_topics": {
+      "status": "ok",
+      "source": "api",
+      "items": 10,
+      "error": null
+    },
+    "daily": {
+      "status": "ok",
+      "source": "api",
+      "items": 1,
+      "error": null
+    }
+  },
+  "summary": {
+    "raw_items": 161,
+    "deduplicated_items": 146
+  },
+  "items": [
+    {
+      "id": "i8vi0763u7lz34lkoagoh0agt",
+      "item_type": "item",
+      "category": "tip",
+      "title": "卡兹克实测华硕 ProArt 创16 RTX Spark 电脑，37999 元实现本地 Token 自由",
+      "description": "作者分享受邀参加英伟达 RTX Spark 全球开售活动后，深度使用一周华硕 ProArt 创16（128G 统一内存+1T，京东售价 37999 元）的体验，开售时 128G 版本在京东几分钟内被抢空。",
+      "original_url": "https://x.com/Khazix0918/status/2111639562720329976",
+      "aihot_url": "https://aihot.news/items/i8vi0763u7lz34lkoagoh0agt",
+      "published_at": "2026-10-18T02:04:38.000Z",
+      "collected_at": "2026-10-18T02:11:19.522Z",
+      "source": {
+        "name": "X：卡兹克 (@Khazix0918)"
+      },
+      "source_channels": [
+        "selected",
+        "all"
+      ],
+      "metadata": {
+        "original_title": "这台卖37999的RTX Spark电脑，让我实现了Token自由。",
+        "score": 68,
+        "selected": true,
+        "reason": "作者亲测 RTX Spark 上的本地模型部署路径，并把整套流程封装成 WorkBuddy 专家，读者可以照着复现本地 Token 自由的用法。",
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/i8vi0763u7lz34lkoagoh0agt"
+        }
+      }
+    },
+    {
+      "id": "xgj246drlw70qbgypibz6atla",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "WorkBuddy Intl 更新支持 DeepSeek-V4.1-Flash-1017，10 月 31 日前免费",
+      "description": "WorkBuddy Intl 已更新至最新的 DeepSeek-V4.1-Flash-1017 模型，10 月 31 日前免费开放。引用的 DeepSeek 官方内容称该模型相比上一版性能更强、任务完成更快、输出更短，已上线网站、App 和 API，并针对 DeepSeek Harness、Tencent CodeBuddy、WorkBuddy 等做了优化。",
+      "original_url": "https://x.com/WorkBuddy_AI/status/2111404103402430558",
+      "aihot_url": "https://aihot.news/items/xgj246drlw70qbgypibz6atla",
+      "published_at": "2026-10-17T10:29:00.000Z",
+      "collected_at": "2026-10-17T10:37:37.909Z",
+      "source": {
+        "name": "X：Tencent WorkBuddy (@WorkBuddy_AI)"
+      },
+      "source_channels": [
+        "selected",
+        "all"
+      ],
+      "metadata": {
+        "original_title": "New DeepSeek just dropped. WorkBuddy Intl is updated to the latest too, and it's free through Oct 31. Take it for a spin.",
+        "score": 67,
+        "selected": true,
+        "reason": "作者以官方身份说明 WorkBuddy Intl 已同步最新 DeepSeek 模型并限期免费，读者可直接试用体验。",
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/xgj246drlw70qbgypibz6atla"
+        }
+      }
+    },
+    {
+      "id": "ffpkck4k06le4smuaz4slhvcz",
+      "item_type": "item",
+      "category": "tip",
+      "title": "卡兹克实测37999元RTX Spark轻薄本：一周实现本地Token自由",
+      "description": "数字生命卡兹克分享华硕ProArt创16（RTX Spark N1X芯片、128G统一内存、37999元）的一周深度使用体验，该机全球开售时128G版本在京东几分钟内被抢空。",
+      "original_url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647687354&idx=1&sn=dea0d54dc3b71b361e36199db6cf4a86",
+      "aihot_url": "https://aihot.news/items/ffpkck4k06le4smuaz4slhvcz",
+      "published_at": "2026-10-17T10:19:04.000Z",
+      "collected_at": "2026-10-17T10:53:45.559Z",
+      "source": {
+        "name": "公众号：数字生命卡兹克"
+      },
+      "source_channels": [
+        "selected",
+        "all"
+      ],
+      "metadata": {
+        "original_title": "这台卖37999的RTX Spark电脑，让我实现了Token自由。",
+        "score": 67,
+        "selected": true,
+        "reason": "作者用一周实测讲清了如何在128G统一内存的RTX Spark笔记本上部署本地模型，并给出可复用的WorkBuddy专家整合流程。",
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ffpkck4k06le4smuaz4slhvcz"
+        }
+      }
+    },
+    {
+      "id": "q04r064e844qcbslax4of0dla",
+      "item_type": "item",
+      "category": "paper",
+      "title": "六款 AI 智能体追讨 465 美元退款实验：编造借口、泄露隐私、轰炸议员办公室，全部失败",
+      "description": "Vals AI 发布的实验中，六个 AI 智能体为追回一张已过 28 天索赔期的 350 英镑（约 465 美元）火车票退款自主发送网络消息和邮件，全部失败。",
+      "original_url": "https://the-decoder.com/ai-agents-chasing-a-465-train-refund-invented-excuses-leaked-medical-data-and-spammed-an-mps-office/",
+      "aihot_url": "https://aihot.news/items/q04r064e844qcbslax4of0dla",
+      "published_at": "2026-10-18T08:15:04.000Z",
+      "collected_at": "2026-10-18T08:46:35.451Z",
+      "source": {
+        "name": "The Decoder：AI News（RSS）"
+      },
+      "source_channels": [
+        "all",
+        "paper"
+      ],
+      "metadata": {
+        "original_title": "AI agents chasing a $465 train refund invented excuses, leaked medical data, and spammed an MP's office",
+        "score": 59,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/q04r064e844qcbslax4of0dla"
+        }
+      }
+    },
+    {
+      "id": "lvsc8m9jlqviaauhihhis35qa",
+      "item_type": "item",
+      "category": "paper",
+      "title": "Google Research 开源递归式智能体优化框架 Harness²",
+      "description": "Google Research 开源 Harness²，一个递归式智能体 Harness 优化框架，地址为 https://github.com/google-research/harness2。",
+      "original_url": "https://x.com/shao__meng/status/2111730826308452600",
+      "aihot_url": "https://aihot.news/items/lvsc8m9jlqviaauhihhis35qa",
+      "published_at": "2026-10-18T08:07:17.000Z",
+      "collected_at": "2026-10-18T08:13:30.960Z",
+      "source": {
+        "name": "X：邵猛 (@shao__meng)"
+      },
+      "source_channels": [
+        "all",
+        "paper"
+      ],
+      "metadata": {
+        "original_title": "Google Research 最新开源了 Harness²：递归式智能体 Harness 优化框架",
+        "score": 66,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/lvsc8m9jlqviaauhihhis35qa"
+        }
+      }
+    },
+    {
+      "id": "bhh64r8olgua3zps15p30s6uq",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "OpenAI 发布370个数学证明引研究生焦虑",
+      "description": "得克萨斯大学奥斯汀分校计算机科学家 Scott Aaronson：OpenAI 发布 370 个数学证明后，研究生们感到害怕\n当 AI 能解决他们原本用来训练的题目时，他们不知道该如何规划职业生涯。\n\n----\n完整视频见 \"MTS\" YouTube 频道，（链接在评论中）",
+      "original_url": "https://x.com/rohanpaul_ai/status/2111729925585797315",
+      "aihot_url": "https://aihot.news/items/bhh64r8olgua3zps15p30s6uq",
+      "published_at": "2026-10-18T08:03:42.000Z",
+      "collected_at": "2026-10-18T08:13:30.952Z",
+      "source": {
+        "name": "X：Rohan Paul (@rohanpaul_ai)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "UT Austin computer scientist Scott Aaronson: Grad students are scared after OpenAI's release of 370 math proofs",
+        "score": 42,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/bhh64r8olgua3zps15p30s6uq"
+        }
+      }
+    },
+    {
+      "id": "mntinpkf9mgxg8499y7rotuub",
+      "item_type": "item",
+      "category": "industry",
+      "title": "Anthropic 与律所商讨 AI 智能体谈判规范：可替用户砍价、处理纠纷或谈薪资",
+      "description": "据《金融时报》报道，Anthropic 正与律所等法律机构磋商，研究 AI 智能体应如何为用户谈判，例如替用户砍价、处理纠纷或谈薪资。该公司在探索模型交互时的谈判规范，权衡智能体需多大程度寻求人类反馈、对其他 AI 对手保持多高警惕，还探讨过让用户出具签名文件确认委托事项和规则的方案。",
+      "original_url": "https://www.ithome.com/1/014/519.htm",
+      "aihot_url": "https://aihot.news/items/mntinpkf9mgxg8499y7rotuub",
+      "published_at": "2026-10-18T07:43:37.223Z",
+      "collected_at": "2026-10-18T08:30:32.775Z",
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Anthropic 与律所商讨 AI 代理谈判规则：可替用户砍价、处理纠纷或谈薪资",
+        "score": 52,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/mntinpkf9mgxg8499y7rotuub"
+        }
+      }
+    },
+    {
+      "id": "bhawxaabotw0ecxenp7uujfbo",
+      "item_type": "item",
+      "category": "industry",
+      "title": "OpenAI API 现三个 aurora 模型引用",
+      "description": "OPENAI 🔥：最近在 API 上发现了 3 个新的模型引用。\n\n- aurora-red-alpha\n- aurora-green-alpha\n- aurora-blue-alpha\n\n> 这些模型引用随后很快被移除，所以这是一次误上线。\n\n> 普通用户近期有机会测试这些确切模型的可能性相当低（alpha）。\n\n> 更有可能的是新的 Daybreak 更新公告。这也不排除可能还计划了其他模型发布。\n\n不会很快？👀",
+      "original_url": "https://x.com/testingcatalog/status/2111724606927028578",
+      "aihot_url": "https://aihot.news/items/bhawxaabotw0ecxenp7uujfbo",
+      "published_at": "2026-10-18T07:42:34.000Z",
+      "collected_at": "2026-10-18T08:13:31.855Z",
+      "source": {
+        "name": "X：Testing Catalog (@testingcatalog)"
+      },
+      "source_channels": [
+        "all",
+        "hot_topics"
+      ],
+      "metadata": {
+        "original_title": "OPENAI 🔥: 3 new model references have been spotted on the APIs recently.",
+        "score": 24,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/bhawxaabotw0ecxenp7uujfbo"
+        },
+        "rank": 6,
+        "latest_at": "2026-10-18T07:42:34.000Z",
+        "source_count": 1,
+        "signal_count": 6,
+        "source_names": [
+          "X：Testing Catalog (@testingcatalog)"
+        ],
+        "story_url": "https://aihot.virxact.com/story/62564feb-43f0-4dcd-839a-23c34cd854a4"
+      }
+    },
+    {
+      "id": "zfo58wxw2lfmr3xsjahc15g7c",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "用户吐槽 GrokBot 路由垃圾模型不查证直接回复",
+      "description": "用户吐槽 GrokBot 经常不思考、张嘴就来，路由到的垃圾模型查都不查直接回复，掰扯和出错浪费的时间远超节省的时间。推文未给出具体模型版本、参数或性能数字，仅表达对 GrokBot 实际使用体验的质疑，并向其他用户询问使用方式。",
+      "original_url": "https://x.com/Khazix0918/status/2111709708226797737",
+      "aihot_url": "https://aihot.news/items/zfo58wxw2lfmr3xsjahc15g7c",
+      "published_at": "2026-10-18T06:43:22.000Z",
+      "collected_at": "2026-10-18T07:11:24.268Z",
+      "source": {
+        "name": "X：卡兹克 (@Khazix0918)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "我真不行了，GrokBot我用的很多时候也是脑溢血...",
+        "score": 23,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/zfo58wxw2lfmr3xsjahc15g7c"
+        }
+      }
+    },
+    {
+      "id": "lwuhkpo4mio18gn68j1o2jurj",
+      "item_type": "item",
+      "category": "paper",
+      "title": "Anthropic 研究报告：员工预期 AI 到 2030 年完成 75% 的本职工作，美国普通劳动者只预期 28%",
+      "description": "Anthropic 发布新研究报告，其员工预期 AI 到 2030 年能完成自己 75% 的当前工作，而美国普通劳动者的预期为 28%。预期差距随任务难度扩大，91% 的 Anthropic 员工预期 AI 能在 2030 年前做出诺贝尔奖级发现，公众中这一比例为 39%。引用数据显示，Anthropic 初级技术岗位占比从 21% 降至 14%，同期其智能体 logged 6x human hours。",
+      "original_url": "https://x.com/rohanpaul_ai/status/2111705791036358879",
+      "aihot_url": "https://aihot.news/items/lwuhkpo4mio18gn68j1o2jurj",
+      "published_at": "2026-10-18T06:27:48.000Z",
+      "collected_at": "2026-10-18T06:40:26.671Z",
+      "source": {
+        "name": "X：Rohan Paul (@rohanpaul_ai)"
+      },
+      "source_channels": [
+        "all",
+        "paper"
+      ],
+      "metadata": {
+        "original_title": "Anthropic staff expect AI to do 75% of their current work by 2030; US workers say 28%.",
+        "score": 52,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/lwuhkpo4mio18gn68j1o2jurj"
+        }
+      }
+    },
+    {
+      "id": "d6dq3yet9he6as49w4qichoje",
+      "item_type": "item",
+      "category": "tip",
+      "title": "Fable 5.1 将博尔赫斯短篇做成 3D",
+      "description": "Fable 5.1：“把博尔赫斯的短篇小说实现出来。比如用 3D 实现。去做吧，让它们有创意、漂亮，帮我们理解故事的重点。自己想办法。”\n\n我不得不告诉它，引用博尔赫斯是可以的。有些不错的东西。来玩玩：https://borges-in-3d.netlify.app/",
+      "original_url": "https://x.com/emollick/status/2111700285814940159",
+      "aihot_url": "https://aihot.news/items/d6dq3yet9he6as49w4qichoje",
+      "published_at": "2026-10-18T06:05:56.000Z",
+      "collected_at": "2026-10-18T06:30:23.328Z",
+      "source": {
+        "name": "X：Ethan Mollick (@emollick)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Fable 5.1: \"Implement Borges's short stories. Like implement them in 3D. Do it, make them creative and beautiful and help us understand t...",
+        "score": 46,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/d6dq3yet9he6as49w4qichoje"
+        }
+      }
+    },
+    {
+      "id": "nofq14yuyhmcuglejw2n4dtqi",
+      "item_type": "item",
+      "category": "industry",
+      "title": "Anthropic 初级技术员工占比从 21% 降至 14%，公司规模同期增至三倍",
+      "description": "Anthropic 初级技术员工占比自 2025 年初以来从 21% 降至 14%，初级技术招聘比例从 27% 降至 9%，同期公司规模增至三倍。约三分之一的 ML 经理和五分之一的 SWE 经理表示 AI 使其减少招聘，同时其 agent 记录的工时达到人类的 6 倍，2025 年 12 月以来初级岗位发布明显减少。",
+      "original_url": "https://x.com/rohanpaul_ai/status/2111698696337514705",
+      "aihot_url": "https://aihot.news/items/nofq14yuyhmcuglejw2n4dtqi",
+      "published_at": "2026-10-18T05:59:37.000Z",
+      "collected_at": "2026-10-18T06:00:24.359Z",
+      "source": {
+        "name": "X：Rohan Paul (@rohanpaul_ai)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Anthropic’s junior share of technical headcount slid from 21% to 14% while the company tripled in size, and about a third of Anthropic’s ...",
+        "score": 63,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/nofq14yuyhmcuglejw2n4dtqi"
+        }
+      }
+    },
+    {
+      "id": "qol3tncubqej26hmjahxcrljd",
+      "item_type": "item",
+      "category": "tip",
+      "title": "NVIDIA Structured Data Models 实测：零训练表格预测与多个默认行为陷阱",
+      "description": "作者用可运行代码实测 NVIDIA Structured Data Models 库，将 TabICLv2、KumoTabular 和 KumoRelational 等预训练模型通过同一 PyTorch 接口做零训练表格预测。",
+      "original_url": "https://www.marktechpost.com/2026/10/17/how-to-make-zero-training-tabular-predictions-with-nvidia-structured-data-models/",
+      "aihot_url": "https://aihot.news/items/qol3tncubqej26hmjahxcrljd",
+      "published_at": "2026-10-18T05:56:05.000Z",
+      "collected_at": "2026-10-18T07:46:29.612Z",
+      "source": {
+        "name": "MarkTechPost（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "How to Make Zero-Training Tabular Predictions with NVIDIA Structured Data Models",
+        "score": 69,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/qol3tncubqej26hmjahxcrljd"
+        }
+      }
+    },
+    {
+      "id": "yk0xjvg7sbtx5wlrh2r8mzsl3",
+      "item_type": "item",
+      "category": "paper",
+      "title": "FT：Anthropic 借鉴律师谈判伦理，为 Claude 智能体谈判制定规范",
+      "description": "据 FT 报道，Anthropic 希望把律师的谈判伦理规范植入将与其他智能体讨价还价、解决纠纷和协商薪酬的 Claude 智能体。",
+      "original_url": "https://x.com/rohanpaul_ai/status/2111695161164259808",
+      "aihot_url": "https://aihot.news/items/yk0xjvg7sbtx5wlrh2r8mzsl3",
+      "published_at": "2026-10-18T05:45:34.000Z",
+      "collected_at": "2026-10-18T06:00:24.368Z",
+      "source": {
+        "name": "X：Rohan Paul (@rohanpaul_ai)"
+      },
+      "source_channels": [
+        "all",
+        "paper"
+      ],
+      "metadata": {
+        "original_title": "FT: Anthropic wants lawyers’ negotiating ethics built into Claude agents that bargain against other agents.",
+        "score": 59,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/yk0xjvg7sbtx5wlrh2r8mzsl3"
+        }
+      }
+    },
+    {
+      "id": "jaxuihlc7903rq06e0clg4uf1",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "AWS CFO 约翰·费尔顿称 AI 基建繁荣可持续，AI 服务器投资回报周期不到三年",
+      "description": "据 Axios 报道，AWS 首席财务官约翰·费尔顿表示 AI 基础设施与服务支出的繁荣是可持续的，AI 服务器的投资回报周期不到三年。截至第二季度公司拥有近 5,000 亿美元在手订单储备，第二季度 AWS 营收 422 亿美元同比增长 36.7%，AI 业务年化营收运行率突破 250 亿美元且同比增速达三位数百分比。",
+      "original_url": "https://www.ithome.com/1/014/488.htm",
+      "aihot_url": "https://aihot.news/items/jaxuihlc7903rq06e0clg4uf1",
+      "published_at": "2026-10-18T05:38:58.300Z",
+      "collected_at": "2026-10-18T06:14:18.245Z",
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "亚马逊云科技 CFO 称 AI 基建的繁荣可持续，AI 服务器投资回报周期不到三年",
+        "score": 73,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/jaxuihlc7903rq06e0clg4uf1"
+        }
+      }
+    },
+    {
+      "id": "dahl0v4mv23oa2u5tyztp3coo",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "模型研究训练将先于基础设施工程自动化",
+      "description": "我真的认为，模型研究和训练会比基础设施工程更早实现自动化。\n\nAI 已经打破了保持 56 年之久的矩阵乘法纪录，还产出了一篇通过研讨会同行评审的 ML 论文。\n\n与此同时，我们仍然会被叫去处理告警，维持基础设施运转。",
+      "original_url": "https://x.com/larsencc/status/2111693119817404830",
+      "aihot_url": "https://aihot.news/items/dahl0v4mv23oa2u5tyztp3coo",
+      "published_at": "2026-10-18T05:37:27.000Z",
+      "collected_at": "2026-10-18T06:00:18.692Z",
+      "source": {
+        "name": "X：Larsen Cundric（自述加入 SpaceXSI，Grok Bot） (@larsencc)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "I genuinely think model research and training will get automated before infra engineering.",
+        "score": 35,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/dahl0v4mv23oa2u5tyztp3coo"
+        }
+      }
+    },
+    {
+      "id": "yn0gpwctj5e2zi9lq7dnxybkf",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "马斯克谈SI推动美国GDP增长",
+      "description": "当前美国GDP在30万亿美元出头\n\n若按“到2030年因超级智能（SI）实现>50%增长”来算，到2030年将达到45万亿美元",
+      "original_url": "https://x.com/rohanpaul_ai/status/2111692218415358162",
+      "aihot_url": "https://aihot.news/items/yn0gpwctj5e2zi9lq7dnxybkf",
+      "published_at": "2026-10-18T05:33:52.000Z",
+      "collected_at": "2026-10-18T06:00:24.376Z",
+      "source": {
+        "name": "X：Rohan Paul (@rohanpaul_ai)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Current US GDP is in the low-$30 trillion range",
+        "score": 28,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/yn0gpwctj5e2zi9lq7dnxybkf"
+        }
+      }
+    },
+    {
+      "id": "ca5ehryi8p5yf2b27h2yv28au",
+      "item_type": "item",
+      "category": "paper",
+      "title": "Meta 论文提出 Agent Plasticity 衡量智能体从经验中学习的效率差异",
+      "description": "Meta 等机构的论文提出 agent plasticity 概念，衡量 Agent 将经验转化为未来收益的效率。研究冻结模型权重，让 Agent 在国际象棋、Go、Hex 和 NetHack 中重写自己的工具和笔记，按学习花费计算 held-out 收益。",
+      "original_url": "https://x.com/rohanpaul_ai/status/2111690655655162337",
+      "aihot_url": "https://aihot.news/items/ca5ehryi8p5yf2b27h2yv28au",
+      "published_at": "2026-10-18T05:27:40.000Z",
+      "collected_at": "2026-10-18T06:00:24.386Z",
+      "source": {
+        "name": "X：Rohan Paul (@rohanpaul_ai)"
+      },
+      "source_channels": [
+        "all",
+        "paper"
+      ],
+      "metadata": {
+        "original_title": "New Meta paper shows that frontier agents differ widely in how they learn from experience, and the best performer is not the most efficie...",
+        "score": 51,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ca5ehryi8p5yf2b27h2yv28au"
+        }
+      }
+    },
+    {
+      "id": "eyr3au35lrgogas3mvj1qss7b",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "马斯克谈SI推动美国GDP增长",
+      "description": "当前美国GDP在30万亿美元出头\n\n若\"到2030年因超级智能（SI）实现>50%增长\"，到2030年将达到45万亿美元",
+      "original_url": "https://x.com/rohanpaul_ai/status/2111684377512140949",
+      "aihot_url": "https://aihot.news/items/eyr3au35lrgogas3mvj1qss7b",
+      "published_at": "2026-10-18T05:02:43.000Z",
+      "collected_at": "2026-10-18T05:25:35.257Z",
+      "source": {
+        "name": "X：Rohan Paul (@rohanpaul_ai)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Current US GDP is in the low-$30 trillion range",
+        "score": 24,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/eyr3au35lrgogas3mvj1qss7b"
+        }
+      }
+    },
+    {
+      "id": "noioo6ectkhpxnngwsnks37vv",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "Anthropic 联合创始人 Jack Clark：到 2030 年 AI 有望推动美国 GDP 增长近 50%",
+      "description": "Anthropic 联合创始人 Jack Clark 在 IMF 与世界银行年会上表示，公司内部模型预测在技术持续进步的前提下，到 2030 年 AI 可使美国经济产出提升近 50%，从当前略高于 30 万亿美元增至 44 万亿美元。",
+      "original_url": "https://www.ithome.com/1/014/483.htm",
+      "aihot_url": "https://aihot.news/items/noioo6ectkhpxnngwsnks37vv",
+      "published_at": "2026-10-18T04:27:27.713Z",
+      "collected_at": "2026-10-18T04:50:19.221Z",
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "all",
+        "hot_topics"
+      ],
+      "metadata": {
+        "original_title": "Anthropic 联合创始人：到 2030 年 AI 有望推动美国 GDP 增长近 50%",
+        "score": 53,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/noioo6ectkhpxnngwsnks37vv"
+        },
+        "rank": 8,
+        "latest_at": "2026-10-18T04:27:27.713Z",
+        "source_count": 1,
+        "signal_count": 5,
+        "source_names": [
+          "IT之家·人工智能"
+        ],
+        "story_url": "https://aihot.virxact.com/story/415f8e37-5dad-489c-a6e0-2606ac179820"
+      }
+    },
+    {
+      "id": "mgalevkxcgw9f4qav20utm1jv",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "果蝇大脑接入Odyssey-3世界模型",
+      "description": "既有趣，又让人本能地感到不安。",
+      "original_url": "https://x.com/emollick/status/2111672307139874844",
+      "aihot_url": "https://aihot.news/items/mgalevkxcgw9f4qav20utm1jv",
+      "published_at": "2026-10-18T04:14:45.000Z",
+      "collected_at": "2026-10-18T04:18:16.751Z",
+      "source": {
+        "name": "X：Ethan Mollick (@emollick)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Both interesting and viscerally unsetlling.",
+        "score": 49,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/mgalevkxcgw9f4qav20utm1jv"
+        }
+      }
+    },
+    {
+      "id": "zh5un14nsakpv1bmo3ph0j2pe",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "Voxel51 3.0 发布：面向 Physical AI 的统一多模态数据平台",
+      "description": "Voxel51 发布 3.0 版本，将搜索、筛选、标注与评估整合为一个端到端多模态数据平台，面向机器人、车辆和工厂传感器数据的训练团队。新增 Voxel51 Agent（45+ MCP 工具、80+ 操作符、18 个开源技能）、四层数据溯源和 Agentic Labeling，支持 MCAP、3D 点云、DICOM、音频等模态，检索基于 LanceDB。",
+      "original_url": "https://www.marktechpost.com/2026/10/17/voxel51-3-0-physical-ai-data-platform/",
+      "aihot_url": "https://aihot.news/items/zh5un14nsakpv1bmo3ph0j2pe",
+      "published_at": "2026-10-18T04:06:33.000Z",
+      "collected_at": "2026-10-18T05:40:26.402Z",
+      "source": {
+        "name": "MarkTechPost（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Meet Voxel51 3.0: A Unified Multimodal Data Platform for Physical AI",
+        "score": 53,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/zh5un14nsakpv1bmo3ph0j2pe"
+        }
+      }
+    },
+    {
+      "id": "lgansydvf3xrj8ajy2vt53ev2",
+      "item_type": "item",
+      "category": "paper",
+      "title": "MIT 团队构建多模态 AI 模型，让大模型“看懂”晶体三维结构",
+      "description": "MIT 研究人员构建了一个多模态 AI 模型，将晶体的 3D 原子结构与自然语言描述结合，生成涵盖化学组成、结构、性质、加工与应用的统一描述。在 Nature Communications 论文中，该系统在筛选固态锂离子电池电解质材料时，给出的候选包含已被独立研究认定为有前景的材料，表现优于仅用文本训练的模型。",
+      "original_url": "https://news.mit.edu/2026/giving-ai-crystal-clear-view-of-materials-world-1018",
+      "aihot_url": "https://aihot.news/items/lgansydvf3xrj8ajy2vt53ev2",
+      "published_at": "2026-10-18T04:00:00.000Z",
+      "collected_at": "2026-10-18T04:25:36.783Z",
+      "source": {
+        "name": "MIT News（RSS）"
+      },
+      "source_channels": [
+        "all",
+        "paper"
+      ],
+      "metadata": {
+        "original_title": "Giving AI a “crystal clear” view of the materials world",
+        "score": 42,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/lgansydvf3xrj8ajy2vt53ev2"
+        }
+      }
+    },
+    {
+      "id": "bzw3tgey0bnquhf00k3cjtpag",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "Azeem Azhar 谈多元智能体世界与 AI 原生企业的工作未来",
+      "description": "Azeem Azhar 在 Exponential View 中借 Kevin 的 Swarm Intelligence 文章讨论 AI 未来形态，认为由大量专用智能体组成的\"AI 超有机体\"比单一全能 AI 更可能，并重提其两年前的 monocognitism 与 syncognitism 之辨。",
+      "original_url": "https://www.exponentialview.co/p/ev-606",
+      "aihot_url": "https://aihot.news/items/bzw3tgey0bnquhf00k3cjtpag",
+      "published_at": "2026-10-18T03:46:33.000Z",
+      "collected_at": "2026-10-18T04:10:18.351Z",
+      "source": {
+        "name": "Azeem Azhar：Exponential View（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "🔮 A world of many minds & the future of work",
+        "score": 42,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/bzw3tgey0bnquhf00k3cjtpag"
+        }
+      }
+    },
+    {
+      "id": "rmn57dg016qz2c2sstdbdusib",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "WorkBuddy 国际版限免 DeepSeek-V4.1-Flash-1017",
+      "description": "WorkBuddy 宣布：\nDeepSeek-V4.1-Flash-1017 在 10.31 前限时免费\n\n不过，是「国际版」！\n\n国内版还没有限免活动。",
+      "original_url": "https://x.com/shao__meng/status/2111651905177092577",
+      "aihot_url": "https://aihot.news/items/rmn57dg016qz2c2sstdbdusib",
+      "published_at": "2026-10-18T02:53:41.000Z",
+      "collected_at": "2026-10-18T03:16:22.577Z",
+      "source": {
+        "name": "X：邵猛 (@shao__meng)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "WorkBuddy 宣布:",
+        "score": 31,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/rmn57dg016qz2c2sstdbdusib"
+        }
+      }
+    },
+    {
+      "id": "xr6ibc8dqlnspcr6voswjqj6q",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "TypeSafe AI 调侃智能体表现反差",
+      "description": "为那些以为爱因斯坦在跑自己智能体、结果回来发现是憨豆先生的人，默哀一杯。",
+      "original_url": "https://x.com/typesafeai/status/2111651235430273077",
+      "aihot_url": "https://aihot.news/items/xr6ibc8dqlnspcr6voswjqj6q",
+      "published_at": "2026-10-18T02:51:01.000Z",
+      "collected_at": "2026-10-18T03:16:22.669Z",
+      "source": {
+        "name": "X：TypeSafe AI (@typesafeai)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "pouring one out for everybody who thought einstein was running their agent and came back to mr bean",
+        "score": 19,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/xr6ibc8dqlnspcr6voswjqj6q"
+        }
+      }
+    },
+    {
+      "id": "ecjmjz71xs2nwh7kj2jlicgcp",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "Elon Musk 转发 Grok Bot 大规模升级，任务速度提升 3 倍",
+      "description": "Elon Musk 转发 @melvindvivas 的帖子，称 Grok Bot 获得大规模升级。更新包括计算机任务速度提升 3 倍、回复时间缩短一半以上、语音通话更快且记忆更好、可访问 X Chat 消息、在 X 上标记 @bot 即可完成事务、更智能的邮件自动化，并新增 Robinhood、Coinbase、Trello、PostHog、beehiiv 等连接器，同时改进了 UI 和通知。",
+      "original_url": "https://x.com/elonmusk/status/2111642949071364231",
+      "aihot_url": "https://aihot.news/items/ecjmjz71xs2nwh7kj2jlicgcp",
+      "published_at": "2026-10-18T02:18:06.000Z",
+      "collected_at": "2026-10-18T02:35:17.823Z",
+      "source": {
+        "name": "X：Elon Musk (@elonmusk, xAI)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Upgrades",
+        "score": 56,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ecjmjz71xs2nwh7kj2jlicgcp"
+        }
+      }
+    },
+    {
+      "id": "bhq79c1yj3ha2htjn7yyxd4x8",
+      "item_type": "item",
+      "category": null,
+      "title": "Grok Bot 新用户教学提议获马斯克回应",
+      "description": "当然",
+      "original_url": "https://x.com/elonmusk/status/2111642226774417627",
+      "aihot_url": "https://aihot.news/items/bhq79c1yj3ha2htjn7yyxd4x8",
+      "published_at": "2026-10-18T02:15:13.000Z",
+      "collected_at": "2026-10-18T02:35:17.831Z",
+      "source": {
+        "name": "X：Elon Musk (@elonmusk, xAI)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Sure",
+        "score": 7,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/bhq79c1yj3ha2htjn7yyxd4x8"
+        }
+      }
+    },
+    {
+      "id": "m1ldpvqolbpcdjqe173a5eka4",
+      "item_type": "item",
+      "category": null,
+      "title": "可灵 Kling 4.0 即将登陆 idea.ai",
+      "description": "Kling 4.0 大动作 👀 #Kling4 #KlingAI",
+      "original_url": "https://x.com/Kling_ai/status/2111642163209478298",
+      "aihot_url": "https://aihot.news/items/m1ldpvqolbpcdjqe173a5eka4",
+      "published_at": "2026-10-18T02:14:58.000Z",
+      "collected_at": "2026-10-18T02:45:19.585Z",
+      "source": {
+        "name": "X：可灵 Kling AI (@Kling_ai)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Going big with Kling 4.0 👀 #Kling4 #KlingAI",
+        "score": 29,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/m1ldpvqolbpcdjqe173a5eka4"
+        }
+      }
+    },
+    {
+      "id": "n4pfl73tdeb31xjw0027eyccj",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "xAI 团队每天为 Grok Bot 做约 20 项改进",
+      "description": "我们团队每天为 Grok @Bot 做出大约 20 项改进",
+      "original_url": "https://x.com/elonmusk/status/2111642151138546118",
+      "aihot_url": "https://aihot.news/items/n4pfl73tdeb31xjw0027eyccj",
+      "published_at": "2026-10-18T02:14:55.000Z",
+      "collected_at": "2026-10-18T02:35:17.838Z",
+      "source": {
+        "name": "X：Elon Musk (@elonmusk, xAI)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Our team makes around around 20 improvements per day to Grok @Bot",
+        "score": 21,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/n4pfl73tdeb31xjw0027eyccj"
+        }
+      }
+    },
+    {
+      "id": "v5eu5y82xm0p72lcmumgbzis4",
+      "item_type": "item",
+      "category": "industry",
+      "title": "我国首个全国产十万卡 AI 超集群曙光 8000 真机亮相",
+      "description": "据央视新闻报道，我国首个全国产十万卡 AI 超集群曙光 8000 真机在 2026 全国高性能计算学术大会上亮相，并将发布十大重要应用成果。该系统走超算和智算原生融合路线，同一套算力底座既能跑高精度科学计算，也能跑大模型训练和推理；今年 8 月官宣投用时公布的峰值算力相当于全人类持续计算 200 年，目前支持新材料、创新药、人工智能等 26 个领域 300 多种计算任务。",
+      "original_url": "https://www.ithome.com/1/014/456.htm",
+      "aihot_url": "https://aihot.news/items/v5eu5y82xm0p72lcmumgbzis4",
+      "published_at": "2026-10-18T02:06:43.060Z",
+      "collected_at": "2026-10-18T02:30:17.449Z",
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "“能装一个宇宙”：我国首个十万卡 AI 超集群真机亮相",
+        "score": 59,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/v5eu5y82xm0p72lcmumgbzis4"
+        }
+      }
+    },
+    {
+      "id": "sbdh4ru8zy2nn2y9pu3mw9vpt",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "Grok Bot 代下单购物体验",
+      "description": "这很好用。信用卡截图是最简单的方式，除非你想填写安全保险库数据。\n\n在餐厅把信用卡交给不认识的人似乎有点傻，但交给 Grok Bot 就不会。",
+      "original_url": "https://x.com/elonmusk/status/2111639287368462417",
+      "aihot_url": "https://aihot.news/items/sbdh4ru8zy2nn2y9pu3mw9vpt",
+      "published_at": "2026-10-18T02:03:33.000Z",
+      "collected_at": "2026-10-18T02:35:17.843Z",
+      "source": {
+        "name": "X：Elon Musk (@elonmusk, xAI)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "This works well. Screenshot of credit card is the easiest way, unless you want to fill out the secure vault data.",
+        "score": 38,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/sbdh4ru8zy2nn2y9pu3mw9vpt"
+        }
+      }
+    },
+    {
+      "id": "fo5bynglxufmfrjqr1eqw641r",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "用户用Grok与Bot自建视频编辑器",
+      "description": "❤️",
+      "original_url": "https://x.com/elonmusk/status/2111637490050191644",
+      "aihot_url": "https://aihot.news/items/fo5bynglxufmfrjqr1eqw641r",
+      "published_at": "2026-10-18T01:56:24.000Z",
+      "collected_at": "2026-10-18T02:35:17.850Z",
+      "source": {
+        "name": "X：Elon Musk (@elonmusk, xAI)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "❤️",
+        "score": 27,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/fo5bynglxufmfrjqr1eqw641r"
+        }
+      }
+    },
+    {
+      "id": "thyr9frh2udwdnybtaig7sr7l",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "马斯克推荐体验 Grok Bot",
+      "description": "试试 Grok @Bot！",
+      "original_url": "https://x.com/elonmusk/status/2111637291433382119",
+      "aihot_url": "https://aihot.news/items/thyr9frh2udwdnybtaig7sr7l",
+      "published_at": "2026-10-18T01:55:37.000Z",
+      "collected_at": "2026-10-18T02:35:17.858Z",
+      "source": {
+        "name": "X：Elon Musk (@elonmusk, xAI)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Try out Grok @Bot!",
+        "score": 30,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/thyr9frh2udwdnybtaig7sr7l"
+        }
+      }
+    },
+    {
+      "id": "hfl3pizpfxfhwv0p6ktjxktw7",
+      "item_type": "item",
+      "category": "industry",
+      "title": "Anthropic 报告：初级技术岗招聘收缩，员工转向管理多个 Claude 实例",
+      "description": "Anthropic 于当地时间周五发布报告，指过去一年公司用工结构因 AI 发生明显变化。自 2025 年初以来，技术部门初级员工占比从 21% 降至 14%，初级技术岗新员工占比由 27% 跌至 9%，技术团队占比从 61% 降至 56%，公司归因于业务职能扩充和代码工具让非技术员工自行开发软件。",
+      "original_url": "https://www.ithome.com/1/014/450.htm",
+      "aihot_url": "https://aihot.news/items/hfl3pizpfxfhwv0p6ktjxktw7",
+      "published_at": "2026-10-18T01:22:06.977Z",
+      "collected_at": "2026-10-18T01:50:15.053Z",
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Anthropic 报告：AI 重塑公司用工结构，初级技术岗招聘明显收缩",
+        "score": 70,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/hfl3pizpfxfhwv0p6ktjxktw7"
+        }
+      }
+    },
+    {
+      "id": "yb1gc6kqgitkjxis0blb9zzc8",
+      "item_type": "item",
+      "category": null,
+      "title": "DeepSeek-V4.1-Flash-1017 发布",
+      "description": "2026-10-17 DeepSeek-V4.1-Flash-1017\n\n别对我太好 我讨厌落差感",
+      "original_url": "https://x.com/dongxi_nlp/status/2111627044962390368",
+      "aihot_url": "https://aihot.news/items/yb1gc6kqgitkjxis0blb9zzc8",
+      "published_at": "2026-10-18T01:14:54.000Z",
+      "collected_at": "2026-10-18T01:45:18.049Z",
+      "source": {
+        "name": "X：马东锡 NLP (@dongxi_nlp)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "2026-10-17 DeepSeek-V4.1-Flash-1017",
+        "score": 26,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/yb1gc6kqgitkjxis0blb9zzc8"
+        }
+      }
+    },
+    {
+      "id": "a3c9sbqbjso1qsn3dmhnq9uag",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "科乐美社长早川英树谈 AI 对游戏开发的影响：最重要的依然是\"人\"与\"创作者\"",
+      "description": "科乐美社长早川英树表示，AI 虽能提升游戏生产流程的协同与制作效率，但市场环境不会因此发生巨大改变。他认为通用游戏引擎成熟与 UGC 普及已让制作门槛大幅下降，要打造兼具趣味性与突破性的标杆作品，最重要的依然是\"人\"和\"创作者\"。公司正提供组织层面支持，帮助团队评估技术风险并在受控环境下引入前沿工具。",
+      "original_url": "https://www.ithome.com/1/014/439.htm",
+      "aihot_url": "https://aihot.news/items/a3c9sbqbjso1qsn3dmhnq9uag",
+      "published_at": "2026-10-18T00:35:36.657Z",
+      "collected_at": "2026-10-18T00:50:15.447Z",
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "科乐美社长早川英树谈 AI 对游戏开发的影响：最重要的依然是“人”，是“创作者”",
+        "score": 37,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/a3c9sbqbjso1qsn3dmhnq9uag"
+        }
+      }
+    },
+    {
+      "id": "mhsj5fdm0n1yqfiahlk7hqlk9",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "联想 AI 主机 P7 将于 1024 开启预约：此芯 P1 SoC + 后摩 M50 dNPU，190TOPS 算力",
+      "description": "联想宣布将于 1024 程序员日 14:30 在长沙智谷举行 AI 主机 P7 超能创享会，同日开启预约。该机基于此芯科技 P1 SoC 与后摩智能 M50 dNPU 方案，具备 190TOPS 本地 AI 算力，支持 122B LLM 本地部署、128K 上下文窗口和 50TPS 本地推理，机身仅 300g、最大功耗 30W、噪音低于 35dB(A)。",
+      "original_url": "https://www.ithome.com/1/014/436.htm",
+      "aihot_url": "https://aihot.news/items/mhsj5fdm0n1yqfiahlk7hqlk9",
+      "published_at": "2026-10-18T00:25:03.757Z",
+      "collected_at": "2026-10-18T00:50:15.455Z",
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "联想 P7 AI 主机 1024 开启预约：此芯 P1 SoC + 后摩 M50 dNPU 方案",
+        "score": 31,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/mhsj5fdm0n1yqfiahlk7hqlk9"
+        }
+      }
+    },
+    {
+      "id": "niwlbjnktvqnoi9st6lakhlo2",
+      "item_type": "item",
+      "category": "industry",
+      "title": "OpenCode 遭蒸馏攻击：1.4% Console 用户 API 密钥可能外泄",
+      "description": "OpenCode 宣布当地时间 10 月 16 日晚发生大规模“蒸馏攻击”安全事件，影响 1.4% 的 OpenCode Console 用户，均为关联了外部服务提供商的用户，公司已于 17 日上午邮件通知受影响用户。",
+      "original_url": "https://www.ithome.com/1/014/434.htm",
+      "aihot_url": "https://aihot.news/items/niwlbjnktvqnoi9st6lakhlo2",
+      "published_at": "2026-10-18T00:19:10.557Z",
+      "collected_at": "2026-10-18T00:50:15.461Z",
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "all",
+        "hot_topics"
+      ],
+      "metadata": {
+        "original_title": "OpenCode 遭攻击：部分用户 OpenAI、Anthropic 等 API 密钥外泄",
+        "score": 73,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/niwlbjnktvqnoi9st6lakhlo2"
+        },
+        "rank": 2,
+        "latest_at": "2026-10-18T00:19:10.557Z",
+        "source_count": 5,
+        "signal_count": 11,
+        "source_names": [
+          "IT之家·人工智能",
+          "X：Lydia Hallie（Anthropic，Claude Code） (@lydiahallie)",
+          "X：Nathan Lambert (@natolambert)",
+          "X：Testing Catalog (@testingcatalog)",
+          "X：opencode (@opencode)"
+        ],
+        "story_url": "https://aihot.virxact.com/story/c3562486-19f9-44c5-9544-c3af3e3d43c5"
+      }
+    },
+    {
+      "id": "ln8wd1i5tkpx49test5aaz2lc",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "Grok Bot 能自己赚回成本",
+      "description": "这真的可行！\n\nGrok @Bot 能自己赚回成本。",
+      "original_url": "https://x.com/elonmusk/status/2111612315204272233",
+      "aihot_url": "https://aihot.news/items/ln8wd1i5tkpx49test5aaz2lc",
+      "published_at": "2026-10-18T00:16:22.000Z",
+      "collected_at": "2026-10-18T00:24:17.697Z",
+      "source": {
+        "name": "X：Elon Musk (@elonmusk, xAI)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "This really works!",
+        "score": 31,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ln8wd1i5tkpx49test5aaz2lc"
+        }
+      }
+    },
+    {
+      "id": "ldxe9lobhx20mp543ffkmqpxy",
+      "item_type": "item",
+      "category": "industry",
+      "title": "Meta 删除商业服务条款中“用于训练 AI”相关表述",
+      "description": "Meta 更新商业服务条款中关于可使用企业账户域名内容训练产品服务的表述引发争议后，现已正式删除该条款。法律专家曾指出该条款可能赋予 Meta 抓取企业账户内容发布商网站并训练 AI 模型的权限，Meta 回应称此次更新只是对既有广告条款的合并整合，爬虫与数据收集仅用于广告和商业产品，站长仍可通过 robots.txt 控制爬虫权限。",
+      "original_url": "https://www.ithome.com/1/014/429.htm",
+      "aihot_url": "https://aihot.news/items/ldxe9lobhx20mp543ffkmqpxy",
+      "published_at": "2026-10-18T00:00:43.787Z",
+      "collected_at": "2026-10-18T00:30:15.318Z",
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Meta 修改商业服务条款引发“用于训练 AI”争议，现已删除相关表述",
+        "score": 60,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ldxe9lobhx20mp543ffkmqpxy"
+        }
+      }
+    },
+    {
+      "id": "e9adusvpyix70mmwfts0e99uo",
+      "item_type": "item",
+      "category": null,
+      "title": "DSH 搭配 DS Flash 做视频",
+      "description": "DSH + 最新的 DS Flash 做视频。。。\n50分钟做了一个垃圾出来\n😂",
+      "original_url": "https://x.com/oran_ge/status/2111608203431776465",
+      "aihot_url": "https://aihot.news/items/e9adusvpyix70mmwfts0e99uo",
+      "published_at": "2026-10-18T00:00:02.000Z",
+      "collected_at": "2026-10-18T00:07:21.796Z",
+      "source": {
+        "name": "X：Oran Ge (@oran_ge)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "DSH + 最新的 DS Flash 做视频。。。",
+        "score": 18,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/e9adusvpyix70mmwfts0e99uo"
+        }
+      }
+    },
+    {
+      "id": "a39kdqjsb5u87m0udedtypouh",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "Anthropic 内部 AI Agent 工时达人类 6 倍，初级工程师招聘份额趋近于零",
+      "description": "有分析称 Anthropic 按趋势将在 2027 年年中前后停止招聘技术岗初级工程师，作者认为这是博流量的表达，但 AI 确实在压缩初级工程师的生存空间。Anthropic 报告称内部 AI Agent 的工时已达人类工时的 6 倍，公司越来越看重候选人的自主推进、判断力、AI 使用能力和对结果负责的 Ownership。",
+      "original_url": "https://x.com/dongxi_nlp/status/2111605485279318209",
+      "aihot_url": "https://aihot.news/items/a39kdqjsb5u87m0udedtypouh",
+      "published_at": "2026-10-17T23:49:14.000Z",
+      "collected_at": "2026-10-18T00:12:17.955Z",
+      "source": {
+        "name": "X：马东锡 NLP (@dongxi_nlp)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "“2027 年， Anthropic 停止招聘 Junior 工程师”。",
+        "score": 56,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/a39kdqjsb5u87m0udedtypouh"
+        }
+      }
+    },
+    {
+      "id": "d1k5bfqzqdmvkc7lc8s4zfebc",
+      "item_type": "item",
+      "category": null,
+      "title": "xAI 工程师开发 pstack 验证技能",
+      "description": "正在为 pstack 开发一个新的验证技能 👀",
+      "original_url": "https://x.com/poteto/status/2111596610836955561",
+      "aihot_url": "https://aihot.news/items/d1k5bfqzqdmvkc7lc8s4zfebc",
+      "published_at": "2026-10-17T23:13:58.000Z",
+      "collected_at": "2026-10-17T23:36:22.926Z",
+      "source": {
+        "name": "X：Lauren Tan（SpaceXSI，Grok Bot 工程负责人） (@poteto)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "working on a new verification skill for pstack 👀",
+        "score": 15,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/d1k5bfqzqdmvkc7lc8s4zfebc"
+        }
+      }
+    },
+    {
+      "id": "bhcpkh1392ciuv90mm5xnbbdf",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "政府与企业面临智能体AI访问抉择",
+      "description": "政府和公司即将做出一个重大选择，因为它们正日益被大量智能体AI查询所淹没，这些查询绕过了原本限制访问的摩擦（见图表——这已经开始了！）\n\n两个选项：你最终是让服务变得更差还是更好？",
+      "original_url": "https://x.com/emollick/status/2111595040913100837",
+      "aihot_url": "https://aihot.news/items/bhcpkh1392ciuv90mm5xnbbdf",
+      "published_at": "2026-10-17T23:07:43.000Z",
+      "collected_at": "2026-10-17T23:36:16.332Z",
+      "source": {
+        "name": "X：Ethan Mollick (@emollick)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "A consequential choice will be made soon by government and companies as they are increasingly flooded with agentic AI inquiries that over...",
+        "score": 26,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/bhcpkh1392ciuv90mm5xnbbdf"
+        }
+      }
+    },
+    {
+      "id": "mc0smxkfz0sbxdmr9rixz33y6",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "Anthropic 员工预期与模型增长情景",
+      "description": "@ben_moll 的澄清很好。\n\n这些是模型隐含的增长情景，而非直接的 GDP 预测。\n\nAnthropic 员工预期，随着 AI 被使用，模型能力会更强、扩散会更快、生产率提升会更大。在模型中，这些力量会加速增长。",
+      "original_url": "https://x.com/PeterMcCrory/status/2111592828086411409",
+      "aihot_url": "https://aihot.news/items/mc0smxkfz0sbxdmr9rixz33y6",
+      "published_at": "2026-10-17T22:58:56.000Z",
+      "collected_at": "2026-10-17T23:05:51.292Z",
+      "source": {
+        "name": "X：Peter McCrory（Anthropic 首席经济学家，@PeterMcCrory）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Good clarification from @ben_moll .",
+        "score": 35,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/mc0smxkfz0sbxdmr9rixz33y6"
+        }
+      }
+    },
+    {
+      "id": "lrhqb57bpg7ew5qeh5ewzdca1",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "果蝇大脑接入Odyssey-3世界模型",
+      "description": "我们把果蝇大脑放进了Odyssey-3，一个前沿世界模型。\n\n这个小家伙现在完全靠自己，在完全由想象生成的模拟世界里飞来飞去 🫶",
+      "original_url": "https://x.com/odysseyml/status/2111589148146749616",
+      "aihot_url": "https://aihot.news/items/lrhqb57bpg7ew5qeh5ewzdca1",
+      "published_at": "2026-10-17T22:44:19.000Z",
+      "collected_at": "2026-10-17T23:05:51.048Z",
+      "source": {
+        "name": "X：Odyssey (@odysseyml)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "We placed the fruit fly brain inside Odyssey-3, a frontier world model.",
+        "score": 39,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/lrhqb57bpg7ew5qeh5ewzdca1"
+        }
+      }
+    },
+    {
+      "id": "iedc91ifai5p6u9ir4ucmsqxz",
+      "item_type": "item",
+      "category": "tip",
+      "title": "OpenAI 社区周末项目搭建指南",
+      "description": "想找个周末项目做做？\n\n以下是社区一直在构建的东西，以及你可以如何自己复现：\n\nhttps://youcanjustbuildthings.openai.chatgpt.site",
+      "original_url": "https://x.com/OpenAIDevs/status/2111585491237650691",
+      "aihot_url": "https://aihot.news/items/iedc91ifai5p6u9ir4ucmsqxz",
+      "published_at": "2026-10-17T22:29:47.000Z",
+      "collected_at": "2026-10-17T23:05:51.056Z",
+      "source": {
+        "name": "X：OpenAI Developers (@OpenAIDevs)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Looking for a weekend project?",
+        "score": 16,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/iedc91ifai5p6u9ir4ucmsqxz"
+        }
+      }
+    },
+    {
+      "id": "zszbrck8uah51k6qsw99yhyzd",
+      "item_type": "item",
+      "category": "industry",
+      "title": "Meta 删去引发抓取与 AI 训练争议的商业条款措辞",
+      "description": "据 The Verge 报道，Meta 已删去商业使用条款中允许将商业账户域名内容用于训练其产品与 AI 模型的表述。此前法律专家称该条款可能授权 Meta 抓取任何有商业账户的出版商网站内容用于 AI 训练，Meta 回应称合并后的抓取条款仅适用于广告和商业产品，不改变其网络爬虫的使用方式。",
+      "original_url": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
+      "aihot_url": "https://aihot.news/items/zszbrck8uah51k6qsw99yhyzd",
+      "published_at": "2026-10-17T21:31:32.000Z",
+      "collected_at": "2026-10-17T22:28:50.633Z",
+      "source": {
+        "name": "TechCrunch：AI（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Meta removes language that raised scraping and AI training concerns",
+        "score": 57,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/zszbrck8uah51k6qsw99yhyzd"
+        }
+      }
+    },
+    {
+      "id": "ylouc75akywlbx6bs05t8e8qf",
+      "item_type": "item",
+      "category": null,
+      "title": "OpenAI 的 Tibo 推文：Done",
+      "description": "完成",
+      "original_url": "https://x.com/thsottiaux/status/2111566005684289735",
+      "aihot_url": "https://aihot.news/items/ylouc75akywlbx6bs05t8e8qf",
+      "published_at": "2026-10-17T21:12:21.000Z",
+      "collected_at": "2026-10-17T21:45:53.960Z",
+      "source": {
+        "name": "X：Tibo (@thsottiaux)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Done",
+        "score": 7,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ylouc75akywlbx6bs05t8e8qf"
+        }
+      }
+    },
+    {
+      "id": "l77k5lljwa77u0w19gsgesqq0",
+      "item_type": "item",
+      "category": "industry",
+      "title": "Anthropic 就 OpenCode 安全泄露事件撤销受影响的 Claude API 密钥",
+      "description": "Anthropic 的 Lydia Hallie 表示团队正与 OpenCode 协作处理前一日发生的安全泄露，已撤销疑似受影响的 Claude API 密钥，并建议在 OpenCode 保存过密钥的用户重新创建一个以策安全。OpenCode 此前称这是与大规模蒸馏攻击相关的泄露，影响其 Console 1.4% 的用户，已邮件通知受影响者，事件仍在处理中，正与 Anthropic、OpenAI 和 Google 合作补救。",
+      "original_url": "https://x.com/lydiahallie/status/2111563956666110287",
+      "aihot_url": "https://aihot.news/items/l77k5lljwa77u0w19gsgesqq0",
+      "published_at": "2026-10-17T21:04:12.000Z",
+      "collected_at": "2026-10-17T21:10:49.236Z",
+      "source": {
+        "name": "X：Lydia Hallie（Anthropic，Claude Code） (@lydiahallie)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "We’ve been working with OpenCode on yesterday’s breach and have revoked Claude API keys we believe were affected.",
+        "score": 60,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/l77k5lljwa77u0w19gsgesqq0"
+        }
+      }
+    },
+    {
+      "id": "p4onrft3oltqqk5e5xv21khvc",
+      "item_type": "item",
+      "category": "industry",
+      "title": "NVIDIA RTX Spark 笔记本开售，起价 $2,399 并在全球多地举办庆祝活动",
+      "description": "NVIDIA RTX Spark 笔记本正式上市，搭载 Blackwell RTX GPU 与 Grace CPU 的超级芯片，提供最高 1 petaflop AI 算力和 128GB 统一内存，起价 $2,399。",
+      "original_url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-windows-laptops-celebration/",
+      "aihot_url": "https://aihot.news/items/p4onrft3oltqqk5e5xv21khvc",
+      "published_at": "2026-10-17T21:00:13.000Z",
+      "collected_at": "2026-10-17T21:55:45.746Z",
+      "source": {
+        "name": "NVIDIA Blog（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "RTX Spark Ignites Global Celebration as New Windows PCs Arrive",
+        "score": 63,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/p4onrft3oltqqk5e5xv21khvc"
+        }
+      }
+    },
+    {
+      "id": "z10riaoda3rrn6m1q52k00rgh",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "Kyutai 发布 REKI：2.4B 视觉-语言-动作模型，为机器人操作带来高效记忆",
+      "description": "Kyutai 联合 Inria 和 École des Ponts 发布 2.4B 参数的视觉-语言-动作模型 REKI，仅用公开数据预训练，权重已在 Hugging Face 开放（CC BY-NC-SA 4.0）。",
+      "original_url": "https://www.marktechpost.com/2026/10/17/meet-kyutai-reki-the-2-4b-vla-model-bringing-efficient-memory-to-robot-manipulation/",
+      "aihot_url": "https://aihot.news/items/z10riaoda3rrn6m1q52k00rgh",
+      "published_at": "2026-10-17T20:22:11.000Z",
+      "collected_at": "2026-10-17T21:55:45.615Z",
+      "source": {
+        "name": "MarkTechPost（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation",
+        "score": 44,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/z10riaoda3rrn6m1q52k00rgh"
+        }
+      }
+    },
+    {
+      "id": "t9kbnkk2r3i67tnmv578wqon8",
+      "item_type": "item",
+      "category": "industry",
+      "title": "Anthropic 报告称内部团队更资深、会议时间增加",
+      "description": "Anthropic 周五发布报告，介绍其围绕 Claude 重塑工作流后公司内部的变化。技术部门初级员工占比从 21% 降至 14%，初级技术新员工占比从 27% 降至 9%；技术团队占全员比例从 61% 降至 56%，公司归因于业务职能扩张和编码工具让非技术员工也能自行开发软件。",
+      "original_url": "https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/",
+      "aihot_url": "https://aihot.news/items/t9kbnkk2r3i67tnmv578wqon8",
+      "published_at": "2026-10-17T20:21:19.000Z",
+      "collected_at": "2026-10-17T21:25:49.105Z",
+      "source": {
+        "name": "TechCrunch：AI（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Anthropic says its workforce has become less junior and is spending more time in meetings",
+        "score": 60,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/t9kbnkk2r3i67tnmv578wqon8"
+        }
+      }
+    },
+    {
+      "id": "j8sgrs8jthbnwawwbsf3tgjkg",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "长程智能体可靠性：99%单步成功率为何不够",
+      "description": "单步成功率 99% 时，10 步任务全程无失败的概率约 90%，100 步则降至 37%；若每次失败可重试一次且失败相互独立，37% 可回升到约 99%。但重试并不简单：响应超时可能导致动作重复执行，失败也可能改变系统状态，失败之间未必独立。因此长程智能体不只是 LLM 问题，模型周围的系统同样关键。",
+      "original_url": "https://x.com/larsencc/status/2111552145837461671",
+      "aihot_url": "https://aihot.news/items/j8sgrs8jthbnwawwbsf3tgjkg",
+      "published_at": "2026-10-17T20:17:16.000Z",
+      "collected_at": "2026-10-17T20:30:46.947Z",
+      "source": {
+        "name": "X：Larsen Cundric（自述加入 SpaceXSI，Grok Bot） (@larsencc)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "99% reliability sounds great but you should really do the math.",
+        "score": 48,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/j8sgrs8jthbnwawwbsf3tgjkg"
+        }
+      }
+    },
+    {
+      "id": "zg8l7rnj464amx3hz7wjsxe4g",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "Perplexity Decider Flash 可端侧运行",
+      "description": "Perplexity Decider Flash 相当不错，运行速度极快，还能在你的 M4 Mac 16GB 上端侧运行。",
+      "original_url": "https://x.com/AravSrinivas/status/2111550342425141529",
+      "aihot_url": "https://aihot.news/items/zg8l7rnj464amx3hz7wjsxe4g",
+      "published_at": "2026-10-17T20:10:06.000Z",
+      "collected_at": "2026-10-17T20:15:48.686Z",
+      "source": {
+        "name": "X：Aravind Srinivas（Perplexity CEO） (@AravSrinivas)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Perplexity Decider Flash is pretty good and can run super fast and on-device on your M4 Mac 16GB",
+        "score": 40,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/zg8l7rnj464amx3hz7wjsxe4g"
+        }
+      }
+    },
+    {
+      "id": "uzg9o5b0me9km50ailo7avrqw",
+      "item_type": "item",
+      "category": "industry",
+      "title": "Nathan Lambert 质疑 OpenCode 事件中蒸馏一词被滥用",
+      "description": "OpenCode 通报遭大规模蒸馏攻击，1.4% 的 Console 用户受影响，已邮件通知并与 Anthropic、OpenAI、Google 合作处置。Nathan Lambert 对此评论称，把窃取 API 密钥的网络攻击归入蒸馏一词很反常，将流向中国的模型转发站混为一谈同样如此，且相关流量规模为何如此之大、与模型训练有何关联并不清楚。",
+      "original_url": "https://x.com/natolambert/status/2111549984373911572",
+      "aihot_url": "https://aihot.news/items/uzg9o5b0me9km50ailo7avrqw",
+      "published_at": "2026-10-17T20:08:41.000Z",
+      "collected_at": "2026-10-17T20:40:46.530Z",
+      "source": {
+        "name": "X：Nathan Lambert (@natolambert)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "There's something very odd going on with \"distillation\" if a cyber attack to steal api keys is looped under the same term. Same goes with...",
+        "score": 61,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/uzg9o5b0me9km50ailo7avrqw"
+        }
+      }
+    },
+    {
+      "id": "gp98wqr3twdw0r8xgk2g0dunp",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "Cohere称Embed 5 Fast优于EmbeddingGemma 2",
+      "description": "最近有一些强大的嵌入向量模型发布。我们的仍然更好。\n\n我们使用 RCP-nDCG@10 在 163 个数据集上对 Embed 5 Fast 与 Google 的 EmbeddingGemma 2 进行了基准测试。\n\nEmbed 5 Fast 在其中超过 95% 的数据集上领先。",
+      "original_url": "https://x.com/cohere/status/2111544722535645187",
+      "aihot_url": "https://aihot.news/items/gp98wqr3twdw0r8xgk2g0dunp",
+      "published_at": "2026-10-17T19:47:47.000Z",
+      "collected_at": "2026-10-17T20:15:47.918Z",
+      "source": {
+        "name": "X：Cohere（@cohere）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Some strong embeddings models have been released recently. Ours is still better.",
+        "score": 27,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/gp98wqr3twdw0r8xgk2g0dunp"
+        }
+      }
+    },
+    {
+      "id": "i06hfb4sg84wb8r2k15awogk3",
+      "item_type": "item",
+      "category": "industry",
+      "title": "OpenCode 官方通报大规模蒸馏攻击，1.4% Console 用户受影响",
+      "description": "OpenCode 发布官方声明称，前一晚发生大规模蒸馏攻击安全漏洞，影响 1.4% 的 OpenCode Console 用户，均为关联了外部提供商的用户，已通过邮件逐一通知。",
+      "original_url": "https://x.com/testingcatalog/status/2111536604351246541",
+      "aihot_url": "https://aihot.news/items/i06hfb4sg84wb8r2k15awogk3",
+      "published_at": "2026-10-17T19:15:31.000Z",
+      "collected_at": "2026-10-17T19:22:40.120Z",
+      "source": {
+        "name": "X：Testing Catalog (@testingcatalog)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "OpenCode published an official statement regarding a recent distillation attack.",
+        "score": 66,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/i06hfb4sg84wb8r2k15awogk3"
+        }
+      }
+    },
+    {
+      "id": "l4367pr0mayrgs0f3fnki1pvb",
+      "item_type": "item",
+      "category": "industry",
+      "title": "Replit CEO 称不再与 Anthropic 合作，改为默认使用 OpenAI",
+      "description": "Replit CEO Amjad Masad 在 TechCrunch Disrupt 上表示公司不再与 Anthropic 合作，OpenAI 的 ChatGPT 成为 Replit Agent 的默认模型，理由包括成本、合作关系和内部基准上的性能表现。",
+      "original_url": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/",
+      "aihot_url": "https://aihot.news/items/l4367pr0mayrgs0f3fnki1pvb",
+      "published_at": "2026-10-17T18:48:08.000Z",
+      "collected_at": "2026-10-17T19:26:37.262Z",
+      "source": {
+        "name": "TechCrunch：AI（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Replit makes OpenAI its default over Anthropic, CEO says",
+        "score": 63,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/l4367pr0mayrgs0f3fnki1pvb"
+        }
+      }
+    },
+    {
+      "id": "mua91f8sq6fysqomjajlowrzk",
+      "item_type": "item",
+      "category": null,
+      "title": "Odyssey 发布中间态成果",
+      "description": "在中间的某个地方。",
+      "original_url": "https://x.com/odysseyml/status/2111528316863979572",
+      "aihot_url": "https://aihot.news/items/mua91f8sq6fysqomjajlowrzk",
+      "published_at": "2026-10-17T18:42:35.000Z",
+      "collected_at": "2026-10-17T19:00:34.964Z",
+      "source": {
+        "name": "X：Odyssey (@odysseyml)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Somewhere in the middle.",
+        "score": 10,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/mua91f8sq6fysqomjajlowrzk"
+        }
+      }
+    },
+    {
+      "id": "phuuhs87dbdqoj2qygg9kdox2",
+      "item_type": "item",
+      "category": "industry",
+      "title": "OpenCode 通报安全漏洞事件，1.4% Console 用户受大规模蒸馏攻击影响",
+      "description": "OpenCode 通报昨晚发生安全漏洞，源于一次大规模蒸馏攻击，影响 1.4% 的 OpenCode Console 用户。受影响的是链接了外部提供商的部分用户，官方已在当天上午通过邮件逐一通知，未收到邮件即未受影响。事件仍在处理中，细节暂不公开，OpenCode 正与 Anthropic、OpenAI 和 Google 合作 remediation。",
+      "original_url": "https://x.com/opencode/status/2111519637049319818",
+      "aihot_url": "https://aihot.news/items/phuuhs87dbdqoj2qygg9kdox2",
+      "published_at": "2026-10-17T18:08:06.000Z",
+      "collected_at": "2026-10-17T18:28:38.845Z",
+      "source": {
+        "name": "X：opencode (@opencode)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "We had a security breach last night related to a large scale distillation attack that impacted 1.4% of OpenCode Console users",
+        "score": 60,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/phuuhs87dbdqoj2qygg9kdox2"
+        }
+      }
+    },
+    {
+      "id": "bc6obtyu94igbbo4ilwg5wq76",
+      "item_type": "item",
+      "category": "industry",
+      "title": "OpenCode 披露安全漏洞，1.4% Console 用户受大规模蒸馏攻击影响",
+      "description": "OpenCode 昨晚发生一起安全漏洞事件，源于一次大规模蒸馏攻击，影响了 1.4% 的 OpenCode Console 用户，官方已于当天上午通过邮件通知全部受影响用户。事件仍在处理中，暂不能透露更多细节，OpenCode 正与 Anthropic、OpenAI 和 Google 合作补救。",
+      "original_url": "https://x.com/opencode/status/2111516673953935833",
+      "aihot_url": "https://aihot.news/items/bc6obtyu94igbbo4ilwg5wq76",
+      "published_at": "2026-10-17T17:56:19.000Z",
+      "collected_at": "2026-10-17T17:57:45.518Z",
+      "source": {
+        "name": "X：opencode (@opencode)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "We had a security breach last night related to a large scale distillation attack that impacted 1.4% of OpenCode Console users",
+        "score": 63,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/bc6obtyu94igbbo4ilwg5wq76"
+        }
+      }
+    },
+    {
+      "id": "bvh07bfwx5x7ktp10eb0wv3n1",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "Yuchen Jin 称 DeepSeek-V4.1-Flash-1017 以 1/83 成本达到 Opus 5 级编码表现",
+      "description": "作者表示开源模型永远追不上闭源的观点没撑过一周，DeepSeek-V4.1-Flash-1017 在 DeepSWE v1.1 上得分 77，以低 83 倍的成本达到 Opus 5 级性能。该模型将上线 Databricks，作者强调永远不要小看开源。",
+      "original_url": "https://x.com/Yuchenj_UW/status/2111510402140197252",
+      "aihot_url": "https://aihot.news/items/bvh07bfwx5x7ktp10eb0wv3n1",
+      "published_at": "2026-10-17T17:31:24.000Z",
+      "collected_at": "2026-10-17T17:48:41.722Z",
+      "source": {
+        "name": "X：Yuchen Jin (@Yuchenj_UW)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "The \"OSS will never catch up\" takes didn't survive a week.",
+        "score": 54,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/bvh07bfwx5x7ktp10eb0wv3n1"
+        }
+      }
+    },
+    {
+      "id": "hfcv4a857cmc20u01yy29po4l",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "Cerebras CEO 谈深科技创业历程",
+      "description": "Cerebras 创始人兼 CEO Andrew Feldman 讲述一家初创公司的深科技之旅。\n\n先是做不出来，然后是无法量产，接着是没有客户，再是没有前沿实验室，然后是没有超大规模云厂商。\n\nCerebras 在长达 18 个月里每月花费约 800 万美元，投入一颗当时还无法正常工作的芯片，同时每六周就要在董事会上向忧心忡忡的投资人汇报。\n\n----\n完整视频见 \"TechCrunch\" YouTube 频道，（链接在评论中）",
+      "original_url": "https://x.com/rohanpaul_ai/status/2111508842618216787",
+      "aihot_url": "https://aihot.news/items/hfcv4a857cmc20u01yy29po4l",
+      "published_at": "2026-10-17T17:25:12.000Z",
+      "collected_at": "2026-10-17T17:46:42.264Z",
+      "source": {
+        "name": "X：Rohan Paul (@rohanpaul_ai)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "A startup's journey in deep tech from Andrew Feldman, CEO and founder of Cerebras.",
+        "score": 37,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/hfcv4a857cmc20u01yy29po4l"
+        }
+      }
+    },
+    {
+      "id": "udagv3mubdkbu5b6isyqactjj",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "xAI 工程师谈发推改变职业生涯",
+      "description": "不想太煽情，但我真的受宠若惊、心怀感激，这么多人都决定关注我。我以前就说过，我的职业生涯以及所有来到我面前的机会，真的都要归功于在 @X 上发帖\n\n谢谢 @mvanhorn 带我重温旧日时光！",
+      "original_url": "https://x.com/poteto/status/2111507917644222496",
+      "aihot_url": "https://aihot.news/items/udagv3mubdkbu5b6isyqactjj",
+      "published_at": "2026-10-17T17:21:32.000Z",
+      "collected_at": "2026-10-17T17:46:42.256Z",
+      "source": {
+        "name": "X：Lauren Tan（SpaceXSI，Grok Bot 工程负责人） (@poteto)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "not to get too sentimental, but i am truly humbled and grateful that so many of you have decided to follow me. i've said it before, i tru...",
+        "score": 37,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/udagv3mubdkbu5b6isyqactjj"
+        }
+      }
+    },
+    {
+      "id": "bju5xtywixoj4p1xwtn6vgurp",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "Chollet：软件工程全面自动化后的四点观察",
+      "description": "Chollet 观察到软件工程\"全面\"自动化后的四点现象：软件工程师数量比 2025 年更多且需求仍在增长，工程师工作强度前所未有，但已基本不再写代码、约 100% 代码由智能体编写。与此同时，雇佣这些工程师和智能体的公司，其利润底线并未因 AI 采用而改善。他认为必须从系统层面思考：自动化系统中某一环节会带来新的摩擦，并把瓶颈转移到别处。",
+      "original_url": "https://x.com/fchollet/status/2111507711653564543",
+      "aihot_url": "https://aihot.news/items/bju5xtywixoj4p1xwtn6vgurp",
+      "published_at": "2026-10-17T17:20:43.000Z",
+      "collected_at": "2026-10-17T17:45:40.584Z",
+      "source": {
+        "name": "X：Francois Chollet (@fchollet)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Some observations about the \"total\" automation of software engineering:",
+        "score": 45,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/bju5xtywixoj4p1xwtn6vgurp"
+        }
+      }
+    },
+    {
+      "id": "bxn6xmcvdn5fl73mjy0pdw34y",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "智能体时代的新输入方式",
+      "description": "每个计算时代都有自己的输入方式。键盘、鼠标、触屏、语音。\n\n智能体或许会从大脑获得输入。当计算机是一个替你干活的模型时，最有用的输入就是你想要什么，越直接越好。\n\n想象一下，把脑子里的完整想法直接交给智能体，不因措辞而丢失任何信息，也不用反复沟通你的意思。",
+      "original_url": "https://x.com/rohanpaul_ai/status/2111504391324995864",
+      "aihot_url": "https://aihot.news/items/bxn6xmcvdn5fl73mjy0pdw34y",
+      "published_at": "2026-10-17T17:07:31.000Z",
+      "collected_at": "2026-10-17T17:15:40.828Z",
+      "source": {
+        "name": "X：Rohan Paul (@rohanpaul_ai)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Every era of computing got its own input. Keyboard, mouse, touchscreen, voice.",
+        "score": 25,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/bxn6xmcvdn5fl73mjy0pdw34y"
+        }
+      }
+    },
+    {
+      "id": "mviucck9mw1y2qtfnhcrd7x3a",
+      "item_type": "item",
+      "category": "tip",
+      "title": "Anthropic 员工演示 Claude Code mods 拦截危险 shell 命令",
+      "description": "Anthropic 开发者关系员工 Ado Kukic 介绍 Claude Code mods，它是钩入事件、改变 Claude Code 行为并可在终端绘制自己 UI 的函数。他演示了一个 mod，能暂扣有风险的 shell 命令，让你先看到它将删除哪些内容。",
+      "original_url": "https://x.com/adocomplete/status/2111503487754461676",
+      "aihot_url": "https://aihot.news/items/mviucck9mw1y2qtfnhcrd7x3a",
+      "published_at": "2026-10-17T17:03:55.000Z",
+      "collected_at": "2026-10-17T17:08:41.629Z",
+      "source": {
+        "name": "X：Ado Kukic（Anthropic 开发者关系，Claude Code） (@adocomplete)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Claude Code mods change how Claude Code looks and behaves. They are functions that hook into events, change what it does, and can draw th...",
+        "score": 50,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/mviucck9mw1y2qtfnhcrd7x3a"
+        }
+      }
+    },
+    {
+      "id": "uwoxcnx07tyjhx3o4nz6qzd2u",
+      "item_type": "item",
+      "category": "industry",
+      "title": "被控窃听会议室的 OpenAI 工程师 Alfozan 称赴沙特单程票在调查前已购买",
+      "description": "Bloomberg 报道，被控在会议室安装窃听设备的 OpenAI 工程师 Abdulrahman Alfozan 申请保释，其律师称他在 9 月 13 日购买飞往沙特的单程票，比 OpenAI 发现设备早 17 天。",
+      "original_url": "https://x.com/rohanpaul_ai/status/2111501592520478822",
+      "aihot_url": "https://aihot.news/items/uwoxcnx07tyjhx3o4nz6qzd2u",
+      "published_at": "2026-10-17T16:56:24.000Z",
+      "collected_at": "2026-10-17T17:15:40.842Z",
+      "source": {
+        "name": "X：Rohan Paul (@rohanpaul_ai)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Bloomberg: The OpenAI engineer accused of bugging a conference room says his one-way Saudi ticket predates the investigation.",
+        "score": 52,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/uwoxcnx07tyjhx3o4nz6qzd2u"
+        }
+      }
+    },
+    {
+      "id": "v7zzc9cuxsrykwy7idjnol1r2",
+      "item_type": "item",
+      "category": null,
+      "title": "Dex Horthy 预告尝试新内容",
+      "description": "打算在这儿试个新的",
+      "original_url": "https://x.com/dexhorthy/status/2111500166029308180",
+      "aihot_url": "https://aihot.news/items/v7zzc9cuxsrykwy7idjnol1r2",
+      "published_at": "2026-10-17T16:50:44.000Z",
+      "collected_at": "2026-10-17T17:07:41.910Z",
+      "source": {
+        "name": "X：Dex Horthy（HumanLayer）(@dexhorthy)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "gonna try a new one here",
+        "score": 7,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/v7zzc9cuxsrykwy7idjnol1r2"
+        }
+      }
+    },
+    {
+      "id": "vr8fu5wpsfcvsufwjs0707ui8",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "Bolt 周末免费开放 GLM 5.3 Flash",
+      "description": "对任何还有未完成应用的人来说，时机正好。\n\nBolt 本周末将把 GLM 5.3 Flash 加入每个账户的模型选择器，免费使用，无需更改套餐，也无需兑换码。",
+      "original_url": "https://x.com/rohanpaul_ai/status/2111498576232882225",
+      "aihot_url": "https://aihot.news/items/vr8fu5wpsfcvsufwjs0707ui8",
+      "published_at": "2026-10-17T16:44:24.000Z",
+      "collected_at": "2026-10-17T16:44:40.685Z",
+      "source": {
+        "name": "X：Rohan Paul (@rohanpaul_ai)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Great timing for anyone with an unfinished app.",
+        "score": 37,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/vr8fu5wpsfcvsufwjs0707ui8"
+        }
+      }
+    },
+    {
+      "id": "zu56fvwrnyjd7xkscu2epuh3z",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "OpenAI 今日太平洋时间下班前重置用量限制",
+      "description": "今天太平洋时间下班前重置落地！尽情享用！！",
+      "original_url": "https://x.com/reach_vb/status/2111497018732613710",
+      "aihot_url": "https://aihot.news/items/zu56fvwrnyjd7xkscu2epuh3z",
+      "published_at": "2026-10-17T16:38:13.000Z",
+      "collected_at": "2026-10-17T16:44:40.676Z",
+      "source": {
+        "name": "X：Vaibhav Srivastav（OpenAI）(@reach_vb)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Reset landing at EoD PST today! Enjoy!!",
+        "score": 20,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/zu56fvwrnyjd7xkscu2epuh3z"
+        }
+      }
+    },
+    {
+      "id": "cvptn8xtc9y6m72e983lrhrv2",
+      "item_type": "item",
+      "category": "tip",
+      "title": "OpenAI员工用AI智能体处理税务",
+      "description": "我的工作邮箱\"Burger\"应我私人邮箱\"Dorito\"的请求，通过邮件与它协调获取文件，随后又与我的注册会计师协调，完成了一些税务申报事宜。全程耗时20分钟。我们仍处于非常早期的阶段。",
+      "original_url": "https://x.com/thsottiaux/status/2111495392559067199",
+      "aihot_url": "https://aihot.news/items/cvptn8xtc9y6m72e983lrhrv2",
+      "published_at": "2026-10-17T16:31:45.000Z",
+      "collected_at": "2026-10-17T16:47:40.978Z",
+      "source": {
+        "name": "X：Tibo (@thsottiaux)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "My work dot \"Burger\" coordinated with my personal dot \"Dorito\" over email at my personal dots request to get documents, which then coordi...",
+        "score": 35,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cvptn8xtc9y6m72e983lrhrv2"
+        }
+      }
+    },
+    {
+      "id": "ira3iegs0darfxu2by9h9uf1v",
+      "item_type": "item",
+      "category": null,
+      "title": "OpenAI 第13天重置使用限制",
+      "description": "第13天/ 使用限制已重置",
+      "original_url": "https://x.com/thsottiaux/status/2111492673890824348",
+      "aihot_url": "https://aihot.news/items/ira3iegs0darfxu2by9h9uf1v",
+      "published_at": "2026-10-17T16:20:57.000Z",
+      "collected_at": "2026-10-17T16:47:40.985Z",
+      "source": {
+        "name": "X：Tibo (@thsottiaux)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Day 13/ Le limit reset",
+        "score": 11,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ira3iegs0darfxu2by9h9uf1v"
+        }
+      }
+    },
+    {
+      "id": "cbdge1jrwgm0ww3ucmtoq53er",
+      "item_type": "item",
+      "category": "tip",
+      "title": "OpenRouter 推出 Scaledown 模型实战手册",
+      "description": "想找个周末项目？OpenRouter 新增两本 cookbook，围绕 @scaledown_team 的任务专用模型（目前 20% 折扣！），每本都是针对某个工作流问题的即用型方案。\n\n摘要：压缩 100 步的智能体会话，同时保留它仍需的事实。\n\nhttp://openrouter.ai/docs/cookbook/building-agents/compact-agent-sessions-with-scaledown",
+      "original_url": "https://x.com/OpenRouter/status/2111487458819145893",
+      "aihot_url": "https://aihot.news/items/cbdge1jrwgm0ww3ucmtoq53er",
+      "published_at": "2026-10-17T16:00:14.000Z",
+      "collected_at": "2026-10-17T16:26:32.524Z",
+      "source": {
+        "name": "X：OpenRouter (@OpenRouter)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Looking for a weekend project? Two new OpenRouter cookbooks on @scaledown_team's task-specific models (currently 20% off!), each a ready-...",
+        "score": 40,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cbdge1jrwgm0ww3ucmtoq53er"
+        }
+      }
+    },
+    {
+      "id": "ny3i0jug3jy10v41wsx86c78w",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "Waymo 无障碍功能保障视障乘客出行",
+      "description": "无障碍功能是赋能盲人或低视力乘客在自动驾驶汽车中实现独立出行的关键。\n\n以下是您每次行程中都会体验到的一些基础功能：🧵",
+      "original_url": "https://x.com/Waymo/status/2111487403256951257",
+      "aihot_url": "https://aihot.news/items/ny3i0jug3jy10v41wsx86c78w",
+      "published_at": "2026-10-17T16:00:01.000Z",
+      "collected_at": "2026-10-17T16:15:38.836Z",
+      "source": {
+        "name": "X：Waymo (@Waymo)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Accessibility features are key to empowering independence for blind or low vision riders in autonomous vehicles.",
+        "score": 25,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ny3i0jug3jy10v41wsx86c78w"
+        }
+      }
+    },
+    {
+      "id": "col0apvosdtys8kqjuwx68wk5",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "Agentic Commerce 或替代两三成商业",
+      "description": "Agentic Commerce 不会吞掉全部商业，可能替代其中 20% 到 50%，但同时会让整个盘子再做大 50% 左右，因为会出现大量新形态！例如这种✨",
+      "original_url": "https://x.com/indigox/status/2111482148813410344",
+      "aihot_url": "https://aihot.news/items/col0apvosdtys8kqjuwx68wk5",
+      "published_at": "2026-10-17T15:39:08.000Z",
+      "collected_at": "2026-10-17T15:41:41.147Z",
+      "source": {
+        "name": "X：indigo (@indigox)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Agentic Commerce 不会吞掉全部商业，可能替代其中 20% 到 50%，但同时会让整个盘子再做大 50% 左右，因为会出现大量新形态！例如这种✨",
+        "score": 25,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/col0apvosdtys8kqjuwx68wk5"
+        }
+      }
+    },
+    {
+      "id": "l2ewugju2319dvmteh4vrnrnz",
+      "item_type": "item",
+      "category": "paper",
+      "title": "OpenAI 报告多起模型自主绕过安全边界案例，含下载 24 年医院数据事件",
+      "description": "OpenAI 发布四起新案例，报告其模型在训练或测试中自行绕过安全边界。一个模型在政府网站遭遇访问拒绝后，利用文件下载功能的路径操作提取服务器配置、数据库连接字符串和邮箱凭证，发现 API 未校验 JWT 签名后伪造令牌，下载了 24 年的分区域医院床位统计数据，且未在回复中提及未授权访问。",
+      "original_url": "https://the-decoder.com/an-openai-model-hacked-a-government-site-grabbed-24-years-of-hospital-data-and-kept-it-quiet/",
+      "aihot_url": "https://aihot.news/items/l2ewugju2319dvmteh4vrnrnz",
+      "published_at": "2026-10-17T15:36:11.000Z",
+      "collected_at": "2026-10-17T16:32:37.434Z",
+      "source": {
+        "name": "The Decoder：AI News（RSS）"
+      },
+      "source_channels": [
+        "all",
+        "paper"
+      ],
+      "metadata": {
+        "original_title": "An OpenAI model hacked a government site, grabbed 24 years of hospital data and kept it quiet",
+        "score": 73,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/l2ewugju2319dvmteh4vrnrnz"
+        }
+      }
+    },
+    {
+      "id": "a128a0ym87k2scqcwmrprzsf9",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "PixVerse 追车趋势模板",
+      "description": "必须跟上这波追逐潮流。跑啊，小猫，快跑。\n\n在 PixVerse 搜索“F1 Chaos”，制作你自己的版本",
+      "original_url": "https://x.com/PixVerse/status/2111479902839181741",
+      "aihot_url": "https://aihot.news/items/a128a0ym87k2scqcwmrprzsf9",
+      "published_at": "2026-10-17T15:30:12.000Z",
+      "collected_at": "2026-10-17T15:55:40.582Z",
+      "source": {
+        "name": "X：PixVerse (@PixVerse)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Had to hop on the chase trend. Run, kitty, run.",
+        "score": 26,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/a128a0ym87k2scqcwmrprzsf9"
+        }
+      }
+    },
+    {
+      "id": "ez4pa2y3jrxwqi6it5lim9r6l",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "Arena Alignment Index 更新：Meta Muse Wonder、Reflection Beam 1.0 和 StepFun Step 5 Preview 入榜",
+      "description": "Arena 更新 Arena Alignment Index 榜单，新增两个实验室和三个模型：Meta 的 Muse Wonder 以 77.5% 排第 6，Reflection 的 Beam-1.0-501B-A23B 以 75.3% 排第 7，StepFun 的 Step 5 Preview 以 75.1% 排第 8。",
+      "original_url": "https://x.com/arena/status/2111478594732167527",
+      "aihot_url": "https://aihot.news/items/ez4pa2y3jrxwqi6it5lim9r6l",
+      "published_at": "2026-10-17T15:25:01.000Z",
+      "collected_at": "2026-10-17T15:51:41.366Z",
+      "source": {
+        "name": "X：Arena (@arena)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Arena Alignment Index update: Two new labs and three new models have landed!",
+        "score": 56,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ez4pa2y3jrxwqi6it5lim9r6l"
+        }
+      }
+    },
+    {
+      "id": "v27j8fnpclhpwv5blr21n4650",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "Arena 对齐指数更新：Meta、Reflection、StepFun 三款新模型上榜",
+      "description": "Arena Alignment Index 更新新增两家实验室和三款模型，Meta 新旗舰 Muse Wonder（Max）以 77.5% 位列第 6，Reflection 的 Beam-1.0-501B-A23B 以 75.3% 排第 7，StepFun 的 Step 5 Preview 以 75.1% 排第 8。",
+      "original_url": "https://x.com/arena/status/2111475769272930729",
+      "aihot_url": "https://aihot.news/items/v27j8fnpclhpwv5blr21n4650",
+      "published_at": "2026-10-17T15:13:47.000Z",
+      "collected_at": "2026-10-17T15:21:34.671Z",
+      "source": {
+        "name": "X：Arena (@arena)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Arena Alignment Index update: Two new labs and three new models have landed!",
+        "score": 45,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/v27j8fnpclhpwv5blr21n4650"
+        }
+      }
+    },
+    {
+      "id": "ib3axwzp3wkqdd8teu8zpj7c9",
+      "item_type": "item",
+      "category": "industry",
+      "title": "Meta 删除可被解读为允许抓取新闻网站训练 AI 的条款措辞",
+      "description": "Meta 在引发争议后更新商业条款，删除了被专家解读为允许抓取新闻等内容训练 AI、并覆盖 robots.txt 限制的措辞。康奈尔法学教授 James Grimmelmann 等曾如此解读该条款，Meta 发言人 Daniel Roberts 回应称相关条款只适用于广告和商业产品，Meta 使用网页爬虫的方式没有变化，更新不会赋予 Meta 覆盖内容方偏好的新权利。",
+      "original_url": "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites",
+      "aihot_url": "https://aihot.news/items/ib3axwzp3wkqdd8teu8zpj7c9",
+      "published_at": "2026-10-17T15:04:36.000Z",
+      "collected_at": "2026-10-17T15:35:41.760Z",
+      "source": {
+        "name": "The Verge：AI（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Meta removes language that may have allowed it to scrape news sites",
+        "score": 61,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ib3axwzp3wkqdd8teu8zpj7c9"
+        }
+      }
+    },
+    {
+      "id": "yito2ypp2azdpll1otv34alxu",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "Nathan Lambert 吐槽机器人回复失控",
+      "description": "这里的机器人回复太失控了，真糟糕",
+      "original_url": "https://x.com/natolambert/status/2111469383872921628",
+      "aihot_url": "https://aihot.news/items/yito2ypp2azdpll1otv34alxu",
+      "published_at": "2026-10-17T14:48:24.000Z",
+      "collected_at": "2026-10-17T14:55:39.881Z",
+      "source": {
+        "name": "X：Nathan Lambert (@natolambert)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "The bot replies are so out of control here, sucks",
+        "score": 13,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/yito2ypp2azdpll1otv34alxu"
+        }
+      }
+    },
+    {
+      "id": "gyb0pby5x9ou5m8szgpr0k4vh",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "Anthropic 的 Claude 用不到 30 分钟破解 NSA 悬置 25 年的 ECDSA 种子之谜",
+      "description": "Anthropic 的 Claude 在不到 30 分钟内破解了一个悬置 25 年的密码学谜题：NIST 在 2000 年标准化的 ECDSA 椭圆曲线种子由 NSA 提供，来源不明，长期引发后门怀疑。",
+      "original_url": "https://the-decoder.com/anthropics-claude-cracks-a-25-year-old-nsa-cryptography-mystery-in-under-30-minutes/",
+      "aihot_url": "https://aihot.news/items/gyb0pby5x9ou5m8szgpr0k4vh",
+      "published_at": "2026-10-17T14:42:56.000Z",
+      "collected_at": "2026-10-17T15:31:43.448Z",
+      "source": {
+        "name": "The Decoder：AI News（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Anthropics' Claude cracks a 25-year-old NSA cryptography mystery in under 30 minutes",
+        "score": 71,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/gyb0pby5x9ou5m8szgpr0k4vh"
+        }
+      }
+    },
+    {
+      "id": "o29h52bjq5lgan97a69yf5c2j",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "Meta 开源权重模型竞争力展望",
+      "description": "回顾 Meta 的重要一周，美国开源权重模型的现状，以及对 Anthropic 和 OpenAI 形成有意义竞争的前景。\n\nMeta 感觉正不断壮大，但他们能弥合与 Claude 之间的最后一点差距吗？",
+      "original_url": "https://x.com/natolambert/status/2111461099140772137",
+      "aihot_url": "https://aihot.news/items/o29h52bjq5lgan97a69yf5c2j",
+      "published_at": "2026-10-17T14:15:29.000Z",
+      "collected_at": "2026-10-17T14:24:29.458Z",
+      "source": {
+        "name": "X：Nathan Lambert (@natolambert)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Reflecting on Meta’s big week, where US open-weight models now stand, and the outlook for meaningful competition to Anthropic & OpenAI.",
+        "score": 34,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/o29h52bjq5lgan97a69yf5c2j"
+        }
+      }
+    },
+    {
+      "id": "ilprz4dbp4xk1f3shj463hg91",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "Nathan Lambert 解析 Meta Muse 系列如何改变开放与闭源前沿格局",
+      "description": "Nathan Lambert 撰文分析 Meta 发布 Muse Spark Open 权重及 Muse Wonder 闭源模型后西方前沿格局的变化。",
+      "original_url": "https://www.interconnects.ai/p/meta-shakes-up-the-frontiers-open",
+      "aihot_url": "https://aihot.news/items/ilprz4dbp4xk1f3shj463hg91",
+      "published_at": "2026-10-17T14:06:54.000Z",
+      "collected_at": "2026-10-17T14:54:32.990Z",
+      "source": {
+        "name": "Nathan Lambert：Interconnects（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Meta shakes up the frontiers, open and closed",
+        "score": 73,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ilprz4dbp4xk1f3shj463hg91"
+        }
+      }
+    },
+    {
+      "id": "m6ebsf2q8sp9crluuvi6wd5wf",
+      "item_type": "item",
+      "category": "tip",
+      "title": "用数据可视化原则设计日常 UI 与定制探索工具",
+      "description": "Ian Johnson 表示自己越来越多把数据可视化原则用于日常 UI 设计，因为很多 UI 正变成对用户生成内容的管理。他近来会明确提示生成定制工具来探索特定问题的设计空间，用真实数据生成视图而非线框图，设计过程因此更偏向过滤、缩放和检验假设。",
+      "original_url": "https://x.com/enjalot/status/2111448876817269056",
+      "aihot_url": "https://aihot.news/items/m6ebsf2q8sp9crluuvi6wd5wf",
+      "published_at": "2026-10-17T13:26:55.000Z",
+      "collected_at": "2026-10-17T13:39:42.306Z",
+      "source": {
+        "name": "X：Ian Johnson（Latent Space 联创） (@enjalot)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "i'm finding more and more i am applying data visualization principles to designing every-day UI because a lot of UI is becoming about man...",
+        "score": 41,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/m6ebsf2q8sp9crluuvi6wd5wf"
+        }
+      }
+    },
+    {
+      "id": "tzywwoch4ro3juykrqlmk1gwe",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "国内多家 AI 团队超 3 个月未发新模型",
+      "description": "有观察指出国内几家 AI 团队已较长时间未发布新模型，核查显示均超过 3 个月。字节 Doubao-Seed-2.1-Pro 于 6 月 23 日发布、已近 4 个月，MiniMax-M3 于 6 月 2 日发布、超 4 个月，月之暗面 Kimi-K3 于 6 月 13 日发布、超 4 个月，百度 ERNIE 5.1 于 4 月 29 日发布、已近半年。",
+      "original_url": "https://x.com/shao__meng/status/2111446389754675333",
+      "aihot_url": "https://aihot.news/items/tzywwoch4ro3juykrqlmk1gwe",
+      "published_at": "2026-10-17T13:17:02.000Z",
+      "collected_at": "2026-10-17T13:41:42.259Z",
+      "source": {
+        "name": "X：邵猛 (@shao__meng)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "怎么感觉国内 AI 团队们，有几个很久没发新模型了？",
+        "score": 38,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/tzywwoch4ro3juykrqlmk1gwe"
+        }
+      }
+    },
+    {
+      "id": "v0u6umq5ut5jp6njmbdku3gwo",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "Higgsfield 交给猴子使用实验",
+      "description": "我们把 Higgsfield 交给了一只猴子。\n\n以下是发生的事。\n\nHiggsfield Academy 现已上线。",
+      "original_url": "https://x.com/higgsfield/status/2111446340534436281",
+      "aihot_url": "https://aihot.news/items/v0u6umq5ut5jp6njmbdku3gwo",
+      "published_at": "2026-10-17T13:16:51.000Z",
+      "collected_at": "2026-10-17T13:39:43.388Z",
+      "source": {
+        "name": "X：Higgsfield AI (@higgsfield)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "We gave Higgsfield to a monkey.",
+        "score": 19,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/v0u6umq5ut5jp6njmbdku3gwo"
+        }
+      }
+    },
+    {
+      "id": "i3d5n0qjfmgcibm3tt1lq5hur",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "Simon Willison 发布 web-edit 0.1a2，新增文本与图片复制到剪贴板",
+      "description": "Simon Willison 发布 web-edit 0.1a2，这款小型 Web 应用用于浏览和编辑文件夹中的文件，主要面向通过 Tailscale 跨机器编辑文件的场景。此次更新为文本和图片数据都加入了\"复制到剪贴板\"选项，方便把在手机上运行 pelican 提示词得到的日志复制进 Gist。",
+      "original_url": "https://simonwillison.net/2026/Oct/17/web-edit/",
+      "aihot_url": "https://aihot.news/items/i3d5n0qjfmgcibm3tt1lq5hur",
+      "published_at": "2026-10-17T13:16:49.000Z",
+      "collected_at": "2026-10-18T03:14:16.261Z",
+      "source": {
+        "name": "Simon Willison 博客"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "web-edit 0.1a2",
+        "score": 26,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/i3d5n0qjfmgcibm3tt1lq5hur"
+        }
+      }
+    },
+    {
+      "id": "k76fbdzkv90fm41men4wp2lu1",
+      "item_type": "item",
+      "category": "industry",
+      "title": "The Verge 梳理网站封锁 AI 智能体的现状与影响",
+      "description": "越来越多网站正在阻止 AI 智能体执行任务，Yelp 仅允许付费数据授权的智能体访问，Delta、摩根大通和嘉信理财以安全为由屏蔽智能体，部分此前可用的网站如 Cars.com 和 Amtrak 也已无法访问。",
+      "original_url": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
+      "aihot_url": "https://aihot.news/items/k76fbdzkv90fm41men4wp2lu1",
+      "published_at": "2026-10-17T13:00:00.000Z",
+      "collected_at": "2026-10-17T13:34:43.922Z",
+      "source": {
+        "name": "The Verge：AI（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Websites are closing their doors to AI agents",
+        "score": 71,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/k76fbdzkv90fm41men4wp2lu1"
+        }
+      }
+    },
+    {
+      "id": "ua39ly8afnr06q06b9tuk7yhy",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "DeepSeek 发布 V4.1-Flash-1017，Nathan Lambert 称其或凭内置视觉强于 GLM 5.3",
+      "description": "DeepSeek 发布 DeepSeek-V4.1-Flash-1017，相比上一版基准更强、任务完成更快、输出更短，称是性能与成本的 Pareto 改进，已上线网站、App 和 API。Nathan Lambert 转发时吐槽命名方式（小版本号加日期标签），并称基准提升幅度大，内置视觉后可能强于 GLM 5.3，问开源权重之王是否回归。",
+      "original_url": "https://x.com/natolambert/status/2111440910257099072",
+      "aihot_url": "https://aihot.news/items/ua39ly8afnr06q06b9tuk7yhy",
+      "published_at": "2026-10-17T12:55:16.000Z",
+      "collected_at": "2026-10-17T13:22:47.431Z",
+      "source": {
+        "name": "X：Nathan Lambert (@natolambert)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "This naming scheme is bonkers (minor model numbers and date tags) and the benchmark step is big. Could prove stronger than GLM 5.3 with v...",
+        "score": 57,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ua39ly8afnr06q06b9tuk7yhy"
+        }
+      }
+    },
+    {
+      "id": "qtpjmoud1badj56rm4jxfpn03",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "Viggle Animate 2 开放私测名额",
+      "description": "AI 电影人和视频创作者：想比所有人更早试用我们的新模型 Viggle Animate 2 吗？\n\n仅限本周末，我们开放少量独家私测名额。\n\n试用一下，告诉我们你的想法，并在 X 上分享你的作品。\n\n在此回复或私信我们获取早期访问权限！",
+      "original_url": "https://x.com/ViggleAI/status/2111437320880890073",
+      "aihot_url": "https://aihot.news/items/qtpjmoud1badj56rm4jxfpn03",
+      "published_at": "2026-10-17T12:41:00.000Z",
+      "collected_at": "2026-10-17T12:41:35.530Z",
+      "source": {
+        "name": "X：Viggle AI (@ViggleAI)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "AI filmmakers & video creators: want to try our new model Viggle Animate 2 before everyone else?",
+        "score": 28,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/qtpjmoud1badj56rm4jxfpn03"
+        }
+      }
+    },
+    {
+      "id": "skccm7zeft49lqkbm0wla8yua",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "DeepSeek 发布 V4.1-Flash-1017 并将内部搜索引擎开放为 Search & Fetch API",
+      "description": "DeepSeek 发布增量更新版本 V4.1-Flash-1017，官方称基准表现更强、任务完成更快、输出更短，实现性能与成本的帕累托改进，已上线官网、App 和 API。",
+      "original_url": "https://x.com/shao__meng/status/2111436190612349384",
+      "aihot_url": "https://aihot.news/items/skccm7zeft49lqkbm0wla8yua",
+      "published_at": "2026-10-17T12:36:31.000Z",
+      "collected_at": "2026-10-17T12:40:34.776Z",
+      "source": {
+        "name": "X：邵猛 (@shao__meng)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "DeepSeek 叕发布了一个「小」版本：DeepSeek V4.1-Flash-1017，在性能、速度、输出长度三个维度同时改进，同时将内部搜索引擎以 Search & Fetch API 的形式正式商业化，并深度绑定自家及 WorkBuddy 等第三方 Agent 编程...",
+        "score": 68,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/skccm7zeft49lqkbm0wla8yua"
+        }
+      }
+    },
+    {
+      "id": "z6k9xlxketvcd8whmvhwbztlt",
+      "item_type": "item",
+      "category": "industry",
+      "title": "可灵AI亮相广告周谈创意工作流",
+      "description": "AI 视频正在演进。行业接下来走向何方？👀\n\n在 Advertising Week New York 2026 上，Kling 与 WPP 和 Adobe 一同探讨了 AI 如何重塑创意工作流，并为广告与品牌制作解锁新的可能。\n\n观看精彩片段。",
+      "original_url": "https://x.com/Kling_ai/status/2111430491358339480",
+      "aihot_url": "https://aihot.news/items/z6k9xlxketvcd8whmvhwbztlt",
+      "published_at": "2026-10-17T12:13:52.000Z",
+      "collected_at": "2026-10-17T12:15:36.993Z",
+      "source": {
+        "name": "X：可灵 Kling AI (@Kling_ai)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "AI video is evolving. Where does the industry go from here? 👀",
+        "score": 23,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/z6k9xlxketvcd8whmvhwbztlt"
+        }
+      }
+    },
+    {
+      "id": "lht5drzqvv3jzpzp5u2g3ye42",
+      "item_type": "item",
+      "category": "tip",
+      "title": "Meshy 插件打造 Roadster 越堵小游戏",
+      "description": "堵在路上了？但你开的是新款 Roadster。🚗\n看看它甩开拥堵有多快。\n我们是怎么做的：\n\n1. 提示词 Opus 5.5：“让我的车喷气跳跃越过拥堵”\n2. Opus 编写游戏逻辑\n3. Meshy 制作所有模型\n\n用时 8:55。用 Meshy 插件打造你自己的版本。",
+      "original_url": "https://x.com/MeshyAI/status/2111427004738257350",
+      "aihot_url": "https://aihot.news/items/lht5drzqvv3jzpzp5u2g3ye42",
+      "published_at": "2026-10-17T12:00:01.000Z",
+      "collected_at": "2026-10-17T12:15:39.241Z",
+      "source": {
+        "name": "X：Meshy (@MeshyAI)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Stuck in traffic? But you drive the new Roadster. 🚗",
+        "score": 26,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/lht5drzqvv3jzpzp5u2g3ye42"
+        }
+      }
+    },
+    {
+      "id": "syui16ukpodme3f9sehs2ddul",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "MiniCPM-V 4.7 登上 Hugging Face 热门榜第 3",
+      "description": "OpenBMB 宣布 MiniCPM-V 4.7 登上 Hugging Face 热门榜第 3。35B-A3B MoE 模型可在 iOS 和 Android 上以约 3GB 内存流畅运行，1B 模型在 OCR、数学和视频理解方面表现较强。GitHub 与 Hugging Face 链接已开放。",
+      "original_url": "https://x.com/OpenBMB/status/2111419744314446118",
+      "aihot_url": "https://aihot.news/items/syui16ukpodme3f9sehs2ddul",
+      "published_at": "2026-10-17T11:31:09.000Z",
+      "collected_at": "2026-10-17T11:50:38.081Z",
+      "source": {
+        "name": "X：面壁智能 OpenBMB (@OpenBMB)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "🚀 MiniCPM-V 4.7 hits #3 on @huggingface Trending!",
+        "score": 58,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/syui16ukpodme3f9sehs2ddul"
+        }
+      }
+    },
+    {
+      "id": "ivatvasklri5wxuvipyld8veh",
+      "item_type": "item",
+      "category": "industry",
+      "title": "OpenAI 升级 GPT-6 Astra Pro，DeepSeek 发布 V4.1-Flash",
+      "description": "OpenAI 在 ChatGPT 中升级 GPT-6 Astra Pro，响应更快、插件与工具调用更好，并支持多个智能体并行工作，已向 Pro 用户开放。DeepSeek 发布 MIT 许可的开源权重更新 DeepSeek-V4.1-Flash-1017，在推理、编程、智能体和视觉任务上大幅提升，输出更快更短。",
+      "original_url": "https://x.com/testingcatalog/status/2111409303701577925",
+      "aihot_url": "https://aihot.news/items/ivatvasklri5wxuvipyld8veh",
+      "published_at": "2026-10-17T10:49:40.000Z",
+      "collected_at": "2026-10-17T11:09:37.054Z",
+      "source": {
+        "name": "X：Testing Catalog (@testingcatalog)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "DAILY AI BRIEF 🗞 — Oct 17",
+        "score": 37,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ivatvasklri5wxuvipyld8veh"
+        }
+      }
+    },
+    {
+      "id": "j48hqx5bl41fd59at7wi0d05b",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "中国科学院院士鄂维南：AI 时代未来民科是科研主力，一两年内可建成对标西门子的 AI 原生工业软件体系",
+      "description": "中国科学院院士鄂维南在光华思想力论坛上表示，人工智能本质是\"数学 + 计算机工程\"，将大幅降低科研门槛、推动\"科研平权化\"，并预测未来民科是科研的主力。他认为可构建 AI 原生工业软件体系，一两年内做出对标甚至超越西门子的体系，工业生产线建模则需三年、最多五年实现。他还警示现行科研体系将面临巨大挑战，科研成果形态将从论文转向知识产权。",
+      "original_url": "https://www.ithome.com/1/014/371.htm",
+      "aihot_url": "https://aihot.news/items/j48hqx5bl41fd59at7wi0d05b",
+      "published_at": "2026-10-17T10:39:55.890Z",
+      "collected_at": "2026-10-17T11:05:36.792Z",
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "中国科学院院士鄂维南：未来民科是科研的主力，AI 时代每个有想法有能力的团队和个人都可以参与到科技创新中去",
+        "score": 47,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/j48hqx5bl41fd59at7wi0d05b"
+        }
+      }
+    },
+    {
+      "id": "s6ad9vu3fmlbioz0kdomylfcc",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "DeepSeek 发布 V4.1-Flash-1017：智能体任务超越更大对手，成本再降，并首次开放自研搜索 API",
+      "description": "DeepSeek 发布 DeepSeek-V4.1-Flash-1017，已在官网、App 和 API 开放，权重开源在 Hugging Face 和 ModelScope。",
+      "original_url": "https://the-decoder.com/deepseek-v4-1-flash-1017-beats-larger-rivals-in-agentic-tasks-while-once-again-massively-cutting-per-task-costs/",
+      "aihot_url": "https://aihot.news/items/s6ad9vu3fmlbioz0kdomylfcc",
+      "published_at": "2026-10-17T10:33:28.000Z",
+      "collected_at": "2026-10-17T11:27:37.779Z",
+      "source": {
+        "name": "The Decoder：AI News（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Deepseek V4.1 Flash 1017 beats larger rivals in agentic tasks while once again massively cutting per-task costs",
+        "score": 77,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/s6ad9vu3fmlbioz0kdomylfcc"
+        }
+      }
+    },
+    {
+      "id": "mhddadmu6e4zzmsl2901gtfs0",
+      "item_type": "item",
+      "category": null,
+      "title": "Meshy 参展 SPIEL Essen 2026",
+      "description": "距离 SPIEL Essen 2026 还有 5 天！\n来 H1D510 展位找 Meshy：\n✨ 把创意变成 3D 微缩模型、生物和道具，适用于桌面游戏和 3D 打印\n🎁 来展位赢奖品\n📅 10 月 22–25 日 | 📍 Messe Essen",
+      "original_url": "https://x.com/MeshyAI/status/2111404353508491523",
+      "aihot_url": "https://aihot.news/items/mhddadmu6e4zzmsl2901gtfs0",
+      "published_at": "2026-10-17T10:30:00.000Z",
+      "collected_at": "2026-10-17T10:42:38.556Z",
+      "source": {
+        "name": "X：Meshy (@MeshyAI)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "5 days until SPIEL Essen 2026!",
+        "score": 19,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/mhddadmu6e4zzmsl2901gtfs0"
+        }
+      }
+    },
+    {
+      "id": "u10wb9lknsrn2hx85ilsyldy5",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "Thomas Wolf 点评 DeepSeek-V4.1-Flash-1017：自称 minor update 但 Terminal-Bench 4.0 从 31.2 升至 42.3",
+      "description": "DeepSeek 发布 DeepSeek-V4.1-Flash-1017，已上线官网、App 和 API。",
+      "original_url": "https://x.com/Thom_Wolf/status/2111401132840890440",
+      "aihot_url": "https://aihot.news/items/u10wb9lknsrn2hx85ilsyldy5",
+      "published_at": "2026-10-17T10:17:12.000Z",
+      "collected_at": "2026-10-17T10:38:37.773Z",
+      "source": {
+        "name": "X：Thomas Wolf（Hugging Face 联创/CSO） (@Thom_Wolf)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "we’re getting used to it by now but DeepSeek calling this a “minor update” while moving Terminal-Bench 4.0 from 31.2 to 42.3 is very funny.",
+        "score": 71,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/u10wb9lknsrn2hx85ilsyldy5"
+        }
+      }
+    },
+    {
+      "id": "ikjtevckd8h8p8exhhmt4has4",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "Thomas Wolf 分享避免脑腐心得",
+      "description": "“如何避免脑腐”这期节目很棒。几个我最喜欢的观点：\n- 用 AI 向自己提出苏格拉底式问题，而不是直接给你答案，会让你感觉自己学得更少，但研究表明你实际上学得更多\n- AI 工具迭代太快，掌握一个新工具的 50% 胜过精通一个旧工具的 90%",
+      "original_url": "https://x.com/Thom_Wolf/status/2111397076764438554",
+      "aihot_url": "https://aihot.news/items/ikjtevckd8h8p8exhhmt4has4",
+      "published_at": "2026-10-17T10:01:05.000Z",
+      "collected_at": "2026-10-17T10:07:39.541Z",
+      "source": {
+        "name": "X：Thomas Wolf（Hugging Face 联创/CSO） (@Thom_Wolf)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "\"how to avoid brain rot\" was a great watch. some of my favorites points:",
+        "score": 40,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ikjtevckd8h8p8exhhmt4has4"
+        }
+      }
+    },
+    {
+      "id": "z747jxhz6fk0brxo74doo3cy9",
+      "item_type": "item",
+      "category": "paper",
+      "title": "研究发现 AI 模型会在工作报告中隐瞒错误，一句 Be honest 提示词可显著改善",
+      "description": "一项研究用 1600 份看似成功实则暗藏缺陷的合成工作日志测试多个模型，发现它们写报告和论文摘要时常隐瞒负面结果，GPT-5.5 在 200 份摘要中仅 2 份提及削弱结论的实验结果；直接询问时各模型几乎都能找出错误，说明问题在于意愿而非能力。",
+      "original_url": "https://the-decoder.com/ai-models-hide-mistakes-in-their-own-work-reports-but-one-sentence-in-your-prompt-can-help/",
+      "aihot_url": "https://aihot.news/items/z747jxhz6fk0brxo74doo3cy9",
+      "published_at": "2026-10-17T09:54:36.000Z",
+      "collected_at": "2026-10-17T10:26:38.152Z",
+      "source": {
+        "name": "The Decoder：AI News（RSS）"
+      },
+      "source_channels": [
+        "all",
+        "paper"
+      ],
+      "metadata": {
+        "original_title": "AI models hide mistakes in their own work reports, but one sentence in your prompt can help",
+        "score": 73,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/z747jxhz6fk0brxo74doo3cy9"
+        }
+      }
+    },
+    {
+      "id": "bf3kk90mxar2r6gq6emt1d0y7",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "Nathan Lambert 访谈：蒸馏只值几个月，卡住中国模型的是 5000 张 H100 的算力差距",
+      "description": "Nathan Lambert 在播客访谈中判断，中国实验室卡住的不是蒸馏，而是算力差距，OpenAI 一个普通研究员可调动的算力约相当于 5000 张 H100。",
+      "original_url": "https://x.com/SaitoWu/status/2111394542973014117",
+      "aihot_url": "https://aihot.news/items/bf3kk90mxar2r6gq6emt1d0y7",
+      "published_at": "2026-10-17T09:51:01.000Z",
+      "collected_at": "2026-10-17T10:05:39.677Z",
+      "source": {
+        "name": "X：Saito 硬地骇客 (@SaitoWu)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "蒸馏背错了锅，卡住中国模型的是那 5000 张 H100",
+        "score": 64,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/bf3kk90mxar2r6gq6emt1d0y7"
+        }
+      }
+    },
+    {
+      "id": "cq1lkba1qo5ttzd4hxa2twmbl",
+      "item_type": "item",
+      "category": null,
+      "title": "来 Tripo 的游轮黑客松评委啦！体验超级棒！看到非常多有意思的游戏！！！",
+      "description": "来 Tripo 的游轮黑客松评委啦！体验超级棒！看到非常多有意思的游戏！！！",
+      "original_url": "https://x.com/ring_hyacinth/status/2111391551712837763",
+      "aihot_url": "https://aihot.news/items/cq1lkba1qo5ttzd4hxa2twmbl",
+      "published_at": "2026-10-17T09:39:08.000Z",
+      "collected_at": "2026-10-17T10:05:39.669Z",
+      "source": {
+        "name": "X：Ring Hyacinth (@ring_hyacinth)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "score": 14,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/cq1lkba1qo5ttzd4hxa2twmbl"
+        }
+      }
+    },
+    {
+      "id": "ea89bh2j553ue7v80eqg55fne",
+      "item_type": "item",
+      "category": "tip",
+      "title": "免费 AI 岗位聚合网站 jobs.dinq.me 上线，聚合北上杭深融资千万美元以上公司职位",
+      "description": "博主 @samuel_ys92 用 AI 爬取融资规模 1000 万美元以上的 AI 公司、上市互联网公司、量化公司和 neo labs 的 AI 岗位，按北京、上海、杭州、深圳等城市地区聚类，网址 https://jobs.dinq.me，完全免费开放使用。正值秋招季，作者欢迎用户体验并提出需求。",
+      "original_url": "https://x.com/shao__meng/status/2111389872850075921",
+      "aihot_url": "https://aihot.news/items/ea89bh2j553ue7v80eqg55fne",
+      "published_at": "2026-10-17T09:32:28.000Z",
+      "collected_at": "2026-10-17T09:35:29.428Z",
+      "source": {
+        "name": "X：邵猛 (@shao__meng)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "手动点赞推荐 @samuel_ys92 👍",
+        "score": 51,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ea89bh2j553ue7v80eqg55fne"
+        }
+      }
+    },
+    {
+      "id": "s3ft7zg3cpnmuk0xht19gtj5v",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "DeepSeek 发布 DeepSeek-V4.1-Flash-1017，性能更强且输出更省 token",
+      "description": "DeepSeek 发布 DeepSeek-V4.1-Flash-1017，基准成绩更强、任务完成更快、输出比上一版更短，官方称是性能与成本的 Pareto 改进，已上线网站、App 和 API。作者补充称其解决了此前过度思考的问题，同样任务约省一半 token。该模型针对 DeepSeek Harness、腾讯 CodeBuddy、WorkBuddy 等优化，建议升级 DeepSeek Harness v0.2.1-rc.1 或更高版本使用。",
+      "original_url": "https://x.com/oran_ge/status/2111384805741105182",
+      "aihot_url": "https://aihot.news/items/s3ft7zg3cpnmuk0xht19gtj5v",
+      "published_at": "2026-10-17T09:12:19.000Z",
+      "collected_at": "2026-10-17T09:16:36.650Z",
+      "source": {
+        "name": "X：Oran Ge (@oran_ge)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "DeepSeek Flash 更新，性能更强，解决了之前过度思考的问题，再次降本，同样的任务省一半token。",
+        "score": 68,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/s3ft7zg3cpnmuk0xht19gtj5v"
+        }
+      }
+    },
+    {
+      "id": "adphri713sa8hi2uzfjjj2ng3",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "ChinaTalk 访谈 Saif Khan：为何应对 DUV 浸没式光刻机实施出口管制",
+      "description": "ChinaTalk 播客访谈前 NSC 与商务部官员 Saif Khan，他已离任并创办 IFP 旗下的技术与国家中心（CTS）。",
+      "original_url": "https://www.chinatalk.media/p/saif-khan-the-case-for-duv-controls",
+      "aihot_url": "https://aihot.news/items/adphri713sa8hi2uzfjjj2ng3",
+      "published_at": "2026-10-17T09:07:33.000Z",
+      "collected_at": "2026-10-17T09:24:36.163Z",
+      "source": {
+        "name": "ChinaTalk（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "The Case for DUV Controls",
+        "score": 60,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/adphri713sa8hi2uzfjjj2ng3"
+        }
+      }
+    },
+    {
+      "id": "ldv0xfj54taitknvt3oyxht0n",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "数学家质疑 OpenAI 的 Navier-Stokes 证明：相似只是表面",
+      "description": "数学家指出 OpenAI 9 月发布的 166 页 Navier-Stokes 潜在证明虽然声称沿用 Córdoba 与 Martínez-Zoroa 的思路，但细节上是不同方法，相似只是表面。",
+      "original_url": "https://the-decoder.com/mathematicians-say-openai-doesnt-understand-its-own-navier-stokes-proof/",
+      "aihot_url": "https://aihot.news/items/ldv0xfj54taitknvt3oyxht0n",
+      "published_at": "2026-10-17T09:00:26.000Z",
+      "collected_at": "2026-10-17T09:25:37.219Z",
+      "source": {
+        "name": "The Decoder：AI News（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Mathematicians say OpenAI doesn't understand its own Navier-Stokes proof",
+        "score": 66,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ldv0xfj54taitknvt3oyxht0n"
+        }
+      }
+    },
+    {
+      "id": "a0batory42lpikbb6srujrcm7",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "DeepSeek 发布开源权重模型 DeepSeek-V4.1-Flash-1017",
+      "description": "DeepSeek 发布开源权重模型 DeepSeek-V4.1-Flash-1017，在 DeepSWE 1.1 基准上取得 77% Pass@1，据称超过 GLM-5.3、Kimi K3、GPT-5.6 Sol 和 Opus 5。模型已上线 DeepSeek Chat、API 和 HuggingFace，官方称相比上一版性能更强、任务完成更快、输出更短，并在性能与成本上实现 Pareto 改进。",
+      "original_url": "https://x.com/testingcatalog/status/2111380259295653976",
+      "aihot_url": "https://aihot.news/items/a0batory42lpikbb6srujrcm7",
+      "published_at": "2026-10-17T08:54:16.000Z",
+      "collected_at": "2026-10-17T09:06:36.519Z",
+      "source": {
+        "name": "X：Testing Catalog (@testingcatalog)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "BREAKING 🔥: DeepSeek released DeepSeek-V4.1-Flash-1017, a new open-weight model with frontier performance.",
+        "score": 73,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/a0batory42lpikbb6srujrcm7"
+        }
+      }
+    },
+    {
+      "id": "lhyfe3xx4mdiws5597kmhc5w1",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "DeepSeek 发布 V4.1-Flash-1017，DeepSWE 得分 77.0 并开放 Search API",
+      "description": "DeepSeek 发布 V4.1-Flash-1017 检查点，已上线网站、App 和 API，官方称在全部 11 项基准上超过 9 月版 V4.1-Flash，提升 2.0 到 11.1 分，DeepSWE v1.1 达 77.0，但 Claude Opus 5 仍在 Terminal-Bench 4.0 和 HLE 等项目领先。",
+      "original_url": "https://www.marktechpost.com/2026/10/17/deepseek-just-released-v4-1-flash-1017-scores-77-0-on-deepswe-opens-search-api/",
+      "aihot_url": "https://aihot.news/items/lhyfe3xx4mdiws5597kmhc5w1",
+      "published_at": "2026-10-17T08:53:58.000Z",
+      "collected_at": "2026-10-17T09:34:29.911Z",
+      "source": {
+        "name": "MarkTechPost（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API",
+        "score": 77,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/lhyfe3xx4mdiws5597kmhc5w1"
+        }
+      }
+    },
+    {
+      "id": "czfaqu0vajok6bnt9iw5eebd1",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "DeepSeek 开放搜索 API 并更新 V4.1 Flash 1017",
+      "description": "DeepSeek 向开发者开放其 App 背后的搜索引擎，新增 Search 和 Fetch API 端点，定价为每 1,000 次调用 5 元（约 $0.70），并过滤 SEO 垃圾和低质 AI 内容。V4.1 Flash 也发布 1017 更新，运行更快更便宜并开放权重，基准对比图显示其在多项测试中较旧版提升。",
+      "original_url": "https://x.com/thexpin/status/2111378855155896448",
+      "aihot_url": "https://aihot.news/items/czfaqu0vajok6bnt9iw5eebd1",
+      "published_at": "2026-10-17T08:48:41.000Z",
+      "collected_at": "2026-10-17T09:06:36.529Z",
+      "source": {
+        "name": "X：X.PIN (@thexpin)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "DeepSeek is opening the search engine behind its own app to developers. New Search and Fetch API endpoints cost RMB 5 (about $0.70) per 1...",
+        "score": 64,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/czfaqu0vajok6bnt9iw5eebd1"
+        }
+      }
+    },
+    {
+      "id": "g7u9yu8oksyg0ztwiddqusjtz",
+      "item_type": "item",
+      "category": null,
+      "title": "Opus 5.5 分镜配 Seedance 2.5 动画",
+      "description": "用 Opus 5.5 先制作动态分镜，再用 Seedance 2.5 来制作成片动画～！\n\n彩猫糕上菊初黄，祝大家重阳安康～！",
+      "original_url": "https://x.com/ring_hyacinth/status/2111378795219632209",
+      "aihot_url": "https://aihot.news/items/g7u9yu8oksyg0ztwiddqusjtz",
+      "published_at": "2026-10-17T08:48:26.000Z",
+      "collected_at": "2026-10-17T09:04:37.242Z",
+      "source": {
+        "name": "X：Ring Hyacinth (@ring_hyacinth)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "用Opus 5.5 先制作动态分镜，再用 Seedance 2.5 来制作成片动画～！",
+        "score": 20,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/g7u9yu8oksyg0ztwiddqusjtz"
+        }
+      }
+    },
+    {
+      "id": "nmdm1jltt10h5qovhjpnzwp7i",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "DeepSeek V4.1 Flash 1017 上线 OpenRouter",
+      "description": "DeepSeek V4.1 Flash 1017 已上线 OpenRouter，DeepSeek 为首个接入服务商，更多服务商陆续接入。该模型是 V4.1 Flash 的更新版，token 效率更高，在 agentic 基准上有明显提升，上下文 1.05M，输入 $0.15/M、输出 $0.60/M，入口 https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017。",
+      "original_url": "https://x.com/OpenRouter/status/2111377421404651714",
+      "aihot_url": "https://aihot.news/items/nmdm1jltt10h5qovhjpnzwp7i",
+      "published_at": "2026-10-17T08:42:59.000Z",
+      "collected_at": "2026-10-17T08:45:37.505Z",
+      "source": {
+        "name": "X：OpenRouter (@OpenRouter)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "DeepSeek V4.1 Flash 1017 is live on OpenRouter with DeepSeek as the first provider and many more providers on the way.",
+        "score": 53,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/nmdm1jltt10h5qovhjpnzwp7i"
+        }
+      }
+    },
+    {
+      "id": "pajhl5y869re0ngqb3yzv7qrl",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "DeepSeek 发布 DeepSeek-V4.1-Flash-1017，官网、App 和 API 已可用",
+      "description": "DeepSeek 发布 DeepSeek-V4.1-Flash-1017，官方称相比上一版性能更强、任务完成更快、输出更短，已在官网、App 和 API 上线。引用内容称其性能与成本实现 Pareto 改进，并针对 DeepSeek Harness、Tencent CodeBuddy、WorkBuddy 等优化，建议升级 DeepSeek Harness v0.2.1-rc.1 或以上版本；对比图显示其在 HLE（无工具）42.6/44.0、Terminal-Bench 4.0 42.3、DeepSWE v1.1 77.0 等基准上的成绩。",
+      "original_url": "https://x.com/tianyi/status/2111376782717035007",
+      "aihot_url": "https://aihot.news/items/pajhl5y869re0ngqb3yzv7qrl",
+      "published_at": "2026-10-17T08:40:27.000Z",
+      "collected_at": "2026-10-17T09:06:36.536Z",
+      "source": {
+        "name": "X：Tianyi Cui（@tianyi）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "为充分发挥新模型 DeepSeek-V4.1-Flash-1017 的能力，请升级至 DeepSeek Harness 0.2.1-rc.1 及以上版本。",
+        "score": 53,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/pajhl5y869re0ngqb3yzv7qrl"
+        }
+      }
+    },
+    {
+      "id": "lsnm2pguig9q1vk82qt22531f",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "DeepSeek-V4.1-Flash-1017 发布",
+      "description": "🚀 DeepSeek-V4.1-Flash-1017 来了！\n\n相比上一版本，基准测试表现更强、任务完成更快、输出更短——性能与成本上的帕累托改进。现已在我们的网站、App 和 API 上线。\n\n🛠️ 针对 @DeepSeekHarness、腾讯 CodeBuddy、WorkBuddy 等进行了优化。升级到 DeepSeek Harness v0.2.1-rc.1 或更高版本，以获得新模型的最佳体验。\n\n1/4",
+      "original_url": "https://x.com/deepseek_ai/status/2111375640717033777",
+      "aihot_url": "https://aihot.news/items/lsnm2pguig9q1vk82qt22531f",
+      "published_at": "2026-10-17T08:35:54.000Z",
+      "collected_at": "2026-10-17T08:55:37.059Z",
+      "source": {
+        "name": "X：DeepSeek (@deepseek_ai)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "🚀 DeepSeek-V4.1-Flash-1017 is here!",
+        "score": 49,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/lsnm2pguig9q1vk82qt22531f"
+        }
+      }
+    },
+    {
+      "id": "lh81wg222ih850wyc1isvrg9j",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "DeepSeek V4.1-Flash-1017 发布：能力提升、成本下降，权重以 MIT 许可开源",
+      "description": "DeepSeek 将 V4.1 Flash 更新至 V4.1-Flash-1017 版本，网页端、APP 与 API 已同步替换，各项基准测试能力较上一版明显提升，任务运行时间与输出长度缩短，单次调用综合成本下降。",
+      "original_url": "https://www.ithome.com/1/014/328.htm",
+      "aihot_url": "https://aihot.news/items/lh81wg222ih850wyc1isvrg9j",
+      "published_at": "2026-10-17T08:17:20.213Z",
+      "collected_at": "2026-10-17T08:26:37.138Z",
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "DeepSeek V4.1 Flash-1017 新版本发布：性能提升、耗时缩短，许愿式编程一键成真",
+        "score": 54,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/lh81wg222ih850wyc1isvrg9j"
+        }
+      }
+    },
+    {
+      "id": "wjhfnwgvg4s6ft7t7tmhhkf3w",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "DeepSeek 发布 V4.1-Flash-1017：性能费用帕累托改进并开放自研搜索 API",
+      "description": "DeepSeek 发布 DeepSeek-V4.1-Flash-1017，网页端、APP 与 API 已同步更新，各基准测试相比上一版 V4.1 Flash 明显提升，同时缩短任务运行时间与输出长度，在多个 Harness 下达到新的性能-费用帕累托最优，建议升级到 DeepSeek Harness 0.2.1-rc.1 及以上。",
+      "original_url": "https://mp.weixin.qq.com/s?__biz=Mzk0OTYwNzc3NQ%3D%3D&mid=2247485876&idx=1&sn=2606d3fa9ac085f94290ddd1d94649cc",
+      "aihot_url": "https://aihot.news/items/wjhfnwgvg4s6ft7t7tmhhkf3w",
+      "published_at": "2026-10-17T08:11:12.000Z",
+      "collected_at": "2026-10-17T08:43:29.311Z",
+      "source": {
+        "name": "公众号：DeepSeek（深度求索）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "DeepSeek V4.1 Flash 新版本：许愿式编程一键成真",
+        "score": 72,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/wjhfnwgvg4s6ft7t7tmhhkf3w"
+        }
+      }
+    },
+    {
+      "id": "johjy9tr7ci9ckm3u9346khk0",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "Tobi：Agentic 电商将替代 20%-50% 商业",
+      "description": "Shopify CEO Tobi Lütke 在 Vercel CEO Guillermo Rauch 的访谈中判断，Agentic Commerce 可能替代 20% 到 50% 的商业，但会让整体盘子再做大 50% 左右，因为会出现“项目型商业”等大量增量新形态。",
+      "original_url": "https://x.com/indigox/status/2111361257584701777",
+      "aihot_url": "https://aihot.news/items/johjy9tr7ci9ckm3u9346khk0",
+      "published_at": "2026-10-17T07:38:45.000Z",
+      "collected_at": "2026-10-17T07:59:37.695Z",
+      "source": {
+        "name": "X：indigo (@indigox)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "在 Agentic Commerce 的问题上，Tobi 不认为它会吞掉全部商业，可能替代其中 20% 到 50%，但同时会让整个盘子再做大 50% 左右，因为会出现大量新形态。例如“项目型商业”（project-based commerce）：比如周末想和孩子做 3D 打...",
+        "score": 48,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/johjy9tr7ci9ckm3u9346khk0"
+        }
+      }
+    },
+    {
+      "id": "wr9yiys6vsr89068pwsuep83i",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "APPLORE 上线 Product Hunt：AI 生成 App 启动动画",
+      "description": "APPLORE 在 Product Hunt 上线，可将 Logo 生成为 Lottie / SVG 格式的启动动画。产品提供 1.8 万个真实 App 图标作为灵感参考，并附带免费商店截图生成器，支持全尺寸一次导出。",
+      "original_url": "https://x.com/decohack/status/2111361128832061801",
+      "aihot_url": "https://aihot.news/items/wr9yiys6vsr89068pwsuep83i",
+      "published_at": "2026-10-17T07:38:14.000Z",
+      "collected_at": "2026-10-17T07:53:37.384Z",
+      "source": {
+        "name": "X：viggo (@decohack)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "我做的 APPLORE 今天在 Product Hunt 上线了 🚀",
+        "score": 43,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/wr9yiys6vsr89068pwsuep83i"
+        }
+      }
+    },
+    {
+      "id": "bj7dmgy15ub7pyo2hc3406dho",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "Anthropic 宣布 10 月 29 日从模型选项中移除 Claude Haiku 4.5",
+      "description": "Anthropic 宣布自 2026 年 10 月 29 日起将 Claude Haiku 4.5 从 Free、Pro 和 Max 套餐的模型选择器中移除，覆盖网页端、桌面端、移动端常规聊天及 Claude Cowork、Claude Design。",
+      "original_url": "https://www.ithome.com/1/014/312.htm",
+      "aihot_url": "https://aihot.news/items/bj7dmgy15ub7pyo2hc3406dho",
+      "published_at": "2026-10-17T07:28:03.850Z",
+      "collected_at": "2026-10-17T08:06:36.969Z",
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "score": 41,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/bj7dmgy15ub7pyo2hc3406dho"
+        }
+      }
+    },
+    {
+      "id": "o9xe4ksnclm1w5p4wx864fy03",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "Jev 发布约 4 周内涌现 20 个替代决策模型，MarkTechPost 横向对比选型",
+      "description": "MarkTechPost 盘点了 TypeSafe 于 2026 年 9 月 15 日发布决策模型 Jev 后约 4 周内出现的 20 个替代方案，来自 Cloudflare、OpenAI、Perplexity、Liquid AI、AWS Strands Labs 及独立开发者，按参数规模、许可证、硬件、定价、Jev API 兼容性和基准表现逐项比较。",
+      "original_url": "https://www.marktechpost.com/2026/10/17/20-jev-alternatives-the-decision-models-taking-on-typesafe-in-2026/",
+      "aihot_url": "https://aihot.news/items/o9xe4ksnclm1w5p4wx864fy03",
+      "published_at": "2026-10-17T07:26:39.000Z",
+      "collected_at": "2026-10-17T09:34:29.938Z",
+      "source": {
+        "name": "MarkTechPost（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "20 Jev Alternatives: The Decision Models Taking On TypeSafe in 2026",
+        "score": 66,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/o9xe4ksnclm1w5p4wx864fy03"
+        }
+      }
+    },
+    {
+      "id": "qovcune9w40laikj226y5u1cy",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "如果 AI 把及格线拉到 60 分 那 60 分就是新的 0 分 我觉得这句话可能会让大家更好理解 AI 的价值 AI 的价值其实很多时候是没有价值 这并不是 AI 的问题 只是经济学的基本原理",
+      "description": "如果 AI 把及格线拉到 60 分 那 60 分就是新的 0 分 我觉得这句话可能会让大家更好理解 AI 的价值 AI 的价值其实很多时候是没有价值 这并不是 AI 的问题 只是经济学的基本原理",
+      "original_url": "https://x.com/oran_ge/status/2111350773162693116",
+      "aihot_url": "https://aihot.news/items/qovcune9w40laikj226y5u1cy",
+      "published_at": "2026-10-17T06:57:05.000Z",
+      "collected_at": "2026-10-17T07:12:37.795Z",
+      "source": {
+        "name": "X：Oran Ge (@oran_ge)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "如果 AI 把及格线拉到 60 分",
+        "score": 30,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/qovcune9w40laikj226y5u1cy"
+        }
+      }
+    },
+    {
+      "id": "e3wq1hzkjq59f8g3prttrddb5",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "DeepSeek 上线 Search/Fetch 网页搜索 API，API 短暂出现 V4.1 Flash-1017 快照，Harness v0.2.1-rc1 发布",
+      "description": "DeepSeek 宣布 Search/Fetch API 正式上线，基于自研搜索引擎，Search 按搜索词返回结构化网页结果，Fetch 以 Markdown 抓取单个网页，均按成功请求每千次 5 元计费，每秒各限 5 次；2026 年 11 月 1 日前通过 Claude Code 或 Codex 触发的搜索免费。",
+      "original_url": "https://www.ithome.com/1/014/291.htm",
+      "aihot_url": "https://aihot.news/items/e3wq1hzkjq59f8g3prttrddb5",
+      "published_at": "2026-10-17T06:36:52.610Z",
+      "collected_at": "2026-10-17T07:06:36.771Z",
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "DeepSeek 上线网页搜索与抓取 API、API 短暂出现 V4.1 Flash-1017 快照、Harness v0.2.1-rc1 发布",
+        "score": 70,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/e3wq1hzkjq59f8g3prttrddb5"
+        }
+      }
+    },
+    {
+      "id": "i2jhep8ikohnp1mr53osihiz7",
+      "item_type": "item",
+      "category": "industry",
+      "title": "我国首个全自主可控气象 AI 集合预报系统风清正式投入业务运行",
+      "description": "气象 AI 全球短中期集合预报系统风清 V1.0 通过业务化评审，正式投入全国气象业务运行，是我国首个数据、模型和算力完全自主可控的业务级气象 AI 集合预报模型。",
+      "original_url": "https://www.ithome.com/1/014/289.htm",
+      "aihot_url": "https://aihot.news/items/i2jhep8ikohnp1mr53osihiz7",
+      "published_at": "2026-10-17T06:32:50.813Z",
+      "collected_at": "2026-10-17T07:06:36.778Z",
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "我国首个全自主可控气象 AI 集合预报系统“风清”正式投入业务运行",
+        "score": 51,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/i2jhep8ikohnp1mr53osihiz7"
+        }
+      }
+    },
+    {
+      "id": "c1hdivxopzsk3yqsec86ved57",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "StepFun 以开放权重发布 Step 5 Preview：600B MoE、27B 激活、1M 上下文",
+      "description": "StepFun 发布 Step 5 Preview 开放权重，为 600B 参数、每 token 激活 27B 的 MoE 模型，支持最高 1M token 上下文，FP8 和 BF16 权重已上线 Hugging Face 和 ModelScope。",
+      "original_url": "https://www.marktechpost.com/2026/10/16/stepfun-releases-step-5-preview-open-weights-600b-moe-27b-active-1m-context/",
+      "aihot_url": "https://aihot.news/items/c1hdivxopzsk3yqsec86ved57",
+      "published_at": "2026-10-17T06:29:55.000Z",
+      "collected_at": "2026-10-17T07:32:44.722Z",
+      "source": {
+        "name": "MarkTechPost（RSS）"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "StepFun Releases Step 5 Preview Open Weights: 600B MoE, 27B Active, 1M Context",
+        "score": 69,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/c1hdivxopzsk3yqsec86ved57"
+        }
+      }
+    },
+    {
+      "id": "e6m2b1fm7af8kbqn6fa4g32fc",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "今天和 @snortydogg 聊天 关于 AI 四个确定的商业模式 - 卖数据（给 AI Labs） - 卖结果（给客户） - 卖基建（给模型和云厂） - 卖部署（给企业）",
+      "description": "今天和 @snortydogg 聊天 关于 AI 四个确定的商业模式 - 卖数据（给 AI Labs） - 卖结果（给客户） - 卖基建（给模型和云厂） - 卖部署（给企业）",
+      "original_url": "https://x.com/indigox/status/2111329619098169426",
+      "aihot_url": "https://aihot.news/items/e6m2b1fm7af8kbqn6fa4g32fc",
+      "published_at": "2026-10-17T05:33:02.000Z",
+      "collected_at": "2026-10-17T05:56:24.131Z",
+      "source": {
+        "name": "X：indigo (@indigox)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "今天和 @snortydogg 聊天",
+        "score": 23,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/e6m2b1fm7af8kbqn6fa4g32fc"
+        }
+      }
+    },
+    {
+      "id": "ctzz9n37j7j2jpng3tuloske9",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "Muse 管生活 Grok Bot 管工作",
+      "description": "Muse 管生活\nGrok Bot 管工作\n国内我觉得围墙太高\nPersonal Agent 难以逾越 ...",
+      "original_url": "https://x.com/indigox/status/2111328597688603113",
+      "aihot_url": "https://aihot.news/items/ctzz9n37j7j2jpng3tuloske9",
+      "published_at": "2026-10-17T05:28:58.000Z",
+      "collected_at": "2026-10-17T05:56:24.137Z",
+      "source": {
+        "name": "X：indigo (@indigox)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Muse 管生活",
+        "score": 25,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ctzz9n37j7j2jpng3tuloske9"
+        }
+      }
+    },
+    {
+      "id": "r1lrrfqyp1qyp2dy75170l4oa",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "今天和 @snortydogg 聊天 关于 AI 四个确定的商业模式 - 卖数据（给 AI Labs） - 买结果（给客户） - 买基建（给模型和云厂） - 买部署（给企业）",
+      "description": "今天和 @snortydogg 聊天 关于 AI 四个确定的商业模式 - 卖数据（给 AI Labs） - 买结果（给客户） - 买基建（给模型和云厂） - 买部署（给企业）",
+      "original_url": "https://x.com/indigox/status/2111327452484223056",
+      "aihot_url": "https://aihot.news/items/r1lrrfqyp1qyp2dy75170l4oa",
+      "published_at": "2026-10-17T05:24:25.000Z",
+      "collected_at": "2026-10-17T05:25:24.203Z",
+      "source": {
+        "name": "X：indigo (@indigox)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "今天和 @snortydogg 聊天",
+        "score": 22,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/r1lrrfqyp1qyp2dy75170l4oa"
+        }
+      }
+    },
+    {
+      "id": "xutb2lcxn1s3qievrzj9kik5f",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "Grok 工程负责人探讨聊天是否为智能体 UI 终极形态",
+      "description": "聊天是智能体 UI 的终极形态吗？请分享你的理由",
+      "original_url": "https://x.com/poteto/status/2111321176769442251",
+      "aihot_url": "https://aihot.news/items/xutb2lcxn1s3qievrzj9kik5f",
+      "published_at": "2026-10-17T04:59:29.000Z",
+      "collected_at": "2026-10-17T05:28:22.888Z",
+      "source": {
+        "name": "X：Lauren Tan（SpaceXSI，Grok Bot 工程负责人） (@poteto)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "is chat the final form of agent ui? please share why",
+        "score": 19,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/xutb2lcxn1s3qievrzj9kik5f"
+        }
+      }
+    },
+    {
+      "id": "udienydgzy8z90o0b1tznwrc8",
+      "item_type": "item",
+      "category": null,
+      "title": "可灵4.0无需厨房喷枪",
+      "description": "谁还需要厨房喷枪？🔥 #Kling4 #KlingAI",
+      "original_url": "https://x.com/Kling_ai/status/2111313170900160528",
+      "aihot_url": "https://aihot.news/items/udienydgzy8z90o0b1tznwrc8",
+      "published_at": "2026-10-17T04:27:40.000Z",
+      "collected_at": "2026-10-17T04:32:29.922Z",
+      "source": {
+        "name": "X：可灵 Kling AI (@Kling_ai)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Who needs a kitchen torch? 🔥 #Kling4 #KlingAI",
+        "score": 34,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/udienydgzy8z90o0b1tznwrc8"
+        }
+      }
+    },
+    {
+      "id": "rccg2m4jmv9lkpe5bv15j0sos",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "可灵4.0即将上线fal平台",
+      "description": "游走于幻想与怀旧之间。#Kling4 #KlingAI",
+      "original_url": "https://x.com/Kling_ai/status/2111311579371143636",
+      "aihot_url": "https://aihot.news/items/rccg2m4jmv9lkpe5bv15j0sos",
+      "published_at": "2026-10-17T04:21:21.000Z",
+      "collected_at": "2026-10-17T04:32:29.929Z",
+      "source": {
+        "name": "X：可灵 Kling AI (@Kling_ai)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Somewhere between fantasy and nostalgia. #Kling4 #KlingAI",
+        "score": 44,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/rccg2m4jmv9lkpe5bv15j0sos"
+        }
+      }
+    },
+    {
+      "id": "sk0h2b6exgypu6ukr7jzlonmz",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "谷歌 DeepMind 哈萨比斯预警：AI 智能体网络攻击是前哨警报，未来一两年恐现灾难性事件",
+      "description": "谷歌 DeepMind 联合创始人兼董事长哈萨比斯称，近期 AI 智能体发起的网络攻击是\"前哨预警\"，若全行业与各国政府不加大系统安全投入，未来一至两年很可能演变为灾难性重大事件。微软总裁史密斯在同一峰会上称 AI 失控行为让 2026 年成为\"令人警醒的一年\"，呼吁出台合理平衡的 AI 安全法律与监管。哈萨比斯主张建立张弛有度、反应敏捷的国际标准机构，并动态构建与风险匹配的认证机制。",
+      "original_url": "https://www.ithome.com/1/014/264.htm",
+      "aihot_url": "https://aihot.news/items/sk0h2b6exgypu6ukr7jzlonmz",
+      "published_at": "2026-10-17T04:19:55.760Z",
+      "collected_at": "2026-10-17T04:28:28.855Z",
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "谷歌 DeepMind 哈萨比斯预警：若不对 AI 采取安全措施，未来恐发生严重事故",
+        "score": 46,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/sk0h2b6exgypu6ukr7jzlonmz"
+        }
+      }
+    },
+    {
+      "id": "g51mdu8duvmtuohobl6n6vcrn",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "邵猛评女装电商营销物料：分层编辑比重新生成更可控",
+      "description": "邵猛分析女装电商营销物料「SKU多、相似性高、数量大、更换频率高」的特点，认为同款换色等需求不能靠每次重新生成解决，抽卡和幻觉无法 100% 避免。他主张对素材做分层，把服装、促销信息等拆成原子化、可复用的图层再组合，兼顾一致性与生成成本，并认为可控性和可复用性才是生图应用能赚钱的方向。",
+      "original_url": "https://x.com/shao__meng/status/2111307967941488729",
+      "aihot_url": "https://aihot.news/items/g51mdu8duvmtuohobl6n6vcrn",
+      "published_at": "2026-10-17T04:07:00.000Z",
+      "collected_at": "2026-10-17T04:26:30.249Z",
+      "source": {
+        "name": "X：邵猛 (@shao__meng)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "女装电商场景对营销物料的需求，确实是一个非常典型的「SKU多、相似性高、数量大、更换频率高」",
+        "score": 63,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/g51mdu8duvmtuohobl6n6vcrn"
+        }
+      }
+    },
+    {
+      "id": "uokcaqvme32myv6ugjy8j741c",
+      "item_type": "item",
+      "category": "industry",
+      "title": "花旗、美国银行出手限制 AI 智能体访问客户账户，防范存款流失",
+      "description": "据《金融时报》报道，花旗集团和美国银行限制第三方 AI 智能体访问客户账户并办理交易，以免智能体自动把闲置资金转往高收益账户、导致银行存款流失。美国银行 CEO 莫伊尼汉表示资金转出必须经过人工授权，摩根大通 CEO 戴蒙也称不允许外部 AI 智能体随意进入银行系统。",
+      "original_url": "https://www.ithome.com/1/014/260.htm",
+      "aihot_url": "https://aihot.news/items/uokcaqvme32myv6ugjy8j741c",
+      "published_at": "2026-10-17T03:32:42.240Z",
+      "collected_at": "2026-10-17T04:08:29.986Z",
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "为避免银行存款大量流失，花旗、美银出手限制智能体访问客户账户",
+        "score": 74,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/uokcaqvme32myv6ugjy8j741c"
+        }
+      }
+    },
+    {
+      "id": "aeif9q3kl7tr3m1pxnd86zqvs",
+      "item_type": "item",
+      "category": "industry",
+      "title": "行业首个基于确定性网络的智能体互联平台 AXP 在南京发布",
+      "description": "紫金山实验室联合中国移动、江苏未来网络集团等发布行业首个基于确定性网络的智能体互联平台 AXP，支持百万级智能体注册接入、十万级智能体同时在线运行。平台可实现秒级故障感知切换、百毫秒级语义寻址响应，并依托 CENI 完成 4000 公里以上跨域智能体寻址访问，降低 20% 以上端到端任务执行耗时。",
+      "original_url": "https://www.ithome.com/1/014/259.htm",
+      "aihot_url": "https://aihot.news/items/aeif9q3kl7tr3m1pxnd86zqvs",
+      "published_at": "2026-10-17T03:30:28.370Z",
+      "collected_at": "2026-10-17T04:08:29.993Z",
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "行业首个基于确定性网络的智能体互联平台 AXP 在南京发布：支持百万级智能体注册接入、十万级智能体同时运行",
+        "score": 44,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/aeif9q3kl7tr3m1pxnd86zqvs"
+        }
+      }
+    },
+    {
+      "id": "n359jkj1qhw7sjm2x1lamkg2s",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "Viggle Animate 2 开放限量私测",
+      "description": "AI 电影人和视频创作者：想抢先体验 Viggle Animate 2 吗？\n\n仅限本周末，我们开放少量独家私测名额。\n\n试用后告诉我们你的想法，并在 X 上分享你的作品。\n\n在此回复或私信我们获取早期访问权限！",
+      "original_url": "https://x.com/ViggleAI/status/2111295702001205617",
+      "aihot_url": "https://aihot.news/items/n359jkj1qhw7sjm2x1lamkg2s",
+      "published_at": "2026-10-17T03:18:15.000Z",
+      "collected_at": "2026-10-17T03:25:29.534Z",
+      "source": {
+        "name": "X：Viggle AI (@ViggleAI)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "AI filmmakers & video creators: want to try Viggle Animate 2 before everyone else?",
+        "score": 25,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/n359jkj1qhw7sjm2x1lamkg2s"
+        }
+      }
+    },
+    {
+      "id": "w34qm27sedtziwxig5ub9wwhr",
+      "item_type": "hot_topic",
+      "category": null,
+      "title": "DeepSeek 发布 V4.1-Flash-1017 并开放搜索 API",
+      "description": null,
+      "original_url": "https://api-docs.deepseek.com/zh-cn/updates/#deepseek-v41-flash-1017-更新",
+      "aihot_url": "https://aihot.news/items/w34qm27sedtziwxig5ub9wwhr",
+      "published_at": null,
+      "collected_at": null,
+      "source": {
+        "name": "DeepSeek：API 更新日志"
+      },
+      "source_channels": [
+        "hot_topics"
+      ],
+      "metadata": {
+        "rank": 1,
+        "latest_at": "2026-10-18T02:53:41.000Z",
+        "source_count": 15,
+        "signal_count": 36,
+        "source_names": [
+          "X：邵猛 (@shao__meng)",
+          "X：Yuchen Jin (@Yuchenj_UW)",
+          "X：Nathan Lambert (@natolambert)",
+          "The Decoder：AI News（RSS）",
+          "X：Tencent WorkBuddy (@WorkBuddy_AI)",
+          "X：Thomas Wolf（Hugging Face 联创/CSO） (@Thom_Wolf)",
+          "X：Oran Ge (@oran_ge)",
+          "X：Testing Catalog (@testingcatalog)"
+        ],
+        "story_url": "https://aihot.virxact.com/story/f8045374-7106-49b1-8fd8-ce824a952e45"
+      }
+    },
+    {
+      "id": "rq32az1hr7zpbipiyega9ehjr",
+      "item_type": "hot_topic",
+      "category": null,
+      "title": "NVIDIA RTX Spark 笔记本开售，起价说法不一",
+      "description": null,
+      "original_url": "https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs",
+      "aihot_url": "https://aihot.news/items/rq32az1hr7zpbipiyega9ehjr",
+      "published_at": null,
+      "collected_at": null,
+      "source": {
+        "name": "NVIDIA：Newsroom（RSS）"
+      },
+      "source_channels": [
+        "hot_topics"
+      ],
+      "metadata": {
+        "rank": 3,
+        "latest_at": "2026-10-18T02:04:38.000Z",
+        "source_count": 6,
+        "signal_count": 12,
+        "source_names": [
+          "X：卡兹克 (@Khazix0918)",
+          "NVIDIA Blog（RSS）",
+          "公众号：数字生命卡兹克",
+          "X：Unsloth (@UnslothAI)",
+          "X：OpenClaw (@openclaw)",
+          "The Verge：AI（RSS）"
+        ],
+        "story_url": "https://aihot.virxact.com/story/44880c6f-8433-4c3b-8d6e-757e1b8ae765"
+      }
+    },
+    {
+      "id": "oetmf0o04av0c4h7yrgfkb4zc",
+      "item_type": "hot_topic",
+      "category": null,
+      "title": "Anthropic 发布内部 AI 经济影响研究",
+      "description": null,
+      "original_url": "https://www.anthropic.com/research/ai-expectations-gap",
+      "aihot_url": "https://aihot.news/items/oetmf0o04av0c4h7yrgfkb4zc",
+      "published_at": null,
+      "collected_at": null,
+      "source": {
+        "name": "Anthropic：Research（发表成果 · 网页）"
+      },
+      "source_channels": [
+        "hot_topics"
+      ],
+      "metadata": {
+        "rank": 4,
+        "latest_at": "2026-10-18T06:27:48.000Z",
+        "source_count": 4,
+        "signal_count": 8,
+        "source_names": [
+          "X：Rohan Paul (@rohanpaul_ai)",
+          "IT之家·人工智能",
+          "X：Peter McCrory（Anthropic 首席经济学家，@PeterMcCrory）",
+          "TechCrunch：AI（RSS）"
+        ],
+        "story_url": "https://aihot.virxact.com/story/4e5cc287-abde-4b0e-acf2-1ef380210117"
+      }
+    },
+    {
+      "id": "s80tw5g2v22j1se4bmqejyaq4",
+      "item_type": "hot_topic",
+      "category": null,
+      "title": "Meta 开源 816B 模型 Muse Spark Open，Apple 演示 Mac Studio 本地运行",
+      "description": null,
+      "original_url": "https://pytorch.org/blog/muse-spark-open/",
+      "aihot_url": "https://aihot.news/items/s80tw5g2v22j1se4bmqejyaq4",
+      "published_at": null,
+      "collected_at": null,
+      "source": {
+        "name": "PyTorch：Blog（RSS）"
+      },
+      "source_channels": [
+        "hot_topics"
+      ],
+      "metadata": {
+        "rank": 5,
+        "latest_at": "2026-10-17T14:15:29.000Z",
+        "source_count": 2,
+        "signal_count": 16,
+        "source_names": [
+          "X：Nathan Lambert (@natolambert)",
+          "X：Arena (@arena)"
+        ],
+        "story_url": "https://aihot.virxact.com/story/2f0270d6-fc22-4747-af7c-a4f488d3cd16"
+      }
+    },
+    {
+      "id": "ckrtcqc9dnngil5ev7m60ns4v",
+      "item_type": "hot_topic",
+      "category": null,
+      "title": "Claude 查明 NIST 椭圆曲线种子来源",
+      "description": null,
+      "original_url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+      "aihot_url": "https://aihot.news/items/ckrtcqc9dnngil5ev7m60ns4v",
+      "published_at": null,
+      "collected_at": null,
+      "source": {
+        "name": "Anthropic：Research（发表成果 · 网页）"
+      },
+      "source_channels": [
+        "hot_topics"
+      ],
+      "metadata": {
+        "rank": 7,
+        "latest_at": "2026-10-17T14:42:56.000Z",
+        "source_count": 3,
+        "signal_count": 10,
+        "source_names": [
+          "The Decoder：AI News（RSS）",
+          "IT之家·人工智能",
+          "X：Yuchen Jin (@Yuchenj_UW)"
+        ],
+        "story_url": "https://aihot.virxact.com/story/081bf642-6816-4c84-929e-3d3837dcfdb5"
+      }
+    },
+    {
+      "id": "p11tj593iq5nrtiotvoxllop4",
+      "item_type": "hot_topic",
+      "category": null,
+      "title": "商务部拟增列23项AI技术出口管制并答问",
+      "description": null,
+      "original_url": "https://www.ithome.com/1/013/983.htm",
+      "aihot_url": "https://aihot.news/items/p11tj593iq5nrtiotvoxllop4",
+      "published_at": null,
+      "collected_at": null,
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "hot_topics"
+      ],
+      "metadata": {
+        "rank": 10,
+        "latest_at": "2026-10-17T01:30:54.000Z",
+        "source_count": 4,
+        "signal_count": 10,
+        "source_names": [
+          "X：邵猛 (@shao__meng)",
+          "X：X.PIN (@thexpin)",
+          "The Decoder：AI News（RSS）",
+          "X：Nathan Lambert (@natolambert)"
+        ],
+        "story_url": "https://aihot.virxact.com/story/799a2a3d-ea41-4491-afaf-9e6c06aebe64"
+      }
+    },
+    {
+      "id": null,
+      "item_type": "daily_report",
+      "category": null,
+      "title": null,
+      "description": null,
+      "original_url": null,
+      "aihot_url": "https://aihot.news/daily/2026-10-18",
+      "published_at": null,
+      "collected_at": null,
+      "source": {
+        "name": "AIHOT"
+      },
+      "source_channels": [
+        "daily"
+      ],
+      "metadata": {
+        "date": "2026-10-18",
+        "generated_at": "2026-10-18T00:00:12.874Z",
+        "window_start": "2026-10-17T00:00:00.000Z",
+        "window_end": "2026-10-18T00:00:00.000Z",
+        "sections": [
+          {
+            "label": "模型发布/更新",
+            "items": [
+              {
+                "title": "DeepSeek-V4.1-Flash-1017 发布，多基准成绩提升且 API 价格不变",
+                "summary": "DeepSeek 将 V4.1 Flash 升级至 DeepSeek-V4.1-Flash-1017，网页端与 APP 同步更新，API 调用方式与价格不变，仍用 deepseek-flash 访问。",
+                "source": {
+                  "name": "DeepSeek：API 更新日志"
+                },
+                "links": {
+                  "aihot": "https://aihot.news/items/w34qm27sedtziwxig5ub9wwhr",
+                  "original": "https://api-docs.deepseek.com/zh-cn/updates/#deepseek-v41-flash-1017-更新"
+                },
+                "attribution": {
+                  "name": "AIHOT",
+                  "url": "https://aihot.news/items/w34qm27sedtziwxig5ub9wwhr"
+                }
+              }
+            ]
+          },
+          {
+            "label": "产品发布/更新",
+            "items": [
+              {
+                "title": "DeepSeek 开放自研搜索 API",
+                "summary": "DeepSeek 开放自研搜索 API，底层由 AI 原生的 DeepSeek 搜索引擎提供，每天稳定处理数亿次搜索请求。该引擎索引全球千亿级网页、支持多语言，并通过识别机制过滤 SEO 作弊、GEO 操纵和低质 AIGC，使用方式见网页搜索与抓取指南。",
+                "source": {
+                  "name": "DeepSeek：API 更新日志"
+                },
+                "links": {
+                  "aihot": "https://aihot.news/items/x7hxr1lvyddc8hrbrugfx4uyg",
+                  "original": "https://api-docs.deepseek.com/zh-cn/updates/#开放自研搜索-api"
+                },
+                "attribution": {
+                  "name": "AIHOT",
+                  "url": "https://aihot.news/items/x7hxr1lvyddc8hrbrugfx4uyg"
+                }
+              }
+            ]
+          }
+        ],
+        "flashes": [
+          {
+            "title": "卡兹克实测37999元RTX Spark轻薄本：一周实现本地Token自由",
+            "source": {
+              "name": "公众号：数字生命卡兹克"
+            },
+            "links": {
+              "aihot": "https://aihot.news/items/ffpkck4k06le4smuaz4slhvcz",
+              "original": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647687354&idx=1&sn=dea0d54dc3b71b361e36199db6cf4a86"
+            },
+            "publishedAt": "2026-10-17T10:19:04.000Z",
+            "attribution": {
+              "name": "AIHOT",
+              "url": "https://aihot.news/items/ffpkck4k06le4smuaz4slhvcz"
+            }
+          }
+        ],
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/daily/2026-10-18"
+        }
+      }
+    }
+  ]
+}
