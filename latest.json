@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-10-20T09:40:26.505871Z",
+  "generated_at": "2026-10-20T09:57:30.339208Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-10-19T03:40:19.231933Z",
-    "to": "2026-10-20T09:40:19.231933Z"
+    "from": "2026-10-19T03:57:23.944056Z",
+    "to": "2026-10-20T09:57:23.944056Z"
   },
   "coverage": {
     "selected": {
@@ -17,7 +17,7 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 307,
+      "items": 308,
       "error": null
     },
     "paper": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 363,
-    "deduplicated_items": 312
+    "raw_items": 364,
+    "deduplicated_items": 313
   },
   "items": [
     {
@@ -87,7 +87,8 @@
       },
       "source_channels": [
         "selected",
-        "all"
+        "all",
+        "hot_topics"
       ],
       "metadata": {
         "original_title": "Reuters: OpenAI is racing to raise about $30B at a valuation above $1.4T before Anthropic goes public.",
@@ -97,7 +98,15 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/srgsfi8edabzrwgg6vjtgw3ya"
-        }
+        },
+        "rank": 9,
+        "latest_at": "2026-10-20T08:06:25.000Z",
+        "source_count": 1,
+        "signal_count": 7,
+        "source_names": [
+          "X：Rohan Paul (@rohanpaul_ai)"
+        ],
+        "story_url": "https://aihot.virxact.com/story/15a36716-6a2a-4098-9854-ee6605f1d6bd"
       }
     },
     {
@@ -408,10 +417,11 @@
           "url": "https://aihot.news/items/p04w1xjk7v6fmlskpf5vsnuka"
         },
         "rank": 3,
-        "latest_at": "2026-10-20T06:48:18.000Z",
-        "source_count": 3,
+        "latest_at": "2026-10-20T09:20:36.667Z",
+        "source_count": 4,
         "signal_count": 25,
         "source_names": [
+          "IT之家·人工智能",
           "X：X.PIN (@thexpin)",
           "X：Rohan Paul (@rohanpaul_ai)",
           "Hacker News：AI 热帖"
@@ -586,10 +596,10 @@
           "name": "AIHOT",
           "url": "https://aihot.news/items/szf3v3re4888fzekwoohhu8b4"
         },
-        "rank": 9,
+        "rank": 7,
         "latest_at": "2026-10-19T20:09:24.000Z",
         "source_count": 3,
-        "signal_count": 7,
+        "signal_count": 8,
         "source_names": [
           "TechCrunch：AI（RSS）",
           "PyTorch：Blog（RSS）",
@@ -641,8 +651,7 @@
       },
       "source_channels": [
         "selected",
-        "all",
-        "hot_topics"
+        "all"
       ],
       "metadata": {
         "original_title": "inclusionAI/Ming-3.0-tts",
@@ -652,19 +661,7 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/uvgayscfmc9ujjak94ymsnxnd"
-        },
-        "rank": 10,
-        "latest_at": "2026-10-20T04:10:28.000Z",
-        "source_count": 5,
-        "signal_count": 3,
-        "source_names": [
-          "X：蚂蚁百灵 (@AntLingAGI)",
-          "X：Artificial Analysis (@ArtificialAnlys)",
-          "IT之家·人工智能",
-          "公众号：蚂蚁百灵（Ling）",
-          "蚂蚁 inclusionAI：GitHub 新仓库"
-        ],
-        "story_url": "https://aihot.virxact.com/story/fe8058c9-afe6-4112-ad7e-de28740550aa"
+        }
       }
     },
     {
@@ -705,6 +702,136 @@
           "Inception Labs：Blog（网页）"
         ],
         "story_url": "https://aihot.virxact.com/story/734c8ed5-330d-4d7c-bea5-a97d9707cfd8"
+      }
+    },
+    {
+      "id": "ctt0cgc9e1ae0i3apvcje27uz",
+      "item_type": "item",
+      "category": "opinion",
+      "title": "DRW 创始人 Don Wilson 谈 CoreWeave 15% 债券、GPU 期货与 token 价差",
+      "description": "DRW 创始人 Don Wilson 在 Odd Lots 播客中解读 CoreWeave 15% 收益率债券，认为它衡量的是对冲工具的缺口，GPU 期货可让 neocloud 通过 basis trade 降低融资成本。",
+      "original_url": "https://x.com/SaitoWu/status/2112478527052447964",
+      "aihot_url": "https://aihot.news/items/ctt0cgc9e1ae0i3apvcje27uz",
+      "published_at": "2026-10-20T09:38:23.000Z",
+      "collected_at": "2026-10-20T09:43:15.928Z",
+      "source": {
+        "name": "X：Saito 硬地骇客 (@SaitoWu)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "CoreWeave 借 15%，因为没人报得出四年后一块 B200 的价",
+        "score": 54,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ctt0cgc9e1ae0i3apvcje27uz"
+        }
+      }
+    },
+    {
+      "id": "h19b1bl3zmaku5eydci69hg7v",
+      "item_type": "item",
+      "category": "ai-products",
+      "title": "DeepSeek 开源自研推理框架 DeepInfer",
+      "description": "DeepSeek 宣布其自研推理框架 DeepInfer 完全开源，代码托管在 http://github.com/deepseek-ai/DeepInfer。该框架以高吞吐、低延迟支撑 DeepSeek-V4.1-Flash 的大规模推理，官方称开放生产技术栈旨在帮助社区降低算力成本与能耗。",
+      "original_url": "https://x.com/deepseek_ai/status/2112476496283775135",
+      "aihot_url": "https://aihot.news/items/h19b1bl3zmaku5eydci69hg7v",
+      "published_at": "2026-10-20T09:30:19.000Z",
+      "collected_at": "2026-10-20T09:43:14.526Z",
+      "source": {
+        "name": "X：DeepSeek (@deepseek_ai)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "🚀 Introducing DeepInfer, our in-house inference framework, now fully open source!",
+        "score": 64,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/h19b1bl3zmaku5eydci69hg7v"
+        }
+      }
+    },
+    {
+      "id": "zfgvybo6zn5zefitfkn2hnipb",
+      "item_type": "item",
+      "category": "tip",
+      "title": "MiniCPM-V 4.7 本地演示：数据与图表自动生成完整分析报告",
+      "description": "面壁智能 OpenBMB 转发 @aiwithsilly 的演示，用 MiniCPM-V 4.7 35B-A3B 在本机跑自动化报告生成，输入结构化数据与图表，输出含记分卡、分部拆解、利润率驱动与多空观点的长篇 markdown 报告，无需 API 和云端。演示称模型一次读取图表和密集表格并关联数据推导结论，得益于 35B 总参数仅约 3B 激活的 MoE 架构，GitHub 和 Hugging Face 已提供下载。",
+      "original_url": "https://x.com/OpenBMB/status/2112475485125181877",
+      "aihot_url": "https://aihot.news/items/zfgvybo6zn5zefitfkn2hnipb",
+      "published_at": "2026-10-20T09:26:18.000Z",
+      "collected_at": "2026-10-20T09:41:15.256Z",
+      "source": {
+        "name": "X：面壁智能 OpenBMB (@OpenBMB)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "From data and charts to full reports, running locally. Great to see @aiwithsally putting MiniCPM-V 4.7 to work in an automated reporting ...",
+        "score": 58,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/zfgvybo6zn5zefitfkn2hnipb"
+        }
+      }
+    },
+    {
+      "id": "mvja9pbjw8jhgzqf91k0yztwb",
+      "item_type": "item",
+      "category": "industry",
+      "title": "社区实测面壁 MiniCPM-V 4.7 35B-A3B：iPhone 17 Pro Max 上 13+ tokens/s 端侧多模态推理",
+      "description": "@techNmak 用面壁 MiniCPM-V 4.7 35B-A3B 实验构建了一个 Neo-Brutalist 风格的作品集 UI，OpenBMB 转发致谢并期待其后续作品。该模型总参数 35B、每次仅激活 3B，在 iPad Pro M4（16GB）上达 17+ tokens/s、iPhone 17 Pro Max 上达 13+ tokens/s，优化移动端设置下内存占用约 3GB；另有面向 OCR、图表、数学和通用理解的 1B 紧凑版本，两个版本均支持 256K 上下文窗口，权重、推理代码和微调代码开源，GitHub 与 Hugging Face 可获取。",
+      "original_url": "https://x.com/OpenBMB/status/2112474103999520787",
+      "aihot_url": "https://aihot.news/items/mvja9pbjw8jhgzqf91k0yztwb",
+      "published_at": "2026-10-20T09:20:48.000Z",
+      "collected_at": "2026-10-20T09:41:15.263Z",
+      "source": {
+        "name": "X：面壁智能 OpenBMB (@OpenBMB)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Great to see community experiments with MiniCPM-V 4.7! Thanks @techNmak for sharing your neo-brutalist portfolio UI. Curious to see what ...",
+        "score": 62,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/mvja9pbjw8jhgzqf91k0yztwb"
+        }
+      }
+    },
+    {
+      "id": "acrg31bdkw2dqqduudi3zhzfd",
+      "item_type": "item",
+      "category": "industry",
+      "title": "外交部回应美政府要求机构停用 DeepSeek：反对将科技经贸问题政治化",
+      "description": "针对美国政府要求其机构停止使用 DeepSeek 等中国 AI 工具的报道，外交部发言人毛宁 10 月 20 日在例行记者会上回应称，中方一贯反对泛化国家安全概念、将科技经贸问题政治化，将坚决维护中国企业的合法权益。",
+      "original_url": "https://www.ithome.com/1/015/434.htm",
+      "aihot_url": "https://aihot.news/items/acrg31bdkw2dqqduudi3zhzfd",
+      "published_at": "2026-10-20T09:20:36.667Z",
+      "collected_at": "2026-10-20T09:52:27.506Z",
+      "source": {
+        "name": "IT之家·人工智能"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "外交部回应美政府要求机构停用 DeepSeek：中方反对将科技经贸问题政治化",
+        "score": 63,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/acrg31bdkw2dqqduudi3zhzfd"
+        }
       }
     },
     {
@@ -8045,110 +8172,6 @@
       }
     },
     {
-      "id": "c5fx5p9ahypb7heg28goooumz",
-      "item_type": "item",
-      "category": "opinion",
-      "title": "六小龄童回应孙悟空林黛玉“圣黛 CP”AI 魔改：创意好玩但改编不能逾越红线",
-      "description": "86 版《西游记》孙悟空饰演者六小龄童 10 月 18 日在济南受访时回应“圣黛 CP”AI 魔改现象，称相关内容播放量已达 50 亿次，认为创意有意义、很好玩，能让更多人关注名著和传统文化传承。同时他强调“忠于原著，慎于翻新”，改编不能逾越政策法规和观众心中的红线。“圣黛 CP”基于《红楼梦》“石头”意象衍生设定，2025 年起因 AI 工具降低制作门槛而集中爆发。",
-      "original_url": "https://www.ithome.com/1/014/753.htm",
-      "aihot_url": "https://aihot.news/items/c5fx5p9ahypb7heg28goooumz",
-      "published_at": "2026-10-19T03:57:11.873Z",
-      "collected_at": "2026-10-19T04:25:17.533Z",
-      "source": {
-        "name": "IT之家·人工智能"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "六小龄童谈孙悟空、林黛玉 AI 魔改“圣黛 CP”：创意很好玩，但改编不能逾越政策法规和观众红线",
-        "score": 51,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/c5fx5p9ahypb7heg28goooumz"
-        }
-      }
-    },
-    {
-      "id": "d3aeg55owdcjj3bf1ur71oe21",
-      "item_type": "item",
-      "category": "opinion",
-      "title": "Mollick 批驳 CSAIL 展示的 IBM 旧幻灯片",
-      "description": "每次这张幻灯片出现我都讨厌它，现在还是从 CSAIL 来的\n\n这张幻灯片做出来之前，它说的就已经是错的。自动化系统一直在做管理决策（交易、物流、客服、保险），假装它们不做，实际上是在推卸责任。",
-      "original_url": "https://x.com/emollick/status/2112030115752456456",
-      "aihot_url": "https://aihot.news/items/d3aeg55owdcjj3bf1ur71oe21",
-      "published_at": "2026-10-19T03:56:33.000Z",
-      "collected_at": "2026-10-19T04:17:19.721Z",
-      "source": {
-        "name": "X：Ethan Mollick (@emollick)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "I hate this slide every time it comes up, and now from CSAIL",
-        "score": 31,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/d3aeg55owdcjj3bf1ur71oe21"
-        }
-      }
-    },
-    {
-      "id": "ies77b1vclael3thbt58kuh50",
-      "item_type": "item",
-      "category": "opinion",
-      "title": "Grok Bot 也学会请客送礼啦？ 😂 中国文化融入的这么自然吗？ 刚刚准备一些硬件概念，Grok Bot 突如其来的给我支招请前同事吃顿饭，着实惊到我了。。",
-      "description": "Grok Bot 也学会请客送礼啦？ 😂 中国文化融入的这么自然吗？ 刚刚准备一些硬件概念，Grok Bot 突如其来的给我支招请前同事吃顿饭，着实惊到我了。。",
-      "original_url": "https://x.com/shao__meng/status/2112029795701948520",
-      "aihot_url": "https://aihot.news/items/ies77b1vclael3thbt58kuh50",
-      "published_at": "2026-10-19T03:55:17.000Z",
-      "collected_at": "2026-10-19T04:19:19.476Z",
-      "source": {
-        "name": "X：邵猛 (@shao__meng)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Grok Bot 也学会请客送礼啦？",
-        "score": 20,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/ies77b1vclael3thbt58kuh50"
-        }
-      }
-    },
-    {
-      "id": "l1a1k5z9s7oak2qa677z3dhww",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "腾讯 WorkBuddy 教育公益版上线：全国教师每月可领 2000 积分，连续 12 个月",
-      "description": "腾讯 SSV 宣布 WorkBuddy 教育公益版正式上线，全国教师不限地区、不限学段，每人每月可领 2000 积分并连续领取 12 个月。该版本联合北京大学、北京师范大学等高校，将教学设计、课件设计、家校沟通等教育研究拆成 100 多位教育专家（陆续上线中），另上线创意教学、剧本课堂、课件制作、动画演示、素材加工 5 个工具。",
-      "original_url": "https://www.ithome.com/1/014/752.htm",
-      "aihot_url": "https://aihot.news/items/l1a1k5z9s7oak2qa677z3dhww",
-      "published_at": "2026-10-19T03:49:22.930Z",
-      "collected_at": "2026-10-19T04:25:17.540Z",
-      "source": {
-        "name": "IT之家·人工智能"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "腾讯 WorkBuddy 教育公益版上线：全国教师每人每月可领 2000 积分，能连续领 1 年",
-        "score": 44,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/l1a1k5z9s7oak2qa677z3dhww"
-        }
-      }
-    },
-    {
       "id": "wrnv8dd428iozlj5xax99zbmj",
       "item_type": "hot_topic",
       "category": null,
@@ -8259,7 +8282,7 @@
         "hot_topics"
       ],
       "metadata": {
-        "rank": 8,
+        "rank": 10,
         "latest_at": "2026-10-20T07:47:28.000Z",
         "source_count": 2,
         "signal_count": 8,
