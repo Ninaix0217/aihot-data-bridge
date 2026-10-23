@@ -1,23 +1,23 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-10-23T09:37:42.296351Z",
+  "generated_at": "2026-10-23T09:56:19.130333Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-10-22T03:37:38.807614Z",
-    "to": "2026-10-23T09:37:38.807614Z"
+    "from": "2026-10-22T03:56:09.358627Z",
+    "to": "2026-10-23T09:56:09.358627Z"
   },
   "coverage": {
     "selected": {
       "status": "ok",
       "source": "api",
-      "items": 18,
+      "items": 19,
       "error": null
     },
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 399,
+      "items": 398,
       "error": null
     },
     "paper": {
@@ -41,7 +41,7 @@
   },
   "summary": {
     "raw_items": 463,
-    "deduplicated_items": 406
+    "deduplicated_items": 405
   },
   "items": [
     {
@@ -468,6 +468,34 @@
       }
     },
     {
+      "id": "ih894crlfahslc0pttsw80r0c",
+      "item_type": "item",
+      "category": "industry",
+      "title": "Latent Space 汇总 PHP2Shell 事件：OpenAI Patch the Planet 与 Wiz 各自用 AI 模型独立发现 PHP 核心漏洞",
+      "description": "Latent Space 的 AI News 汇总了 PHP 核心内存损坏漏洞 PHP2Shell（CVE-2026-109618、CVE-2026-109619）的披露：Calif 研究者在 OpenAI Patch the Planet 项目中用 GPT-5.6 Sol 发现。",
+      "original_url": "https://latent.space/p/ainews-openais-patch-the-planet-program/",
+      "aihot_url": "https://aihot.news/items/ih894crlfahslc0pttsw80r0c",
+      "published_at": "2026-10-22T07:42:44.000Z",
+      "collected_at": "2026-10-23T09:46:28.354Z",
+      "source": {
+        "name": "Latent Space（RSS）"
+      },
+      "source_channels": [
+        "selected",
+        "all"
+      ],
+      "metadata": {
+        "original_title": "[AINews] OpenAI’s Patch the Planet program is 1 of 2 parties to discover PHP2Shell vulnerabilities in core PHP affecting 70% of the web, using GPT-5.6 Sol; coordinated response over 2 months",
+        "score": 85,
+        "selected": true,
+        "reason": "原文梳理了 PHP2Shell 漏洞发现与两个月协同修复的时间线，并区分了有据事实与未经证实的传闻。",
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ih894crlfahslc0pttsw80r0c"
+        }
+      }
+    },
+    {
       "id": "uc21c65s4trz2ums8g8fgtb0v",
       "item_type": "item",
       "category": "ai-products",
@@ -548,6 +576,58 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/eme8i9igoadxb3beb902byfz0"
+        }
+      }
+    },
+    {
+      "id": "ekf4lzvyn5lijiecqibno3sth",
+      "item_type": "item",
+      "category": "industry",
+      "title": "美国财政部拟禁止美国人投资所有开发 AI 系统的中国公司",
+      "description": "美国财政部提出新规，拟禁止美国人投资开发任何 AI 系统的中国公司，现行规则只限制最强大的中国 AI 模型。新提案还将新增高带宽内存、光子芯片和抗辐射芯片等受限芯片类型，并扩展到高超音速武器和生物科技等领域，覆盖国家新增俄罗斯、伊朗、朝鲜和古巴。",
+      "original_url": "https://x.com/rohanpaul_ai/status/2113567271893577992",
+      "aihot_url": "https://aihot.news/items/ekf4lzvyn5lijiecqibno3sth",
+      "published_at": "2026-10-23T09:44:40.000Z",
+      "collected_at": "2026-10-23T09:53:24.167Z",
+      "source": {
+        "name": "X：Rohan Paul (@rohanpaul_ai)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "The U.S. Treasury proposed barring Americans from investing in Chinese companies that develop any AI system.",
+        "score": 71,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ekf4lzvyn5lijiecqibno3sth"
+        }
+      }
+    },
+    {
+      "id": "ukszlvgmrmrac1fs0a3galmli",
+      "item_type": "item",
+      "category": "ai-models",
+      "title": "Kling AI 正式发布新一代视频模型 Kling 4.0",
+      "description": "Kling AI 正式发布新一代视频模型 Kling 4.0，主打更可控、一致性更强的视频生成。Omni Reference 可在单个任务中组合最多 15 个图像、视频、主体或声音；单次生成最长 30 秒，支持最多 10 个关键帧以控制场景推进。",
+      "original_url": "https://x.com/testingcatalog/status/2113564061707149646",
+      "aihot_url": "https://aihot.news/items/ukszlvgmrmrac1fs0a3galmli",
+      "published_at": "2026-10-23T09:31:55.000Z",
+      "collected_at": "2026-10-23T09:54:24.713Z",
+      "source": {
+        "name": "X：Testing Catalog (@testingcatalog)"
+      },
+      "source_channels": [
+        "all"
+      ],
+      "metadata": {
+        "original_title": "Kling AI has officially released Kling 4.0, its next-generation video model built for more controlled, consistent video generation.",
+        "score": 68,
+        "selected": false,
+        "attribution": {
+          "name": "AIHOT",
+          "url": "https://aihot.news/items/ukszlvgmrmrac1fs0a3galmli"
         }
       }
     },
@@ -10425,110 +10505,6 @@
         "attribution": {
           "name": "AIHOT",
           "url": "https://aihot.news/items/gk5wtdkgh7dapkuu5ekokmv9g"
-        }
-      }
-    },
-    {
-      "id": "lcg85guffwhlk2ydfd5yr2sm2",
-      "item_type": "item",
-      "category": "opinion",
-      "title": "Grok Bot 可直接在 X 上操作",
-      "description": "能在 Grok Bot 里直接操作 X，大概是有史以来最棒的事 🙏",
-      "original_url": "https://x.com/larsencc/status/2113116793313300713",
-      "aihot_url": "https://aihot.news/items/lcg85guffwhlk2ydfd5yr2sm2",
-      "published_at": "2026-10-22T03:54:37.000Z",
-      "collected_at": "2026-10-22T03:55:32.296Z",
-      "source": {
-        "name": "X：Larsen Cundric（自述加入 SpaceXSI，Grok Bot） (@larsencc)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Being able to work on X from Grok Bot is probably the best thing ever 🙏",
-        "score": 27,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/lcg85guffwhlk2ydfd5yr2sm2"
-        }
-      }
-    },
-    {
-      "id": "blai852r4q1s9xfj52zb3h629",
-      "item_type": "item",
-      "category": "industry",
-      "title": "FT：Meta 拟设无投票权股份为 AI 建设引入外部资金",
-      "description": "FT 报道 Meta 因 AI 建设需要大规模外部股权，将创设无投票权的新股份类别，让 Zuckerberg 出售股票同时保住公司控制权。作为交换，Zuckerberg 承诺在加州或 Meta 总部所在地居住 8 年，此前他曾向董事表示可能离开。背景是对加州亿万富翁一次性征收 5% 税的 Proposition 40，将于 11 月 3 日交付选民投票。",
-      "original_url": "https://x.com/rohanpaul_ai/status/2113116183264448877",
-      "aihot_url": "https://aihot.news/items/blai852r4q1s9xfj52zb3h629",
-      "published_at": "2026-10-22T03:52:12.000Z",
-      "collected_at": "2026-10-22T03:59:32.490Z",
-      "source": {
-        "name": "X：Rohan Paul (@rohanpaul_ai)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "FT: Meta’s AI build-out now needs outside equity on a scale that its founder-control structure could not absorb, so the company is creati...",
-        "score": 67,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/blai852r4q1s9xfj52zb3h629"
-        }
-      }
-    },
-    {
-      "id": "mmzdw0afp2eoqu4v4u0pm33ie",
-      "item_type": "item",
-      "category": "industry",
-      "title": "Semafor：Meta 计划发行无投票权 C 类股为 AI 融资，不稀释 Zuckerberg 控制权",
-      "description": "据 Semafor 报道，Meta 计划创设无投票权 C 类股，为 AI 建设融资而不稀释 Mark Zuckerberg 的控制权。2027 年 1 月 19 日章程变更后每持 1 股 A 类或 B 类股将获得 1 股 C 类股，效果类似 2 比 1 拆股但不改变投票权；该股票也将用于支付员工，且投票股的买家将排除主权金融机构。",
-      "original_url": "https://x.com/rohanpaul_ai/status/2113114993592078353",
-      "aihot_url": "https://aihot.news/items/mmzdw0afp2eoqu4v4u0pm33ie",
-      "published_at": "2026-10-22T03:47:28.000Z",
-      "collected_at": "2026-10-22T03:59:32.497Z",
-      "source": {
-        "name": "X：Rohan Paul (@rohanpaul_ai)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Semafor: Meta is creating non-voting Class C shares so it can raise AI money without diluting Mark Zuckerberg’s control.",
-        "score": 66,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/mmzdw0afp2eoqu4v4u0pm33ie"
-        }
-      }
-    },
-    {
-      "id": "xgutlvmutactru6a1fwg077cx",
-      "item_type": "item",
-      "category": "industry",
-      "title": "Microsoft 报告称 Storm-0940 用开源 AI 智能体框架 ARTEX 自动化攻击数百组织",
-      "description": "Microsoft 发布报告称，与中国政府结盟的攻击组织 Storm-0940 使用开源 AI 渗透测试框架 ARTEX 自动化攻击全球数百个组织。ARTEX 在 GitHub 开源，能串联 LLM 智能体完成从侦察到数据窃取的渗透流程，部分入侵从首次定向到获得云特权访问不到 3 小时。",
-      "original_url": "https://x.com/rohanpaul_ai/status/2113113477552169349",
-      "aihot_url": "https://aihot.news/items/xgutlvmutactru6a1fwg077cx",
-      "published_at": "2026-10-22T03:41:27.000Z",
-      "collected_at": "2026-10-22T03:59:32.504Z",
-      "source": {
-        "name": "X：Rohan Paul (@rohanpaul_ai)"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "Microsoft published a new report saying that it has seen cyberattacks carried out by a Chinese state-aligned actor called Storm-0940, whi...",
-        "score": 72,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/xgutlvmutactru6a1fwg077cx"
         }
       }
     },
