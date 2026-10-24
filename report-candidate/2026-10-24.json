@@ -1,11 +1,11 @@
 {
   "schema_version": "aihot-bridge/v1",
-  "generated_at": "2026-10-24T09:09:59.247720Z",
+  "generated_at": "2026-10-24T09:25:39.404923Z",
   "window": {
     "type": "rolling_candidate",
     "hours": 30,
-    "from": "2026-10-23T03:09:54.746959Z",
-    "to": "2026-10-24T09:09:54.746959Z"
+    "from": "2026-10-23T03:25:33.238042Z",
+    "to": "2026-10-24T09:25:33.238042Z"
   },
   "coverage": {
     "selected": {
@@ -17,7 +17,7 @@
     "all": {
       "status": "ok",
       "source": "api",
-      "items": 297,
+      "items": 295,
       "error": null
     },
     "paper": {
@@ -40,8 +40,8 @@
     }
   },
   "summary": {
-    "raw_items": 336,
-    "deduplicated_items": 304
+    "raw_items": 334,
+    "deduplicated_items": 302
   },
   "items": [
     {
@@ -7803,55 +7803,30 @@
       }
     },
     {
-      "id": "fbxsqmx6cfmpyohqmxx86ipv8",
-      "item_type": "item",
-      "category": "tip",
-      "title": "可灵（Kling）4.0 制作解析：短片 KING CARD 的动态运镜与环境变换方法",
-      "description": "可灵（Kling）官方解析如何用 Kling 4.0 制作短片 KING CARD，该片在各社交平台获 500 万次观看。",
-      "original_url": "https://x.com/Kling_ai/status/2113470610038784062",
-      "aihot_url": "https://aihot.news/items/fbxsqmx6cfmpyohqmxx86ipv8",
-      "published_at": "2026-10-23T03:20:34.000Z",
-      "collected_at": "2026-10-23T03:37:22.716Z",
+      "id": "ofhppbtjnzfrzbv2a11sl8u7h",
+      "item_type": "hot_topic",
+      "category": null,
+      "title": "Apple折叠屏iPhone Duo发布并开售",
+      "description": null,
+      "original_url": "https://www.apple.com/newsroom/2026/10/open-up-to-new-possibilities-with-iphone-duo/",
+      "aihot_url": "https://aihot.news/items/ofhppbtjnzfrzbv2a11sl8u7h",
+      "published_at": null,
+      "collected_at": null,
       "source": {
-        "name": "X：可灵 Kling AI (@Kling_ai)"
+        "name": "Apple：Newsroom（RSS）"
       },
       "source_channels": [
-        "all"
+        "hot_topics"
       ],
       "metadata": {
-        "original_title": "The Making of King Card with Kling 4.0 🎬 #KlingAI #Kling4 https://x.com/i/article/2113227083618897921",
-        "score": 52,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/fbxsqmx6cfmpyohqmxx86ipv8"
-        }
-      }
-    },
-    {
-      "id": "tw89k6wagoa7uqrui50ozpc2e",
-      "item_type": "item",
-      "category": "ai-products",
-      "title": "Codex 0.164.0 发布：新增 /presets 预设槽与内联 /model 参数",
-      "description": "Codex 0.164.0 新增十个编号 /presets 槽位，可保存可复用提示词与斜杠命令，并配键盘菜单快速调用。该版本支持用内联 /model 和 /permissions 参数直接设置模型、推理强度、速度与权限配置，还可在支持 Kitty 或 Sixel 图形的终端全屏预览查看与生成的图片。",
-      "original_url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0",
-      "aihot_url": "https://aihot.news/items/tw89k6wagoa7uqrui50ozpc2e",
-      "published_at": "2026-10-23T03:15:13.000Z",
-      "collected_at": "2026-10-23T03:37:23.271Z",
-      "source": {
-        "name": "Codex：GitHub Releases（RSS）"
-      },
-      "source_channels": [
-        "all"
-      ],
-      "metadata": {
-        "original_title": "0.164.0",
-        "score": 45,
-        "selected": false,
-        "attribution": {
-          "name": "AIHOT",
-          "url": "https://aihot.news/items/tw89k6wagoa7uqrui50ozpc2e"
-        }
+        "rank": 3,
+        "latest_at": "2026-10-22T16:00:00.000Z",
+        "source_count": 1,
+        "signal_count": 30,
+        "source_names": [
+          "Apple：Newsroom（RSS）"
+        ],
+        "story_url": "https://aihot.virxact.com/story/bd558c88-9573-4806-a1aa-67426d33a87c"
       }
     },
     {
@@ -7871,41 +7846,14 @@
         "hot_topics"
       ],
       "metadata": {
-        "rank": 3,
+        "rank": 4,
         "latest_at": "2026-10-22T15:25:02.000Z",
         "source_count": 1,
-        "signal_count": 35,
+        "signal_count": 33,
         "source_names": [
           "Ars Technica：AI（RSS）"
         ],
         "story_url": "https://aihot.virxact.com/story/17f9865a-cef7-4d98-9742-0796331c81ea"
-      }
-    },
-    {
-      "id": "ofhppbtjnzfrzbv2a11sl8u7h",
-      "item_type": "hot_topic",
-      "category": null,
-      "title": "Apple折叠屏iPhone Duo发布并开售",
-      "description": null,
-      "original_url": "https://www.apple.com/newsroom/2026/10/open-up-to-new-possibilities-with-iphone-duo/",
-      "aihot_url": "https://aihot.news/items/ofhppbtjnzfrzbv2a11sl8u7h",
-      "published_at": null,
-      "collected_at": null,
-      "source": {
-        "name": "Apple：Newsroom（RSS）"
-      },
-      "source_channels": [
-        "hot_topics"
-      ],
-      "metadata": {
-        "rank": 4,
-        "latest_at": "2026-10-22T16:00:00.000Z",
-        "source_count": 1,
-        "signal_count": 29,
-        "source_names": [
-          "Apple：Newsroom（RSS）"
-        ],
-        "story_url": "https://aihot.virxact.com/story/bd558c88-9573-4806-a1aa-67426d33a87c"
       }
     },
     {
